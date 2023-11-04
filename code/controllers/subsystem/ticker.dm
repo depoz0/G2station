@@ -158,8 +158,8 @@ SUBSYSTEM_DEF(ticker)
 				start_at = world.time + (CONFIG_GET(number/lobby_countdown) * 10)
 			for(var/client/C in GLOB.clients)
 				window_flash(C, ignorepref = TRUE) //let them know lobby has opened up.
-			to_chat(world, span_notice("<b>Welcome to [station_name()]!</b>"))
-			send2chat(new /datum/tgs_message_content("New round starting on [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
+			to_chat(world, span_notice("<b>Добро пожаловать на [station_name()]!</b>"))
+			send2chat(new /datum/tgs_message_content("Новый раунд стартует на [SSmapping.config.map_name]!"), CONFIG_GET(string/channel_announce_new_game))
 			current_state = GAME_STATE_PREGAME
 			SEND_SIGNAL(src, COMSIG_TICKER_ENTER_PREGAME)
 
@@ -219,7 +219,7 @@ SUBSYSTEM_DEF(ticker)
 
 
 /datum/controller/subsystem/ticker/proc/setup()
-	to_chat(world, span_boldannounce("Starting game..."))
+	to_chat(world, span_boldannounce("Начинаем игру..."))
 	var/init_start = world.timeofday
 
 	mode = new /datum/game_mode/dynamic
@@ -236,7 +236,7 @@ SUBSYSTEM_DEF(ticker)
 		if(!can_continue)
 			log_game("Game failed pre_setup")
 			QDEL_NULL(mode)
-			to_chat(world, "<B>Error setting up game.</B> Reverting to pre-game lobby.")
+			to_chat(world, "<B>Ошибка при создании игры.</B> Возврат к предстартовому лобби.")
 			SSjob.ResetOccupations()
 			return FALSE
 	else
@@ -275,7 +275,7 @@ SUBSYSTEM_DEF(ticker)
 	log_world("Game start took [(world.timeofday - init_start)/10]s")
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
-	to_chat(world, span_notice("<B>Welcome to [station_name()], enjoy your stay!</B>"))
+	to_chat(world, span_notice("<B>Добро пожаловать на [station_name()], приятного пребывания!</B>"))
 	SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
 
 	current_state = GAME_STATE_PLAYING
@@ -299,7 +299,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]" : ""] has started[allmins.len ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "Раунд [GLOB.round_id ? "#[GLOB.round_id]" : ""] начался[allmins.len ? ".":" без активных администраторов!"]")
 	setup_done = TRUE
 
 	for(var/i in GLOB.start_landmarks_list)
@@ -691,7 +691,7 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, span_boldannounce("An admin has delayed the round end."))
 		return
 
-	to_chat(world, span_boldannounce("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
+	to_chat(world, span_boldannounce("Перезагрузка мира через [DisplayTimeText(delay)]. [reason]"))
 
 	var/start_wait = world.time
 	UNTIL(round_end_sound_sent || (world.time - start_wait) > (delay * 2)) //don't wait forever
