@@ -1,7 +1,7 @@
 /datum/job/cargo_technician
 	title = JOB_CARGO_TECHNICIAN
 	description = "Распределять товары по отделам, которые их заказали, \
-		собирайте пустые ящики, загружайте и разгружайте шаттл с припасами, \
+		собирайте пустые ящики, загружайте и разгружайте челнок с припасами, \
 		ship bounty cubes."
 	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION

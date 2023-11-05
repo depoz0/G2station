@@ -682,7 +682,7 @@
 		for(var/custom_material in custom_materials)
 			var/datum/material/current_material = GET_MATERIAL_REF(custom_material)
 			materials_list += "[current_material.name]"
-		. += "<u>It is made out of [english_list(materials_list)]</u>."
+		. += "<u>Это сделано из [english_list(materials_list)]</u>."
 
 	if(reagents)
 		var/user_sees_reagents = user.can_see_reagents()
@@ -690,21 +690,21 @@
 		if(!(reagent_sigreturn & STOP_GENERIC_REAGENT_EXAMINE))
 			if(reagents.flags & TRANSPARENT)
 				if(reagents.total_volume)
-					. += "It contains <b>[round(reagents.total_volume, 0.01)]</b> units of various reagents[user_sees_reagents ? ":" : "."]"
+					. += "Содержит <b>[round(reagents.total_volume, 0.01)]</b> единиц различных реагентов[user_sees_reagents ? ":" : "."]"
 					if(user_sees_reagents) //Show each individual reagent for detailed examination
 						for(var/datum/reagent/current_reagent as anything in reagents.reagent_list)
 							. += "&bull; [round(current_reagent.volume, 0.01)] units of [current_reagent.name]"
 						if(reagents.is_reacting)
-							. += span_warning("It is currently reacting!")
-						. += span_notice("The solution's pH is [round(reagents.ph, 0.01)] and has a temperature of [reagents.chem_temp]K.")
+							. += span_warning("В настоящее время идет реакция!")
+						. += span_notice("pH раствора [round(reagents.ph, 0.01)] и температура составляет [reagents.chem_temp]K.")
 
 				else
-					. += "It contains:<br>Nothing."
+					. += "Содержит:<br>Ничего."
 			else if(reagents.flags & AMOUNT_VISIBLE)
 				if(reagents.total_volume)
 					. += span_notice("It has [reagents.total_volume] unit\s left.")
 				else
-					. += span_danger("It's empty.")
+					. += span_danger("Пусто.")
 
 	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, .)
 
