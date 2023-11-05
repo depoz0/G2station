@@ -21,7 +21,7 @@ export const RequestMainScreen = (props, context) => {
                 act('clear_message_status');
                 act('clear_authentication');
               }}>
-              View Messages <Icon name={'envelope-open'} />
+              Просмотр сообщений <Icon name={'envelope-open'} />
             </Tabs.Tab>
             <Tabs.Tab
               selected={tab === RequestTabs.MESSAGE_WRITE}
@@ -33,7 +33,7 @@ export const RequestMainScreen = (props, context) => {
                 }
                 setTab(RequestTabs.MESSAGE_WRITE);
               }}>
-              Write Message <Icon name="pencil" />
+              Написать сообщение <Icon name="pencil" />
             </Tabs.Tab>
             {!!can_send_announcements && (
               <Tabs.Tab
@@ -46,7 +46,7 @@ export const RequestMainScreen = (props, context) => {
                   }
                   setTab(RequestTabs.ANNOUNCE);
                 }}>
-                Make Announcement <Icon name="bullhorn" />
+                Сделать объявление <Icon name="bullhorn" />
               </Tabs.Tab>
             )}
           </Tabs>

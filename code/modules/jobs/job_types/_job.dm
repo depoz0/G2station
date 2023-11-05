@@ -283,14 +283,14 @@
 	if(related_policy)
 		info += related_policy
 	if(supervisors)
-		info += "As the [title] you answer directly to [supervisors]. Special circumstances may change this."
+		info += "В качестве [title] вы отвечаете непосредственно перед [supervisors]. Особые обстоятельства могут изменить это положение."
 	if(radio_info)
 		info += radio_info
 	if(req_admin_notify)
-		info += "<b>You are playing a job that is important for Game Progression. \
-			If you have to disconnect, please notify the admins via adminhelp.</b>"
+		info += "<b>Вы выполняете работу, которая важна для развития игры. \
+			Если вы вынуждены отключиться, пожалуйста, сообщите об этом администраторам через adminhelp.</b>"
 	if(CONFIG_GET(number/minimal_access_threshold))
-		info += span_boldnotice("As this station was initially staffed with a \
+		info += span_boldnotice("Поскольку эта станция изначально была укомплектована сотрудниками \
 			[CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] \
 			have been added to your ID card.")
 
