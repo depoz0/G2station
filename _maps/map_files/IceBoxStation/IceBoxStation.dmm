@@ -1407,7 +1407,7 @@
 	dir = 4
 	},
 /obj/structure/sign/warning/gas_mask/directional/north{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /turf/open/floor/vault,
 /area/station/security/prison/rec)
@@ -2870,7 +2870,7 @@
 /area/station/service/chapel)
 "aUR" = (
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/spawner/structure/window/hollow/reinforced/end{
 	dir = 1
@@ -3509,8 +3509,8 @@
 /area/station/maintenance/starboard/fore)
 "beZ" = (
 /turf/closed/indestructible/riveted{
-	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
-	name = "hyper-reinforced wall"
+	desc = "Стена, пропитанная Fixium, способна легко выдерживать мощные взрывы";
+	name = "гиперармированная стена"
 	},
 /area/station/science/ordnance/bomb)
 "bff" = (
@@ -3803,9 +3803,9 @@
 "bjm" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/security/telescreen{
-	desc = "Used for monitoring medbay to ensure patient safety.";
+	desc = "Используется для мониторинга медпункта с целью обеспечения безопасности пациента.";
 	dir = 8;
-	name = "Medbay Monitor";
+	name = "Монитор медпункта";
 	network = list("medbay");
 	pixel_y = 4
 	},
@@ -5335,11 +5335,11 @@
 	},
 /obj/structure/sign/warning/cold_temp/directional/east,
 /obj/structure/sign/warning/gas_mask/directional/west{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/machinery/door/airlock/external{
 	glass = 1;
-	name = "Xenobiology External Airlock";
+	name = "Ксенобиологический внешний шлюз";
 	opacity = 0
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
@@ -5877,8 +5877,8 @@
 /area/station/security/processing)
 "bLL" = (
 /obj/structure/sink/kitchen/directional/west{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink"
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
 	},
 /turf/open/floor/iron/freezer,
 /area/mine/laborcamp)
@@ -9557,7 +9557,7 @@
 /area/station/service/hydroponics/garden)
 "cOa" = (
 /obj/structure/sign/warning/secure_area{
-	desc = "A warning sign which reads 'SERVER ROOM'.";
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
 	name = "SERVER ROOM"
 	},
 /turf/closed/wall,
@@ -10883,8 +10883,8 @@
 "djC" = (
 /obj/effect/decal/remains/human,
 /obj/item/reagent_containers/cup/glass/bottle/wine{
-	desc = "A fine bottle of amontillado wine. Yes, for the love of god!";
-	name = "bottle of amontillado wine";
+	desc = "Бутылка хорошего вина амонтильядо. Да, ради всего святого!";
+	name = "бутылка вина амонтильядо";
 	pixel_x = 8
 	},
 /turf/open/floor/plating,
@@ -13130,7 +13130,7 @@
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /turf/open/floor/iron,
 /area/station/service/chapel)
@@ -13700,7 +13700,7 @@
 "edp" = (
 /obj/structure/table/glass,
 /obj/machinery/reagentgrinder{
-	desc = "Used to grind things up into raw materials and liquids.";
+	desc = "Используется для переработки в сырьё и жидкости.";
 	pixel_y = 5
 	},
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -14764,10 +14764,10 @@
 	dir = 4
 	},
 /obj/structure/fluff{
-	desc = "What, you think the water just magically soaks into the metallic flooring?";
+	desc = "Вы что, думаете, что вода просто волшебным образом впитывается в металлический пол?";
 	icon = 'icons/obj/mining_zones/survival_pod.dmi';
 	icon_state = "fan_tiny";
-	name = "shower drain"
+	name = "душевой дренаж"
 	},
 /obj/effect/turf_decal/stripes/white/end,
 /turf/open/floor/iron/white,
@@ -15280,7 +15280,7 @@
 /area/station/hallway/primary/central/fore)
 "eCR" = (
 /obj/structure/no_effect_signpost{
-	desc = "Now, where to go from here? That's a timeless question."
+	desc = "Куда двигаться дальше? Это вечный вопрос."
 	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
@@ -15898,8 +15898,8 @@
 /area/station/command/heads_quarters/hos)
 "eNm" = (
 /obj/structure/fermenting_barrel{
-	desc = "A dried up barrel of what appeared to once have been full of wine.";
-	name = "cask"
+	desc = "Высохший бочонок, который, судя по всему, когда-то был полон вина.";
+	name = "бочка"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
@@ -17780,7 +17780,7 @@
 /area/station/maintenance/port/fore)
 "ftt" = (
 /obj/structure/sign/warning/secure_area/directional/south{
-	desc = "A warning sign which reads 'SERVER ROOM'.";
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
 	name = "SERVER ROOM"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -20028,7 +20028,7 @@
 "gdS" = (
 /obj/machinery/shower/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /turf/open/floor/iron/smooth,
 /area/mine/eva/lower)
@@ -20791,8 +20791,8 @@
 "gqh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sink/kitchen/directional/north{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink"
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
 	},
 /obj/effect/turf_decal/tile/green/half/contrasted,
 /turf/open/floor/iron/dark,
@@ -20985,8 +20985,8 @@
 "gsW" = (
 /obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
 /obj/machinery/door/airlock/freezer{
-	desc = "The freezer where the chef keeps all the stuff that needs to be kept cold. Ice cold.";
-	name = "The Ice Box"
+	desc = "Морозильная камера, где шеф-повар хранит все, что нужно держать в холоде. Ледяной холод.";
+	name = "холодильник"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -22097,7 +22097,7 @@
 /area/station/commons/vacant_room/office)
 "gMw" = (
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = -29
 	},
 /obj/machinery/light/small/directional/west,
@@ -27178,7 +27178,7 @@
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
 /turf/open/floor/plating,
@@ -28334,7 +28334,7 @@
 /area/station/medical/medbay/aft)
 "iKp" = (
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
@@ -30148,7 +30148,7 @@
 "jpi" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = -2;
 	pixel_y = 32
 	},
@@ -33067,7 +33067,7 @@
 "khF" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/north{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/machinery/button/door/directional/north{
 	id = "drone_bay";
@@ -41800,8 +41800,8 @@
 /area/station/engineering/atmos)
 "mTI" = (
 /obj/structure/sink/kitchen/directional/south{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink"
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/freezer,
@@ -41827,7 +41827,7 @@
 /obj/structure/barricade/wooden,
 /obj/structure/sign/warning/cold_temp/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
@@ -42501,7 +42501,7 @@
 "ncO" = (
 /obj/machinery/shower/directional/east,
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = -29
 	},
 /turf/open/floor/iron/smooth,
@@ -46082,7 +46082,7 @@
 /obj/structure/table,
 /obj/item/food/chococoin,
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = 30
 	},
 /turf/open/floor/iron/smooth,
@@ -48306,10 +48306,10 @@
 /area/station/maintenance/solars/port/fore)
 "oLW" = (
 /obj/machinery/computer/security/telescreen{
-	desc = "Used to access the various cameras on the station.";
+	desc = "Используется для доступа к различным камерам на станции.";
 	dir = 1;
 	layer = 3.1;
-	name = "Security Camera Monitor";
+	name = "Монитор камер безопасности";
 	network = list("ss13");
 	pixel_y = 2
 	},
@@ -53391,8 +53391,8 @@
 /area/station/engineering/atmos/mix)
 "qpb" = (
 /obj/machinery/disposal/bin{
-	desc = "A pneumatic waste disposal unit. This one leads to the morgue.";
-	name = "corpse disposal"
+	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
+	name = "утилизация трупов"
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -53981,7 +53981,7 @@
 /area/station/commons/dorms)
 "qxv" = (
 /obj/machinery/disposal/bin{
-	desc = "A pneumatic waste disposal unit. This one leads to the frozen exterior of the moon.";
+	desc = "Пневматическая установка для удаления отходов. Этот ведет к замерзшей внешней стороне Луны.";
 	name = "deathsposal unit"
 	},
 /obj/structure/disposalpipe/trunk{
@@ -54268,7 +54268,7 @@
 	dir = 8
 	},
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
 /turf/open/floor/iron/large,
@@ -54608,8 +54608,8 @@
 "qHz" = (
 /obj/machinery/light_switch/directional/west,
 /obj/machinery/disposal/bin{
-	desc = "A pneumatic waste disposal unit. This one leads to the morgue.";
-	name = "corpse disposal"
+	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
+	name = "утилизация трупов"
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
@@ -57008,8 +57008,8 @@
 "rsM" = (
 /obj/structure/bed/maint,
 /obj/item/toy/plush/rouny{
-	desc = "What is this? Is this a dog?";
-	name = "Therapy Dog"
+	desc = "Что это такое? Это собака?";
+	name = "Терапевтическая собака"
 	},
 /obj/structure/cable,
 /obj/machinery/camera/directional/east{
@@ -64628,7 +64628,7 @@
 	dir = 8
 	},
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /turf/open/floor/iron/dark,
@@ -64784,7 +64784,7 @@
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
 /turf/open/floor/plating,
@@ -66447,8 +66447,8 @@
 /area/station/maintenance/starboard/fore)
 "uqV" = (
 /obj/structure/sign/warning/directional/east{
-	desc = "A sign warning of a sudden drop below.";
-	name = "SUDDEN DROP sign"
+	desc = "Знак, предупреждающий о резком обрыве вниз.";
+	name = "Знак ВНЕЗАПНЫЙ ОБРЫВ"
 	},
 /turf/open/openspace/icemoon/keep_below,
 /area/icemoon/surface/outdoors/nospawn)
@@ -67626,7 +67626,7 @@
 	pixel_x = -29
 	},
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = 30
 	},
 /turf/open/floor/iron/dark,
@@ -69866,9 +69866,9 @@
 	dir = 4
 	},
 /obj/structure/sign/directions/engineering{
-	desc = "A sign that shows there are doors here. There are doors everywhere!";
+	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
 	icon_state = "doors";
-	name = "WARNING: EXTERNAL AIRLOCK";
+	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
 	pixel_y = 32
 	},
 /turf/open/floor/iron,
@@ -69997,9 +69997,9 @@
 /area/station/maintenance/starboard/aft)
 "vzI" = (
 /obj/structure/sign/directions/engineering{
-	desc = "A sign that shows there are doors here. There are doors everywhere!";
+	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
 	icon_state = "doors";
-	name = "WARNING: EXTERNAL AIRLOCK";
+	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
 	pixel_x = 32
 	},
 /turf/closed/wall/r_wall,
@@ -70146,7 +70146,7 @@
 "vBg" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/sign/warning/gas_mask{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals.";
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
 	pixel_x = 3;
 	pixel_y = -32
 	},
@@ -71533,8 +71533,8 @@
 "vZp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sink/kitchen/directional/east{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink"
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
@@ -71830,7 +71830,7 @@
 /area/station/engineering/supermatter/room)
 "weg" = (
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /turf/open/floor/iron/smooth,
 /area/mine/mechbay)
@@ -72061,7 +72061,7 @@
 "whl" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
@@ -73322,7 +73322,7 @@
 /area/station/service/chapel/office)
 "wAx" = (
 /obj/structure/sign/warning/secure_area/directional/north{
-	desc = "A warning sign which reads 'SERVER ROOM'.";
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
 	name = "SERVER ROOM"
 	},
 /obj/effect/spawner/structure/window/reinforced,
@@ -75505,7 +75505,7 @@
 /area/station/service/hydroponics)
 "xgI" = (
 /obj/structure/sign/warning/secure_area{
-	desc = "A warning sign which reads 'BOMB RANGE";
+	desc = "Предупреждающая табличка с надписью 'BOMB RANGE";
 	name = "BOMB RANGE"
 	},
 /turf/closed/wall,
@@ -75839,7 +75839,7 @@
 "xlH" = (
 /obj/effect/mapping_helpers/broken_floor,
 /mob/living/basic/mouse/white{
-	desc = "This mouse smells faintly of alcohol.";
+	desc = "От этой мыши исходит слабый запах алкоголя.";
 	name = "Mik"
 	},
 /turf/open/floor/wood,
@@ -76113,7 +76113,7 @@
 	cycle_id = "service-hall-external"
 	},
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/access/all/service/general,
@@ -77150,7 +77150,7 @@
 "xFU" = (
 /obj/structure/barricade/wooden,
 /obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "A sign that warns of dangerous gasses in the air, instructing you to wear internals."
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
 	},
 /obj/structure/sign/warning/cold_temp/directional/north,
 /turf/open/floor/plating,
@@ -78007,7 +78007,7 @@
 "xVO" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/cup/glass/mug/coco{
-	desc = "Still hot!";
+	desc = "Все еще горячо!";
 	pixel_x = -4;
 	pixel_y = 4
 	},

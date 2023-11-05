@@ -282,7 +282,7 @@ SUBSYSTEM_DEF(ticker)
 	Master.SetRunLevel(RUNLEVEL_GAME)
 
 	if(length(GLOB.holidays))
-		to_chat(world, span_notice("and..."))
+		to_chat(world, span_notice("и..."))
 		for(var/holidayname in GLOB.holidays)
 			var/datum/holiday/holiday = GLOB.holidays[holidayname]
 			to_chat(world, span_info(holiday.greet()))

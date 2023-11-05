@@ -87,16 +87,21 @@
 
 	if(isnull(sender_override))
 		if(length(title) > 0)
-			GLOB.news_network.submit_article(title + "<br><br>" + text, "Центральное командование", "Объявления станции", null)
+			GLOB.news_network.submit_article(title + "<br><br>" + text, "[command_name()]", "Объявления станции", null)
 		else
-			GLOB.news_network.submit_article(text, "Обновление центрального командования", "Объявления станции", null)
+			GLOB.news_network.submit_article(text, "[command_name()] Обновление", "Объявления станции", null)
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)
 		title = "Classified [command_name()] Update"
 
 	if(announce)
-		priority_announce("На всех станциях связи загружен и распечатан отчет.", "Incoming Classified Message", SSstation.announcer.get_rand_report_sound(), has_important_message = TRUE)
+		priority_announce(
+			text = "На всех станциях связи загружен и распечатан отчет.",
+			title = "Incoming Classified Message",
+			sound = SSstation.announcer.get_rand_report_sound(),
+			has_important_message = TRUE,
+		)
 
 	var/datum/comm_message/message = new
 	message.title = title
