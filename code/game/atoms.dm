@@ -690,10 +690,10 @@
 		if(!(reagent_sigreturn & STOP_GENERIC_REAGENT_EXAMINE))
 			if(reagents.flags & TRANSPARENT)
 				if(reagents.total_volume)
-					. += "Содержит <b>[round(reagents.total_volume, 0.01)]</b> единиц различных реагентов[user_sees_reagents ? ":" : "."]"
+					. += "Содержит <b>[reagents.total_volume]</b> единиц различных реагентов[user_sees_reagents ? ":" : "."]"
 					if(user_sees_reagents) //Show each individual reagent for detailed examination
 						for(var/datum/reagent/current_reagent as anything in reagents.reagent_list)
-							. += "&bull; [round(current_reagent.volume, 0.01)] units of [current_reagent.name]"
+							. += "&bull; [round(current_reagent.volume, CHEMICAL_VOLUME_ROUNDING)] units of [current_reagent.name]"
 						if(reagents.is_reacting)
 							. += span_warning("В настоящее время идет реакция!")
 						. += span_notice("pH раствора [round(reagents.ph, 0.01)] и температура составляет [reagents.chem_temp]K.")
