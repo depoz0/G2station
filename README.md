@@ -1,3 +1,9 @@
+## G2station это попытка полной локализации SS13 на Русский язык.
+
+Ожидать чего либо от этого проэкта на данном этапе не стоит.
+
+
+
 ## /tg/station codebase
 
 [![Build Status](https://github.com/tgstation/tgstation/workflows/CI%20Suite/badge.svg)](https://github.com/tgstation/tgstation/actions?query=workflow%3A%22CI+Suite%22)

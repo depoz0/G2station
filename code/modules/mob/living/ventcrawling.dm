@@ -12,7 +12,7 @@
 		return
 	if(stat)
 		if(provide_feedback)
-			to_chat(src, span_warning("You must be conscious to do this!"))
+			to_chat(src, span_warning("Вы должны быть в сознании, чтобы сделать это!"))
 		return
 	if(HAS_TRAIT(src, TRAIT_IMMOBILIZED))
 		if(provide_feedback)

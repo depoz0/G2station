@@ -125,8 +125,8 @@ export const JobSelection = (props, context) => {
               <Button
                 style={{ 'position': 'absolute', 'right': '1em' }}
                 onClick={() => act('select_job', { 'job': 'Random' })}
-                content="Random Job!"
-                tooltip="Roll target random job. You can re-roll or cancel your random job if you don't like it."
+                content="Случайная вакансия!"
+                tooltip="Выбрать случайную вакансию. Вы можете повторно выбрать другую или отменить случайную вакансию, если она Вам не нравится."
               />
             </>
           }
