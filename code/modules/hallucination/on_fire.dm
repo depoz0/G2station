@@ -40,7 +40,7 @@
 	hallucinator.set_fire_stacks(max(hallucinator.fire_stacks, 0.1)) //Placebo flammability
 	fire_overlay = image(fire_icon, hallucinator, fire_icon_state, ABOVE_MOB_LAYER)
 	hallucinator.client?.images |= fire_overlay
-	to_chat(hallucinator, span_userdanger("You're set on fire!"))
+	to_chat(hallucinator, span_userdanger("Вы в огне!"))
 	hallucinator.throw_alert(ALERT_FIRE, /atom/movable/screen/alert/fire, override = TRUE)
 	times_to_lower_stamina = rand(5, 10)
 	addtimer(CALLBACK(src, PROC_REF(start_expanding)), 2 SECONDS)

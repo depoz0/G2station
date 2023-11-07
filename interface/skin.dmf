@@ -155,7 +155,7 @@ window "infowindow"
 		anchor1 = 3,0
 		anchor2 = 19,0
 		saved-params = "is-checked"
-		text = "Changelog"
+		text = "Список изменений"
 		command = "changelog"
 	elem "rules"
 		type = BUTTON
@@ -164,7 +164,7 @@ window "infowindow"
 		anchor1 = 19,0
 		anchor2 = 34,0
 		saved-params = "is-checked"
-		text = "Rules"
+		text = "Правила"
 		command = "rules"
 	elem "wiki"
 		type = BUTTON
@@ -173,7 +173,7 @@ window "infowindow"
 		anchor1 = 34,0
 		anchor2 = 50,0
 		saved-params = "is-checked"
-		text = "Wiki"
+		text = "Вики"
 		command = "wiki"
 	elem "forum"
 		type = BUTTON
@@ -182,7 +182,7 @@ window "infowindow"
 		anchor1 = 50,0
 		anchor2 = 66,0
 		saved-params = "is-checked"
-		text = "Forum"
+		text = "Форум"
 		command = "forum"
 	elem "github"
 		type = BUTTON

@@ -867,14 +867,14 @@
 				/datum/dynamic_ruleset/midround/dangerous_pirates,
 			)
 			priority_announce(
-				"Attention crew: sector monitoring reports a massive jump-trace from an enemy vessel destined for your system. Prepare for imminent hostile contact.",
+				"Внимание экипажу: секторный мониторинг сообщает о массивном прыжковом следе от вражеского корабля, направляющегося в вашу систему. Приготовиться к неминуемому вражескому контакту.",
 				"[command_name()] High-Priority Update",
 			)
 			dynamic.picking_specific_rule(pick(pirate_rulesets), forced = TRUE, ignore_cost = TRUE)
 
 		if(HACK_FUGITIVES) // Triggers fugitives, which can cause confusion / chaos as the crew decides which side help
 			priority_announce(
-				"Attention crew: sector monitoring reports a jump-trace from an unidentified vessel destined for your system. Prepare for probable contact.",
+				"Внимание экипажу: секторный мониторинг сообщает о прыжковом следе от неопознанного судна, направляющегося в вашу систему. Приготовьтесь к возможному контакту.",
 				"[command_name()] High-Priority Update",
 			)
 

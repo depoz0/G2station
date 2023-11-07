@@ -1,18 +1,18 @@
 /obj/item/electronics/firealarm
-	name = "fire alarm electronics"
-	desc = "A fire alarm circuit. Can handle heat levels up to 40 degrees celsius."
+	name = "электроника пожарной сигнализации"
+	desc = "Схема пожарной сигнализации. Может выдерживать нагрев до 40 градусов Цельсия."
 
 /obj/item/wallframe/firealarm
-	name = "fire alarm frame"
-	desc = "Used for building fire alarms."
+	name = "каркас пожарной сигнализации"
+	desc = "Используется при построении пожарных сигнализаций."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "fire_bitem"
 	result_path = /obj/machinery/firealarm
 	pixel_shift = 26
 
 /obj/machinery/firealarm
-	name = "fire alarm"
-	desc = "Pull this in case of emergency. Thus, keep pulling it forever."
+	name = "противопожарная сигнализация"
+	desc = "Потяните за рычаг в случае чрезвычайной ситуации. Тем самым продолжайте тянуть рычаг до бесконечности."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "fire0"
 	max_integrity = 250

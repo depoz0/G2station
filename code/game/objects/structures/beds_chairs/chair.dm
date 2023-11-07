@@ -18,9 +18,9 @@
 
 /obj/structure/chair/examine(mob/user)
 	. = ..()
-	. += span_notice("It's held together by a couple of <b>bolts</b>.")
+	. += span_notice("Он закреплен парой <b>болтов</b>.")
 	if(!has_buckled_mobs() && can_buckle)
-		. += span_notice("While standing on [src], drag and drop your sprite onto [src] to buckle to it.")
+		. += span_notice("Находясь на [src], перетащите свой спрайт на [src] чтобы пристегнуться в нем.")
 
 /obj/structure/chair/Initialize(mapload)
 	. = ..()
@@ -137,8 +137,8 @@
 
 /obj/structure/chair/wood
 	icon_state = "wooden_chair"
-	name = "wooden chair"
-	desc = "Old is never too old to not be in fashion."
+	name = "деревянный стул"
+	desc = "Старое никогда не бывает слишком старым, чтобы не быть в моде."
 	resistance_flags = FLAMMABLE
 	max_integrity = 70
 	buildstacktype = /obj/item/stack/sheet/mineral/wood
@@ -153,8 +153,8 @@
 	item_chair = /obj/item/chair/wood/wings
 
 /obj/structure/chair/comfy
-	name = "comfy chair"
-	desc = "It looks comfy."
+	name = "кресло"
+	desc = "Выглядит очень комфортным."
 	icon_state = "comfychair"
 	color = rgb(255, 255, 255)
 	resistance_flags = FLAMMABLE
@@ -219,8 +219,8 @@
 	color = rgb(193, 248, 104)
 
 /obj/structure/chair/comfy/shuttle
-	name = "shuttle seat"
-	desc = "A comfortable, secure seat. It has a more sturdy looking buckling system, for smoother flights."
+	name = "челночное кресло"
+	desc = "Удобное и надежное кресло. Имеет более устойчивую систему крепления, обеспечивающую более плавный полет."
 	icon_state = "shuttle_chair"
 	buildstacktype = /obj/item/stack/sheet/mineral/titanium
 
@@ -230,11 +230,11 @@
 	. = ..()
 
 /obj/structure/chair/comfy/shuttle/tactical
-	name = "tactical chair"
+	name = "тактическое кресло"
 
 /obj/structure/chair/comfy/carp
-	name = "carpskin chair"
-	desc = "A luxurious chair, the many purple scales reflect the light in a most pleasing manner."
+	name = "кресло с блестками"
+	desc = "Роскошное кресло, многочисленные пурпурные чешуйки которого отражают свет самым приятным образом."
 	icon_state = "carp_chair"
 	buildstacktype = /obj/item/stack/sheet/animalhide/carp
 
@@ -254,7 +254,7 @@
 	. = ..()
 
 /obj/structure/chair/office/tactical
-	name = "tactical swivel chair"
+	name = "тактический вращающийся стул"
 
 /obj/structure/chair/office/light
 	icon_state = "officechair_white"
@@ -262,8 +262,8 @@
 //Stool
 
 /obj/structure/chair/stool
-	name = "stool"
-	desc = "Apply butt."
+	name = "стул"
+	desc = "Применить зад."
 	icon_state = "stool"
 	can_buckle = FALSE
 	buildstackamount = 1
@@ -281,7 +281,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool, 0)
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|NEED_HANDS))
 			return
-		usr.visible_message(span_notice("[usr] grabs \the [src.name]."), span_notice("You grab \the [src.name]."))
+		usr.visible_message(span_notice("[usr] хватает \the [src.name]."), span_notice("Вы хватаете \the [src.name]."))
 		var/obj/item/C = new item_chair(loc)
 		C.set_custom_materials(custom_materials)
 		TransferComponents(C)
