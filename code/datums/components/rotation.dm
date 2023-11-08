@@ -55,7 +55,7 @@
 /datum/component/simple_rotation/proc/ExamineMessage(datum/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
 	if(rotation_flags & ROTATION_REQUIRE_WRENCH)
-		examine_list += span_notice("This requires a wrench to be rotated.")
+		examine_list += span_notice("Для вращения необходим гаечный ключ.")
 
 /datum/component/simple_rotation/proc/RotateRight(datum/source, mob/user)
 	SIGNAL_HANDLER
@@ -101,13 +101,13 @@
 		var/obj/item/tool = user.get_active_held_item()
 		if(!tool || tool.tool_behaviour != TOOL_WRENCH)
 			if(!silent)
-				rotated_obj.balloon_alert(user, "need a wrench!")
+				rotated_obj.balloon_alert(user, "нужен гаечный ключ!")
 			return FALSE
 	if(!(rotation_flags & ROTATION_IGNORE_ANCHORED) && rotated_obj.anchored)
 		if(istype(rotated_obj, /obj/structure/window) && !silent)
-			rotated_obj.balloon_alert(user, "need to unscrew!")
+			rotated_obj.balloon_alert(user, "нужно открутить отверткой!")
 		else if(!silent)
-			rotated_obj.balloon_alert(user, "need to unwrench!")
+			rotated_obj.balloon_alert(user, "нужно открутить гаечным ключом!")
 		return FALSE
 
 	if(rotation_flags & ROTATION_NEEDS_ROOM)
@@ -116,7 +116,7 @@
 		var/fulltile = istype(rotated_window) ? rotated_window.fulltile : FALSE
 		if(!valid_build_direction(rotated_obj.loc, target_dir, is_fulltile = fulltile))
 			if(!silent)
-				rotated_obj.balloon_alert(user, "can't rotate in that direction!")
+				rotated_obj.balloon_alert(user, "не получается вращать в этом направлении!")
 			return FALSE
 	return TRUE
 
@@ -130,10 +130,10 @@
 	var/rotation_screentip = FALSE
 
 	if(CanBeRotated(user, ROTATION_CLOCKWISE, silent=TRUE))
-		context[SCREENTIP_CONTEXT_ALT_LMB] = "Rotate left"
+		context[SCREENTIP_CONTEXT_ALT_LMB] = "Повернуть влево"
 		rotation_screentip = TRUE
 	if(CanBeRotated(user, ROTATION_COUNTERCLOCKWISE, silent=TRUE))
-		context[SCREENTIP_CONTEXT_ALT_RMB] = "Rotate right"
+		context[SCREENTIP_CONTEXT_ALT_RMB] = "Повернуть вправо"
 		rotation_screentip = TRUE
 
 	if(rotation_screentip)

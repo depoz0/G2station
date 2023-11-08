@@ -17,10 +17,10 @@
 			obscure_name = TRUE
 			obscure_examine = TRUE
 
-	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
+	. = list("<span class='info'>Это <EM>[!obscure_name ? name : "Unknown"]</EM>!")
 
 	if(obscure_examine)
-		return list("<span class='warning'>You're struggling to make out any details...")
+		return list("<span class='warning'>Вам трудно разобрать какие-либо детали...")
 
 	var/obscured = check_obscured_slots()
 
@@ -32,34 +32,34 @@
 			var/obj/item/clothing/under/undershirt = w_uniform
 			var/list/accessories = undershirt.list_accessories_with_icon(user)
 			if(length(accessories))
-				accessory_message = " with [english_list(accessories)] attached"
+				accessory_message = " с [english_list(accessories)]"
 
-		. += "[t_He] [t_is] wearing [w_uniform.get_examine_string(user)][accessory_message]."
+		. += "Надето [w_uniform.get_examine_string(user)][accessory_message]."
 	//head
 	if(head && !(obscured & ITEM_SLOT_HEAD) && !(head.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_is] wearing [head.get_examine_string(user)] on [t_his] head."
+		. += "Надето [head.get_examine_string(user)] на голову."
 	//suit/armor
 	if(wear_suit && !(wear_suit.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_is] wearing [wear_suit.get_examine_string(user)]."
+		. += "Надето [wear_suit.get_examine_string(user)]."
 		//suit/armor storage
 		if(s_store && !(obscured & ITEM_SLOT_SUITSTORE) && !(s_store.item_flags & EXAMINE_SKIP))
-			. += "[t_He] [t_is] carrying [s_store.get_examine_string(user)] on [t_his] [wear_suit.name]."
+			. += "Носит [s_store.get_examine_string(user)] на [wear_suit.name]."
 	//back
 	if(back && !(back.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [back.get_examine_string(user)] on [t_his] back."
+		. += "[back.get_examine_string(user)] позади."
 
 	//Hands
 	for(var/obj/item/held_thing in held_items)
 		if(held_thing.item_flags & (ABSTRACT|EXAMINE_SKIP|HAND_ITEM))
 			continue
-		. += "[t_He] [t_is] holding [held_thing.get_examine_string(user)] in [t_his] [get_held_index_name(get_held_index_of_item(held_thing))]."
+		. += "Держит [held_thing.get_examine_string(user)] в [get_held_index_name(get_held_index_of_item(held_thing))]."
 
 	//gloves
 	if(gloves && !(obscured & ITEM_SLOT_GLOVES) && !(gloves.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [gloves.get_examine_string(user)] on [t_his] hands."
+		. += "[gloves.get_examine_string(user)] на руках."
 	else if(GET_ATOM_BLOOD_DNA_LENGTH(src))
 		if(num_hands)
-			. += span_warning("[t_He] [t_has] [num_hands > 1 ? "" : "a"] blood-stained hand[num_hands > 1 ? "s" : ""]!")
+			. += span_warning("[num_hands > 1 ? "испачканные кровью руки" : "испачканная кровью рука"]!")
 
 	//handcuffed?
 	if(handcuffed)
@@ -70,35 +70,35 @@
 
 	//belt
 	if(belt && !(belt.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [belt.get_examine_string(user)] about [t_his] waist."
+		. += "[belt.get_examine_string(user)] вокруг талии."
 
 	//shoes
 	if(shoes && !(obscured & ITEM_SLOT_FEET)  && !(shoes.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_is] wearing [shoes.get_examine_string(user)] on [t_his] feet."
+		. += "Носит [shoes.get_examine_string(user)] на ногах."
 
 	//mask
 	if(wear_mask && !(obscured & ITEM_SLOT_MASK)  && !(wear_mask.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [wear_mask.get_examine_string(user)] on [t_his] face."
+		. += "Носит [wear_mask.get_examine_string(user)] на лице"
 
 	if(wear_neck && !(obscured & ITEM_SLOT_NECK)  && !(wear_neck.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_is] wearing [wear_neck.get_examine_string(user)] around [t_his] neck."
+		. += "Носит [wear_neck.get_examine_string(user)] на шее"
 
 	//eyes
 	if(!(obscured & ITEM_SLOT_EYES) )
 		if(glasses  && !(glasses.item_flags & EXAMINE_SKIP))
-			. += "[t_He] [t_has] [glasses.get_examine_string(user)] covering [t_his] eyes."
+			. += "[glasses.get_examine_string(user)] прячут глаза."
 		else if(HAS_TRAIT(src, TRAIT_UNNATURAL_RED_GLOWY_EYES))
-			. += "<span class='warning'><B>[t_His] eyes are glowing with an unnatural red aura!</B></span>"
+			. += "<span class='warning'><B>Глаза светятся неестественной красной аурой!</B></span>"
 		else if(HAS_TRAIT(src, TRAIT_BLOODSHOT_EYES))
-			. += "<span class='warning'><B>[t_His] eyes are bloodshot!</B></span>"
+			. += "<span class='warning'><B>Кровавые глаза!</B></span>"
 
 	//ears
 	if(ears && !(obscured & ITEM_SLOT_EARS) && !(ears.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_has] [ears.get_examine_string(user)] on [t_his] ears."
+		. += "[ears.get_examine_string(user)] на ушах"
 
 	//ID
 	if(wear_id && !(wear_id.item_flags & EXAMINE_SKIP))
-		. += "[t_He] [t_is] wearing [wear_id.get_examine_string(user)]."
+		. += "Носит [wear_id.get_examine_string(user)]."
 
 		. += wear_id.get_id_examine_strings(user)
 
@@ -126,7 +126,7 @@
 			. += generate_death_examine_text()
 
 	if(get_bodypart(BODY_ZONE_HEAD) && !get_organ_by_type(/obj/item/organ/internal/brain))
-		. += span_deadsay("It appears that [t_his] brain is missing...")
+		. += span_deadsay("Похоже, что у когото отсутствует мозг...")
 
 	var/list/msg = list()
 
@@ -156,21 +156,21 @@
 			damage_text = "limp and lifeless"
 		else
 			damage_text = (body_part.brute_dam >= body_part.burn_dam) ? body_part.heavy_brute_msg : body_part.heavy_burn_msg
-		msg += "<B>[capitalize(t_his)] [body_part.name] is [damage_text]!</B>\n"
+		msg += "<B>[body_part.name] [damage_text]!</B>\n"
 
 	//stores missing limbs
 	var/l_limbs_missing = 0
 	var/r_limbs_missing = 0
 	for(var/t in missing)
 		if(t == BODY_ZONE_HEAD)
-			msg += "<span class='deadsay'><B>[t_His] [parse_zone(t)] is missing!</B><span class='warning'>\n"
+			msg += "<span class='deadsay'><B>[parse_zone(t)] отсутствует!</B><span class='warning'>\n"
 			continue
 		if(t == BODY_ZONE_L_ARM || t == BODY_ZONE_L_LEG)
 			l_limbs_missing++
 		else if(t == BODY_ZONE_R_ARM || t == BODY_ZONE_R_LEG)
 			r_limbs_missing++
 
-		msg += "<B>[capitalize(t_his)] [parse_zone(t)] is missing!</B>\n"
+		msg += "<B>[parse_zone(t)] отсутствует!</B>\n"
 
 	if(l_limbs_missing >= 2 && r_limbs_missing == 0)
 		msg += "[t_He] look[p_s()] all right now.\n"
@@ -188,35 +188,35 @@
 		var/list/damage_desc = get_majority_bodypart_damage_desc()
 		if(temp)
 			if(temp < 25)
-				msg += "[t_He] [t_has] minor [damage_desc[BRUTE]].\n"
+				msg += "незначительные [damage_desc[BRUTE]].\n"
 			else if(temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> [damage_desc[BRUTE]]!\n"
+				msg += "<b>средние</b> [damage_desc[BRUTE]]!\n"
 			else
-				msg += "<B>[t_He] [t_has] severe [damage_desc[BRUTE]]!</B>\n"
+				msg += "<B>серьезные [damage_desc[BRUTE]]!</B>\n"
 
 		temp = getFireLoss()
 		if(temp)
 			if(temp < 25)
-				msg += "[t_He] [t_has] minor [damage_desc[BURN]].\n"
+				msg += "незначительные [damage_desc[BURN]].\n"
 			else if (temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> [damage_desc[BURN]]!\n"
+				msg += "<b>средние</b> [damage_desc[BURN]]!\n"
 			else
-				msg += "<B>[t_He] [t_has] severe [damage_desc[BURN]]!</B>\n"
+				msg += "<B>серьезные [damage_desc[BURN]]!</B>\n"
 
 		temp = getCloneLoss()
 		if(temp)
 			if(temp < 25)
-				msg += "[t_He] [t_has] minor [damage_desc[CLONE]].\n"
+				msg += "незначительные [damage_desc[CLONE]].\n"
 			else if(temp < 50)
-				msg += "[t_He] [t_has] <b>moderate</b> [damage_desc[CLONE]]!\n"
+				msg += "<b>средние</b> [damage_desc[CLONE]]!\n"
 			else
-				msg += "<b>[t_He] [t_has] severe [damage_desc[CLONE]]!</b>\n"
+				msg += "<b>серьезные [damage_desc[CLONE]]!</b>\n"
 
 
 	if(has_status_effect(/datum/status_effect/fire_handler/fire_stacks))
-		msg += "[t_He] [t_is] covered in something flammable.\n"
+		msg += "покрыто чем-то легковоспламеняющимся.\n"
 	if(has_status_effect(/datum/status_effect/fire_handler/wet_stacks))
-		msg += "[t_He] look[p_s()] a little soaked.\n"
+		msg += "выглядит немного промокшим.\n"
 
 
 	if(pulledby?.grab_state)

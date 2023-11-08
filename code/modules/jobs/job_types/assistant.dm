@@ -9,7 +9,7 @@ Assistant
 	faction = FACTION_STATION
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "absolutely everyone"
+	supervisors = "абсолютно всеми"
 	exp_granted_type = EXP_TYPE_CREW
 	outfit = /datum/outfit/job/assistant
 	plasmaman_outfit = /datum/outfit/plasmaman
