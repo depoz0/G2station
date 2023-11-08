@@ -155,7 +155,7 @@
 	. += list("[icon2html(get_cached_flat_icon(), user, extra_classes = "bigicon")]")
 
 /obj/item/card/id/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(get_cached_flat_icon(), user)] [thats? "That's ":""][get_examine_name(user)]"
+	return "[icon2html(get_cached_flat_icon(), user)] [thats? "Это ":""][get_examine_name(user)]"
 
 /**
  * Helper proc, checks whether the ID card can hold any given set of wildcards.
@@ -1833,7 +1833,7 @@
 	. += list("[icon2html(get_cached_flat_icon(), user, extra_classes = "bigicon")]")
 
 /obj/item/card/cardboard/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(get_cached_flat_icon(), user)] [thats? "That's ":""][get_examine_name(user)]"
+	return "[icon2html(get_cached_flat_icon(), user)] [thats? "Это ":""][get_examine_name(user)]"
 
 /obj/item/card/cardboard/examine(mob/user)
 	. = ..()

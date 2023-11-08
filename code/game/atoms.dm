@@ -642,7 +642,7 @@
 
 ///Generate the full examine string of this atom (including icon for goonchat)
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(src, user)] [thats? "That's ":""][get_examine_name(user)]"
+	return "[icon2html(src, user)] [thats? "Это ":""][get_examine_name(user)]"
 
 /**
  * Returns an extended list of examine strings for any contained ID cards.
