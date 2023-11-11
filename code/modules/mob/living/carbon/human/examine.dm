@@ -1,7 +1,7 @@
 /mob/living/carbon/human/examine(mob/user)
 //this is very slightly better than it was because you can use it more places. still can't do \his[src] though.
 	var/t_He = p_They()
-	var/t_His = p_Their()
+//	var/t_His = p_Their()
 	var/t_his = p_their()
 	var/t_him = p_them()
 	var/t_has = p_have()
@@ -223,19 +223,19 @@
 		msg += "[t_He] [t_is] restrained by [pulledby]'s grip.\n"
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
-		msg += "[t_He] [t_is] severely malnourished.\n"
+		msg += "сильное недоедание.\n"
 	else if(nutrition >= NUTRITION_LEVEL_FAT)
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
-			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
+			msg += "упитанный и аппетитный на вид - Как маленький толстый поросенок. Вкусный поросенок\n"
 		else
-			msg += "[t_He] [t_is] quite chubby.\n"
+			msg += "довольно упитанный.\n"
 	switch(disgust)
 		if(DISGUST_LEVEL_GROSS to DISGUST_LEVEL_VERYGROSS)
-			msg += "[t_He] look[p_s()] a bit grossed out.\n"
+			msg += "выглядит немного отвратительно.\n"
 		if(DISGUST_LEVEL_VERYGROSS to DISGUST_LEVEL_DISGUSTED)
-			msg += "[t_He] look[p_s()] really grossed out.\n"
+			msg += "выглядит очень отвратительно.\n"
 		if(DISGUST_LEVEL_DISGUSTED to INFINITY)
-			msg += "[t_He] look[p_s()] extremely disgusted.\n"
+			msg += "выглядит крайне отвратительно.\n"
 
 	var/apparent_blood_volume = blood_volume
 	if(HAS_TRAIT(src, TRAIT_USES_SKINTONES) && (skin_tone == "albino"))

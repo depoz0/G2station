@@ -217,6 +217,17 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/iron/smooth,
 /area/mine/living_quarters)
+"aeO" = (
+/obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/machinery/button/door/directional/east{
+	id = "secmechbay";
+	name = "Security Mech Garage Door Controls";
+	req_access = list("security")
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/station/security/brig/upper)
 "aeQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -277,6 +288,16 @@
 	dir = 4
 	},
 /area/station/engineering/lobby)
+"afM" = (
+/obj/structure/rack,
+/obj/machinery/light/cold/directional/north,
+/obj/item/storage/box/bandages{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/healthanalyzer,
+/turf/open/floor/iron/white/textured,
+/area/station/security/medical)
 "afR" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible,
 /obj/machinery/atmospherics/pipe/smart/simple/violet/visible/layer1{
@@ -1332,6 +1353,14 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/ai_monitored/security/armory/upper)
+"awl" = (
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = -29
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/smooth,
+/area/mine/eva)
 "awn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1390,27 +1419,6 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
-"awR" = (
-/obj/machinery/conveyor{
-	id = "garbage";
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
-"axb" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 4
-	},
-/obj/structure/sign/warning/gas_mask/directional/north{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/turf/open/floor/vault,
-/area/station/security/prison/rec)
 "axc" = (
 /obj/machinery/door/firedoor/heavy,
 /obj/machinery/door/poddoor/preopen{
@@ -2291,6 +2299,16 @@
 	},
 /turf/open/floor/plating,
 /area/station/cargo/sorting)
+"aMf" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/brown/half/contrasted,
+/obj/item/storage/box/bandages{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/food/cheesiehonkers,
+/turf/open/floor/iron,
+/area/station/cargo/office)
 "aMr" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -2323,6 +2341,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/processing)
+"aMM" = (
+/obj/structure/sign/warning/secure_area{
+	desc = "Предупреждающая табличка с надписью 'BOMB RANGE";
+	name = "BOMB RANGE"
+	},
+/turf/closed/wall,
+/area/station/science/ordnance/bomb)
 "aMP" = (
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/white,
@@ -2518,6 +2543,18 @@
 /obj/item/clothing/shoes/jackboots,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
+"aQg" = (
+/obj/item/stack/spacecash/c10{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/toy/plush/beeplushie{
+	name = "Coolidge";
+	pixel_y = -6
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/station/commons/dorms/laundry)
 "aQn" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
@@ -2812,17 +2849,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
-"aUi" = (
-/obj/structure/table,
-/obj/item/storage/briefcase{
-	pixel_y = 3;
-	pixel_x = 2
-	},
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/item/storage/wallet,
-/obj/item/storage/wallet,
-/turf/open/floor/iron,
-/area/station/commons/locker)
 "aUj" = (
 /turf/closed/wall/r_wall,
 /area/station/engineering/storage)
@@ -2868,15 +2894,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet,
 /area/station/service/chapel)
-"aUR" = (
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/spawner/structure/window/hollow/reinforced/end{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
 "aUS" = (
 /obj/machinery/meter{
 	name = "Mixed Air Tank In"
@@ -3109,6 +3126,15 @@
 /obj/item/bikehorn/rubberducky/plasticducky,
 /turf/open/floor/iron/freezer,
 /area/mine/laborcamp)
+"aYT" = (
+/obj/machinery/button/door/directional/south{
+	id = "vacantofficemaintshutter";
+	name = "Privacy Shutters";
+	pixel_x = 4;
+	pixel_y = -28
+	},
+/turf/open/floor/iron/grimy,
+/area/station/commons/vacant_room/office)
 "aZd" = (
 /turf/open/floor/plating,
 /area/station/medical/virology)
@@ -3167,25 +3193,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/station/engineering/supermatter/room)
-"aZK" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/structure/table,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/item/lighter/greyscale{
-	pixel_x = 4;
-	pixel_y = 2
-	},
-/obj/effect/spawner/random/entertainment/cigarette_pack{
-	pixel_x = 7
-	},
-/obj/item/reagent_containers/cup/soda_cans/sol_dry{
-	pixel_y = 4;
-	pixel_x = -7
-	},
-/turf/open/floor/iron/white/corner,
-/area/station/hallway/secondary/entry)
 "aZL" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/firealarm/directional/south,
@@ -3507,12 +3514,6 @@
 /obj/item/cultivator,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
-"beZ" = (
-/turf/closed/indestructible/riveted{
-	desc = "Стена, пропитанная Fixium, способна легко выдерживать мощные взрывы";
-	name = "гиперармированная стена"
-	},
-/area/station/science/ordnance/bomb)
 "bff" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
@@ -3532,11 +3533,25 @@
 /obj/effect/spawner/structure/window/hollow/reinforced/end,
 /turf/open/floor/plating,
 /area/mine/eva/lower)
-"bfB" = (
-/obj/item/kirbyplants/random,
-/obj/machinery/firealarm/directional/east,
-/turf/open/floor/iron/dark/textured,
-/area/station/security/office)
+"bfu" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/table,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/item/lighter/greyscale{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/effect/spawner/random/entertainment/cigarette_pack{
+	pixel_x = 7
+	},
+/obj/item/reagent_containers/cup/soda_cans/sol_dry{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/turf/open/floor/iron/white/corner,
+/area/station/hallway/secondary/entry)
 "bfL" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -3800,19 +3815,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"bjm" = (
-/obj/structure/table/reinforced,
-/obj/machinery/computer/security/telescreen{
-	desc = "Используется для мониторинга медпункта с целью обеспечения безопасности пациента.";
-	dir = 8;
-	name = "Монитор медпункта";
-	network = list("medbay");
-	pixel_y = 4
-	},
-/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
-/obj/effect/turf_decal/tile/red/full,
-/turf/open/floor/iron/dark/smooth_large,
-/area/station/security/checkpoint/medical)
 "bjn" = (
 /obj/machinery/door/window/left/directional/north{
 	dir = 4;
@@ -5307,44 +5309,11 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
-"bEd" = (
-/obj/machinery/conveyor_switch/oneway{
-	dir = 8;
-	id = "garbage";
-	name = "disposal conveyor";
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/obj/structure/railing/corner,
-/obj/effect/turf_decal/box/corners{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/brown/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/station/maintenance/disposal)
 "bEf" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark/textured,
 /area/station/security/interrogation)
-"bEh" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/obj/structure/sign/warning/cold_temp/directional/east,
-/obj/structure/sign/warning/gas_mask/directional/west{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Ксенобиологический внешний шлюз";
-	opacity = 0
-	},
-/obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
-/turf/open/floor/plating,
-/area/station/maintenance/aft/lesser)
 "bEi" = (
 /obj/structure/sign/poster/official/work_for_a_future/directional/north,
 /obj/effect/decal/cleanable/dirt,
@@ -5875,13 +5844,6 @@
 /obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/iron,
 /area/station/security/processing)
-"bLL" = (
-/obj/structure/sink/kitchen/directional/west{
-	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
-	name = "старая раковина"
-	},
-/turf/open/floor/iron/freezer,
-/area/mine/laborcamp)
 "bLQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/siding/wood{
@@ -7000,6 +6962,19 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/station/maintenance/port/lesser)
+"ccD" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "chem-morgue-airlock"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/medical/maintenance,
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
+/area/station/medical/morgue)
 "ccQ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -7143,18 +7118,6 @@
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/iron/smooth,
 /area/mine/mechbay)
-"ceY" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "Disposal Exit";
-	name = "Disposal Exit Vent"
-	},
-/obj/machinery/conveyor{
-	id = "garbage";
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/red/box,
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "cfe" = (
 /obj/structure/cable,
 /obj/machinery/holopad/secure,
@@ -7828,15 +7791,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/fitness)
-"coT" = (
-/obj/structure/table,
-/obj/item/storage/wallet,
-/obj/item/storage/wallet{
-	pixel_y = 3;
-	pixel_x = 4
-	},
-/turf/open/floor/plastic,
-/area/station/commons/dorms/laundry)
 "cpe" = (
 /obj/machinery/atmospherics/components/tank/air{
 	dir = 8
@@ -8174,6 +8128,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit/departure_lounge)
+"cuS" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 4
+	},
+/obj/structure/sign/warning/gas_mask/directional/north{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/turf/open/floor/vault,
+/area/station/security/prison/rec)
 "cvg" = (
 /obj/effect/mapping_helpers/trapdoor_placer,
 /obj/effect/turf_decal/delivery,
@@ -8888,6 +8851,15 @@
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
+"cDS" = (
+/obj/structure/sign/directions/engineering{
+	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
+	icon_state = "doors";
+	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
+	pixel_x = 32
+	},
+/turf/closed/wall/r_wall,
+/area/mine/production)
 "cDT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -9555,13 +9527,15 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/iron/textured,
 /area/station/service/hydroponics/garden)
-"cOa" = (
-/obj/structure/sign/warning/secure_area{
-	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
-	name = "SERVER ROOM"
+"cNV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sink/kitchen/directional/north{
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
 	},
-/turf/closed/wall,
-/area/station/tcommsat/computer)
+/obj/effect/turf_decal/tile/green/half/contrasted,
+/turf/open/floor/iron/dark,
+/area/mine/laborcamp)
 "cOb" = (
 /obj/structure/rack,
 /obj/item/storage/box/lights/mixed{
@@ -10696,6 +10670,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
+"dgG" = (
+/obj/item/toy/cards/deck{
+	pixel_x = -9;
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/plating,
+/area/station/commons/dorms/laundry)
 "dgZ" = (
 /obj/machinery/airalarm/directional/south,
 /obj/structure/cable,
@@ -10809,6 +10792,16 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood/large,
 /area/station/command/heads_quarters/hos)
+"dis" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 8
+	},
+/obj/machinery/camera/directional/west{
+	c_tag = "Security - Office - Port"
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "dit" = (
 /obj/machinery/requests_console/directional/north{
 	department = "Chapel";
@@ -10880,15 +10873,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
-"djC" = (
-/obj/effect/decal/remains/human,
-/obj/item/reagent_containers/cup/glass/bottle/wine{
-	desc = "Бутылка хорошего вина амонтильядо. Да, ради всего святого!";
-	name = "бутылка вина амонтильядо";
-	pixel_x = 8
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
 "djD" = (
 /obj/machinery/door/airlock{
 	name = "Crematorium"
@@ -12048,6 +12032,14 @@
 "dAZ" = (
 /turf/closed/wall/r_wall,
 /area/station/security/prison/visit)
+"dBd" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "dBh" = (
 /obj/machinery/telecomms/server/presets/medical,
 /turf/open/floor/iron/dark/telecomms,
@@ -12711,6 +12703,19 @@
 "dLf" = (
 /turf/closed/wall/r_wall,
 /area/station/cargo/storage)
+"dLk" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/engineering/tool{
+	pixel_x = -11
+	},
+/obj/effect/spawner/random/engineering/tool{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/turf/open/floor/iron,
+/area/station/security/mechbay)
 "dLo" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/status_display/evac/directional/east,
@@ -13119,21 +13124,6 @@
 "dTs" = (
 /turf/open/floor/iron/smooth,
 /area/mine/eva)
-"dTv" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Chapel External Airlock";
-	opacity = 0
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/turf/open/floor/iron,
-/area/station/service/chapel)
 "dTD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
@@ -13697,15 +13687,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/command/nuke_storage)
-"edp" = (
-/obj/structure/table/glass,
-/obj/machinery/reagentgrinder{
-	desc = "Используется для переработки в сырьё и жидкости.";
-	pixel_y = 5
-	},
-/obj/structure/window/reinforced/spawner/directional/west,
-/turf/open/floor/iron,
-/area/station/science/xenobiology)
 "edq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -14750,28 +14731,6 @@
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/iron,
 /area/station/commons/locker)
-"eub" = (
-/obj/machinery/camera{
-	c_tag = "Medbay Pharmacy";
-	dir = 9;
-	network = list("ss13","medbay")
-	},
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 1
-	},
-/obj/machinery/shower/directional/south,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/fluff{
-	desc = "Вы что, думаете, что вода просто волшебным образом впитывается в металлический пол?";
-	icon = 'icons/obj/mining_zones/survival_pod.dmi';
-	icon_state = "fan_tiny";
-	name = "душевой дренаж"
-	},
-/obj/effect/turf_decal/stripes/white/end,
-/turf/open/floor/iron/white,
-/area/station/medical/pharmacy)
 "euc" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -14995,6 +14954,16 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
+"eye" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/small/directional/east,
+/obj/effect/spawner/random/engineering/tool{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/machinery/airalarm/directional/east,
+/turf/open/floor/iron,
+/area/station/security/mechbay)
 "eyf" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -15278,12 +15247,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
-"eCR" = (
-/obj/structure/no_effect_signpost{
-	desc = "Куда двигаться дальше? Это вечный вопрос."
-	},
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/underground/explored)
 "eDc" = (
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/structure/cable,
@@ -15794,6 +15757,15 @@
 	dir = 5
 	},
 /area/station/science/research)
+"eLt" = (
+/obj/structure/table,
+/obj/item/storage/wallet,
+/obj/item/storage/wallet{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/open/floor/plastic,
+/area/station/commons/dorms/laundry)
 "eLx" = (
 /obj/effect/landmark/start/bartender,
 /obj/machinery/duct,
@@ -15896,13 +15868,6 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblue,
 /area/station/command/heads_quarters/hos)
-"eNm" = (
-/obj/structure/fermenting_barrel{
-	desc = "Высохший бочонок, который, судя по всему, когда-то был полон вина.";
-	name = "бочка"
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
 "eNz" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Fitness Maintenance"
@@ -16236,6 +16201,15 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/commons/locker)
+"eTK" = (
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/spawner/structure/window/hollow/reinforced/end{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/department/medical/morgue)
 "eTM" = (
 /obj/effect/turf_decal/trimline/blue/corner,
 /obj/effect/turf_decal/trimline/blue/corner,
@@ -16424,6 +16398,21 @@
 /obj/effect/mapping_helpers/airlock/access/any/medical/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
+"eVQ" = (
+/obj/item/crowbar{
+	pixel_y = 3
+	},
+/obj/item/assembly/flash/handheld{
+	pixel_x = -19;
+	pixel_y = 3
+	},
+/obj/structure/table,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/item/radio/off{
+	pixel_y = 6
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/checkpoint/customs/auxiliary)
 "eVV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -16729,6 +16718,13 @@
 /obj/structure/tank_holder/extinguisher,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
+"fay" = (
+/obj/structure/sink/kitchen/directional/west{
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
+	},
+/turf/open/floor/iron/freezer,
+/area/mine/laborcamp)
 "faG" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -16887,15 +16883,6 @@
 /obj/item/melee/roastingstick,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/underground/explored)
-"fdX" = (
-/obj/item/toy/cards/deck{
-	pixel_y = 13;
-	pixel_x = -9
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating,
-/area/station/commons/dorms/laundry)
 "fdY" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
 /turf/closed/wall,
@@ -17075,6 +17062,14 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
+"fii" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = -29
+	},
+/turf/open/floor/iron/smooth,
+/area/mine/living_quarters)
 "fij" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -17255,6 +17250,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/kitchen/diagonal,
 /area/station/service/kitchen)
+"fkp" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "fkt" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/icemoon,
@@ -17778,14 +17785,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
-"ftt" = (
-/obj/structure/sign/warning/secure_area/directional/south{
-	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
-	name = "SERVER ROOM"
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/science/server)
 "ftA" = (
 /obj/structure/table,
 /obj/item/storage/box/prisoner,
@@ -18876,6 +18875,19 @@
 /obj/structure/closet/toolcloset,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
+"fLk" = (
+/obj/structure/table/reinforced,
+/obj/machinery/computer/security/telescreen{
+	desc = "Используется для мониторинга медпункта с целью обеспечения безопасности пациента.";
+	dir = 8;
+	name = "Монитор медпункта";
+	network = list("medbay");
+	pixel_y = 4
+	},
+/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
+/obj/effect/turf_decal/tile/red/full,
+/turf/open/floor/iron/dark/smooth_large,
+/area/station/security/checkpoint/medical)
 "fLl" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -19466,25 +19478,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
-"fVK" = (
-/obj/structure/table/reinforced,
-/obj/item/folder/white,
-/obj/item/pen,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/right/directional/east{
-	base_state = "left";
-	icon_state = "left";
-	name = "Pharmacy Desk";
-	req_access = list("pharmacy")
-	},
-/obj/effect/turf_decal/tile/yellow/fourcorners,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "pharmacy_shutters2";
-	name = "Pharmacy Shutters";
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/medical/pharmacy)
 "fVS" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/iron,
@@ -20025,13 +20018,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/engineering/storage/tech)
-"gdS" = (
-/obj/machinery/shower/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/turf/open/floor/iron/smooth,
-/area/mine/eva/lower)
 "gdY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -20400,6 +20386,23 @@
 /obj/structure/chair,
 /turf/open/floor/iron/cafeteria,
 /area/station/hallway/secondary/exit/departure_lounge)
+"gjY" = (
+/obj/machinery/conveyor_switch/oneway{
+	dir = 8;
+	id = "garbage";
+	name = "disposal conveyor";
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/structure/railing/corner,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/station/maintenance/disposal)
 "gjZ" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Checkpoint"
@@ -20788,15 +20791,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/tools)
-"gqh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sink/kitchen/directional/north{
-	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
-	name = "старая раковина"
-	},
-/obj/effect/turf_decal/tile/green/half/contrasted,
-/turf/open/floor/iron/dark,
-/area/mine/laborcamp)
 "gqj" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -20855,6 +20849,20 @@
 	},
 /turf/open/floor/iron/textured,
 /area/station/security/brig)
+"grc" = (
+/obj/machinery/door/airlock/external{
+	name = "Service Hall Exit"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "service-hall-external"
+	},
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/mapping_helpers/airlock/access/all/service/general,
+/turf/open/floor/iron/dark/textured,
+/area/station/hallway/secondary/service)
 "grk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -20982,18 +20990,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
-"gsW" = (
-/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
-/obj/machinery/door/airlock/freezer{
-	desc = "Морозильная камера, где шеф-повар хранит все, что нужно держать в холоде. Ледяной холод.";
-	name = "холодильник"
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/plating,
-/area/station/service/kitchen/coldroom)
 "gta" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table,
@@ -21079,15 +21075,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/prison/workout)
-"gvp" = (
-/obj/item/chair/stool{
-	pixel_y = -3;
-	pixel_x = -1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/dim/directional/west,
-/turf/open/floor/plating,
-/area/station/maintenance/port/greater)
 "gvK" = (
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/dark,
@@ -21729,6 +21716,21 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
+"gGi" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	dir = 4;
+	name = "Arrivals Dock"
+	},
+/turf/open/floor/iron/dark/textured,
+/area/station/hallway/secondary/entry)
 "gGj" = (
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -22095,14 +22097,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
 /area/station/commons/vacant_room/office)
-"gMw" = (
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = -29
-	},
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/iron/smooth,
-/area/mine/eva)
 "gMK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -22641,18 +22635,6 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
-"gVm" = (
-/obj/item/coin/silver{
-	pixel_y = -3;
-	pixel_x = -5
-	},
-/obj/item/toy/plush/moth{
-	pixel_y = 5;
-	pixel_x = 5;
-	name = "Marcellus"
-	},
-/turf/open/floor/plating,
-/area/station/commons/dorms/laundry)
 "gVn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -23699,6 +23681,13 @@
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/station/service/kitchen/diner)
+"hnh" = (
+/obj/structure/sign/warning/directional/east{
+	desc = "Знак, предупреждающий о резком обрыве вниз.";
+	name = "Знак ВНЕЗАПНЫЙ ОБРЫВ"
+	},
+/turf/open/openspace/icemoon/keep_below,
+/area/icemoon/surface/outdoors/nospawn)
 "hno" = (
 /obj/structure/sign/painting/library{
 	pixel_y = 32
@@ -24719,28 +24708,6 @@
 /obj/item/melee/chainofcommand,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
-"hCY" = (
-/obj/structure/table/wood,
-/obj/item/folder/yellow{
-	pixel_y = 8;
-	pixel_x = 3
-	},
-/obj/item/folder/white{
-	pixel_y = 12;
-	pixel_x = -3
-	},
-/obj/structure/sign/poster/contraband/random/directional/south,
-/obj/item/folder/blue{
-	pixel_y = 3;
-	pixel_x = -3
-	},
-/obj/item/folder/red{
-	pixel_x = 5;
-	pixel_y = 2
-	},
-/obj/item/folder,
-/turf/open/floor/iron/grimy,
-/area/station/commons/vacant_room/office)
 "hDb" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /turf/open/floor/iron,
@@ -24959,6 +24926,21 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/fitness)
+"hHt" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	dir = 4;
+	name = "Auxiliary Dock"
+	},
+/turf/open/floor/iron/dark/textured,
+/area/station/hallway/secondary/entry)
 "hHu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -25622,6 +25604,11 @@
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
+"hRP" = (
+/obj/vehicle/sealed/mecha/ripley/paddy/preset,
+/obj/structure/cable,
+/turf/open/floor/iron/recharge_floor,
+/area/station/security/mechbay)
 "hRX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
@@ -25685,6 +25672,19 @@
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron,
 /area/station/security/processing)
+"hSX" = (
+/obj/machinery/light_switch/directional/west,
+/obj/machinery/disposal/bin{
+	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
+	name = "утилизация трупов"
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 1
+	},
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/iron/white,
+/area/station/medical/surgery/fore)
 "hSZ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/dark_blue/line{
@@ -25783,6 +25783,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"hUJ" = (
+/obj/item/coin/silver{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/toy/plush/moth{
+	name = "Marcellus";
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/open/floor/plating,
+/area/station/commons/dorms/laundry)
 "hUK" = (
 /obj/structure/railing{
 	dir = 4
@@ -25873,6 +25885,12 @@
 /obj/machinery/teleport/hub,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat_interior)
+"hWr" = (
+/obj/machinery/mech_bay_recharge_port{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/station/security/mechbay)
 "hWI" = (
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate/maint,
@@ -26875,6 +26893,19 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
+"img" = (
+/obj/machinery/light/small/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/north{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/machinery/button/door/directional/north{
+	id = "drone_bay";
+	name = "Shutter Control";
+	pixel_x = -24
+	},
+/obj/structure/window/reinforced/spawner/directional/east,
+/turf/open/floor/plating,
+/area/station/cargo/drone_bay)
 "imi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/steam_vent,
@@ -27142,6 +27173,28 @@
 /obj/item/flashlight/lamp,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
+"iqJ" = (
+/obj/structure/table/wood,
+/obj/item/folder/yellow{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/item/folder/white{
+	pixel_x = -3;
+	pixel_y = 12
+	},
+/obj/structure/sign/poster/contraband/random/directional/south,
+/obj/item/folder/blue{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/folder/red{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/item/folder,
+/turf/open/floor/iron/grimy,
+/area/station/commons/vacant_room/office)
 "iqL" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -27167,22 +27220,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
-"irz" = (
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Service External Airlock";
-	opacity = 0
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
-/turf/open/floor/plating,
-/area/station/maintenance/starboard/lesser)
 "irA" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/white,
@@ -27512,15 +27549,6 @@
 /obj/structure/railing,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
-"ixb" = (
-/obj/machinery/button/door/directional/south{
-	id = "vacantofficemaintshutter";
-	pixel_x = 4;
-	name = "Privacy Shutters";
-	pixel_y = -28
-	},
-/turf/open/floor/iron/grimy,
-/area/station/commons/vacant_room/office)
 "ixu" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Teleporter"
@@ -28332,13 +28360,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
-"iKp" = (
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
 "iKw" = (
 /obj/item/kitchen/fork/plastic,
 /obj/structure/table,
@@ -28990,6 +29011,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/aft)
+"iTS" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = 3;
+	pixel_y = -32
+	},
+/obj/effect/turf_decal/tile/brown/half/contrasted,
+/turf/open/floor/iron/dark/side,
+/area/mine/eva/lower)
 "iTY" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/engine/plasma,
@@ -29319,6 +29350,15 @@
 	},
 /turf/open/floor/iron/textured,
 /area/station/security/brig)
+"iZc" = (
+/obj/item/chair/stool{
+	pixel_x = -1;
+	pixel_y = -3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/dim/directional/west,
+/turf/open/floor/plating,
+/area/station/maintenance/port/greater)
 "iZl" = (
 /obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -30145,20 +30185,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/iron/smooth_large,
 /area/station/cargo/warehouse)
-"jpi" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = -2;
-	pixel_y = 32
-	},
-/obj/effect/turf_decal/tile/brown/half/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron/dark/side{
-	dir = 1
-	},
-/area/mine/eva/lower)
 "jpo" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "maint2"
@@ -30363,6 +30389,25 @@
 	dir = 1
 	},
 /area/station/hallway/primary/port)
+"jtg" = (
+/obj/structure/table/reinforced,
+/obj/item/folder/white,
+/obj/item/pen,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/east{
+	base_state = "left";
+	icon_state = "left";
+	name = "Pharmacy Desk";
+	req_access = list("pharmacy")
+	},
+/obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "pharmacy_shutters2";
+	name = "Pharmacy Shutters"
+	},
+/turf/open/floor/iron,
+/area/station/medical/pharmacy)
 "jth" = (
 /obj/structure/table,
 /obj/item/assembly/prox_sensor{
@@ -30782,6 +30827,19 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/security/checkpoint/engineering)
+"jyY" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/sign/directions/engineering{
+	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
+	icon_state = "doors";
+	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
+	pixel_y = 32
+	},
+/turf/open/floor/iron,
+/area/station/hallway/secondary/service)
 "jzk" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
 /turf/open/floor/wood,
@@ -31280,16 +31338,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"jHV" = (
-/obj/machinery/mineral/stacking_machine{
-	stack_amt = 10;
-	output_dir = 2
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
-	},
-/turf/open/floor/iron/dark,
-/area/station/maintenance/disposal)
 "jHX" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -32533,6 +32581,9 @@
 /obj/effect/landmark/generic_maintenance_landmark,
 /turf/open/floor/iron,
 /area/station/construction)
+"kaN" = (
+/turf/closed/wall/r_wall,
+/area/station/security/mechbay)
 "kaO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/loading_area{
@@ -32555,16 +32606,6 @@
 /obj/structure/fluff/fokoff_sign,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
-"kbq" = (
-/obj/machinery/conveyor{
-	id = "garbage";
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "kbs" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 1
@@ -33064,19 +33105,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
-"khF" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/north{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/machinery/button/door/directional/north{
-	id = "drone_bay";
-	name = "Shutter Control";
-	pixel_x = -24
-	},
-/obj/structure/window/reinforced/spawner/directional/east,
-/turf/open/floor/plating,
-/area/station/cargo/drone_bay)
 "khR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/circuit,
@@ -34087,12 +34115,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
 /area/station/engineering/lobby)
-"kvI" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/security/office)
 "kvR" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -34200,6 +34222,22 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/solars/starboard/fore)
+"kxH" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Chapel Maintenance External Airlock";
+	opacity = 0
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/department/chapel)
 "kxN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -34572,23 +34610,6 @@
 "kCV" = (
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/service)
-"kCY" = (
-/obj/structure/rack,
-/obj/item/clothing/shoes/winterboots/ice_boots/eva{
-	pixel_y = 2
-	},
-/obj/item/clothing/suit/hooded/wintercoat/eva{
-	pixel_y = 5;
-	pixel_x = 1
-	},
-/obj/machinery/light/small/directional/east,
-/obj/machinery/mining_weather_monitor/directional/north,
-/obj/effect/turf_decal/delivery/red,
-/obj/machinery/camera/directional/north{
-	c_tag = "Arrivals Emergency EVA"
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/hallway/secondary/entry)
 "kDb" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped{
 	dir = 4;
@@ -34894,6 +34915,15 @@
 	dir = 1
 	},
 /area/station/hallway/secondary/entry)
+"kHS" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/cup/glass/mug/coco{
+	desc = "Все еще горячо!";
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/space_hut/cabin)
 "kHU" = (
 /obj/structure/table,
 /obj/item/stack/sheet/iron/fifty,
@@ -34999,6 +35029,15 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/general,
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
+"kJh" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "pharmacy_shutters";
+	name = "Pharmacy Shutters"
+	},
+/turf/open/floor/plating,
+/area/station/medical/pharmacy)
 "kJm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -36530,6 +36569,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/command/bridge)
+"lhx" = (
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron/dark/textured,
+/area/station/security/office)
 "lhC" = (
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
@@ -37000,6 +37043,16 @@
 "log" = (
 /turf/closed/wall/r_wall,
 /area/station/maintenance/central/lesser)
+"loj" = (
+/obj/structure/sign/warning/cold_temp{
+	pixel_x = -29
+	},
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = 30
+	},
+/turf/open/floor/iron/dark,
+/area/mine/storage)
 "lok" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -37022,11 +37075,6 @@
 /obj/structure/light_construct/directional/east,
 /turf/open/floor/iron,
 /area/station/construction)
-"loy" = (
-/obj/item/kirbyplants/random,
-/obj/effect/turf_decal/tile/red/anticorner/contrasted,
-/turf/open/floor/iron,
-/area/station/security/brig/upper)
 "loG" = (
 /obj/structure/closet/secure_closet/chief_medical,
 /obj/item/screwdriver,
@@ -37064,6 +37112,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/vacant_room/commissary)
+"lpB" = (
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/station/security/mechbay)
 "lpC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37527,6 +37581,26 @@
 /obj/machinery/atmospherics/pipe/bridge_pipe/cyan/visible,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"lxG" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "secmechbay";
+	name = "Security Mech Bay Shutters"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/turf_decal/box,
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
+"lxK" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "lxT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/decal/cleanable/dirt,
@@ -38436,16 +38510,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/recharge_floor,
 /area/mine/mechbay)
-"lMd" = (
-/obj/structure/table,
-/obj/effect/turf_decal/tile/brown/half/contrasted,
-/obj/item/storage/box/bandages{
-	pixel_y = 6;
-	pixel_x = -6
-	},
-/obj/item/food/cheesiehonkers,
-/turf/open/floor/iron,
-/area/station/cargo/office)
 "lMg" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -39019,6 +39083,15 @@
 "lUC" = (
 /turf/closed/wall,
 /area/station/maintenance/department/electrical)
+"lUG" = (
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	dir = 8;
+	id = "vacantofficemaintshutter";
+	name = "Privacy Shutters"
+	},
+/turf/open/floor/plating,
+/area/station/commons/vacant_room/office)
 "lUN" = (
 /obj/structure/grille/broken,
 /obj/effect/spawner/random/maintenance,
@@ -39155,6 +39228,17 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron,
 /area/mine/laborcamp)
+"lWC" = (
+/obj/structure/table,
+/obj/item/storage/briefcase{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/storage/wallet,
+/obj/item/storage/wallet,
+/turf/open/floor/iron,
+/area/station/commons/locker)
 "lWI" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -40023,6 +40107,22 @@
 	},
 /turf/open/floor/iron/textured_half,
 /area/station/hallway/secondary/service)
+"mnn" = (
+/obj/structure/bed/maint,
+/obj/item/toy/plush/rouny{
+	desc = "Что это такое? Это собака?";
+	name = "Терапевтическая собака"
+	},
+/obj/structure/cable,
+/obj/machinery/camera/directional/east{
+	c_tag = "Security - Isolation Cell";
+	network = list("ss13","prison","Isolation");
+	view_range = 5
+	},
+/turf/open/floor/iron/smooth_half{
+	dir = 1
+	},
+/area/station/security/prison/safe)
 "mnu" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -40415,6 +40515,20 @@
 /obj/item/stack/ducts/fifty,
 /turf/open/floor/iron/dark,
 /area/station/medical/chemistry)
+"msM" = (
+/obj/machinery/computer/security/telescreen{
+	desc = "Используется для доступа к различным камерам на станции.";
+	dir = 1;
+	layer = 3.1;
+	name = "Монитор камер безопасности";
+	network = list("ss13");
+	pixel_y = 2
+	},
+/obj/structure/table,
+/turf/open/floor/iron/dark/textured_edge{
+	dir = 8
+	},
+/area/station/security/brig/entrance)
 "msN" = (
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible,
 /turf/closed/wall/r_wall,
@@ -40598,15 +40712,6 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
-"mwF" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "pharmacy_shutters";
-	name = "Pharmacy Shutters";
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/medical/pharmacy)
 "mwH" = (
 /obj/item/trash/popcorn,
 /obj/effect/landmark/generic_maintenance_landmark,
@@ -40683,6 +40788,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
+"mys" = (
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/smooth,
+/area/station/cargo/warehouse)
 "myE" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -40834,6 +40946,16 @@
 "mAe" = (
 /turf/open/floor/glass/reinforced,
 /area/station/security/lockers)
+"mAt" = (
+/obj/machinery/smartfridge/chemistry/preloaded,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "pharmacy_shutters2";
+	name = "Pharmacy Shutters"
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/pharmacy)
 "mAz" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
@@ -41466,6 +41588,13 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/carpet,
 /area/station/service/library)
+"mMH" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron,
+/area/station/security/brig/upper)
 "mMM" = (
 /turf/closed/wall/r_wall,
 /area/station/security/prison)
@@ -41798,14 +41927,6 @@
 	},
 /turf/open/floor/engine/air,
 /area/station/engineering/atmos)
-"mTI" = (
-/obj/structure/sink/kitchen/directional/south{
-	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
-	name = "старая раковина"
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/turf/open/floor/iron/freezer,
-/area/mine/laborcamp)
 "mTS" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
@@ -41823,14 +41944,6 @@
 	},
 /turf/open/openspace/icemoon/keep_below,
 /area/icemoon/underground/explored)
-"mTX" = (
-/obj/structure/barricade/wooden,
-/obj/structure/sign/warning/cold_temp/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/department/medical/morgue)
 "mUf" = (
 /obj/structure/railing{
 	dir = 9
@@ -41885,6 +41998,14 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/wood/parquet,
 /area/station/commons/lounge)
+"mUV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sink/kitchen/directional/east{
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/port/aft)
 "mVe" = (
 /obj/machinery/button/ignition/incinerator/atmos,
 /turf/closed/wall/r_wall,
@@ -41938,6 +42059,20 @@
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"mVR" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = -2;
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/mine/eva/lower)
 "mVY" = (
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -42498,14 +42633,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
 /turf/open/floor/iron,
 /area/station/security/brig/upper)
-"ncO" = (
-/obj/machinery/shower/directional/east,
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = -29
-	},
-/turf/open/floor/iron/smooth,
-/area/mine/living_quarters)
 "ncR" = (
 /turf/closed/wall/r_wall,
 /area/station/security/courtroom)
@@ -43242,6 +43369,15 @@
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter/room)
+"nnm" = (
+/obj/structure/table,
+/obj/item/food/chococoin,
+/obj/structure/sign/warning/gas_mask{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
+	pixel_x = 30
+	},
+/turf/open/floor/iron/smooth,
+/area/mine/eva)
 "nnn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/binary/pump{
@@ -43812,23 +43948,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/security/prison/visit)
-"nuM" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 4
-	},
-/obj/machinery/door/airlock/multi_tile/public/glass{
-	name = "Док прибывающих";
-	dir = 4
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/hallway/secondary/entry)
 "nuN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -44127,6 +44246,22 @@
 /obj/effect/turf_decal/tile/blue/full,
 /turf/open/floor/iron/large,
 /area/station/medical/treatment_center)
+"nzx" = (
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Service External Airlock";
+	opacity = 0
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard/lesser)
 "nzy" = (
 /obj/machinery/computer/atmos_control/mix_tank{
 	dir = 8
@@ -45894,6 +46029,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"obn" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "secmechbay";
+	name = "Security Mech Bay Shutters"
+	},
+/obj/effect/turf_decal/caution/stand_clear,
+/obj/effect/turf_decal/box,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "obr" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/preopen{
@@ -46078,15 +46224,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/station/command/heads_quarters/cmo)
-"oeP" = (
-/obj/structure/table,
-/obj/item/food/chococoin,
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = 30
-	},
-/turf/open/floor/iron/smooth,
-/area/mine/eva)
 "oeT" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
@@ -46201,6 +46338,30 @@
 	dir = 9
 	},
 /area/station/security/prison)
+"ogR" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/right/directional/east{
+	name = "Pharmacy Desk";
+	req_access = list("pharmacy")
+	},
+/obj/item/folder/white{
+	pixel_x = -5
+	},
+/obj/item/pen{
+	pixel_x = -5
+	},
+/obj/structure/desk_bell{
+	pixel_x = 7
+	},
+/obj/effect/turf_decal/tile/yellow/fourcorners,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "pharmacy_shutters";
+	name = "Pharmacy Shutters"
+	},
+/turf/open/floor/iron,
+/area/station/medical/pharmacy)
 "oha" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -46229,6 +46390,23 @@
 	},
 /turf/open/floor/plating/snowed/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
+"ohK" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/public/glass{
+	name = "Док прибывающих";
+	dir = 4
+	},
+/turf/open/floor/iron/dark/textured,
+/area/station/hallway/secondary/entry)
 "ohS" = (
 /obj/structure/railing{
 	dir = 8
@@ -46490,6 +46668,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/warden)
+"okD" = (
+/obj/structure/fermenting_barrel{
+	desc = "Высохший бочонок, который, судя по всему, когда-то был полон вина.";
+	name = "бочка"
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/department/medical/morgue)
 "okG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -46709,21 +46894,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/external,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
-"oor" = (
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 4
-	},
-/obj/machinery/door/airlock/multi_tile/public/glass{
-	name = "Arrivals Dock";
-	dir = 4
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/hallway/secondary/entry)
 "oot" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -47119,16 +47289,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/station/security/courtroom)
-"oty" = (
-/obj/structure/rack,
-/obj/machinery/light/cold/directional/north,
-/obj/item/storage/box/bandages{
-	pixel_y = 6;
-	pixel_x = -6
-	},
-/obj/item/healthanalyzer,
-/turf/open/floor/iron/white/textured,
-/area/station/security/medical)
 "otC" = (
 /obj/structure/railing,
 /turf/open/genturf,
@@ -47506,6 +47666,19 @@
 /obj/structure/bed/medical/emergency,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
+"ozP" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/random/entertainment/deck{
+	pixel_x = -2;
+	pixel_y = 15
+	},
+/obj/effect/spawner/random/food_or_drink/snack{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/carpet/blue,
+/area/station/hallway/secondary/entry)
 "ozV" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -48304,20 +48477,6 @@
 /obj/structure/sign/warning/gas_mask,
 /turf/open/floor/plating,
 /area/station/maintenance/solars/port/fore)
-"oLW" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Используется для доступа к различным камерам на станции.";
-	dir = 1;
-	layer = 3.1;
-	name = "Монитор камер безопасности";
-	network = list("ss13");
-	pixel_y = 2
-	},
-/obj/structure/table,
-/turf/open/floor/iron/dark/textured_edge{
-	dir = 8
-	},
-/area/station/security/brig/entrance)
 "oMa" = (
 /obj/structure/marker_beacon/burgundy,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -49327,18 +49486,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
-"pcc" = (
-/obj/item/stack/spacecash/c10{
-	pixel_y = 4;
-	pixel_x = 4
-	},
-/obj/item/toy/plush/beeplushie{
-	pixel_y = -6;
-	name = "Coolidge"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/station/commons/dorms/laundry)
 "pcg" = (
 /obj/machinery/computer/apc_control{
 	dir = 4
@@ -50371,6 +50518,24 @@
 	},
 /turf/open/floor/iron/smooth_edge,
 /area/station/medical/chemistry)
+"psE" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "mining-aux-mechbay-external"
+	},
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Mining Mech Bay External Airlock";
+	opacity = 0
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/effect/mapping_helpers/airlock/access/all/supply/mining,
+/turf/open/floor/iron/large,
+/area/mine/mechbay)
 "psN" = (
 /turf/closed/wall/r_wall,
 /area/station/security/brig/entrance)
@@ -53389,21 +53554,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/mix)
-"qpb" = (
-/obj/machinery/disposal/bin{
-	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
-	name = "утилизация трупов"
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/obj/machinery/light_switch/directional/west,
-/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
-	dir = 8
-	},
-/obj/item/radio/intercom/directional/south,
-/turf/open/floor/iron/white,
-/area/station/medical/surgery/aft)
 "qpd" = (
 /obj/effect/landmark/blobstart,
 /obj/structure/disposalpipe/segment{
@@ -53413,6 +53563,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/station/maintenance/starboard/fore)
+"qph" = (
+/obj/machinery/smartfridge/chemistry/preloaded,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "pharmacy_shutters";
+	name = "Pharmacy Shutters"
+	},
+/turf/open/floor/iron/white,
+/area/station/medical/pharmacy)
 "qpp" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Quartermaster's Office"
@@ -53979,19 +54139,6 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/station/commons/dorms)
-"qxv" = (
-/obj/machinery/disposal/bin{
-	desc = "Пневматическая установка для удаления отходов. Этот ведет к замерзшей внешней стороне Луны.";
-	name = "deathsposal unit"
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/structure/sign/warning/deathsposal/directional/north,
-/obj/structure/sign/warning/fire/directional/west,
-/obj/effect/turf_decal/tile/green/full,
-/turf/open/floor/iron/white/smooth_large,
-/area/station/medical/virology)
 "qxy" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 4
@@ -54175,6 +54322,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
 /area/station/commons/dorms)
+"qBe" = (
+/obj/structure/sign/warning/secure_area/directional/north{
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
+	name = "SERVER ROOM"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/station/science/server)
 "qBj" = (
 /obj/structure/cable,
 /turf/open/floor/iron/white,
@@ -54255,24 +54410,6 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat/maint)
-"qCY" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "mining-aux-mechbay-external"
-	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Mining Mech Bay External Airlock";
-	opacity = 0
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/mapping_helpers/airlock/access/all/supply/mining,
-/turf/open/floor/iron/large,
-/area/mine/mechbay)
 "qDj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/binary/pump{
@@ -54605,19 +54742,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
-"qHz" = (
-/obj/machinery/light_switch/directional/west,
-/obj/machinery/disposal/bin{
-	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
-	name = "утилизация трупов"
-	},
-/obj/structure/disposalpipe/trunk,
-/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
-	dir = 1
-	},
-/obj/item/radio/intercom/directional/north,
-/turf/open/floor/iron/white,
-/area/station/medical/surgery/fore)
 "qHD" = (
 /obj/machinery/computer/prisoner/management,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
@@ -55259,6 +55383,18 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
+"qQQ" = (
+/obj/effect/mapping_helpers/airlock/access/all/service/kitchen,
+/obj/machinery/door/airlock/freezer{
+	desc = "Морозильная камера, где шеф-повар хранит все, что нужно держать в холоде. Ледяной холод.";
+	name = "холодильник"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/station/service/kitchen/coldroom)
 "qRk" = (
 /obj/item/chair/wood,
 /turf/open/floor/carpet,
@@ -55483,6 +55619,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmos/hfr_room)
+"qUm" = (
+/obj/structure/sign/warning/secure_area{
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
+	name = "SERVER ROOM"
+	},
+/turf/closed/wall,
+/area/station/tcommsat/computer)
 "qUr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -55619,6 +55762,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
+"qWx" = (
+/obj/structure/no_effect_signpost{
+	desc = "Куда двигаться дальше? Это вечный вопрос."
+	},
+/turf/open/misc/asteroid/snow/icemoon,
+/area/icemoon/underground/explored)
 "qWy" = (
 /obj/machinery/shower/directional/west,
 /obj/effect/turf_decal/stripes/red/end{
@@ -55790,16 +55939,6 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"qYV" = (
-/obj/machinery/smartfridge/chemistry/preloaded,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "pharmacy_shutters";
-	name = "Pharmacy Shutters";
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/pharmacy)
 "qYZ" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/machinery/newscaster/directional/south,
@@ -56657,6 +56796,22 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/meeting_room)
+"rmT" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/structure/sign/warning/cold_temp/directional/east,
+/obj/structure/sign/warning/gas_mask/directional/west{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Ксенобиологический внешний шлюз";
+	opacity = 0
+	},
+/obj/effect/mapping_helpers/airlock/access/any/science/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
 "rmU" = (
 /obj/effect/spawner/random/trash/graffiti,
 /obj/structure/sign/poster/contraband/free_drone/directional/east,
@@ -56877,21 +57032,6 @@
 	dir = 1
 	},
 /area/station/science/explab)
-"rqi" = (
-/obj/item/crowbar{
-	pixel_y = 3
-	},
-/obj/item/assembly/flash/handheld{
-	pixel_y = 3;
-	pixel_x = -19
-	},
-/obj/structure/table,
-/obj/effect/turf_decal/tile/red/anticorner/contrasted,
-/obj/item/radio/off{
-	pixel_y = 6
-	},
-/turf/open/floor/iron/dark,
-/area/station/security/checkpoint/customs/auxiliary)
 "rqq" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -56949,6 +57089,14 @@
 /obj/machinery/light_switch/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/medical/virology)
+"rrb" = (
+/obj/structure/sign/warning/secure_area/directional/south{
+	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
+	name = "SERVER ROOM"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/station/science/server)
 "rrf" = (
 /obj/structure/table/wood,
 /turf/open/floor/iron/dark,
@@ -57005,22 +57153,6 @@
 /obj/structure/cable,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/aisat/hallway)
-"rsM" = (
-/obj/structure/bed/maint,
-/obj/item/toy/plush/rouny{
-	desc = "Что это такое? Это собака?";
-	name = "Терапевтическая собака"
-	},
-/obj/structure/cable,
-/obj/machinery/camera/directional/east{
-	c_tag = "Security - Isolation Cell";
-	network = list("ss13","prison","Isolation");
-	view_range = 5
-	},
-/turf/open/floor/iron/smooth_half{
-	dir = 1
-	},
-/area/station/security/prison/safe)
 "rsR" = (
 /obj/structure/table/optable,
 /obj/effect/turf_decal/tile/blue/full,
@@ -57276,6 +57408,12 @@
 /obj/structure/sign/warning/electric_shock/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/fore)
+"rxI" = (
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/turf/open/floor/iron/smooth,
+/area/mine/mechbay)
 "rxK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/landmark/start/hangover,
@@ -57914,16 +58052,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"rGw" = (
-/obj/machinery/smartfridge/chemistry/preloaded,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "pharmacy_shutters2";
-	name = "Pharmacy Shutters";
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/pharmacy)
 "rHc" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red{
@@ -59081,30 +59209,6 @@
 	dir = 4
 	},
 /area/station/service/chapel)
-"sbc" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/right/directional/east{
-	name = "Pharmacy Desk";
-	req_access = list("pharmacy")
-	},
-/obj/item/folder/white{
-	pixel_x = -5
-	},
-/obj/item/pen{
-	pixel_x = -5
-	},
-/obj/structure/desk_bell{
-	pixel_x = 7
-	},
-/obj/effect/turf_decal/tile/yellow/fourcorners,
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "pharmacy_shutters";
-	name = "Pharmacy Shutters";
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/medical/pharmacy)
 "sbd" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
@@ -60071,22 +60175,6 @@
 /obj/effect/spawner/random/structure/table_fancy,
 /turf/open/floor/wood,
 /area/station/service/library)
-"sqb" = (
-/obj/item/coin/iron{
-	pixel_y = -5
-	},
-/obj/item/coin/plasma{
-	pixel_y = -2;
-	pixel_x = 3
-	},
-/obj/item/toy/plush/lizard_plushie{
-	pixel_x = 11;
-	pixel_y = -4;
-	name = "Cassius"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/station/commons/dorms/laundry)
 "sqn" = (
 /obj/machinery/computer/records/security{
 	dir = 1
@@ -60121,6 +60209,18 @@
 	dir = 8
 	},
 /area/station/service/chapel)
+"sqM" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "Disposal Exit";
+	name = "Disposal Exit Vent"
+	},
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
+/obj/effect/turf_decal/stripes/red/box,
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "sqN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -60206,6 +60306,13 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/station/medical/morgue)
+"srH" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/iron/dark/textured,
+/area/station/security/office)
 "srM" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 1
@@ -60431,6 +60538,15 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/locker)
+"sub" = (
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder{
+	desc = "Используется для переработки в сырьё и жидкости.";
+	pixel_y = 5
+	},
+/obj/structure/window/reinforced/spawner/directional/west,
+/turf/open/floor/iron,
+/area/station/science/xenobiology)
 "sup" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/sign/warning/gas_mask,
@@ -61472,6 +61588,28 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/dorms)
+"sJm" = (
+/obj/machinery/camera{
+	c_tag = "Medbay Pharmacy";
+	dir = 9;
+	network = list("ss13","medbay")
+	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 1
+	},
+/obj/machinery/shower/directional/south,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/fluff{
+	desc = "Вы что, думаете, что вода просто волшебным образом впитывается в металлический пол?";
+	icon = 'icons/obj/mining_zones/survival_pod.dmi';
+	icon_state = "fan_tiny";
+	name = "душевой дренаж"
+	},
+/obj/effect/turf_decal/stripes/white/end,
+/turf/open/floor/iron/white,
+/area/station/medical/pharmacy)
 "sJn" = (
 /obj/structure/closet/emcloset,
 /obj/structure/sign/warning/gas_mask/directional/west,
@@ -61625,17 +61763,6 @@
 	dir = 1
 	},
 /area/station/medical/chemistry)
-"sLR" = (
-/obj/machinery/conveyor{
-	id = "garbage";
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/disposal)
 "sMb" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/neutral/diagonal_edge,
@@ -62595,15 +62722,6 @@
 /obj/structure/fence,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/icemoon/underground/explored)
-"teE" = (
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "vacantofficemaintshutter";
-	name = "Privacy Shutters";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/station/commons/vacant_room/office)
 "teN" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -62885,6 +63003,11 @@
 	},
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/fore)
+"tjS" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/station/security/mechbay)
 "tjY" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
@@ -62912,21 +63035,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
-"tku" = (
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/white/line{
-	dir = 4
-	},
-/obj/machinery/door/airlock/multi_tile/public/glass{
-	name = "Auxiliary Dock";
-	dir = 4
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/hallway/secondary/entry)
 "tkP" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -63409,6 +63517,14 @@
 /obj/effect/landmark/start/chemist,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"tte" = (
+/obj/structure/barricade/wooden,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
 "ttk" = (
 /obj/machinery/door/airlock/freezer,
 /turf/open/floor/iron/showroomfloor,
@@ -64618,21 +64734,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
-"tLc" = (
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Public Mining Storage";
-	opacity = 0
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/turf/open/floor/iron/dark,
-/area/mine/storage)
 "tLe" = (
 /obj/machinery/cryo_cell,
 /obj/effect/turf_decal/stripes/line{
@@ -64773,22 +64874,6 @@
 /obj/machinery/light/floor,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"tNA" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/machinery/door/airlock/external{
-	glass = 1;
-	name = "Chapel Maintenance External Airlock";
-	opacity = 0
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/mapping_helpers/airlock/access/any/service/maintenance,
-/turf/open/floor/plating,
-/area/station/maintenance/department/chapel)
 "tND" = (
 /obj/effect/turf_decal/stripes/asteroid/corner{
 	dir = 4
@@ -64965,6 +65050,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
+"tRg" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "tRA" = (
 /obj/machinery/door/airlock{
 	name = "Bar"
@@ -65038,6 +65132,14 @@
 /obj/structure/railing,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
+"tTH" = (
+/obj/structure/barricade/wooden,
+/obj/structure/sign/warning/cold_temp/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/department/medical/morgue)
 "tTL" = (
 /obj/structure/chair,
 /turf/open/floor/plating,
@@ -65078,6 +65180,19 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/station/science/ordnance)
+"tUu" = (
+/obj/machinery/disposal/bin{
+	desc = "Пневматическая установка для удаления отходов. Этот ведет к замерзшей внешней стороне Луны.";
+	name = "deathsposal unit"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/structure/sign/warning/deathsposal/directional/north,
+/obj/structure/sign/warning/fire/directional/west,
+/obj/effect/turf_decal/tile/green/full,
+/turf/open/floor/iron/white/smooth_large,
+/area/station/medical/virology)
 "tUx" = (
 /obj/effect/spawner/random/trash/moisture_trap,
 /turf/open/floor/plating,
@@ -65705,6 +65820,21 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/atmos/hfr_room)
+"ufc" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Chapel External Airlock";
+	opacity = 0
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/turf/open/floor/iron,
+/area/station/service/chapel)
 "uff" = (
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
@@ -66445,13 +66575,6 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/fore)
-"uqV" = (
-/obj/structure/sign/warning/directional/east{
-	desc = "Знак, предупреждающий о резком обрыве вниз.";
-	name = "Знак ВНЕЗАПНЫЙ ОБРЫВ"
-	},
-/turf/open/openspace/icemoon/keep_below,
-/area/icemoon/surface/outdoors/nospawn)
 "urd" = (
 /obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron,
@@ -66793,6 +66916,21 @@
 /obj/effect/spawner/random/engineering/flashlight,
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
+"uyC" = (
+/obj/machinery/disposal/bin{
+	desc = "Пневматическая установка для удаления отходов. Этот ведет в морг.";
+	name = "утилизация трупов"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/light_switch/directional/west,
+/obj/effect/turf_decal/tile/blue/anticorner/contrasted{
+	dir = 8
+	},
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/iron/white,
+/area/station/medical/surgery/aft)
 "uyH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/broken_floor,
@@ -67449,6 +67587,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter/room)
+"uJi" = (
+/obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "uJn" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -67621,16 +67766,6 @@
 	dir = 4
 	},
 /area/station/hallway/secondary/entry)
-"uMq" = (
-/obj/structure/sign/warning/cold_temp{
-	pixel_x = -29
-	},
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = 30
-	},
-/turf/open/floor/iron/dark,
-/area/mine/storage)
 "uMu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -68990,6 +69125,15 @@
 /obj/effect/turf_decal/tile/green/full,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/medical/virology)
+"vjK" = (
+/obj/effect/decal/remains/human,
+/obj/item/reagent_containers/cup/glass/bottle/wine{
+	desc = "Бутылка хорошего вина амонтильядо. Да, ради всего святого!";
+	name = "бутылка вина амонтильядо";
+	pixel_x = 8
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/department/medical/morgue)
 "vjM" = (
 /obj/machinery/light/floor,
 /turf/open/floor/iron,
@@ -68998,6 +69142,16 @@
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"vjU" = (
+/obj/machinery/mineral/stacking_machine{
+	output_dir = 2;
+	stack_amt = 10
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/iron/dark,
+/area/station/maintenance/disposal)
 "vjZ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -69678,6 +69832,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
+"vvl" = (
+/obj/structure/sink/kitchen/directional/south{
+	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
+	name = "старая раковина"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/turf/open/floor/iron/freezer,
+/area/mine/laborcamp)
 "vvu" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/trimline/neutral/warning{
@@ -69770,6 +69932,19 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/smooth,
 /area/station/security/holding_cell)
+"vwx" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/machinery/button/door/directional/north{
+	id = "secmechbay";
+	name = "Security Mech Garage Door Controls";
+	req_access = list("security")
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "vwC" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -69860,19 +70035,6 @@
 /obj/effect/turf_decal/tile/yellow/opposingcorners,
 /turf/open/floor/iron/white,
 /area/station/maintenance/port/fore)
-"vxx" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/structure/sign/directions/engineering{
-	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
-	icon_state = "doors";
-	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
-	pixel_y = 32
-	},
-/turf/open/floor/iron,
-/area/station/hallway/secondary/service)
 "vxO" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/siding/wood,
@@ -69995,15 +70157,6 @@
 "vzD" = (
 /turf/closed/wall,
 /area/station/maintenance/starboard/aft)
-"vzI" = (
-/obj/structure/sign/directions/engineering{
-	desc = "Знак, показывающий, что здесь есть двери. Здесь везде есть двери!";
-	icon_state = "doors";
-	name = "ПРЕДУПРЕЖДЕНИЕ: ВНЕШНИЙ ШЛЮЗ";
-	pixel_x = 32
-	},
-/turf/closed/wall/r_wall,
-/area/mine/production)
 "vzN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -70143,16 +70296,6 @@
 	},
 /turf/open/floor/wood,
 /area/station/maintenance/aft/greater)
-"vBg" = (
-/obj/machinery/light/small/directional/west,
-/obj/structure/sign/warning/gas_mask{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства.";
-	pixel_x = 3;
-	pixel_y = -32
-	},
-/obj/effect/turf_decal/tile/brown/half/contrasted,
-/turf/open/floor/iron/dark/side,
-/area/mine/eva/lower)
 "vBh" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -71472,6 +71615,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/hop)
+"vYn" = (
+/obj/effect/turf_decal/tile/red/half/contrasted,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/station/security/mechbay)
 "vYq" = (
 /obj/structure/barricade/wooden/snowed,
 /turf/open/misc/asteroid/snow/icemoon,
@@ -71530,14 +71680,6 @@
 /obj/effect/spawner/random/entertainment/dice,
 /turf/open/floor/iron,
 /area/station/commons/locker)
-"vZp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sink/kitchen/directional/east{
-	desc = "Раковина для мытья рук и лица. Она выглядит ржавой и самодельной";
-	name = "старая раковина"
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/port/aft)
 "vZt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/scrubbers/visible{
 	dir = 8
@@ -71742,6 +71884,21 @@
 /obj/machinery/bluespace_vendor/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
+"wcs" = (
+/obj/machinery/door/airlock/external{
+	glass = 1;
+	name = "Public Mining Storage";
+	opacity = 0
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/obj/structure/sign/warning/cold_temp/directional/north,
+/turf/open/floor/iron/dark,
+/area/mine/storage)
 "wcx" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/bot,
@@ -71828,12 +71985,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"weg" = (
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+"wef" = (
+/obj/effect/mapping_helpers/broken_floor,
+/mob/living/basic/mouse/white{
+	desc = "От этой мыши исходит слабый запах алкоголя.";
+	name = "Mik"
 	},
-/turf/open/floor/iron/smooth,
-/area/mine/mechbay)
+/turf/open/floor/wood,
+/area/station/maintenance/fore)
 "weF" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
@@ -72058,19 +72217,6 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
-"whl" = (
-/obj/machinery/door/airlock/external,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "chem-morgue-airlock"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/medical/maintenance,
-/obj/effect/mapping_helpers/broken_floor,
-/turf/open/floor/plating,
-/area/station/medical/morgue)
 "whr" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/cultivator,
@@ -73288,6 +73434,13 @@
 	},
 /turf/open/floor/iron,
 /area/mine/laborcamp)
+"wzB" = (
+/obj/machinery/shower/directional/north,
+/obj/structure/sign/warning/gas_mask/directional/south{
+	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
+	},
+/turf/open/floor/iron/smooth,
+/area/mine/eva/lower)
 "wAf" = (
 /obj/machinery/requests_console/directional/north{
 	department = "Cargo Bay";
@@ -73320,14 +73473,6 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
-"wAx" = (
-/obj/structure/sign/warning/secure_area/directional/north{
-	desc = "Предупреждающая табличка с надписью 'SERVER ROOM'.";
-	name = "SERVER ROOM"
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/station/science/server)
 "wAB" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible{
 	dir = 4
@@ -73341,11 +73486,6 @@
 	},
 /turf/open/floor/iron,
 /area/mine/laborcamp)
-"wAT" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/tile/red/half/contrasted,
-/turf/open/floor/iron,
-/area/station/security/brig/upper)
 "wAW" = (
 /obj/structure/table,
 /obj/item/knife/kitchen,
@@ -74884,6 +75024,12 @@
 /obj/machinery/requests_console/auto_name/directional/north,
 /turf/open/floor/iron/cafeteria,
 /area/station/commons/dorms/laundry)
+"wYC" = (
+/turf/closed/indestructible/riveted{
+	desc = "Стена, пропитанная Fixium, способна легко выдерживать мощные взрывы";
+	name = "гиперармированная стена"
+	},
+/area/station/science/ordnance/bomb)
 "wYJ" = (
 /turf/closed/wall,
 /area/station/engineering/storage_shared)
@@ -75503,13 +75649,6 @@
 "xgy" = (
 /turf/open/openspace,
 /area/station/service/hydroponics)
-"xgI" = (
-/obj/structure/sign/warning/secure_area{
-	desc = "Предупреждающая табличка с надписью 'BOMB RANGE";
-	name = "BOMB RANGE"
-	},
-/turf/closed/wall,
-/area/station/science/ordnance/bomb)
 "xgK" = (
 /obj/structure/table,
 /obj/item/transfer_valve{
@@ -75550,19 +75689,6 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/station/cargo/drone_bay)
-"xgX" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/random/entertainment/deck{
-	pixel_y = 15;
-	pixel_x = -2
-	},
-/obj/effect/spawner/random/food_or_drink/snack{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet/blue,
-/area/station/hallway/secondary/entry)
 "xhg" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -75836,14 +75962,6 @@
 	dir = 1
 	},
 /area/station/security/lockers)
-"xlH" = (
-/obj/effect/mapping_helpers/broken_floor,
-/mob/living/basic/mouse/white{
-	desc = "От этой мыши исходит слабый запах алкоголя.";
-	name = "Mik"
-	},
-/turf/open/floor/wood,
-/area/station/maintenance/fore)
 "xlN" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "maint2"
@@ -76008,6 +76126,23 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat/atmos)
+"xoF" = (
+/obj/structure/rack,
+/obj/item/clothing/shoes/winterboots/ice_boots/eva{
+	pixel_y = 2
+	},
+/obj/item/clothing/suit/hooded/wintercoat/eva{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/machinery/light/small/directional/east,
+/obj/machinery/mining_weather_monitor/directional/north,
+/obj/effect/turf_decal/delivery/red,
+/obj/machinery/camera/directional/north{
+	c_tag = "Arrivals Emergency EVA"
+	},
+/turf/open/floor/iron/dark/textured,
+/area/station/hallway/secondary/entry)
 "xpo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -76105,20 +76240,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/cargo/office)
-"xqA" = (
-/obj/machinery/door/airlock/external{
-	name = "Service Hall Exit"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
-	cycle_id = "service-hall-external"
-	},
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/access/all/service/general,
-/turf/open/floor/iron/dark/textured,
-/area/station/hallway/secondary/service)
 "xqX" = (
 /obj/structure/sign/poster/contraband/random/directional/north,
 /obj/structure/cable,
@@ -77147,14 +77268,6 @@
 /obj/machinery/incident_display/delam,
 /turf/closed/wall/r_wall,
 /area/station/engineering/supermatter/room)
-"xFU" = (
-/obj/structure/barricade/wooden,
-/obj/structure/sign/warning/gas_mask/directional/south{
-	desc = "Знак, предупреждающий об опасных газах в воздухе и предписывающий надевать защитные средства."
-	},
-/obj/structure/sign/warning/cold_temp/directional/north,
-/turf/open/floor/plating,
-/area/station/maintenance/aft/lesser)
 "xGh" = (
 /obj/structure/railing{
 	dir = 8
@@ -77335,6 +77448,22 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/aft)
+"xJg" = (
+/obj/item/coin/iron{
+	pixel_y = -5
+	},
+/obj/item/coin/plasma{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/toy/plush/lizard_plushie{
+	name = "Cassius";
+	pixel_x = 11;
+	pixel_y = -4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/station/commons/dorms/laundry)
 "xJj" = (
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
@@ -77442,6 +77571,17 @@
 "xLq" = (
 /turf/open/floor/glass/reinforced,
 /area/station/science/ordnance/office)
+"xLu" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "garbage"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/disposal)
 "xLF" = (
 /obj/machinery/door/window{
 	base_state = "right";
@@ -78004,15 +78144,6 @@
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/white/corner,
 /area/station/hallway/secondary/entry)
-"xVO" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/cup/glass/mug/coco{
-	desc = "Все еще горячо!";
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/turf/open/floor/wood,
-/area/station/maintenance/space_hut/cabin)
 "xVT" = (
 /obj/structure/railing{
 	dir = 9
@@ -97381,7 +97512,7 @@ tbX
 qmt
 nAa
 qLQ
-vBg
+iTS
 qmt
 tbX
 wDU
@@ -97893,7 +98024,7 @@ wDU
 qmt
 qmt
 qmt
-jpi
+mVR
 tYz
 gle
 qmt
@@ -100465,7 +100596,7 @@ vfp
 niN
 eSY
 uyq
-gdS
+wzB
 uUT
 bzJ
 srZ
@@ -100983,7 +101114,7 @@ wDU
 iwf
 cEh
 dNA
-weg
+rxI
 iwf
 lQw
 fWX
@@ -104763,7 +104894,7 @@ nNn
 gzV
 nNn
 nNn
-axb
+cuS
 tCV
 cFc
 mJX
@@ -113201,7 +113332,7 @@ iDt
 uEA
 vjh
 aYQ
-bLL
+fay
 njJ
 kqs
 dqx
@@ -113724,7 +113855,7 @@ dqx
 twV
 hVB
 npH
-gqh
+cNV
 vjh
 pDW
 fLT
@@ -114745,7 +114876,7 @@ sPA
 sPA
 sPA
 njJ
-mTI
+vvl
 sTO
 rVX
 rQx
@@ -118724,7 +118855,7 @@ oSU
 oSU
 oSU
 szG
-eCR
+qWx
 iDt
 iDt
 iDt
@@ -157273,7 +157404,7 @@ xuB
 jkn
 jkn
 iyE
-ncO
+fii
 vAj
 lwR
 iDt
@@ -162391,7 +162522,7 @@ keu
 eJf
 pfg
 sjb
-khF
+img
 oFZ
 jVx
 wQr
@@ -162627,8 +162758,8 @@ aSC
 cQi
 boS
 ivF
-sqb
-gVm
+xJg
+hUJ
 iwS
 iJM
 dNl
@@ -162884,14 +163015,14 @@ fFD
 bYz
 trc
 ivF
-pcc
-fdX
+aQg
+dgG
 iwS
 iJM
 dNl
 qxI
 qxI
-coT
+eLt
 qMo
 iDt
 iDt
@@ -162917,7 +163048,7 @@ qLm
 vSi
 bie
 bie
-vzI
+cDS
 bie
 bie
 cMk
@@ -163391,7 +163522,7 @@ iDt
 snd
 cmT
 fxd
-bEd
+gjY
 mua
 nfn
 tHX
@@ -163649,7 +163780,7 @@ ivF
 jwH
 jwH
 jwH
-jHV
+vjU
 aLz
 jul
 oRE
@@ -163905,11 +164036,11 @@ scw
 hyj
 slX
 kwT
-ceY
-kbq
-sLR
-awR
-sLR
+sqM
+lxK
+xLu
+fkp
+xLu
 dsR
 ivF
 bUW
@@ -165753,7 +165884,7 @@ unT
 dZq
 cvB
 tzE
-gMw
+awl
 ggv
 rsY
 urG
@@ -167021,7 +167152,7 @@ jpS
 jlK
 jpS
 szJ
-iKp
+mys
 kNW
 rrV
 xGt
@@ -167539,7 +167670,7 @@ iDt
 rsY
 mqs
 dTs
-oeP
+nnm
 uUT
 kmO
 rtR
@@ -168057,7 +168188,7 @@ scw
 iwf
 uUT
 afs
-qCY
+psE
 iwf
 tej
 tej
@@ -172407,7 +172538,7 @@ iDt
 iDt
 vcj
 vcj
-tLc
+wcs
 vcj
 vcj
 aVq
@@ -172875,7 +173006,7 @@ nzj
 dFr
 pOk
 par
-rsM
+mnn
 xby
 gjq
 gjq
@@ -173437,7 +173568,7 @@ wDG
 vyg
 dOq
 kOS
-uMq
+loj
 nul
 scw
 scw
@@ -175509,7 +175640,7 @@ nxM
 nxM
 qKH
 eVO
-aUR
+eTK
 nxM
 nxM
 nxM
@@ -180376,7 +180507,7 @@ xMq
 btU
 btU
 btU
-whl
+ccD
 ako
 hjM
 hjM
@@ -180639,8 +180770,8 @@ nxM
 dTm
 ofJ
 hjM
-djC
-eNm
+vjK
+okD
 hjM
 ugs
 ttb
@@ -182718,7 +182849,7 @@ lyX
 iTB
 imH
 nxM
-mTX
+tTH
 hjM
 qUe
 ljL
@@ -182933,7 +183064,7 @@ nmS
 vUi
 dMS
 twX
-gsW
+qQQ
 czm
 fpb
 fLa
@@ -184236,7 +184367,7 @@ iSs
 vMf
 tdL
 xDb
-qxv
+tUu
 osr
 wiD
 dRz
@@ -184460,7 +184591,7 @@ xMq
 xMq
 mdZ
 mdZ
-vxx
+jyY
 eaB
 fwf
 tlr
@@ -184718,7 +184849,7 @@ xMq
 xMq
 mdZ
 iQf
-xqA
+grc
 jre
 jre
 jre
@@ -185248,7 +185379,7 @@ vFg
 xwx
 vTp
 jre
-irz
+nzx
 jre
 fuH
 fuH
@@ -185544,7 +185675,7 @@ xMq
 xMq
 xMq
 alM
-xFU
+tte
 alM
 apB
 ffe
@@ -188318,7 +188449,7 @@ tBs
 tBs
 tBs
 tBs
-tNA
+kxH
 tBs
 tBs
 tBs
@@ -189875,7 +190006,7 @@ wrX
 wrX
 wrX
 wrX
-dTv
+ufc
 wrX
 wrX
 xMq
@@ -190668,7 +190799,7 @@ scw
 iDt
 lRI
 eNh
-bEh
+rmT
 oxO
 vAx
 oLa
@@ -219928,7 +220059,7 @@ qlP
 nDJ
 sfr
 fsv
-aZK
+bfu
 uhx
 sEB
 sEB
@@ -221206,7 +221337,7 @@ hEI
 hEI
 biY
 biY
-kCY
+xoF
 bLs
 xRI
 ydI
@@ -222239,7 +222370,7 @@ lJO
 lJO
 fUR
 nmA
-oor
+gGi
 fUR
 fUR
 fUR
@@ -222256,12 +222387,12 @@ fUR
 fUR
 fUR
 gjN
-nuM
+ohK
 fUR
 fUR
 fUR
 lSF
-tku
+hHt
 fUR
 fUR
 fUR
@@ -223288,7 +223419,7 @@ juu
 lnp
 gel
 fUR
-teE
+lUG
 bKA
 nwT
 hAo
@@ -223550,7 +223681,7 @@ gMt
 cut
 pGd
 bPw
-ixb
+aYT
 tKI
 jLX
 fbY
@@ -223798,7 +223929,7 @@ qHO
 fUR
 juu
 kBU
-xgX
+ozP
 juu
 gNL
 fUR
@@ -224321,7 +224452,7 @@ nsr
 xSl
 vxO
 qAB
-hCY
+iqJ
 tKI
 npr
 uyx
@@ -224553,7 +224684,7 @@ sOY
 lJO
 bpm
 xQs
-rqi
+eVQ
 iRo
 lvW
 uTI
@@ -225858,7 +225989,7 @@ aSI
 nEq
 tKI
 kCv
-gvp
+iZc
 nSr
 tKI
 xDw
@@ -228934,7 +229065,7 @@ gpp
 qnj
 hjJ
 ykG
-aUi
+lWC
 kXB
 ihk
 ssv
@@ -228983,7 +229114,7 @@ sEB
 bln
 pRj
 dMO
-vZp
+mUV
 dcQ
 wAW
 pRj
@@ -232039,7 +232170,7 @@ kXA
 kXA
 oDt
 kRU
-lMd
+aMf
 kXr
 hLY
 ceo
@@ -232519,7 +232650,7 @@ sTj
 hos
 biY
 sDl
-uqV
+hnh
 sDl
 hDU
 ksU
@@ -236949,7 +237080,7 @@ rHQ
 wFX
 rBV
 kJV
-cOa
+qUm
 omG
 tvW
 scx
@@ -237625,7 +237756,7 @@ sMY
 wMV
 qqM
 wMi
-kvI
+srH
 arA
 jwx
 kfy
@@ -238139,7 +238270,7 @@ jeF
 omk
 jeF
 nQf
-bfB
+lhx
 arA
 rYB
 rgC
@@ -238164,7 +238295,7 @@ sDl
 psN
 lYz
 dkY
-oLW
+msM
 hzY
 bRn
 fng
@@ -239945,7 +240076,7 @@ bUx
 jOQ
 bxQ
 bUx
-oty
+afM
 vxc
 aKt
 tDk
@@ -240726,7 +240857,7 @@ jNp
 jNp
 jNp
 jNp
-sDl
+kaN
 sDl
 sDl
 sDl
@@ -240978,12 +241109,12 @@ vhL
 law
 eqI
 ewM
-wAT
-lbk
-bln
-bln
-bln
-sDl
+mMH
+lxG
+dBd
+dis
+hRP
+tjS
 sDl
 sDl
 sDl
@@ -241235,12 +241366,12 @@ nsL
 eyb
 hAQ
 ksC
-loy
-lbk
-bln
-bln
-bln
-sDl
+aeO
+obn
+tRg
+vYn
+hWr
+tjS
 sDl
 sDl
 sDl
@@ -241494,10 +241625,10 @@ mfH
 cIY
 mfH
 mfH
-ntK
-bln
-sDl
-sDl
+vwx
+uJi
+lpB
+tjS
 sDl
 sDl
 sDl
@@ -241750,11 +241881,11 @@ ykw
 tSi
 kfc
 dcX
-lbk
-bln
-bln
-sDl
-sDl
+mfH
+dLk
+eye
+kaN
+kaN
 sDl
 sDl
 sDl
@@ -242008,9 +242139,9 @@ nOQ
 cqx
 sQB
 mfH
-bln
-sDl
-sDl
+kaN
+kaN
+kaN
 sDl
 sDl
 tOq
@@ -242786,7 +242917,7 @@ pwx
 deY
 skl
 gDz
-xlH
+wef
 kbN
 jOQ
 skl
@@ -244878,7 +245009,7 @@ cwh
 dEV
 pNx
 azw
-eub
+sJm
 eyc
 qPt
 uTc
@@ -245396,8 +245527,8 @@ cJw
 dip
 bHO
 azw
-fVK
-rGw
+jtg
+mAt
 azw
 eiY
 tZm
@@ -246420,9 +246551,9 @@ mqq
 kjK
 bai
 azw
-mwF
-sbc
-qYV
+kJh
+ogR
+qph
 azw
 gIY
 iBj
@@ -249249,7 +249380,7 @@ nGA
 nKa
 nTV
 jPl
-bjm
+fLk
 kXM
 nKa
 xXV
@@ -250552,13 +250683,13 @@ vCz
 ufN
 iZx
 dDw
-qHz
+hSX
 ekE
 fzo
 czF
 qaU
 jtH
-qpb
+uyC
 mFE
 iZR
 nuN
@@ -251364,7 +251495,7 @@ vYq
 fWS
 weR
 jdJ
-xVO
+kHS
 jAQ
 bln
 bln
@@ -251621,7 +251752,7 @@ vYq
 iAf
 qPY
 tUh
-xVO
+kHS
 jAQ
 bln
 bln
@@ -253115,9 +253246,9 @@ mtI
 uxj
 eNK
 owC
-wAx
+qBe
 jTZ
-ftt
+rrb
 wHc
 oMT
 emK
@@ -253397,7 +253528,7 @@ ocD
 diL
 qVz
 pNY
-edp
+sub
 dcr
 aRl
 bCL
@@ -268286,11 +268417,11 @@ bln
 bln
 bln
 bln
-xgI
+aMM
 mvE
 anO
 mvE
-xgI
+aMM
 bln
 bln
 wNO
@@ -269828,11 +269959,11 @@ wNO
 wNO
 bln
 bln
-xgI
+aMM
 mvE
-beZ
+wYC
 mvE
-xgI
+aMM
 bln
 bln
 wNO
