@@ -632,7 +632,7 @@
  * [COMSIG_ATOM_GET_EXAMINE_NAME] signal
  */
 /atom/proc/get_examine_name(mob/user)
-	. = "\a <b>[src]</b>"
+	. = "<b>[src]</b>"
 	var/list/override = list(gender == PLURAL ? "some" : "a", " ", "[name]")
 	if(article)
 		. = "[article] <b>[src]</b>"
@@ -642,7 +642,7 @@
 
 ///Generate the full examine string of this atom (including icon for goonchat)
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(src, user)] [thats? "Это ":""][get_examine_name(user)]"
+	return "[icon2html(src, user)] [thats? "Это ":" "][get_examine_name(user)]"
 
 /**
  * Returns an extended list of examine strings for any contained ID cards.
