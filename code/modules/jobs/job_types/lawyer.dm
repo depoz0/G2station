@@ -1,7 +1,7 @@
 /datum/job/lawyer
 	title = JOB_LAWYER
-	description = "Advocate for prisoners, create law-binding contracts, \
-		ensure Security is following protocol and Space Law."
+	description = "Защищайте интересы заключенных, создавайте контракты, имеющие юридическую силу,\
+		следить за тем, чтобы служба безопасности соблюдала протокол и космическое право."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
 	total_positions = 2

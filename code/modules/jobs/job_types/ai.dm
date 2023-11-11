@@ -1,6 +1,6 @@
 /datum/job/ai
 	title = JOB_AI
-	description = "Assist the crew, follow your laws, coordinate your cyborgs."
+	description = "Помогайте экипажу, соблюдайте свои законы, руководите своими киборгами."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SILICON
 	faction = FACTION_STATION
 	total_positions = 1
@@ -94,4 +94,4 @@
 	return CONFIG_GET(flag/allow_ai)
 
 /datum/job/ai/get_radio_information()
-	return "<b>Prefix your message with :b to speak with cyborgs and other AIs.</b>"
+	return "<b>Для общения с киборгами и другими ИИ добавьте к своему сообщению префикс :b.</b>"
