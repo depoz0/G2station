@@ -128,52 +128,52 @@
 // * /mob/living/simple_animal/handle_environment()
 
 /atom/movable/screen/alert/not_enough_oxy
-	name = "Choking (No O2)"
-	desc = "You're not getting enough oxygen. Find some good air before you pass out! The box in your backpack has an oxygen tank and breath mask in it."
+	name = "Удушение (нехватает O2)"
+	desc = "Вы не получаете достаточно кислорода. Найдите источник хорошего воздуха, пока не потеряли сознание! В коробке в вашем рюкзаке есть кислородный баллон и дыхательная маска."
 	icon_state = ALERT_NOT_ENOUGH_OXYGEN
 
 /atom/movable/screen/alert/too_much_oxy
-	name = "Choking (O2)"
-	desc = "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!"
+	name = "Удушение (много O2)"
+	desc = "В воздухе слишком много кислорода, и вы его вдыхаете! Найдите источник хорошего воздуха, пока не потеряли сознание!"
 	icon_state = ALERT_TOO_MUCH_OXYGEN
 
 /atom/movable/screen/alert/not_enough_nitro
-	name = "Choking (No N2)"
-	desc = "You're not getting enough nitrogen. Find some good air before you pass out!"
+	name = "Удушение (нехватает N2)"
+	desc = "Вы не получаете достаточного количества азота. Найдите источник хорошего воздуха, пока не потеряли сознание!"
 	icon_state = ALERT_NOT_ENOUGH_NITRO
 
 /atom/movable/screen/alert/too_much_nitro
-	name = "Choking (N2)"
-	desc = "There's too much nitrogen in the air, and you're breathing it in! Find some good air before you pass out!"
+	name = "Удушение (много N2)"
+	desc = "В воздухе слишком много азота, и вы его вдыхаете! Найдите источник хорошего воздуха, пока не потеряли сознание!"
 	icon_state = ALERT_TOO_MUCH_NITRO
 
 /atom/movable/screen/alert/not_enough_co2
-	name = "Choking (No CO2)"
+	name = "Удушение (нехватает CO2)"
 	desc = "You're not getting enough carbon dioxide. Find some good air before you pass out!"
 	icon_state = ALERT_NOT_ENOUGH_CO2
 
 /atom/movable/screen/alert/too_much_co2
-	name = "Choking (CO2)"
+	name = "Удушение (много CO2)"
 	desc = "There's too much carbon dioxide in the air, and you're breathing it in! Find some good air before you pass out!"
 	icon_state = ALERT_TOO_MUCH_CO2
 
 /atom/movable/screen/alert/not_enough_plas
-	name = "Choking (No Plasma)"
+	name = "Удушение (нехватает Plasma)"
 	desc = "You're not getting enough plasma. Find some good air before you pass out! The box in your backpack has a spare plasma tank."
 	icon_state = ALERT_NOT_ENOUGH_PLASMA
 
 /atom/movable/screen/alert/too_much_plas
-	name = "Choking (Plasma)"
+	name = "Удушение (много Plasma)"
 	desc = "There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air. The box in your backpack has an oxygen tank and breath mask in it."
 	icon_state = ALERT_TOO_MUCH_PLASMA
 
 /atom/movable/screen/alert/not_enough_n2o
-	name = "Choking (No N2O)"
+	name = "Удушение (нехватает N2O)"
 	desc = "You're not getting enough N2O. Find some good air before you pass out!"
 	icon_state = ALERT_NOT_ENOUGH_N2O
 
 /atom/movable/screen/alert/too_much_n2o
-	name = "Choking (N2O)"
+	name = "Удушение (много N2O)"
 	desc = "There's sleeping gas in the air and you're breathing it in. Find some fresh air. The box in your backpack has an oxygen tank and breath mask in it."
 	icon_state = ALERT_TOO_MUCH_N2O
 
@@ -181,18 +181,18 @@
 
 
 /atom/movable/screen/alert/fat
-	name = "Fat"
-	desc = "You ate too much food, lardass. Run around the station and lose some weight."
+	name = "Толстый"
+	desc = "Вы съели слишком много еды, жиртрест. Побегай вокруг станции и сбрось немного веса."
 	icon_state = "fat"
 
 /atom/movable/screen/alert/hungry
-	name = "Hungry"
-	desc = "Some food would be good right about now."
+	name = "Голод"
+	desc = "Сейчас не помешало бы чтонибудь перекусить."
 	icon_state = "hungry"
 
 /atom/movable/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
+	name = "Голодание"
+	desc = "Вы сильно недоедаете. От сильных ощущений голода передвигаться становится трудно."
 	icon_state = "starving"
 
 /atom/movable/screen/alert/gross
