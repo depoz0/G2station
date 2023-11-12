@@ -43,7 +43,7 @@
  * No threats
  */
 /datum/security_level/green
-	name = "цвета 'Зеленый'"
+	name = "'Зеленый'"
 	announcement_color = "green"
 	sound = 'sound/misc/notice2.ogg' // Friendly beep
 	number_level = SEC_LEVEL_GREEN
@@ -56,7 +56,7 @@
  * Caution advised
  */
 /datum/security_level/blue
-	name = "цвета 'Синий'"
+	name = "'Синий'"
 	announcement_color = "blue"
 	sound = 'sound/misc/notice1.ogg' // Angry alarm
 	number_level = SEC_LEVEL_BLUE
@@ -70,7 +70,7 @@
  * Hostile threats
  */
 /datum/security_level/red
-	name = "цвета 'Красный'"
+	name = "'Красный'"
 	announcement_color = "red"
 	sound = 'sound/misc/notice3.ogg' // More angry alarm
 	number_level = SEC_LEVEL_RED
