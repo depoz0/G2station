@@ -88,11 +88,11 @@ const AntagSelection = (
       buttons={
         <>
           <Button color="good" onClick={() => enableAntags(antagonistKeys)}>
-            Enable All
+            Включить все
           </Button>
 
           <Button color="bad" onClick={() => disableAntags(antagonistKeys)}>
-            Disable All
+            Отключить все
           </Button>
         </>
       }>
@@ -132,7 +132,7 @@ const AntagSelection = (
                   <Tooltip
                     content={
                       isBanned
-                        ? `You are banned from ${antagonist.name}.`
+                        ? `Вам запрещен ${antagonist.name}.`
                         : antagonist.description.map((text, index) => {
                           return (
                             <div key={antagonist.key + index}>
@@ -189,17 +189,17 @@ export const AntagsPage = () => {
   return (
     <Box className="PreferencesMenu__Antags">
       <AntagSelection
-        name="Roundstart"
+        name="Начало раунда"
         antagonists={antagsByCategory.get(Category.Roundstart)!}
       />
 
       <AntagSelection
-        name="Midround"
+        name="Середина раунда"
         antagonists={antagsByCategory.get(Category.Midround)!}
       />
 
       <AntagSelection
-        name="Latejoin"
+        name="Конец раунда"
         antagonists={antagsByCategory.get(Category.Latejoin)!}
       />
     </Box>

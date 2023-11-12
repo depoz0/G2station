@@ -227,7 +227,7 @@
 				disgusted.adjust_stutter(2 SECONDS)
 				disgusted.adjust_confusion(2 SECONDS)
 			if(SPT_PROB(5, seconds_per_tick) && !disgusted.stat)
-				to_chat(disgusted, span_warning("Вы чувствуете себя как-то неуверенно..."))
+				to_chat(disgusted, span_warning("Вы чувствуете себя как-то неважно..."))
 			disgusted.adjust_jitter(-6 SECONDS)
 		if(disgust >= DISGUST_LEVEL_VERYGROSS)
 			if(SPT_PROB(pukeprob, seconds_per_tick)) //iT hAndLeS mOrE ThaN PukInG
