@@ -1,7 +1,7 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
 /client/verb/wiki(query as text)
 	set name = "wiki"
-	set desc = "Type what you want to know about.  This will open the wiki in your web browser. Type nothing to go to the main page."
+	set desc = "Введите название интересующей вас темы.  Это откроет вики-страницу в веб-браузере. Чтобы перейти на главную страницу, оставте поле пустым."
 	set hidden = TRUE
 	var/wikiurl = CONFIG_GET(string/wikiurl)
 	if(wikiurl)
@@ -11,61 +11,61 @@
 		else if (query != null)
 			src << link(wikiurl)
 	else
-		to_chat(src, span_danger("The wiki URL is not set in the server configuration."))
+		to_chat(src, span_danger("URL-адрес wiki не задан в конфигурации сервера."))
 	return
 
 /client/verb/forum()
 	set name = "forum"
-	set desc = "Visit the forum."
+	set desc = "Посетить форум."
 	set hidden = TRUE
 	var/forumurl = CONFIG_GET(string/forumurl)
 	if(forumurl)
-		if(tgui_alert(src, "This will open the forum in your browser. Are you sure?",, list("Yes","No"))!="Yes")
+		if(tgui_alert(src, "В вашем браузере откроется форум. Вы уверены?",, list("Да","Нет"))!="Да")
 			return
 		src << link(forumurl)
 	else
-		to_chat(src, span_danger("The forum URL is not set in the server configuration."))
+		to_chat(src, span_danger("URL-адрес форума не задан в конфигурации сервера."))
 	return
 
 /client/verb/rules()
 	set name = "rules"
-	set desc = "Show Server Rules."
+	set desc = "Показать правила сервера."
 	set hidden = TRUE
 	var/rulesurl = CONFIG_GET(string/rulesurl)
 	if(rulesurl)
-		if(tgui_alert(src, "This will open the rules in your browser. Are you sure?",, list("Yes","No"))!="Yes")
+		if(tgui_alert(src, "В вашем браузере откроются правила.. Вы уверены?",, list("Да","Нет"))!="Да")
 			return
 		src << link(rulesurl)
 	else
-		to_chat(src, span_danger("The rules URL is not set in the server configuration."))
+		to_chat(src, span_danger("URL-адрес правил не задан в конфигурации сервера."))
 	return
 
 /client/verb/github()
 	set name = "github"
-	set desc = "Visit Github"
+	set desc = "Посетить Github"
 	set hidden = TRUE
 	var/githuburl = CONFIG_GET(string/githuburl)
 	if(githuburl)
-		if(tgui_alert(src, "This will open the Github repository in your browser. Are you sure?",, list("Yes","No"))!="Yes")
+		if(tgui_alert(src, "В браузере откроется репозиторий Github. Вы уверены?",, list("Да","Нет"))!="Да")
 			return
 		src << link(githuburl)
 	else
-		to_chat(src, span_danger("The Github URL is not set in the server configuration."))
+		to_chat(src, span_danger("URL-адрес Github не задан в конфигурации сервера."))
 	return
 
 /client/verb/reportissue()
 	set name = "report-issue"
-	set desc = "Report an issue"
+	set desc = "Сообщить об ошибке"
 	set hidden = TRUE
 	var/githuburl = CONFIG_GET(string/githuburl)
 	if(githuburl)
-		var/message = "This will open the Github issue reporter in your browser. Are you sure?"
+		var/message = "В браузере откроется создание отчета о проблеме на Github. Вы уверены?"
 		if(GLOB.revdata.testmerge.len)
 			message += "<br>The following experimental changes are active and are probably the cause of any new or sudden issues you may experience. If possible, please try to find a specific thread for your issue instead of posting to the general issue tracker:<br>"
 			message += GLOB.revdata.GetTestMergeInfo(FALSE)
 		// We still use tgalert here because some people were concerned that if someone wanted to report that tgui wasn't working
 		// then the report issue button being tgui-based would be problematic.
-		if(tgalert(src, message, "Report Issue","Yes","No")!="Yes")
+		if(tgalert(src, message, "Отправить отчёт","Да","Нет")!="Да")
 			return
 
 		// Keep a static version of the template to avoid reading file

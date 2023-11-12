@@ -1,7 +1,7 @@
 /datum/job/chief_engineer
 	title = JOB_CHIEF_ENGINEER
-	description = "Coordinate engineering, ensure equipment doesn't get stolen, \
-		make sure the Supermatter doesn't blow up, maintain telecommunications."
+	description = "Руководить инженерными работами, следить чтобы не крали оборудование, \
+		контролировать, чтобы Суперматерия не взорвалась, поддерживать телекоммуникации."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list("Engineering")
@@ -49,7 +49,7 @@
 
 
 /datum/job/chief_engineer/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "В связи с нехваткой персонала на борту новый назначенный исполняющий обязанности капитана [captain.real_name]!"
 
 
 /datum/outfit/job/ce

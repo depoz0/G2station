@@ -157,22 +157,22 @@
 /datum/config_entry/flag/arrivals_shuttle_require_safe_latejoin //Require the arrivals shuttle to be operational in order for latejoiners to join
 
 /datum/config_entry/string/alert_green
-	default = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
+	default = "Все угрозы для станции миновали. Охрана может убрать оружие, законы о неприкосновенности частной жизни снова действуют в полном объеме."
 
 /datum/config_entry/string/alert_blue_upto
-	default = "The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted."
+	default = "Станция получила достоверную информацию о возможной враждебной активности на станции. Сотрудники безопасности могут применять оружие, разрешен случайный обыск."
 
 /datum/config_entry/string/alert_blue_downto
-	default = "The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed."
+	default = "Непосредственная угроза миновала. Охранники могут передохнуть но держать оружие наготове. Случайные обыски по-прежнему разрешены."
 
 /datum/config_entry/string/alert_red_upto
-	default = "There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised."
+	default = "Имеется непосредственная серьезная угроза для станции. Охранники могут постоянно держать оружие на готове. Случайные обыски разрешены и рекомендованы."
 
 /datum/config_entry/string/alert_red_downto
-	default = "The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised."
+	default = "Разрушение станции предотвращено. Однако непосредственная серьезная угроза для станции все еще существует. Охрана может постоянно держать оружие на готове,  случайные обыски разрешены и рекомендованы."
 
 /datum/config_entry/string/alert_delta
-	default = "Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill."
+	default = "Уничтожение станции неизбежно. Всем членам экипажа приказано выполнять все указания руководства. Любое нарушение этих приказов карается смертью. Это не учения."
 
 /datum/config_entry/flag/revival_pod_plants
 

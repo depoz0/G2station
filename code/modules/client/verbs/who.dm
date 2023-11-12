@@ -1,11 +1,11 @@
 #define DEFAULT_WHO_CELLS_PER_ROW 4
-#define NO_ADMINS_ONLINE_MESSAGE "Adminhelps are also sent through TGS to services like IRC and Discord. If no admins are available in game, sending an adminhelp might still be noticed and responded to."
+#define NO_ADMINS_ONLINE_MESSAGE "Помощь администратора также отправляется через TGS в такие сервисы, как IRC и Discord. Если в игре нет администраторов, отправка adminhelp все равно может быть воспринята и дан ответ."
 
 /client/verb/who()
 	set name = "Who"
 	set category = "OOC"
 
-	var/msg = "<b>Current Players:</b>\n"
+	var/msg = "<b>Текущие игроки:</b>\n"
 
 	var/list/Lines = list()
 	var/columns_per_row = DEFAULT_WHO_CELLS_PER_ROW
@@ -21,9 +21,9 @@
 				if(client.holder && client.holder.fakekey)
 					entry += " <i>(as [client.holder.fakekey])</i>"
 				if (isnewplayer(client.mob))
-					entry += " - <font color='darkgray'><b>In Lobby</b></font>"
+					entry += " - <font color='darkgray'><b>В лобби</b></font>"
 				else
-					entry += " - Playing as [client.mob.real_name]"
+					entry += " - Играет как [client.mob.real_name]"
 					switch(client.mob.stat)
 						if(UNCONSCIOUS, HARD_CRIT)
 							entry += " - <font color='darkgray'><b>Unconscious</b></font>"
@@ -33,27 +33,27 @@
 								if(O.started_as_observer)
 									entry += " - <font color='gray'>Observing</font>"
 								else
-									entry += " - <font color='black'><b>DEAD</b></font>"
+									entry += " - <font color='black'><b>МЕРТВЫЙ</b></font>"
 							else
-								entry += " - <font color='black'><b>DEAD</b></font>"
+								entry += " - <font color='black'><b>МЕРТВЫЙ</b></font>"
 					if(is_special_character(client.mob))
-						entry += " - <b><font color='red'>Antagonist</font></b>"
+						entry += " - <b><font color='red'>Антагонист</font></b>"
 				entry += " [ADMIN_QUE(client.mob)]"
-				entry += " ([round(client.avgping, 1)]ms)"
+				entry += " ([round(client.avgping, 1)]мс)"
 				Lines += entry
 		else//If they don't have +ADMIN, only show hidden admins
 			for(var/client/client in GLOB.clients)
 				var/entry = "[client.key]"
 				if(client.holder && client.holder.fakekey)
 					entry += " <i>(as [client.holder.fakekey])</i>"
-				entry += " ([round(client.avgping, 1)]ms)"
+				entry += " ([round(client.avgping, 1)]мс)"
 				Lines += entry
 	else
 		for(var/client/client in GLOB.clients)
 			if(client.holder && client.holder.fakekey)
-				Lines += "[client.holder.fakekey] ([round(client.avgping, 1)]ms)"
+				Lines += "[client.holder.fakekey] ([round(client.avgping, 1)]мс)"
 			else
-				Lines += "[client.key] ([round(client.avgping, 1)]ms)"
+				Lines += "[client.key] ([round(client.avgping, 1)]мс)"
 
 	var/num_lines = 0
 	msg += "<table style='width: 100%; table-layout: fixed'><tr>"
@@ -66,7 +66,7 @@
 			msg += "</tr><tr>"
 	msg += "</tr></table>"
 
-	msg += "<b>Total Players: [length(Lines)]</b>"
+	msg += "<b>Всего игроков: [length(Lines)]</b>"
 	to_chat(src, "<span class='infoplain'>[msg]</span>")
 
 /client/verb/adminwho()
@@ -78,9 +78,9 @@
 	var/header
 
 	if(payload_string == NO_ADMINS_ONLINE_MESSAGE)
-		header = "No Admins Currently Online"
+		header = "Администраторы в настоящее время отсутствуют"
 	else
-		header = "Current Admins:"
+		header = "Текущие администраторы:"
 
 	lines += span_bold(header)
 	lines += payload_string
@@ -153,13 +153,13 @@
 			if(SSticker.current_state <= GAME_STATE_PREGAME)
 				var/mob/dead/new_player/lobbied_admin = admin.mob
 				if(lobbied_admin.ready == PLAYER_READY_TO_PLAY)
-					admin_strings += "- Lobby (Readied)"
+					admin_strings += "- Лобби (готово)"
 				else
-					admin_strings += "- Lobby (Not Readied)"
+					admin_strings += "- Лобби (не готово)"
 			else
-				admin_strings += "- Lobby"
+				admin_strings += "- Лобби"
 		else
-			admin_strings += "- Playing"
+			admin_strings += "- Играет"
 
 		if(admin.is_afk())
 			admin_strings += "(AFK)"

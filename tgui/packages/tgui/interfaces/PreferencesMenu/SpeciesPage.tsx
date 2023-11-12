@@ -26,23 +26,23 @@ const FOOD_ICONS = {
 };
 
 const FOOD_NAMES: Record<keyof typeof FOOD_ICONS, string> = {
-  [Food.Bugs]: 'Bugs',
-  [Food.Cloth]: 'Clothing',
-  [Food.Dairy]: 'Dairy',
-  [Food.Fried]: 'Fried food',
-  [Food.Fruit]: 'Fruit',
+  [Food.Bugs]: 'Жучки',
+  [Food.Cloth]: 'Одежда',
+  [Food.Dairy]: 'Молочное',
+  [Food.Fried]: 'Жареная еда',
+  [Food.Fruit]: 'Фрукты',
   [Food.Gore]: 'Gore',
-  [Food.Grain]: 'Grain',
-  [Food.Gross]: 'Gross food',
-  [Food.Junkfood]: 'Junk food',
-  [Food.Meat]: 'Meat',
-  [Food.Nuts]: 'Nuts',
-  [Food.Raw]: 'Raw',
-  [Food.Seafood]: 'Seafood',
-  [Food.Stone]: 'Rocks',
-  [Food.Sugar]: 'Sugar',
-  [Food.Toxic]: 'Toxic food',
-  [Food.Vegetables]: 'Vegetables',
+  [Food.Grain]: 'Зерновые',
+  [Food.Gross]: 'Продукты питания',
+  [Food.Junkfood]: 'Нездоровая еда',
+  [Food.Meat]: 'Мясо',
+  [Food.Nuts]: 'Орехи',
+  [Food.Raw]: 'Сырьё',
+  [Food.Seafood]: 'Морепродукты',
+  [Food.Stone]: 'Камни',
+  [Food.Sugar]: 'Сахар',
+  [Food.Toxic]: 'Токсичные отходы',
+  [Food.Vegetables]: 'Овощи',
 };
 
 const IGNORE_UNLESS_LIKED: Set<Food> = new Set([
@@ -118,7 +118,7 @@ const Diet = (props: { diet: Species['diet'] }) => {
         <FoodList
           food={liked_food}
           icon="heart"
-          name="Liked food"
+          name="Любимая еда"
           className="color-pink"
         />
       </Stack.Item>
@@ -127,7 +127,7 @@ const Diet = (props: { diet: Species['diet'] }) => {
         <FoodList
           food={disliked_food.filter(notIn(IGNORE_UNLESS_LIKED))}
           icon="thumbs-down"
-          name="Disliked food"
+          name="Не любимая еда"
           className="color-red"
         />
       </Stack.Item>
@@ -136,7 +136,7 @@ const Diet = (props: { diet: Species['diet'] }) => {
         <FoodList
           food={toxic_food.filter(notIn(IGNORE_UNLESS_LIKED))}
           icon="biohazard"
-          name="Toxic food"
+          name="Токсичные отходы"
           className="color-olive"
         />
       </Stack.Item>
@@ -243,11 +243,7 @@ const SpeciesPageInner = (
   return (
     <Stack vertical fill>
       <Stack.Item>
-        <Button
-          icon="arrow-left"
-          onClick={props.handleClose}
-          content="Go Back"
-        />
+        <Button icon="arrow-left" onClick={props.handleClose} content="Назад" />
       </Stack.Item>
 
       <Stack.Item grow>
@@ -292,11 +288,9 @@ const SpeciesPageInner = (
                           <Diet diet={currentSpecies.diet} />
                         )
                       }>
-                      <Section title="Description">
-                        {currentSpecies.desc}
-                      </Section>
+                      <Section title="Описание">{currentSpecies.desc}</Section>
 
-                      <Section title="Features">
+                      <Section title="Особенности">
                         <SpeciesPerks perks={currentSpecies.perks} />
                       </Section>
                     </Section>
@@ -312,7 +306,7 @@ const SpeciesPageInner = (
               </Box>
 
               <Box mt={1}>
-                <Section title="Lore">
+                <Section title="Лор">
                   <BlockQuote>
                     {currentSpecies.lore.map((text, index) => (
                       <Box key={index} maxWidth="100%">
