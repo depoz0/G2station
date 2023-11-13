@@ -153,7 +153,7 @@
 	. = ..()
 	if(!. && !docked && !damaged)
 		if(console)
-			console.say("Добро пожаловать в новую жизнь, сотрудникам!")
+			console.say("Добро пожаловать в новую жизнь!")
 		for(var/L in queued_announces)
 			var/datum/callback/C = L
 			C.Invoke()

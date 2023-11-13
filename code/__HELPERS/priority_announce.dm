@@ -63,7 +63,7 @@
 				header += SUBHEADER_ANNOUNCEMENT_TITLE(title)
 		if(ANNOUNCEMENT_TYPE_CAPTAIN)
 			header = MAJOR_ANNOUNCEMENT_TITLE("Объявление капитана")
-			GLOB.news_network.submit_article(text, "Объявление капитана", "Объявления станции", null)
+			GLOB.news_network.submit_article(text, "Объявление капитана", "Станция", null)
 		if(ANNOUNCEMENT_TYPE_SYNDICATE)
 			header = MAJOR_ANNOUNCEMENT_TITLE("Объявление капитана синдиката")
 		else
@@ -87,9 +87,9 @@
 
 	if(isnull(sender_override))
 		if(length(title) > 0)
-			GLOB.news_network.submit_article(title + "<br><br>" + text, "[command_name()]", "Объявления станции", null)
+			GLOB.news_network.submit_article(title + "<br><br>" + text, "[command_name()]", "Станция", null)
 		else
-			GLOB.news_network.submit_article(text, "[command_name()] Обновление", "Объявления станции", null)
+			GLOB.news_network.submit_article(text, "[command_name()] Обновление", "Станция", null)
 
 /proc/print_command_report(text = "", title = null, announce=TRUE)
 	if(!title)
