@@ -1,9 +1,9 @@
 /datum/round_event_control/communications_blackout
-	name = "Communications Blackout"
+	name = "Отключение связи"
 	typepath = /datum/round_event/communications_blackout
 	weight = 30
 	category = EVENT_CATEGORY_ENGINEERING
-	description = "Heavily emps all telecommunication machines, blocking all communication for a while."
+	description = "Сильно поражает все телекоммуникационные устройства, блокируя на некоторое время связь."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 3
 
@@ -11,11 +11,11 @@
 	announce_when = 1
 
 /datum/round_event/communications_blackout/announce(fake)
-	var/alert = pick( "Ionospheric anomalies detected. Temporary telecommunication failure imminent. Please contact you*%fj00)`5vc-BZZT",
-		"Ionospheric anomalies detected. Temporary telecommunication failu*3mga;b4;'1v¬-BZZZT",
-		"Ionospheric anomalies detected. Temporary telec#MCi46:5.;@63-BZZZZT",
-		"Ionospheric anomalies dete'fZ\\kg5_0-BZZZZZT",
-		"Ionospheri:%£ MCayj^j<.3-BZZZZZZT",
+	var/alert = pick( "Обнаружены ионосферные аномалии. Ожидается временный отказ телекоммуникаций. Пожалуйста, свяжитесь с ва*%fj00)`5vc-BZZT",
+		"Обнаружены ионосферные аномалии. Ожидается временный отказ телекоммуник*3mga;b4;'1v¬-BZZZT",
+		"Обнаружены ионосферные аномалии. Ожидается временный отк#MCi46:5.;@63-BZZZZT",
+		"Обнаружены ионосферные анома'fZ\\kg5_0-BZZZZZT",
+		"Обнаружены ио:%£ MCayj^j<.3-BZZZZZZT",
 		"#4nd%;f4y6,>£%-BZZZZZZZT",
 	)
 
@@ -23,7 +23,7 @@
 		to_chat(A, "<br>[span_warning("<b>[alert]</b>")]<br>")
 
 	if(prob(30) || fake) //most of the time, we don't want an announcement, so as to allow AIs to fake blackouts.
-		priority_announce(alert, "Anomaly Alert")
+		priority_announce(alert, "Предупреждение об аномалии")
 
 
 /datum/round_event/communications_blackout/start()

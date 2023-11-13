@@ -1,0 +1,24 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/modular_map_connector,
+/obj/item/clothing/under/rank/civilian/clown/purple,
+/obj/item/reagent_containers/cup/soda_cans/canned_laughter{
+	desc = "Fire, Water. Air and Dirt. Fuckin magnets, how do they work?";
+	name = "Faygo"
+	},
+/obj/item/reagent_containers/cup/soda_cans/canned_laughter{
+	desc = "Fire, Water. Air and Dirt. Fuckin magnets, how do they work?";
+	name = "Faygo"
+	},
+/obj/item/reagent_containers/cup/soda_cans/canned_laughter{
+	desc = "Fire, Water. Air and Dirt. Fuckin magnets, how do they work?";
+	name = "Faygo"
+	},
+/obj/item/bikehorn,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+"}

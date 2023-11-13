@@ -1,0 +1,11 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/modular_map_connector,
+/obj/effect/spawner/random/engineering/tool_advanced,
+/obj/item/clothing/head/utility/hardhat,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+"}

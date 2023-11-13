@@ -81,7 +81,7 @@
 	icon_state = "escape_lounge"
 
 /area/station/hallway/secondary/entry
-	name = "\improper Коридор прибытия челноков"
+	name = "\improper Коридор прибытия шаттла"
 	icon_state = "entry"
 	area_flags = UNIQUE_AREA | EVENT_PROTECTED
 

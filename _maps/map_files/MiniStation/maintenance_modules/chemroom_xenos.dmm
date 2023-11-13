@@ -1,0 +1,96 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/west,
+/obj/structure/table,
+/obj/item/toy/toy_xeno{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/obj/item/xenos_claw{
+	pixel_x = 8
+	},
+/obj/item/clothing/head/collectable/xenom{
+	pixel_y = 8
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"k" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/generic_maintenance_landmark,
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/west,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"x" = (
+/obj/structure/sign/poster/contraband/lusty_xenomorph/directional/east,
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/north,
+/obj/structure/closet,
+/obj/item/paper/fluff/awaymissions/moonoutpost19/research/xeno_queen,
+/obj/item/paper/fluff/awaymissions/moonoutpost19/research/xeno_hivemind,
+/obj/item/paper/fluff/awaymissions/moonoutpost19/research/xeno_castes,
+/obj/item/paper/fluff/awaymissions/moonoutpost19/research/xeno_behavior,
+/obj/item/paper/fluff/awaymissions/moonoutpost19/research/xeno_adult,
+/obj/item/toy/toy_xeno,
+/obj/item/toy/toy_xeno,
+/obj/item/toy/toy_xeno,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"B" = (
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/east,
+/obj/item/clothing/mask/facehugger/toy,
+/obj/structure/bed/maint,
+/obj/item/bedsheet/black,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"N" = (
+/obj/effect/spawner/random/engineering/atmospherics_portable,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"O" = (
+/obj/structure/sign/poster/contraband/lusty_xenomorph/directional/west,
+/obj/effect/spawner/random/medical/two_percent_xeno_egg_spawner,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"P" = (
+/obj/structure/sign/poster/contraband/lusty_xenomorph/directional/east,
+/obj/structure/closet,
+/obj/item/clothing/suit/costume/xenos,
+/obj/item/clothing/head/costume/xenos,
+/obj/structure/sign/poster/contraband/busty_backdoor_xeno_babes_6/directional/south,
+/obj/effect/spawner/random/exotic/antag_gear_weak{
+	spawn_loot_chance = 20
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"S" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
+/obj/effect/spawner/random/structure/barricade,
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"U" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/modular_map_connector,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"X" = (
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+
+(1,1,1) = {"
+U
+S
+k
+O
+a
+"}
+(2,1,1) = {"
+N
+X
+x
+B
+P
+"}

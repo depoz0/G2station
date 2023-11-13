@@ -42,12 +42,12 @@
 		areas += A
 
 	if(SSjob.latejoin_trackers.len)
-		log_mapping("Map contains predefined latejoin spawn points and an arrivals shuttle. Using the arrivals shuttle.")
+		log_mapping("Карта содержит предопределенные точки спавна при позднем подключении и шаттл прибывающих. Используем прибывающий шаттл.")
 
 	if(!new_latejoin.len)
 		log_mapping("Arrivals shuttle contains no chairs for spawn points. Reverting to latejoin landmarks.")
 		if(!SSjob.latejoin_trackers.len)
-			log_mapping("No latejoin landmarks exist. Players will spawn unbuckled on the shuttle.")
+			log_mapping("Нет никаких точек спавна позднего входа в игру. Игроки будут появляться на шаттле непристегнутыми.")
 		return
 
 	SSjob.latejoin_trackers = new_latejoin
@@ -67,7 +67,7 @@
 		if(!CheckTurfsPressure())
 			damaged = FALSE
 			if(console)
-				console.say("Repairs complete, launching soon.")
+				console.say("Ремонт завершен, скоро отчаливаем.")
 		return
 
 //If this proc is high on the profiler add a cooldown to the stuff after this line
@@ -75,7 +75,7 @@
 	else if(CheckTurfsPressure())
 		damaged = TRUE
 		if(console)
-			console.say("Alert, hull breach detected!")
+			console.say("Тревога, обнаружена брешь в корпусе!")
 		if (length(GLOB.announcement_systems))
 			var/obj/machinery/announcement_system/announcer = pick(GLOB.announcement_systems)
 			if(!QDELETED(announcer))
@@ -130,7 +130,7 @@
 	var/dockTime = CONFIG_GET(number/arrivals_shuttle_dock_window)
 	if(mode == SHUTTLE_CALL && timeLeft(1) > dockTime)
 		if(console)
-			console.say(damaged ? "Initiating emergency docking for repairs!" : "Now approaching: [station_name()].")
+			console.say(damaged ? "Начинаю аварийную стыковку для ремонта!" : "Приближаемся к: [station_name()].")
 		hyperspace_sound(HYPERSPACE_LAUNCH, areas) //for the new guy
 		setTimer(dockTime)
 
@@ -141,19 +141,19 @@
 		if(!force_depart)
 			var/cancel_reason
 			if(PersonCheck())
-				cancel_reason = "lifeform dectected on board"
+				cancel_reason = "на борту обнаружено присутствие формы жизни"
 			else if(NukeDiskCheck())
-				cancel_reason = "critical station device detected on board"
+				cancel_reason = "на борту обнаружено критическое станционное устройство"
 			if(cancel_reason)
 				mode = SHUTTLE_IDLE
 				if(console)
-					console.say("Launch cancelled, [cancel_reason].")
+					console.say("Запуск отменен, [cancel_reason].")
 				return
 		force_depart = FALSE
 	. = ..()
 	if(!. && !docked && !damaged)
 		if(console)
-			console.say("Welcome to your new life, employees!")
+			console.say("Добро пожаловать в новую жизнь, сотрудникам!")
 		for(var/L in queued_announces)
 			var/datum/callback/C = L
 			C.Invoke()
@@ -175,7 +175,7 @@
 		force_depart = TRUE
 	if(mode == SHUTTLE_IDLE)
 		if(console)
-			console.say(pickingup ? "Departing immediately for new employee pickup." : "Shuttle departing.")
+			console.say(pickingup ? "Немедленное отбытие для подбора нового сотрудника." : "Шаттл отбывает.")
 		var/obj/docking_port/stationary/target = target_dock
 		if(QDELETED(target))
 			target = SSshuttle.getDock("arrival_stationary")
@@ -187,7 +187,7 @@
 
 	Launch(TRUE)
 
-	to_chat(user, span_notice("Calling your shuttle. One moment..."))
+	to_chat(user, span_notice("Вызываю ваш шаттл. Один момент..."))
 	while(mode != SHUTTLE_CALL && !damaged)
 		stoplag()
 
