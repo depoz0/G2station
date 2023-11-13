@@ -1,0 +1,61 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/chair/stool/directional/east,
+/obj/effect/spawner/random/entertainment/cigarette_pack,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"p" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/obj/modular_map_connector,
+/obj/effect/spawner/random/structure/barricade,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"t" = (
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+"E" = (
+/obj/effect/decal/cleanable/ash,
+/obj/item/chair/stool,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"K" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"M" = (
+/obj/machinery/computer/slot_machine,
+/obj/structure/sign/poster/random/directional/east,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"N" = (
+/obj/structure/sign/poster/random/directional/west,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"P" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/random/food_or_drink/booze,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+"S" = (
+/obj/machinery/computer/slot_machine,
+/turf/open/floor/iron/grimy,
+/area/station/maintenance/aft/lesser)
+
+(1,1,1) = {"
+p
+K
+N
+E
+a
+"}
+(2,1,1) = {"
+t
+S
+P
+S
+M
+"}

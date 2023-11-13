@@ -1,0 +1,10 @@
+directory = "_maps/map_files/Ministation/maintenance_modules/"
+
+[rooms.chemroom]
+modules = ["chemroom_xenos.dmm", "chemroom_casino.dmm", "chemroom_surgery.dmm"]
+
+[rooms.atmosroom]
+modules = ["atmosroom_owl.dmm", "atmosroom_shrine.dmm"]
+
+[rooms.wallgag]
+modules = ["wallgag_1.dmm", "wallgag_2.dmm", "wallgag_3.dmm", "wallgag_4.dmm", "wallgag_5.dmm", "wallgag_6.dmm", "wallgag_7.dmm", "wallgag_8.dmm", "wallgag_9.dmm", "wallgag_10.dmm", "wallgag_11.dmm"]
