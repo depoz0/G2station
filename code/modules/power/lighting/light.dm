@@ -1,9 +1,9 @@
 // the standard tube light fixture
 /obj/machinery/light
-	name = "light fixture"
+	name = "лампа"
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "tube"
-	desc = "A lighting fixture."
+	desc = "Осветительное устройство."
 	layer = WALL_OBJ_LAYER
 	plane = GAME_PLANE_UPPER
 	max_integrity = 100
@@ -320,15 +320,15 @@
 	. = ..()
 	switch(status)
 		if(LIGHT_OK)
-			. += "It is turned [on? "on" : "off"]."
+			. += "Свет [on? "включен" : "выключен"]."
 		if(LIGHT_EMPTY)
-			. += "The [fitting] has been removed."
+			. += "[fitting] было удален."
 		if(LIGHT_BURNED)
-			. += "The [fitting] is burnt out."
+			. += "[fitting] сгорела."
 		if(LIGHT_BROKEN)
-			. += "The [fitting] has been smashed."
+			. += "[fitting] была разбита."
 	if(cell || has_mock_cell)
-		. += "Its backup power charge meter reads [has_mock_cell ? 100 : round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
+		. += "Прибор для измерения заряда резервного питания, показания которого [has_mock_cell ? 100 : round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
 
 
 
@@ -338,7 +338,7 @@
 	// attempt to insert light
 	if(istype(tool, /obj/item/light))
 		if(status == LIGHT_OK)
-			to_chat(user, span_warning("There is a [fitting] already inserted!"))
+			to_chat(user, span_warning("[fitting] уже вставлена!"))
 			return
 		add_fingerprint(user)
 		var/obj/item/light/light_object = tool
@@ -351,9 +351,9 @@
 		add_fingerprint(user)
 		if(status != LIGHT_EMPTY)
 			drop_light_tube(user)
-			to_chat(user, span_notice("You replace [light_object]."))
+			to_chat(user, span_notice("Вы заменили [light_object]."))
 		else
-			to_chat(user, span_notice("You insert [light_object]."))
+			to_chat(user, span_notice("Вы вставили [light_object]."))
 		if(length(light_object.reagents.reagent_list))
 			create_reagents(LIGHT_REAGENT_CAPACITY, SEALED_CONTAINER | TRANSPARENT)
 			light_object.reagents.trans_to(reagents, LIGHT_REAGENT_CAPACITY)

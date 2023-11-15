@@ -1,5 +1,5 @@
 /obj/vehicle/ridden/bicycle
-	name = "bicycle"
+	name = "велосипед"
 	desc = "Keep away from electricity."
 	icon_state = "bicycle"
 	max_integrity = 150

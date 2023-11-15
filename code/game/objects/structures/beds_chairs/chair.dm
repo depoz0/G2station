@@ -219,7 +219,7 @@
 	color = rgb(193, 248, 104)
 
 /obj/structure/chair/comfy/shuttle
-	name = "челночное кресло"
+	name = "кресло шаттла"
 	desc = "Удобное и надежное кресло. Имеет более устойчивую систему крепления, обеспечивающую более плавный полет."
 	icon_state = "shuttle_chair"
 	buildstacktype = /obj/item/stack/sheet/mineral/titanium

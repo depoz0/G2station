@@ -65,7 +65,7 @@
 //TITANIUM (shuttle)
 
 /turf/open/floor/mineral/titanium
-	name = "shuttle floor"
+	name = "пол шаттла"
 	icon_state = "titanium"
 	floor_tile = /obj/item/stack/tile/mineral/titanium
 	custom_materials = list(/datum/material/titanium = SMALL_MATERIAL_AMOUNT*5)
@@ -149,7 +149,7 @@
 
 //PLASTITANIUM (syndieshuttle)
 /turf/open/floor/mineral/plastitanium
-	name = "shuttle floor"
+	name = "пол шаттла"
 	icon_state = "plastitanium"
 	floor_tile = /obj/item/stack/tile/mineral/plastitanium
 	custom_materials = list(/datum/material/alloy/plastitanium = SMALL_MATERIAL_AMOUNT*5)

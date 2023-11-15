@@ -148,7 +148,7 @@
 		port.alter_engines(mod)
 
 /obj/machinery/power/shuttle_engine/heater
-	name = "подогреватель двигателя"
+	name = "пусковой двигатель"
 	desc = "Directs energy into compressed particles in order to power engines."
 	icon_state = "heater"
 	circuit = /obj/item/circuitboard/machine/engine/heater

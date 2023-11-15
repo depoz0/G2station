@@ -85,8 +85,7 @@ export const Panel = (props, context) => {
             <Notifications>
               {game.connectionLostAt && (
                 <Notifications.Item rightSlot={<ReconnectButton />}>
-                  You are either AFK, experiencing lag or the connection has
-                  closed.
+                  Вы либо AFK, лагаете или соединение закрылось.
                 </Notifications.Item>
               )}
               {game.roundRestartedAt && (

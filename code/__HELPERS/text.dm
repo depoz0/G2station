@@ -1196,3 +1196,18 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 /proc/endswith(input_text, ending)
 	var/input_length = LAZYLEN(ending)
 	return !!findtext(input_text, ending, -input_length)
+
+/proc/runam(n, a, b, c)
+	if(!c)
+		c = b
+	n = abs(n) % 100
+	if(5 <= n && n <= 20)
+		return c
+	n %= 10
+	switch(n)
+		if(1)
+			return a
+		if(2 to 4)
+			return b
+		else
+			return c

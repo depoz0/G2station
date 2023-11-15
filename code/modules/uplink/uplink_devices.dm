@@ -4,12 +4,12 @@
 // used for nuke ops, for whom opening the radio GUI and the uplink GUI
 // simultaneously is an annoying distraction.
 /obj/item/uplink
-	name = "station bounced radio"
+	name = "рация"
 	icon = 'icons/obj/radio.dmi'
 	icon_state = "radio"
 	inhand_icon_state = "radio"
 	worn_icon_state = "radio"
-	desc = "A basic handheld radio that communicates with local telecommunication networks."
+	desc = "Простая портативная рация, обеспечивающая связь с местными телекоммуникационными сетями."
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	dog_fashion = /datum/dog_fashion/back
