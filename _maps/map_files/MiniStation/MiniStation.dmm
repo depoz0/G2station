@@ -84,9 +84,7 @@
 /obj/effect/spawner/random/medical/surgery_tool,
 /mob/living/simple_animal/hostile/retaliate/goose/vomit,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "aai" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/door/window/right/directional/west{
@@ -407,9 +405,7 @@
 "aqc" = (
 /obj/effect/spawner/random/engineering/atmospherics_portable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "arh" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/cable,
@@ -601,9 +597,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/grille,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "azn" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/firedoor,
@@ -766,9 +760,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "aHU" = (
 /obj/structure/closet/secure_closet/hos,
 /obj/effect/turf_decal/siding/wood{
@@ -1176,9 +1168,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/external,
 /obj/machinery/door/airlock/external,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "bfh" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
@@ -1997,9 +1987,7 @@
 /obj/effect/spawner/random/trash/garbage,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "bYj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2222,9 +2210,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "ckr" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -3650,9 +3636,7 @@
 	light_color = "#d8b1b1"
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "dMM" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -3940,9 +3924,7 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "edG" = (
 /obj/structure/lattice,
 /obj/structure/cable,
@@ -4240,9 +4222,7 @@
 	},
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "esz" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 8
@@ -4266,9 +4246,7 @@
 "etk" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "etm" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/shower/directional/south,
@@ -5121,9 +5099,7 @@
 "fgT" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "fii" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/fourcorners,
@@ -6240,9 +6216,7 @@
 "gyJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "gyU" = (
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva)
@@ -6394,9 +6368,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/contraband/random/directional/west,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "gKf" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -7163,9 +7135,7 @@
 "hul" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "hvq" = (
 /obj/machinery/computer/security/telescreen/entertainment/directional/east,
 /obj/structure/window/reinforced/spawner/directional/north{
@@ -7735,9 +7705,7 @@
 /obj/structure/closet/crate/maint,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "hYE" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/any/medical/chemistry,
@@ -7977,9 +7945,7 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/spawner/random/structure/grille,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "iiS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
@@ -8186,9 +8152,7 @@
 /area/station/cargo)
 "ipN" = (
 /turf/closed/wall/r_wall,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "ipX" = (
 /obj/machinery/modular_computer/preset/cargochat/engineering,
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
@@ -8421,9 +8385,7 @@
 /obj/structure/cable,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "iEu" = (
 /obj/structure/closet/secure_closet/brig,
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -9087,9 +9049,7 @@
 /obj/effect/mapping_helpers/broken_floor,
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "jpP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -10202,9 +10162,7 @@
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/clothing/mask/gas,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "kyy" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -11231,9 +11189,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/firecloset,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "lDs" = (
 /obj/structure/table,
 /obj/machinery/recharger{
@@ -11460,9 +11416,7 @@
 /obj/structure/cable,
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "lRg" = (
 /obj/structure/rack,
 /obj/item/radio{
@@ -11873,9 +11827,7 @@
 /obj/item/restraints/handcuffs/cable/yellow,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "mnd" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plating,
@@ -12186,9 +12138,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/entertainment/drugs,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "mJG" = (
 /obj/structure/closet/secure_closet/atmospherics,
 /obj/effect/turf_decal/tile/yellow{
@@ -12491,9 +12441,7 @@
 /obj/structure/cable,
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "niw" = (
 /obj/effect/turf_decal/plaque{
 	icon_state = "L9"
@@ -12785,9 +12733,7 @@
 	},
 /obj/structure/closet/crate/secure/loot,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "nAb" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
@@ -13492,9 +13438,7 @@
 /area/station/hallway/primary/central/fore)
 "oja" = (
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "ojK" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/green/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/visible/layer4,
@@ -14056,9 +14000,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/bikehorn/rubberducky/plasticducky,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "oOS" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/monitored/oxygen_input{
 	dir = 1
@@ -14403,9 +14345,7 @@
 "pjL" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "pmm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/effect/turf_decal/stripes/line,
@@ -14519,9 +14459,7 @@
 "ptL" = (
 /obj/effect/spawner/random/structure/grille,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "ptP" = (
 /obj/machinery/rnd/production/techfab/department/medical,
 /obj/effect/turf_decal/siding/dark{
@@ -15148,9 +15086,7 @@
 "pYu" = (
 /obj/structure/sign/poster/official/no_erp/directional/south,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "pYP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall,
@@ -15779,9 +15715,7 @@
 	dir = 1
 	},
 /turf/closed/wall,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "qFE" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -15897,9 +15831,7 @@
 /obj/item/reagent_containers/cup/glass/bottle/beer,
 /obj/structure/sign/poster/contraband/kudzu/directional/north,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "qLT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -16443,9 +16375,7 @@
 /obj/item/clothing/mask/gas,
 /obj/item/flashlight,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "riu" = (
 /obj/machinery/conveyor{
 	id = "atmos_storage"
@@ -16622,9 +16552,7 @@
 /obj/item/soap,
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "rts" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -17165,9 +17093,7 @@
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "rWT" = (
 /obj/machinery/camera/autoname/directional/south,
 /obj/structure/closet/firecloset,
@@ -17419,9 +17345,7 @@
 "slJ" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "snw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -17472,9 +17396,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "ssc" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -17653,9 +17575,7 @@
 "sBI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "sCe" = (
 /turf/closed/wall/r_wall,
 /area/station/command/heads_quarters/captain)
@@ -18560,9 +18480,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/external,
 /obj/machinery/door/airlock/external,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "tAj" = (
 /turf/open/floor/iron/cafeteria,
 /area/station/service/cafeteria)
@@ -18777,9 +18695,7 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "tMP" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/airlock/research{
@@ -18862,9 +18778,7 @@
 "tRQ" = (
 /obj/effect/spawner/random/structure/girder,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "tSc" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -18933,9 +18847,7 @@
 /obj/structure/sign/poster/official/random/directional/north,
 /obj/machinery/light/small,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "tVd" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/neutral{
@@ -19237,9 +19149,7 @@
 /area/station/ai_monitored/command/storage/eva)
 "ulT" = (
 /turf/closed/wall,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "unF" = (
 /obj/machinery/computer/records/medical{
 	dir = 4
@@ -19257,9 +19167,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general,
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "upb" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Dock";
@@ -19453,9 +19361,7 @@
 /obj/effect/spawner/random/medical/surgery_tool,
 /obj/effect/spawner/random/medical/surgery_tool,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "uAA" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/table/glass,
@@ -19498,9 +19404,7 @@
 /obj/effect/spawner/random/contraband/narcotics,
 /obj/structure/sign/poster/contraband/lusty_xenomorph/directional/east,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "uGf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -19695,16 +19599,12 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/engineering/toolbox,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "uQa" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "uQT" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -19904,9 +19804,7 @@
 "vct" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "vcD" = (
 /obj/effect/spawner/random/engineering/tank,
 /turf/open/floor/plating,
@@ -20987,9 +20885,7 @@
 "wkD" = (
 /obj/effect/spawner/random/trash/garbage,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "wlB" = (
 /obj/item/radio/intercom/directional/east{
 	pixel_y = -39
@@ -21094,9 +20990,7 @@
 /obj/structure/cable,
 /obj/effect/spawner/random/engineering/atmospherics_portable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "woF" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/heavy,
@@ -21550,9 +21444,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "wOr" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/firedoor,
@@ -21643,9 +21535,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/machinery/door/airlock/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "wYS" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -21943,9 +21833,7 @@
 /obj/effect/spawner/random/medical/minor_healing,
 /obj/effect/spawner/random/medical/surgery_tool,
 /turf/open/floor/plating,
-/area/station/maintenance/aft{
-	name = "Aft Maintenance"
-	})
+/area/station/maintenance/aft)
 "xtF" = (
 /obj/structure/lattice,
 /obj/structure/transit_tube/curved/flipped{
