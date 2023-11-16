@@ -7,12 +7,6 @@
 /mob/living/simple_animal/bot/secbot/beepsky/armsky,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
-"aab" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/mob/living/simple_animal/sloth/citrus,
-/turf/open/floor/iron,
-/area/station/cargo)
 "aac" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -2950,7 +2944,6 @@
 	pixel_y = 7
 	},
 /obj/item/clothing/gloves/latex,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
@@ -9037,10 +9030,6 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
-"jnI" = (
-/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/random,
-/turf/open/misc/asteroid/airless,
-/area/space/nearstation)
 "jod" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
@@ -13260,7 +13249,6 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "nXB" = (
-/obj/machinery/atmospherics/components/unary/cryo_cell,
 /turf/open/floor/iron/dark,
 /area/station/medical/cryo)
 "nXP" = (
@@ -15594,7 +15582,6 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "quF" = (
-/obj/structure/bed/roller,
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
 	},
@@ -17282,13 +17269,6 @@
 /obj/structure/sign/warning/radiation/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main)
-"seU" = (
-/obj/structure/bed/roller,
-/obj/effect/turf_decal/siding/blue{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
 "sfW" = (
 /obj/machinery/button/door{
 	id = "plumbing_shutters";
@@ -19571,7 +19551,6 @@
 /area/station/science/xenobiology)
 "uHq" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/dark/textured,
 /area/station/medical/morgue)
@@ -21341,10 +21320,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
-"wAH" = (
-/mob/living/simple_animal/hostile/asteroid/basilisk,
-/turf/open/misc/asteroid/airless,
-/area/space/nearstation)
 "wAU" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/airlock/research{
@@ -21867,10 +21842,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet,
 /area/station/service/library)
-"xjy" = (
-/mob/living/simple_animal/hostile/hivebot/range,
-/turf/open/misc/asteroid/airless,
-/area/space/nearstation)
 "xkd" = (
 /obj/structure/bookcase/random/religion,
 /obj/effect/turf_decal/siding/wood{
@@ -34576,7 +34547,7 @@ uTF
 qeD
 qeD
 qeD
-xjy
+qeD
 qeD
 qeD
 uTF
@@ -38965,7 +38936,7 @@ rEu
 rEu
 uTF
 qeD
-jnI
+qeD
 qeD
 kAF
 kAF
@@ -42573,7 +42544,7 @@ rEu
 uTF
 qeD
 qeD
-wAH
+qeD
 uTF
 rEu
 uTF
@@ -51857,7 +51828,7 @@ bIY
 hTV
 iep
 oMt
-aab
+rmq
 rmq
 qvZ
 uXn
@@ -63704,7 +63675,7 @@ gWy
 sTy
 dxN
 quF
-seU
+fKZ
 qrB
 atE
 jWV

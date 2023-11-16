@@ -1,4 +1,4 @@
-directory = "_maps/map_files/Ministation/maintenance_modules/"
+directory = "_maps/map_files/MiniStation/maintenance_modules/"
 
 [rooms.chemroom]
 modules = ["chemroom_xenos.dmm", "chemroom_casino.dmm", "chemroom_surgery.dmm"]

@@ -28,9 +28,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/structure/sign/poster/official/the_owl{
-	pixel_y = 34
-	},
+/obj/structure/sign/poster/official/the_owl,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/lesser)
 "w" = (
