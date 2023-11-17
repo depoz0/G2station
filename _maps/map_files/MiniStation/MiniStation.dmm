@@ -930,8 +930,7 @@
 /area/station/engineering/main)
 "aSW" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Armory";
-	!INVALID_VAR! = "3"
+	name = "Armory"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
@@ -1574,8 +1573,7 @@
 /area/station/maintenance/starboard)
 "bzK" = (
 /obj/machinery/door/airlock/research{
-	name = "Robotics Lab";
-	!INVALID_VAR! = "29"
+	name = "Robotics Lab"
 	},
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/machinery/door/firedoor,
@@ -1590,8 +1588,7 @@
 "bzX" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
-	name = "Supermatter Chamber";
-	!INVALID_VAR! = "10;24"
+	name = "Supermatter Chamber"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/airlock/access/any/engineering/general,
@@ -1856,8 +1853,7 @@
 	},
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
-	!INVALID_VAR! = "63"
+	name = "Brig"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
@@ -2430,8 +2426,7 @@
 "cwK" = (
 /obj/machinery/door/airlock/engineering/glass/critical{
 	heat_proof = 1;
-	name = "Supermatter Chamber";
-	!INVALID_VAR! = "10;24"
+	name = "Supermatter Chamber"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -3194,10 +3189,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos)
 "dpa" = (
-/obj/machinery/door/airlock/external{
-	!INVALID_VAR! = "13"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/machinery/door/airlock/external/obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/external,
@@ -3567,8 +3559,7 @@
 /area/station/science/ordnance/burnchamber)
 "dHz" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Armory";
-	!INVALID_VAR! = "3"
+	name = "Armory"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -4553,8 +4544,7 @@
 /area/station/command/heads_quarters/ce)
 "eGT" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Medbay Storage";
-	!INVALID_VAR! = "5"
+	name = "Medbay Storage"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/blue/fourcorners,
@@ -4778,8 +4768,7 @@
 /area/station/maintenance/aft/lesser)
 "eQu" = (
 /obj/machinery/door/airlock/security{
-	name = "Head of Security's Office";
-	!INVALID_VAR! = "58"
+	name = "Head of Security's Office"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -4996,8 +4985,7 @@
 /area/station/security/brig)
 "fci" = (
 /obj/machinery/door/airlock/virology/glass{
-	name = "Isolation A";
-	!INVALID_VAR! = "39"
+	name = "Isolation A"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/medical/virology,
 /obj/machinery/door/firedoor,
@@ -6157,8 +6145,7 @@
 /area/station/maintenance/starboard)
 "gvq" = (
 /obj/machinery/door/airlock/external{
-	name = "Supply Dock Airlock";
-	!INVALID_VAR! = "31"
+	name = "Supply Dock Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
@@ -6373,8 +6360,7 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /obj/machinery/door/airlock{
-	name = "Kitchen";
-	!INVALID_VAR! = "28;25"
+	name = "Kitchen"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/service/bar,
 /obj/effect/mapping_helpers/airlock/access/any/service/kitchen,
@@ -6428,8 +6414,7 @@
 /area/station/medical/medbay/central)
 "gKS" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Testing Labs";
-	!INVALID_VAR! = "7"
+	name = "Testing Labs"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/mapping_helpers/airlock/access/any/science/general,
@@ -6482,8 +6467,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock{
-	name = "Custodial Closet";
-	!INVALID_VAR! = "26"
+	name = "Custodial Closet"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/service/janitor,
 /obj/structure/cable,
@@ -6620,8 +6604,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	!INVALID_VAR! = "5"
+	name = "Medbay"
 	},
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 1
@@ -8050,8 +8033,7 @@
 /area/station/engineering/gravity_generator)
 "ikJ" = (
 /obj/machinery/door/airlock/research{
-	name = "Toxins Lab";
-	!INVALID_VAR! = "8"
+	name = "Toxins Lab"
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/structure/cable,
@@ -8089,8 +8071,7 @@
 /area/station/hallway/primary/central)
 "ilq" = (
 /obj/machinery/door/airlock/mining{
-	name = "Mining Office";
-	!INVALID_VAR! = "48"
+	name = "Mining Office"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/mining,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -8946,9 +8927,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
 "jjt" = (
-/obj/machinery/vending/cart{
-	!INVALID_VAR! = "57"
-	},
+/obj/machinery/vending/cart,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "jjO" = (
@@ -9001,9 +8980,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "jln" = (
-/obj/machinery/door/airlock/maintenance{
-	!INVALID_VAR! = "12"
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/spawner/random/structure/barricade,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
@@ -9175,9 +9152,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "jwL" = (
-/obj/structure/closet/secure_closet/bar{
-	!INVALID_VAR! = "25"
-	},
+/obj/structure/closet/secure_closet/bar,
 /obj/item/gun/ballistic/shotgun/doublebarrel,
 /turf/open/floor/wood,
 /area/station/service/cafeteria)
@@ -9192,8 +9167,7 @@
 /area/station/service/hydroponics)
 "jwY" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Tech Storage";
-	!INVALID_VAR! = "23;30"
+	name = "Tech Storage"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -9337,8 +9311,7 @@
 /area/station/engineering/storage_shared)
 "jED" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Pharmacy";
-	!INVALID_VAR! = "5; 69"
+	name = "Pharmacy"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -9531,8 +9504,7 @@
 /area/station/service/library)
 "jTQ" = (
 /obj/machinery/door/airlock/research{
-	name = "Toxins Test Lab";
-	!INVALID_VAR! = "8"
+	name = "Toxins Test Lab"
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/turf_decal/stripes/line{
@@ -9595,8 +9567,7 @@
 /area/station/service/cafeteria)
 "jVr" = (
 /obj/machinery/door/airlock/grunge{
-	name = "Morgue";
-	!INVALID_VAR! = "6"
+	name = "Morgue"
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/access/any/medical/morgue,
@@ -10068,8 +10039,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = null;
-	name = "Medbay Office";
-	!INVALID_VAR! = "5"
+	name = "Medbay Office"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -11150,7 +11120,6 @@
 	pixel_y = 6
 	},
 /obj/machinery/airalarm/directional/north{
-	!INVALID_VAR! = 1440;
 	pixel_y = 23
 	},
 /turf/open/floor/iron/dark/corner{
@@ -12295,8 +12264,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "virology_airlock_interior";
-	name = "Virology Interior Airlock";
-	!INVALID_VAR! = "39"
+	name = "Virology Interior Airlock"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
@@ -12421,8 +12389,7 @@
 	},
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "outerbrig";
-	name = "Brig";
-	!INVALID_VAR! = "63"
+	name = "Brig"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/all/security/entrance,
@@ -13343,8 +13310,7 @@
 /area/station/medical/surgery/theatre)
 "odW" = (
 /obj/machinery/door/airlock/medical{
-	name = "Psychology";
-	!INVALID_VAR! = "70"
+	name = "Psychology"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/wood{
@@ -13404,8 +13370,7 @@
 /area/station/science/robotics/lab)
 "ogb" = (
 /obj/machinery/door/airlock{
-	name = "Hydroponics/Bar Access";
-	!INVALID_VAR! = "35;28;25"
+	name = "Hydroponics/Bar Access"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/access/any/service/bar,
@@ -13620,8 +13585,7 @@
 /obj/machinery/button/door/directional/north{
 	id = "testingprivacy";
 	name = "Testing Privacy Control";
-	pixel_x = -24;
-	!INVALID_VAR! = list("science")
+	pixel_x = -24
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/explab)
@@ -14567,8 +14531,7 @@
 /area/station/commons/dorms)
 "pvL" = (
 /obj/machinery/door/airlock/medical/glass{
-	name = "Cryogenics Bay";
-	!INVALID_VAR! = "5"
+	name = "Cryogenics Bay"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -14597,9 +14560,7 @@
 /obj/machinery/camera/directional/east{
 	c_tag = "Medbay Office"
 	},
-/obj/machinery/modular_computer/preset/id{
-	!INVALID_VAR! = "30"
-	},
+/obj/machinery/modular_computer/preset/id,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /obj/machinery/airalarm/directional/east,
@@ -15062,8 +15023,7 @@
 /area/station/service/library)
 "pVD" = (
 /obj/machinery/door/airlock/medical{
-	name = "Operating Theatre";
-	!INVALID_VAR! = "45"
+	name = "Operating Theatre"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
@@ -15334,8 +15294,7 @@
 /area/station/medical/virology)
 "qkv" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Long-Term Cell 1";
-	!INVALID_VAR! = "2"
+	name = "Long-Term Cell 1"
 	},
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -15879,8 +15838,7 @@
 	id = "roboticsprivacy";
 	name = "Robotics Privacy Control";
 	pixel_x = -24;
-	pixel_y = -24;
-	!INVALID_VAR! = list("robotics")
+	pixel_y = -24
 	},
 /obj/machinery/computer/robotics{
 	dir = 1
@@ -16173,8 +16131,7 @@
 /area/station/medical/chemistry)
 "rat" = (
 /obj/machinery/door/airlock{
-	name = "Law Office";
-	!INVALID_VAR! = "38"
+	name = "Law Office"
 	},
 /obj/effect/turf_decal/siding/wood/end,
 /obj/structure/cable,
@@ -16444,8 +16401,7 @@
 /area/station/maintenance/aft/lesser)
 "rkC" = (
 /obj/machinery/door/airlock/research{
-	name = "Robotics Lab";
-	!INVALID_VAR! = "29"
+	name = "Robotics Lab"
 	},
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/machinery/door/firedoor,
@@ -16725,9 +16681,7 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "rEu" = (
-/turf/closed/mineral/random{
-	!INVALID_VAR! = list(/turf/closed/mineral/uranium = 5, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 10, /turf/closed/mineral/silver = 12, /turf/closed/mineral/plasma = 20, /turf/closed/mineral/iron = 40, /turf/closed/mineral/titanium = 11, /turf/closed/mineral/gibtonite = 4, /turf/closed/mineral/bscrystal = 1)
-	},
+/turf/closed/mineral/random,
 /area/space/nearstation)
 "rEL" = (
 /obj/structure/table/wood,
@@ -16853,8 +16807,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/mining/glass{
-	name = "Deliveries";
-	!INVALID_VAR! = "50"
+	name = "Deliveries"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron,
@@ -16943,8 +16896,7 @@
 /area/station/hallway/primary/central)
 "rOX" = (
 /obj/machinery/door/airlock/research/glass{
-	name = "Chemistry Lab";
-	!INVALID_VAR! = "33"
+	name = "Chemistry Lab"
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
@@ -17581,8 +17533,7 @@
 /area/station/command/heads_quarters/captain)
 "sCW" = (
 /obj/machinery/door/airlock/highsecurity{
-	name = "Secure Tech Storage";
-	!INVALID_VAR! = "19;23"
+	name = "Secure Tech Storage"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/tech_storage,
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
@@ -17698,8 +17649,7 @@
 /area/station/engineering/atmos)
 "sLn" = (
 /obj/machinery/door/airlock/external{
-	name = "Supply Dock Airlock";
-	!INVALID_VAR! = "31"
+	name = "Supply Dock Airlock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -18120,8 +18070,7 @@
 	autoclose = 0;
 	frequency = 1449;
 	id_tag = "virology_airlock_exterior";
-	name = "Virology Exterior Airlock";
-	!INVALID_VAR! = "39"
+	name = "Virology Exterior Airlock"
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
@@ -18199,8 +18148,7 @@
 /area/station/security/brig)
 "tmw" = (
 /obj/machinery/door/airlock/command/glass{
-	name = "AI Core";
-	!INVALID_VAR! = "65"
+	name = "AI Core"
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
@@ -18278,8 +18226,7 @@
 /area/station/hallway/secondary/exit)
 "tuc" = (
 /obj/machinery/door/airlock/research{
-	name = "Toxins Gas Storage";
-	!INVALID_VAR! = "8"
+	name = "Toxins Gas Storage"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/firedoor/heavy,
@@ -18644,9 +18591,7 @@
 "tLx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	!INVALID_VAR! = "5"
+	id_tag = "MedbayFoyer"
 	},
 /obj/effect/mapping_helpers/airlock/unres{
 	dir = 1
@@ -18668,8 +18613,7 @@
 "tMP" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/airlock/research{
-	name = "Toxins Gas Storage";
-	!INVALID_VAR! = "8"
+	name = "Toxins Gas Storage"
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/mapping_helpers/airlock/access/all/science/ordnance_storage,
@@ -19146,8 +19090,7 @@
 /area/station/maintenance/aft)
 "upb" = (
 /obj/machinery/door/airlock/mining/glass{
-	name = "Mining Dock";
-	!INVALID_VAR! = "48"
+	name = "Mining Dock"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -21193,8 +21136,7 @@
 "wAU" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/airlock/research{
-	name = "Toxins Lab";
-	!INVALID_VAR! = "8"
+	name = "Toxins Lab"
 	},
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/turf_decal/stripes/line{
@@ -21844,9 +21786,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "xuV" = (
-/obj/machinery/door/airlock/external{
-	!INVALID_VAR! = "13"
-	},
+/obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/external,
 /turf/open/floor/plating,
@@ -21862,7 +21802,6 @@
 /area/station/tcommsat/computer)
 "xwF" = (
 /obj/machinery/airalarm/directional/north{
-	!INVALID_VAR! = 1442;
 	pixel_y = 23
 	},
 /obj/machinery/smartfridge/petri/preloaded,
@@ -22069,8 +22008,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock{
-	name = "Kitchen";
-	!INVALID_VAR! = "28;25"
+	name = "Kitchen"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/service/bar,
 /obj/effect/mapping_helpers/airlock/access/any/service/kitchen,
