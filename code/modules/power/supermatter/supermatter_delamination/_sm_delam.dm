@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(sm_delam_list, list(
 /// First message is start of count down, second message is quitting of count down (if sm healed), third is 5 second intervals
 /datum/sm_delam/proc/count_down_messages(obj/machinery/power/supermatter_crystal/sm)
 	var/list/messages = list()
-	messages += "CRYSTAL DELAMINATION IMMINENT. The supermatter has reached critical integrity failure. Emergency causality destabilization field has been activated."
-	messages += "Crystalline hyperstructure returning to safe operating parameters. Failsafe has been disengaged."
+	messages += "РАСЩЕПЛЕНИЕ КРИСТАЛЛА НЕИЗБЕЖНО. Суперматерия достигла критического уровня дестабилизации. Активировано аварийное поле дестабилизации."
+	messages += "Кристаллическая гиперструктура возвращается к безопасным рабочим значениям. Защита от сбоев отключена."
 	messages += "remain before causality stabilization."
 	return messages
