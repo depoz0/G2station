@@ -439,9 +439,9 @@
 		adjustStaminaLoss(shock_damage)
 	if(!(flags & SHOCK_SUPPRESS_MESSAGE))
 		visible_message(
-			span_danger("[src] was shocked by \the [source]!"), \
-			span_userdanger("You feel a powerful shock coursing through your body!"), \
-			span_hear("You hear a heavy electrical crack.") \
+			span_danger("[src] получил удар тока от [source]!"), \
+			span_userdanger("Вы чувствуете мощный удар током, проходящий через все тело!"), \
+			span_hear("Слышен сильный электрический разряд.") \
 		)
 	return shock_damage
 
