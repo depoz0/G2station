@@ -237,3 +237,5 @@ define_sanity_output.txt
 # ezdb
 /db/
 /config/ezdb.txt
+# AP
+.github/CODEOWNERS

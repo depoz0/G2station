@@ -341,18 +341,18 @@
 
 		var/organ_hit_text = ""
 		if(hit_limb_zone)
-			organ_hit_text = " in \the [parse_zone(hit_limb_zone)]"
+			organ_hit_text = " в [parse_zone(hit_limb_zone)]"
 		if(suppressed == SUPPRESSED_VERY)
 			playsound(loc, hitsound, 5, TRUE, -1)
 		else if(suppressed)
 			playsound(loc, hitsound, 5, TRUE, -1)
-			to_chat(living_target, span_userdanger("You're shot by \a [src][organ_hit_text]!"))
+			to_chat(living_target, span_userdanger("В вас стреляют [src][organ_hit_text]!"))
 		else
 			if(hitsound)
 				var/volume = vol_by_damage()
 				playsound(src, hitsound, volume, TRUE, -1)
-			living_target.visible_message(span_danger("[living_target] is hit by \a [src][organ_hit_text]!"), \
-					span_userdanger("You're hit by \a [src][organ_hit_text]!"), null, COMBAT_MESSAGE_RANGE)
+			living_target.visible_message(span_danger("[living_target] был поражен [src][organ_hit_text]!"), \
+					span_userdanger("Вас поразил [src][organ_hit_text]!"), null, COMBAT_MESSAGE_RANGE)
 			if(living_target.is_blind())
 				to_chat(living_target, span_userdanger("You feel something hit you[organ_hit_text]!"))
 
