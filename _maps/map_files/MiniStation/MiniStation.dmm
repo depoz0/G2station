@@ -2021,6 +2021,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
+/obj/effect/landmark/navigate_destination{
+	location = "Xeno"
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "bZa" = (
@@ -4592,12 +4595,6 @@
 	},
 /turf/open/floor/wood,
 /area/station/service/cafeteria)
-"eIY" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/sign/poster/official/safety_eye_protection,
-/turf/open/floor/iron,
-/area/station/engineering/lobby)
 "eJq" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line{
@@ -5924,6 +5921,10 @@
 /obj/machinery/computer/security/telescreen/ordnance,
 /turf/open/floor/iron,
 /area/station/science/ordnance/testlab)
+"gjl" = (
+/obj/structure/sign/poster/official/build,
+/turf/closed/wall/r_wall,
+/area/station/maintenance/aft)
 "gju" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
@@ -8026,6 +8027,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
+"ilg" = (
+/obj/structure/sign/poster/official/safety_eye_protection,
+/turf/closed/wall/r_wall,
+/area/station/engineering/main)
 "ilq" = (
 /obj/machinery/door/airlock/mining{
 	name = "Mining Office"
@@ -9707,6 +9712,13 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
+"keV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/effect/landmark/navigate_destination/janitor,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
 "kfa" = (
 /obj/machinery/door/window/right/directional/east{
 	name = "Curator Desk Door";
@@ -9959,6 +9971,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
+"kpD" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/effect/landmark/navigate_destination/chapel,
+/turf/open/floor/iron,
+/area/station/hallway/secondary/exit)
 "kpP" = (
 /obj/structure/sign/painting/library{
 	pixel_x = -32
@@ -14780,11 +14798,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva)
-"pMG" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/landmark/navigate_destination/janitor,
-/turf/open/floor/iron,
-/area/station/hallway/secondary/exit)
 "pMP" = (
 /obj/structure/window/reinforced/fulltile,
 /obj/structure/transit_tube,
@@ -21885,7 +21898,6 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
 	},
-/obj/structure/sign/poster/official/festive,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "xEU" = (
@@ -22034,6 +22046,10 @@
 /obj/effect/spawner/random/clothing/bowler_or_that,
 /turf/open/floor/carpet,
 /area/station/service/cafeteria)
+"xNE" = (
+/obj/structure/sign/poster/official/festive,
+/turf/closed/wall/r_wall,
+/area/station/engineering/lobby)
 "xOG" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/engine,
@@ -22372,7 +22388,6 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
 	},
-/obj/structure/sign/poster/official/build,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
@@ -49508,7 +49523,7 @@ aDP
 hOO
 buN
 buN
-buN
+kpD
 igh
 cfb
 buN
@@ -51570,7 +51585,7 @@ tOh
 iaV
 oVE
 tYn
-pMG
+ohD
 lFb
 wMT
 mhv
@@ -52628,7 +52643,7 @@ hSD
 hSD
 hSD
 hSD
-eIY
+hSD
 hSD
 haU
 foq
@@ -52885,7 +52900,7 @@ hir
 dqj
 dqj
 dzC
-dzC
+ilg
 dzC
 nVR
 tTy
@@ -53386,7 +53401,7 @@ qyM
 tQi
 okV
 tUS
-ipN
+gjl
 ylt
 juO
 fFx
@@ -53903,7 +53918,7 @@ fgT
 ipN
 sYE
 sYE
-sYE
+xNE
 xEO
 nYH
 jLe
@@ -59041,7 +59056,7 @@ lsr
 vNr
 ewe
 vzh
-vzh
+keV
 gOM
 ydX
 err
