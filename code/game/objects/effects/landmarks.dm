@@ -66,15 +66,15 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/prisoner
-	name = "Prisoner"
+	name = "Заключенный"
 	icon_state = "Prisoner"
 
 /obj/effect/landmark/start/janitor
-	name = "Janitor"
+	name = "Уборщик"
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Cargo Technician"
+	name = "Грузчик"
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bitrunner
@@ -82,99 +82,99 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Bitrunner"
 
 /obj/effect/landmark/start/bartender
-	name = "Bartender"
+	name = "Бармен"
 	icon_state = "Bartender"
 
 /obj/effect/landmark/start/clown
-	name = "Clown"
+	name = "Клоун"
 	icon_state = "Clown"
 
 /obj/effect/landmark/start/mime
-	name = "Mime"
+	name = "Мим"
 	icon_state = "Mime"
 
 /obj/effect/landmark/start/quartermaster
-	name = "Quartermaster"
+	name = "Квартирмейстер"
 	icon_state = "Quartermaster"
 
 /obj/effect/landmark/start/atmospheric_technician
-	name = "Atmospheric Technician"
+	name = "Атмосферный техник"
 	icon_state = "Atmospheric Technician"
 
 /obj/effect/landmark/start/cook
-	name = "Cook"
+	name = "Повар"
 	icon_state = "Cook"
 
 /obj/effect/landmark/start/shaft_miner
-	name = "Shaft Miner"
+	name = "Шахтёр"
 	icon_state = "Shaft Miner"
 
 /obj/effect/landmark/start/security_officer
-	name = "Security Officer"
+	name = "Офицер службы безопасности"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/botanist
-	name = "Botanist"
+	name = "Ботаник"
 	icon_state = "Botanist"
 
 /obj/effect/landmark/start/head_of_security
-	name = "Head of Security"
+	name = "Глава службы безопасности"
 	icon_state = "Head of Security"
 
 /obj/effect/landmark/start/captain
-	name = "Captain"
+	name = "Капитан"
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "Detective"
+	name = "Детектив"
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden
-	name = "Warden"
+	name = "Смотритель"
 	icon_state = "Warden"
 
 /obj/effect/landmark/start/chief_engineer
-	name = "Chief Engineer"
+	name = "Главный инженер"
 	icon_state = "Chief Engineer"
 
 /obj/effect/landmark/start/head_of_personnel
-	name = "Head of Personnel"
+	name = "Глава персонала"
 	icon_state = "Head of Personnel"
 
 /obj/effect/landmark/start/librarian
-	name = "Curator"
+	name = "Библиотекарь"
 	icon_state = "Curator"
 
 /obj/effect/landmark/start/lawyer
-	name = "Lawyer"
+	name = "Адвокат"
 	icon_state = "Lawyer"
 
 /obj/effect/landmark/start/station_engineer
-	name = "Station Engineer"
+	name = "Станционный инженер"
 	icon_state = "Station Engineer"
 
 /obj/effect/landmark/start/medical_doctor
-	name = "Medical Doctor"
+	name = "Врач"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/coroner
-	name = "Coroner"
+	name = "Патологоанат"
 	icon_state = "Coroner"
 
 /obj/effect/landmark/start/paramedic
-	name = "Paramedic"
+	name = "Парамедик"
 	icon_state = "Paramedic"
 
 /obj/effect/landmark/start/scientist
-	name = "Scientist"
+	name = "Учёный"
 	icon_state = "Scientist"
 
 /obj/effect/landmark/start/chemist
-	name = "Chemist"
+	name = "Химик"
 	icon_state = "Chemist"
 
 /obj/effect/landmark/start/roboticist
-	name = "Roboticist"
+	name = "Робототехник"
 	icon_state = "Roboticist"
 
 /obj/effect/landmark/start/research_director
@@ -182,23 +182,23 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = JOB_RESEARCH_DIRECTOR
 
 /obj/effect/landmark/start/geneticist
-	name = "Geneticist"
+	name = "Генетик"
 	icon_state = "Geneticist"
 
 /obj/effect/landmark/start/chief_medical_officer
-	name = "Chief Medical Officer"
+	name = "Главный врач"
 	icon_state = "Chief Medical Officer"
 
 /obj/effect/landmark/start/virologist
-	name = "Virologist"
+	name = "Вирусолог"
 	icon_state = "Virologist"
 
 /obj/effect/landmark/start/psychologist
-	name = "Psychologist"
+	name = "Психолог"
 	icon_state = "Psychologist"
 
 /obj/effect/landmark/start/chaplain
-	name = "Chaplain"
+	name = "Священник"
 	icon_state = "Chaplain"
 
 /obj/effect/landmark/start/cyborg
