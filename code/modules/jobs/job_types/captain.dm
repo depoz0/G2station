@@ -56,7 +56,7 @@
 	. += "\nВы имеете доступ ко всем радиоканалам, но они не настраиваются автоматически. Проверьте свой радиоприемник для получения дополнительной информации."
 
 /datum/outfit/job/captain
-	name = "Captain"
+	name = "Капитан"
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/advanced/gold

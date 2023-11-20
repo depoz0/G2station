@@ -92,15 +92,15 @@ const ApcContent = (props, context) => {
         siliconUser={data.remoteAccess || data.siliconUser}
         preventLocking={data.remoteAccess}
       />
-      <Section title="Power Status">
+      <Section title="Состояние питания">
         <LabeledList>
           <LabeledList.Item
-            label="Main Breaker"
+            label="Главный выключатель"
             color={externalPowerStatus.color}
             buttons={
               <Button
                 icon={data.isOperating ? 'power-off' : 'times'}
-                content={data.isOperating ? 'On' : 'Off'}
+                content={data.isOperating ? 'Вкл' : 'Выкл'}
                 selected={data.isOperating && !locked}
                 disabled={locked}
                 onClick={() => act('breaker')}
@@ -108,16 +108,16 @@ const ApcContent = (props, context) => {
             }>
             [ {externalPowerStatus.externalPowerText} ]
           </LabeledList.Item>
-          <LabeledList.Item label="Power Cell">
+          <LabeledList.Item label="Батарея питания">
             <ProgressBar color="good" value={adjustedCellChange} />
           </LabeledList.Item>
           <LabeledList.Item
-            label="Charge Mode"
+            label="Режим зарядки"
             color={chargingStatus.color}
             buttons={
               <Button
                 icon={data.chargeMode ? 'sync' : 'times'}
-                content={data.chargeMode ? 'Auto' : 'Off'}
+                content={data.chargeMode ? 'Авто' : 'Выкл'}
                 disabled={locked}
                 onClick={() => act('charge')}
               />
@@ -126,7 +126,7 @@ const ApcContent = (props, context) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-      <Section title="Power Channels">
+      <Section title="Каналы питания">
         <LabeledList>
           {channelArray.map((channel) => {
             const { topicParams } = channel;
@@ -140,11 +140,11 @@ const ApcContent = (props, context) => {
                       inline
                       mx={2}
                       color={channel.status >= 2 ? 'good' : 'bad'}>
-                      {channel.status >= 2 ? 'On' : 'Off'}
+                      {channel.status >= 2 ? 'Вкл' : 'Выкл'}
                     </Box>
                     <Button
                       icon="sync"
-                      content="Auto"
+                      content="Авто"
                       selected={
                         !locked &&
                         (channel.status === 1 || channel.status === 3)
@@ -154,14 +154,14 @@ const ApcContent = (props, context) => {
                     />
                     <Button
                       icon="power-off"
-                      content="On"
+                      content="Вкл"
                       selected={!locked && channel.status === 2}
                       disabled={locked}
                       onClick={() => act('channel', topicParams.on)}
                     />
                     <Button
                       icon="times"
-                      content="Off"
+                      content="Выкл"
                       selected={!locked && channel.status === 0}
                       disabled={locked}
                       onClick={() => act('channel', topicParams.off)}
@@ -172,13 +172,13 @@ const ApcContent = (props, context) => {
               </LabeledList.Item>
             );
           })}
-          <LabeledList.Item label="Total Load">
+          <LabeledList.Item label="Общая нагрузка">
             <b>{data.totalLoad}</b>
           </LabeledList.Item>
         </LabeledList>
       </Section>
       <Section
-        title="Misc"
+        title="Прочие"
         buttons={
           !!data.siliconUser && (
             <>
@@ -192,7 +192,7 @@ const ApcContent = (props, context) => {
               )}
               <Button
                 icon="lightbulb-o"
-                content="Overload"
+                content="Избыток"
                 onClick={() => act('overload')}
               />
             </>
@@ -200,36 +200,36 @@ const ApcContent = (props, context) => {
         }>
         <LabeledList>
           <LabeledList.Item
-            label="Cover Lock"
+            label="Блокировка крышки"
             buttons={
               <Button
-                tooltip="APC cover can be pried open with a crowbar."
+                tooltip="Крышку ЛКП можно открыть с помощью ломика."
                 icon={data.coverLocked ? 'lock' : 'unlock'}
-                content={data.coverLocked ? 'Engaged' : 'Disengaged'}
+                content={data.coverLocked ? 'Задействован' : 'Отключен'}
                 disabled={locked}
                 onClick={() => act('cover')}
               />
             }
           />
           <LabeledList.Item
-            label="Emergency Lighting"
+            label="Аварийная подсветка"
             buttons={
               <Button
-                tooltip="Lights use internal power cell when there is no power available."
+                tooltip="При отсутствии питания лампочки используют внутренний элемент питания."
                 icon="lightbulb-o"
-                content={data.emergencyLights ? 'Enabled' : 'Disabled'}
+                content={data.emergencyLights ? 'Включено' : 'Отключено'}
                 disabled={locked}
                 onClick={() => act('emergency_lighting')}
               />
             }
           />
           <LabeledList.Item
-            label="Night Shift Lighting"
+            label="Освещение в темное время"
             buttons={
               <Button
-                tooltip="Dim lights to reduce power consumption."
+                tooltip="Уменьшение яркости освещения для снижения энергопотребления."
                 icon="lightbulb-o"
-                content={data.nightshiftLights ? 'Enabled' : 'Disabled'}
+                content={data.nightshiftLights ? 'Включено' : 'Отключено'}
                 disabled={data.disable_nightshift_toggle}
                 onClick={() => act('toggle_nightshift')}
               />

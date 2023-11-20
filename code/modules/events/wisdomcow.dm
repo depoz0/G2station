@@ -1,10 +1,10 @@
 /datum/round_event_control/wisdomcow
-	name = "Wisdom Cow"
+	name = "Божья коровка"
 	typepath = /datum/round_event/wisdomcow
 	max_occurrences = 1
 	weight = 20
 	category = EVENT_CATEGORY_FRIENDLY
-	description = "A cow appears to tell you wise words."
+	description = "Появляется корова, чтобы произнести мудрые слова."
 	admin_setup = list(
 		/datum/event_admin_setup/set_location/wisdom_cow,
 		/datum/event_admin_setup/listed_options/wisdom_cow,
@@ -20,7 +20,7 @@
 	var/selected_experience
 
 /datum/round_event/wisdomcow/announce(fake)
-	priority_announce("A wise cow has been spotted in the area. Be sure to ask for her advice.", "Nanotrasen Cow Ranching Agency")
+	priority_announce("В окрестностях замечена разумная корова. Не забудьте спросить у нее совета.", "Агентство по разведению коров Нанотрасен")
 
 /datum/round_event/wisdomcow/start()
 	var/turf/targetloc
@@ -56,5 +56,3 @@
 
 /datum/event_admin_setup/input_number/wisdom_cow/apply_to_event(datum/round_event/wisdomcow/event)
 	event.selected_experience = chosen_value
-	
-	

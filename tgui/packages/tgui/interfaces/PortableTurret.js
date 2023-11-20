@@ -23,7 +23,8 @@ export const PortableTurret = (props, context) => {
     <Window width={310} height={lasertag_turret ? 110 : 292}>
       <Window.Content>
         <NoticeBox>
-          Swipe an ID card to {locked ? 'unlock' : 'lock'} this interface.
+          Проведите картой ID, чтобы {locked ? 'unlock' : 'lock'} этот
+          интерфейс.
         </NoticeBox>
         <>
           <Section>
