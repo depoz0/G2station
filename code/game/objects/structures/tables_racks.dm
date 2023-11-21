@@ -13,8 +13,8 @@
  */
 
 /obj/structure/table
-	name = "table"
-	desc = "A square piece of iron standing on four metal legs. It can not move."
+	name = "стол"
+	desc = "Квадратный кусок железа, стоящий на четырех металлических ножках. Он не может двигаться."
 	icon = 'icons/obj/smooth_structures/table.dmi'
 	icon_state = "table-0"
 	base_icon_state = "table"

@@ -77,7 +77,7 @@
 	return TRUE
 
 /datum/id_trim/job/assistant
-	assignment = "Assistant"
+	assignment = "Ассистент"
 	trim_state = "trim_assistant"
 	sechud_icon_state = SECHUD_ASSISTANT
 	minimal_access = list()
@@ -103,7 +103,7 @@
 			ACCESS_MAINT_TUNNELS)
 
 /datum/id_trim/job/atmospheric_technician
-	assignment = "Atmospheric Technician"
+	assignment = "Атмосферный техник"
 	trim_state = "trim_atmospherictechnician"
 	department_color = COLOR_ENGINEERING_ORANGE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
@@ -132,7 +132,7 @@
 	job = /datum/job/atmospheric_technician
 
 /datum/id_trim/job/bartender
-	assignment = "Bartender"
+	assignment = "Бармен"
 	trim_state = "trim_bartender"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -180,7 +180,7 @@
 	job = /datum/job/bitrunner
 
 /datum/id_trim/job/botanist
-	assignment = "Botanist"
+	assignment = "Ботаник"
 	trim_state = "trim_botanist"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -203,7 +203,7 @@
 	job = /datum/job/botanist
 
 /datum/id_trim/job/captain
-	assignment = "Captain"
+	assignment = "Капитан"
 	intern_alt_name = "Captain-in-Training"
 	trim_state = "trim_captain"
 	department_color = COLOR_COMMAND_BLUE
@@ -226,7 +226,7 @@
 	return ..()
 
 /datum/id_trim/job/cargo_technician
-	assignment = "Cargo Technician"
+	assignment = "Грузчик"
 	trim_state = "trim_cargotechnician"
 	department_color = COLOR_CARGO_BROWN
 	subdepartment_color = COLOR_CARGO_BROWN
@@ -251,7 +251,7 @@
 	job = /datum/job/cargo_technician
 
 /datum/id_trim/job/chaplain
-	assignment = "Chaplain"
+	assignment = "Священник"
 	trim_state = "trim_chaplain"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -273,7 +273,7 @@
 	job = /datum/job/chaplain
 
 /datum/id_trim/job/chemist
-	assignment = "Chemist"
+	assignment = "Химик"
 	trim_state = "trim_chemist"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -298,7 +298,7 @@
 	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
-	assignment = "Chief Engineer"
+	assignment = "Главный инженер"
 	intern_alt_name = "Chief Engineer-in-Training"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_COMMAND_BLUE
@@ -339,7 +339,7 @@
 	job = /datum/job/chief_engineer
 
 /datum/id_trim/job/chief_medical_officer
-	assignment = "Chief Medical Officer"
+	assignment = "Главный врач"
 	intern_alt_name = "Chief Medical Officer-in-Training"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_COMMAND_BLUE
@@ -378,7 +378,7 @@
 	job = /datum/job/chief_medical_officer
 
 /datum/id_trim/job/clown
-	assignment = "Clown"
+	assignment = "Клоун"
 	trim_state = "trim_clown"
 	department_color = COLOR_MAGENTA
 	subdepartment_color = COLOR_MAGENTA
@@ -397,7 +397,7 @@
 	job = /datum/job/clown
 
 /datum/id_trim/job/cook
-	assignment = "Cook"
+	assignment = "Повар"
 	trim_state = "trim_cook"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -424,7 +424,7 @@
 	sechud_icon_state = SECHUD_CHEF
 
 /datum/id_trim/job/coroner
-	assignment = "Coroner"
+	assignment = "Патологоанат"
 	trim_state = "trim_coroner"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -450,7 +450,7 @@
 	job = /datum/job/coroner
 
 /datum/id_trim/job/curator
-	assignment = "Curator"
+	assignment = "Библиотекарь"
 	trim_state = "trim_curator"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -471,7 +471,7 @@
 	job = /datum/job/curator
 
 /datum/id_trim/job/detective
-	assignment = "Detective"
+	assignment = "Детектив"
 	trim_state = "trim_detective"
 	department_color = COLOR_SECURITY_RED
 	subdepartment_color = COLOR_SECURITY_RED
@@ -509,7 +509,7 @@
 		access |= list(ACCESS_MAINT_TUNNELS)
 
 /datum/id_trim/job/geneticist
-	assignment = "Geneticist"
+	assignment = "Генетик"
 	trim_state = "trim_geneticist"
 	department_color = COLOR_SCIENCE_PINK
 	subdepartment_color = COLOR_SCIENCE_PINK
@@ -535,7 +535,7 @@
 	job = /datum/job/geneticist
 
 /datum/id_trim/job/head_of_personnel
-	assignment = "Head of Personnel"
+	assignment = "Глава персонала"
 	intern_alt_name = "Head of Personnel-in-Training"
 	trim_state = "trim_headofpersonnel"
 	department_color = COLOR_COMMAND_BLUE
@@ -588,7 +588,7 @@
 	job = /datum/job/head_of_personnel
 
 /datum/id_trim/job/head_of_security
-	assignment = "Head of Security"
+	assignment = "Глава службы безопасности"
 	intern_alt_name = "Head of Security-in-Training"
 	trim_state = "trim_securityofficer"
 	department_color = COLOR_COMMAND_BLUE
@@ -647,7 +647,7 @@
 		access |= list(ACCESS_MAINT_TUNNELS)
 
 /datum/id_trim/job/janitor
-	assignment = "Janitor"
+	assignment = "Уборщик"
 	trim_state = "trim_janitor"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SERVICE_LIME
@@ -667,7 +667,7 @@
 	job = /datum/job/janitor
 
 /datum/id_trim/job/lawyer
-	assignment = "Lawyer"
+	assignment = "Адвокат"
 	trim_state = "trim_lawyer"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_SECURITY_RED
@@ -688,7 +688,7 @@
 	job = /datum/job/lawyer
 
 /datum/id_trim/job/medical_doctor
-	assignment = "Medical Doctor"
+	assignment = "Врач"
 	trim_state = "trim_medicaldoctor"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -713,7 +713,7 @@
 	job = /datum/job/doctor
 
 /datum/id_trim/job/mime
-	assignment = "Mime"
+	assignment = "Мим"
 	trim_state = "trim_mime"
 	department_color = COLOR_SILVER
 	subdepartment_color = COLOR_WHITE
@@ -732,7 +732,7 @@
 	job = /datum/job/mime
 
 /datum/id_trim/job/paramedic
-	assignment = "Paramedic"
+	assignment = "Парамедик"
 	trim_state = "trim_paramedic"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -763,7 +763,7 @@
 	job = /datum/job/paramedic
 
 /datum/id_trim/job/prisoner
-	assignment = "Prisoner"
+	assignment = "Заключенный"
 	trim_state = "trim_warden"
 	department_color = COLOR_PRISONER_BLACK
 	subdepartment_color = COLOR_PRISONER_BLACK
@@ -805,7 +805,7 @@
 	template_access = null
 
 /datum/id_trim/job/psychologist
-	assignment = "Psychologist"
+	assignment = "Психолог"
 	trim_state = "trim_psychologist"
 	department_color = COLOR_SERVICE_LIME
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -829,7 +829,7 @@
 	job = /datum/job/psychologist
 
 /datum/id_trim/job/quartermaster
-	assignment = "Quartermaster"
+	assignment = "Квартирмейстер"
 	trim_state = "trim_quartermaster"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_CARGO_BROWN
@@ -866,7 +866,7 @@
 	job = /datum/job/quartermaster
 
 /datum/id_trim/job/research_director
-	assignment = "Research Director"
+	assignment = "Директор исследований"
 	intern_alt_name = "Research Director-in-Training"
 	trim_state = "trim_scientist"
 	department_color = COLOR_COMMAND_BLUE
@@ -914,7 +914,7 @@
 	job = /datum/job/research_director
 
 /datum/id_trim/job/roboticist
-	assignment = "Roboticist"
+	assignment = "Робототехник"
 	trim_state = "trim_roboticist"
 	department_color = COLOR_SCIENCE_PINK
 	subdepartment_color = COLOR_SCIENCE_PINK
@@ -942,7 +942,7 @@
 	job = /datum/job/roboticist
 
 /datum/id_trim/job/scientist
-	assignment = "Scientist"
+	assignment = "Учёный"
 	trim_state = "trim_scientist"
 	department_color = COLOR_SCIENCE_PINK
 	subdepartment_color = COLOR_SCIENCE_PINK
@@ -970,7 +970,7 @@
 
 /// Sec officers have departmental variants. They each have their own trims with bonus departmental accesses.
 /datum/id_trim/job/security_officer
-	assignment = "Security Officer"
+	assignment = "Офицер службы безопасности"
 	trim_state = "trim_securityofficer"
 	department_color = COLOR_SECURITY_RED
 	subdepartment_color = COLOR_SECURITY_RED
@@ -1033,7 +1033,7 @@
 		access |= elevated_access
 
 /datum/id_trim/job/security_officer/supply
-	assignment = "Security Officer (Cargo)"
+	assignment = "Офицер службы безопасности (Грузы)"
 	subdepartment_color = COLOR_CARGO_BROWN
 	department_access = list(
 		ACCESS_BIT_DEN,
@@ -1047,7 +1047,7 @@
 	)
 
 /datum/id_trim/job/security_officer/engineering
-	assignment = "Security Officer (Engineering)"
+	assignment = "Офицер службы безопасности (Инженерия)"
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
 	department_access = list(
 		ACCESS_ATMOSPHERICS,
@@ -1061,7 +1061,7 @@
 	)
 
 /datum/id_trim/job/security_officer/medical
-	assignment = "Security Officer (Medical)"
+	assignment = "Офицер службы безопасности (Медицина)"
 	subdepartment_color = COLOR_MEDICAL_BLUE
 	department_access = list(
 		ACCESS_MEDICAL,
@@ -1075,7 +1075,7 @@
 	)
 
 /datum/id_trim/job/security_officer/science
-	assignment = "Security Officer (Science)"
+	assignment = "Офицер службы безопасности (Наука)"
 	subdepartment_color = COLOR_SCIENCE_PINK
 	department_access = list(
 		ACCESS_RESEARCH,
@@ -1091,7 +1091,7 @@
 	)
 
 /datum/id_trim/job/shaft_miner
-	assignment = "Shaft Miner"
+	assignment = "Шахтёр"
 	trim_state = "trim_shaftminer"
 	department_color = COLOR_CARGO_BROWN
 	subdepartment_color = COLOR_SCIENCE_PINK
@@ -1128,7 +1128,7 @@
 	template_access = null
 
 /datum/id_trim/job/station_engineer
-	assignment = "Station Engineer"
+	assignment = "Станционный инженер"
 	trim_state = "trim_stationengineer"
 	department_color = COLOR_ENGINEERING_ORANGE
 	subdepartment_color = COLOR_ENGINEERING_ORANGE
@@ -1157,7 +1157,7 @@
 	job = /datum/job/station_engineer
 
 /datum/id_trim/job/virologist
-	assignment = "Virologist"
+	assignment = "Вирусолог"
 	trim_state = "trim_virologist"
 	department_color = COLOR_MEDICAL_BLUE
 	subdepartment_color = COLOR_MEDICAL_BLUE
@@ -1181,7 +1181,7 @@
 	job = /datum/job/virologist
 
 /datum/id_trim/job/warden
-	assignment = "Warden"
+	assignment = "Смотритель"
 	trim_state = "trim_warden"
 	department_color = COLOR_SECURITY_RED
 	subdepartment_color = COLOR_SECURITY_RED

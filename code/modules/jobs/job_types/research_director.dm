@@ -1,8 +1,7 @@
 /datum/job/research_director
 	title = JOB_RESEARCH_DIRECTOR
-	description = "Supervise research efforts, ensure Robotics is in working \
-		order, make sure the AI and its Cyborgs aren't rogue, replacing them if \
-		they are"
+	description = "Контролировать исследовательские работы, следить за тем, чтобы робототехника была в рабочем состоянии.\
+		следить за тем, чтобы ИИ и его Киборги не были неконтролируемыми, заменять их если они выходя из подконтроля."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list("Science")
@@ -47,7 +46,7 @@
 
 
 /datum/job/research_director/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "В связи с нехваткой персонала на палубе назначен новый исполняющий обязанности капитана [captain.real_name]!"
 
 
 /datum/outfit/job/rd

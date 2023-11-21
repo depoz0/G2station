@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 ///	Modifies the message by comparing the languages of the speaker with the languages of the hearer. Called on the hearer.
 /atom/movable/proc/translate_language(atom/movable/speaker, datum/language/language, raw_message, list/spans, list/message_mods = list())
 	if(!language)
-		return "makes a strange sound."
+		return "издает странные звуки."
 
 	if(!has_language(language))
 		var/datum/language/dialect = GLOB.language_datum_instances[language]

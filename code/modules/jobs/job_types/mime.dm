@@ -84,8 +84,8 @@
 	fan.show_to(H)
 
 /obj/item/book/granter/action/spell/mime/mimery
-	name = "Guide to Dank Mimery"
-	desc = "Teaches one of three classic pantomime routines, allowing a practiced mime to conjure invisible objects into corporeal existence. One use only."
+	name = "Руководство по Dank Mimery"
+	desc = "Обучает одному из трех классических пантомимических приемов, позволяющих практикующемуся миму вызывать к жизни невидимые предметы. Однократное использование."
 	pages_to_mastery = 0
 	reading_time = 0
 
@@ -110,14 +110,14 @@
 		vow.Grant(user)
 	var/datum/action/new_action = new granted_action(user.mind || user)
 	new_action.Grant(user)
-	to_chat(user, span_warning("The book disappears into thin air."))
+	to_chat(user, span_warning("Книга растворяется в воздухе."))
 	qdel(src)
 
 /obj/item/book/granter/action/spell/mime/mimery/can_learn(mob/living/user)
 	for(var/type in list(/datum/action/cooldown/spell/conjure/invisible_wall, /datum/action/cooldown/spell/conjure/invisible_chair, /datum/action/cooldown/spell/conjure_item/invisible_box))
 		if(!(locate(type) in user.actions))
 			return TRUE
-	to_chat(user, span_warning("You already know the secrets of mimery!"))
+	to_chat(user, span_warning("Вы уже знаете секреты мимикрии!"))
 	return FALSE
 
 /**

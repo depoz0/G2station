@@ -39,56 +39,56 @@
  */
 
 //No department
-#define JOB_ASSISTANT "Assistant"
-#define JOB_PRISONER "Prisoner"
+#define JOB_ASSISTANT "Ассистент"
+#define JOB_PRISONER "Заключенный"
 //Command
-#define JOB_CAPTAIN "Captain"
-#define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
-#define JOB_HEAD_OF_SECURITY "Head of Security"
-#define JOB_RESEARCH_DIRECTOR "Research Director"
-#define JOB_CHIEF_ENGINEER "Chief Engineer"
-#define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
+#define JOB_CAPTAIN "Капитан"
+#define JOB_HEAD_OF_PERSONNEL "Глава персонала"
+#define JOB_HEAD_OF_SECURITY "Глава службы безопасности"
+#define JOB_RESEARCH_DIRECTOR "Директор исследований"
+#define JOB_CHIEF_ENGINEER "Главный инженер"
+#define JOB_CHIEF_MEDICAL_OFFICER "Главный врач"
 //Silicon
 #define JOB_AI "AI"
 #define JOB_CYBORG "Cyborg"
 #define JOB_PERSONAL_AI "Personal AI"
 //Security
-#define JOB_WARDEN "Warden"
-#define JOB_DETECTIVE "Detective"
-#define JOB_SECURITY_OFFICER "Security Officer"
-#define JOB_SECURITY_OFFICER_MEDICAL "Security Officer (Medical)"
-#define JOB_SECURITY_OFFICER_ENGINEERING "Security Officer (Engineering)"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_WARDEN "Смотритель"
+#define JOB_DETECTIVE "Детектив"
+#define JOB_SECURITY_OFFICER "Офицер службы безопасности"
+#define JOB_SECURITY_OFFICER_MEDICAL "Офицер службы безопасности (Медицина)"
+#define JOB_SECURITY_OFFICER_ENGINEERING "Офицер службы безопасности (Инженерия)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Офицер службы безопасности (Наука)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Офицер службы безопасности (Грузы)"
 //Engineering
-#define JOB_STATION_ENGINEER "Station Engineer"
-#define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
+#define JOB_STATION_ENGINEER "Станционный инженер"
+#define JOB_ATMOSPHERIC_TECHNICIAN "Атмосферный техник"
 //Medical
-#define JOB_CORONER "Coroner"
-#define JOB_MEDICAL_DOCTOR "Medical Doctor"
-#define JOB_PARAMEDIC "Paramedic"
-#define JOB_CHEMIST "Chemist"
-#define JOB_VIROLOGIST "Virologist"
+#define JOB_CORONER "Патологоанат"
+#define JOB_MEDICAL_DOCTOR "Врач"
+#define JOB_PARAMEDIC "Парамедик"
+#define JOB_CHEMIST "Химик"
+#define JOB_VIROLOGIST "Вирусолог"
 //Science
-#define JOB_SCIENTIST "Scientist"
-#define JOB_ROBOTICIST "Roboticist"
-#define JOB_GENETICIST "Geneticist"
+#define JOB_SCIENTIST "Учёный"
+#define JOB_ROBOTICIST "Робототехник"
+#define JOB_GENETICIST "Генетик"
 //Supply
-#define JOB_QUARTERMASTER "Quartermaster"
-#define JOB_CARGO_TECHNICIAN "Cargo Technician"
-#define JOB_SHAFT_MINER "Shaft Miner"
+#define JOB_QUARTERMASTER "Квартирмейстер"
+#define JOB_CARGO_TECHNICIAN "Грузчик"
+#define JOB_SHAFT_MINER "Шахтёр"
 #define JOB_BITRUNNER "Bitrunner"
 //Service
-#define JOB_BARTENDER "Bartender"
-#define JOB_BOTANIST "Botanist"
-#define JOB_COOK "Cook"
-#define JOB_JANITOR "Janitor"
-#define JOB_CLOWN "Clown"
-#define JOB_MIME "Mime"
-#define JOB_CURATOR "Curator"
-#define JOB_LAWYER "Lawyer"
-#define JOB_CHAPLAIN "Chaplain"
-#define JOB_PSYCHOLOGIST "Psychologist"
+#define JOB_BARTENDER "Бармен"
+#define JOB_BOTANIST "Ботаник"
+#define JOB_COOK "Повар"
+#define JOB_JANITOR "Уборщик"
+#define JOB_CLOWN "Клоун"
+#define JOB_MIME "Мим"
+#define JOB_CURATOR "Библиотекарь"
+#define JOB_LAWYER "Адвокат"
+#define JOB_CHAPLAIN "Священник"
+#define JOB_PSYCHOLOGIST "Психолог"
 //ERTs
 #define JOB_ERT_DEATHSQUAD "Death Commando"
 #define JOB_ERT_COMMANDER "Emergency Response Team Commander"
@@ -156,28 +156,28 @@
 #define JOB_DISPLAY_ORDER_SECURITY_OFFICER 36
 #define JOB_DISPLAY_ORDER_PRISONER 37
 
-#define DEPARTMENT_UNASSIGNED "No Department"
+#define DEPARTMENT_UNASSIGNED "Без отдела"
 
 #define DEPARTMENT_BITFLAG_SECURITY (1<<0)
-#define DEPARTMENT_SECURITY "Security"
+#define DEPARTMENT_SECURITY "Охрана"
 #define DEPARTMENT_BITFLAG_COMMAND (1<<1)
-#define DEPARTMENT_COMMAND "Command"
+#define DEPARTMENT_COMMAND "Командование"
 #define DEPARTMENT_BITFLAG_SERVICE (1<<2)
-#define DEPARTMENT_SERVICE "Service"
+#define DEPARTMENT_SERVICE "Сервис"
 #define DEPARTMENT_BITFLAG_CARGO (1<<3)
-#define DEPARTMENT_CARGO "Cargo"
+#define DEPARTMENT_CARGO "Грузы"
 #define DEPARTMENT_BITFLAG_ENGINEERING (1<<4)
-#define DEPARTMENT_ENGINEERING "Engineering"
+#define DEPARTMENT_ENGINEERING "Инженерия"
 #define DEPARTMENT_BITFLAG_SCIENCE (1<<5)
-#define DEPARTMENT_SCIENCE "Science"
+#define DEPARTMENT_SCIENCE "Наука"
 #define DEPARTMENT_BITFLAG_MEDICAL (1<<6)
-#define DEPARTMENT_MEDICAL "Medical"
+#define DEPARTMENT_MEDICAL "Медицина"
 #define DEPARTMENT_BITFLAG_SILICON (1<<7)
-#define DEPARTMENT_SILICON "Silicon"
+#define DEPARTMENT_SILICON "ИИ"
 #define DEPARTMENT_BITFLAG_ASSISTANT (1<<8)
-#define DEPARTMENT_ASSISTANT "Assistant"
+#define DEPARTMENT_ASSISTANT "Ассистент"
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
-#define DEPARTMENT_CAPTAIN "Captain"
+#define DEPARTMENT_CAPTAIN "Капитан"
 
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.

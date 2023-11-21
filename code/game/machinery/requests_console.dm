@@ -11,8 +11,8 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 #define ANNOUNCEMENT_COOLDOWN_TIME (30 SECONDS)
 
 /obj/machinery/requests_console
-	name = "requests console"
-	desc = "A console intended to send requests to different departments on the station."
+	name = "консоль запросов"
+	desc = "Консоль предназначена для передачи запросов в различные отделения станции."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "req_comp_off"
 	base_icon_state = "req_comp"
@@ -111,15 +111,15 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 	// Naming and department sets
 	if(auto_name) // If autonaming, just pick department and name from the area code.
 		department = "[get_area_name(area, TRUE)]"
-		name = "\improper [department] requests console"
+		name = "\improper [department] консоль запросов"
 	else
 		if(!(department) && (name != "requests console")) // if we have a map-set name, let's default that for the department.
 			department = name
 		else if(!(department)) // if we have no department and no name, we'll have to be Unknown.
 			department = "Unknown"
-			name = "\improper [department] requests console"
+			name = "\improper [department] консоль запросов"
 		else
-			name = "\improper [department] requests console" // and if we have a 'department', our name should reflect that.
+			name = "\improper [department] консоль запросов" // and if we have a 'department', our name should reflect that.
 
 	GLOB.req_console_all += src
 
@@ -406,8 +406,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/requests_console, 30)
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/requests_console/auto_name, 30)
 
 /obj/item/wallframe/requests_console
-	name = "requests console"
-	desc = "An unmounted requests console. Attach it to a wall to use."
+	name = "консоль запросов"
+	desc = "Несмонтированная консоль запросов. Для использования прикрепите ее к стене."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "req_comp_off"
 	result_path = /obj/machinery/requests_console/auto_name

@@ -3,7 +3,7 @@
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
 /area/station/hallway/primary
-	name = "\improper Primary Hallway"
+	name = "\improper Основной коридор"
 	icon_state = "primaryhall"
 
 /area/station/hallway/primary/aft
@@ -77,11 +77,11 @@
 	icon_state = "escape_pods"
 
 /area/station/hallway/secondary/exit/departure_lounge
-	name = "\improper Departure Lounge"
+	name = "\improper Зал ожидания вылета"
 	icon_state = "escape_lounge"
 
 /area/station/hallway/secondary/entry
-	name = "\improper Arrival Shuttle Hallway"
+	name = "\improper Коридор прибытия шаттла"
 	icon_state = "entry"
 	area_flags = UNIQUE_AREA | EVENT_PROTECTED
 

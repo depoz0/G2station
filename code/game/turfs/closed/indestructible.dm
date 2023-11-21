@@ -1,6 +1,6 @@
 /turf/closed/indestructible
-	name = "wall"
-	desc = "Effectively impervious to conventional methods of destruction."
+	name = "стена"
+	desc = "Практически невосприимчива к традиционным методам разрушения."
 	icon = 'icons/turf/walls.dmi'
 	explosive_resistance = 50
 
@@ -320,8 +320,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	return TRUE
 
 /turf/closed/indestructible/riveted/hierophant
-	name = "wall"
-	desc = "A wall made out of a strange metal. The squares on it pulse in a predictable pattern."
+	name = "стена"
+	desc = "Стена из странного металла. Квадраты на ней пульсируют по предсказуемой схеме."
 	icon = 'icons/turf/walls/hierophant_wall.dmi'
 	icon_state = "wall"
 	smoothing_flags = SMOOTH_CORNERS

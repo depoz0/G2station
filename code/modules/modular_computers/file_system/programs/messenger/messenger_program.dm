@@ -7,10 +7,10 @@
 
 /datum/computer_file/program/messenger
 	filename = "nt_messenger"
-	filedesc = "Direct Messenger"
+	filedesc = "Мессенджер"
 	downloader_category = PROGRAM_CATEGORY_DEVICE
 	program_open_overlay = "command"
-	extended_desc = "This program allows old-school communication with other modular devices."
+	extended_desc = "Эта программа позволяет осуществлять связь с другими модульными устройствами по старинке."
 	size = 0
 	undeletable = TRUE // It comes by default in tablets, can't be downloaded, takes no space and should obviously not be able to be deleted.
 	header_program = TRUE
@@ -150,7 +150,7 @@
 /datum/computer_file/program/messenger/ui_act(action, list/params, datum/tgui/ui)
 	switch(action)
 		if("PDA_ringSet")
-			var/new_ringtone = tgui_input_text(usr, "Enter a new ringtone", "Ringtone", ringtone, MESSENGER_RINGTONE_MAX_LENGTH)
+			var/new_ringtone = tgui_input_text(usr, "Введите новый рингтон", "Рингтон", ringtone, MESSENGER_RINGTONE_MAX_LENGTH)
 			var/mob/living/usr_mob = usr
 			if(!new_ringtone || !in_range(computer, usr_mob) || computer.loc != usr_mob)
 				return FALSE
@@ -212,11 +212,11 @@
 
 		if("PDA_sendEveryone")
 			if(!sending_and_receiving)
-				to_chat(usr, span_notice("ERROR: This device has sending disabled."))
+				to_chat(usr, span_notice("ОШИБКА: В этом устройстве отключена отправка."))
 				return FALSE
 
 			if(!spam_mode)
-				to_chat(usr, span_notice("ERROR: This device does not have mass-messaging perms."))
+				to_chat(usr, span_notice("ОШИБКА: В данном устройстве нет функции массового обмена сообщениями."))
 				return FALSE
 
 			if(!can_send_everyone_message())
@@ -250,7 +250,7 @@
 
 		if("PDA_sendMessage")
 			if(!sending_and_receiving)
-				to_chat(usr, span_notice("ERROR: This device has sending disabled."))
+				to_chat(usr, span_notice("ОШИБКА: В этом устройстве отключена отправка."))
 				return FALSE
 
 			// target ref, can either be a chat in saved_chats
@@ -277,7 +277,7 @@
 					var/datum/pda_chat/target_chat = target
 					target_messenger = target_chat.recipient?.resolve()
 					if(!istype(target_messenger))
-						to_chat(usr, span_notice("ERROR: Recipient no longer exists."))
+						to_chat(usr, span_notice("ОШИБКА: Получатель больше не существует."))
 						return FALSE
 				else if(istype(target, /datum/computer_file/program/messenger))
 					target_messenger = target
@@ -382,12 +382,12 @@
 		return
 	var/datum/computer_file/program/messenger/target = chat.recipient?.resolve()
 	if(!istype(target) || !istype(target.computer))
-		to_chat(user, span_notice("ERROR: Recipient no longer exists."))
+		to_chat(user, span_notice("ОШИБКА: Получатель больше не существует."))
 		chat.recipient = null
 		chat.can_reply = FALSE
 		return
 	var/target_name = target.computer.saved_identification
-	var/input_message = tgui_input_text(user, "Enter [mime_mode ? "emojis":"a message"]", "NT Messaging[target_name ? " ([target_name])" : ""]", encode = FALSE)
+	var/input_message = tgui_input_text(user, "Введите [mime_mode ? "emojis":"a message"]", "NT Messaging[target_name ? " ([target_name])" : ""]", encode = FALSE)
 	send_message(user, input_message, list(chat))
 
 /// Helper proc that sends a message to everyone
@@ -418,7 +418,7 @@
 
 	if(isnull(name) && isnull(job))
 		if(!(recipient_ref in GLOB.pda_messengers))
-			CRASH("tried to create a chat with a messenger that isn't registered")
+			CRASH("попытка создать чат с незарегистрированным мессенджером")
 		recipient = GLOB.pda_messengers[recipient_ref]
 
 	var/datum/pda_chat/new_chat = new(recipient)
@@ -486,21 +486,21 @@
 
 			if(!target_chat.can_reply)
 				if(should_alert)
-					to_chat(sender, span_notice("ERROR: Recipient has receiving disabled."))
+					to_chat(sender, span_notice("ОШИБКА: У получателя отключено получение сообщений."))
 				continue
 
 			target_messenger = target_chat.recipient?.resolve()
 
 			if(!istype(target_messenger))
 				if(should_alert)
-					to_chat(sender, span_notice("ERROR: Recipient no longer exists."))
+					to_chat(sender, span_notice("ОШИБКА: Получатель больше не существует."))
 				target_chat.can_reply = FALSE
 				target_chat.recipient = null
 				continue
 
 			if(!target_messenger.sending_and_receiving)
 				if(should_alert)
-					to_chat(sender, span_notice("ERROR: Recipient has receiving disabled."))
+					to_chat(sender, span_notice("ОШИБКА: У получателя отключено получение сообщений."))
 				continue
 
 		else if(istype(target, /datum/computer_file/program/messenger))
@@ -508,7 +508,7 @@
 
 			if(!target_messenger.sending_and_receiving)
 				if(should_alert)
-					to_chat(sender, span_notice("ERROR: Recipient has receiving disabled."))
+					to_chat(sender, span_notice("ОШИБКА: У получателя отключено получение сообщений."))
 				continue
 
 			target_chat = find_chat_by_recipient(REF(target))
@@ -566,7 +566,7 @@
 	// check for jammers
 	if(is_within_radio_jammer_range(computer) && !rigged)
 		// different message so people know it's a radio jammer
-		to_chat(sender, span_notice("ERROR: Network unavailable, please try again later."))
+		to_chat(sender, span_notice("ОШИБКА: Сеть недоступна, повторите попытку позже."))
 		if(alert_able && !alert_silenced)
 			playsound(computer, 'sound/machines/terminal_error.ogg', 15, TRUE)
 		return FALSE
@@ -596,7 +596,7 @@
 
 	// If it didn't reach, note that fact
 	if (!signal.data["done"])
-		to_chat(sender, span_notice("ERROR: Server is not responding."))
+		to_chat(sender, span_notice("ОШИБКА: Сервер не отвечает."))
 		if(alert_able && !alert_silenced)
 			playsound(computer, 'sound/machines/terminal_error.ogg', 15, TRUE)
 		return FALSE
@@ -668,7 +668,7 @@
 		if(is_automated)
 			reply = "\[Automated Message\]"
 		else
-			reply = "(<a href='byond://?src=[REF(src)];choice=[reply_href];skiprefresh=1;target=[REF(chat)]'>Reply</a>)"
+			reply = "(<a href='byond://?src=[REF(src)];choice=[reply_href];skiprefresh=1;target=[REF(chat)]'>Ответить</a>)"
 
 		// resolving w/o nullcheck here, assume the messenger exists if a real person sent a message
 		var/datum/computer_file/program/messenger/sender_messenger = chat.recipient?.resolve()
@@ -682,7 +682,7 @@
 		var/inbound_message = "[signal.format_message()]"
 		inbound_message = emoji_parse(inbound_message)
 
-		var/photo_message = signal.data["photo"] ? " (<a href='byond://?src=[REF(src)];choice=[photo_href];skiprefresh=1;target=[REF(chat)]'>Photo Attached</a>)" : ""
+		var/photo_message = signal.data["photo"] ? " (<a href='byond://?src=[REF(src)];choice=[photo_href];skiprefresh=1;target=[REF(chat)]'>Прикрепленная фотография</a>)" : ""
 		to_chat(messaged_mob, span_infoplain("[icon2html(computer, messaged_mob)] <b>PDA message from [sender_title], </b>\"[inbound_message]\"[photo_message] [reply]"))
 
 	if (alert_able && (!alert_silenced || is_rigged))

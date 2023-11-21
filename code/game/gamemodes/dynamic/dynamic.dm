@@ -324,7 +324,7 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 
 	print_command_report(., "[command_name()] Status Summary", announce=FALSE)
 	if(greenshift)
-		priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", SSstation.announcer.get_rand_report_sound())
+		priority_announce("Благодаря неустанным усилиям наших охранных и разведывательных отделов в настоящее время не существует серьезных угроз для [station_name()]. Все строительные проекты станции разрешены. Удачной смены!", "Отчет по безопасности", SSstation.announcer.get_rand_report_sound())
 	else
 		priority_announce("A summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT)
 		if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_BLUE)

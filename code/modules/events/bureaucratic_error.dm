@@ -1,16 +1,16 @@
 /datum/round_event_control/bureaucratic_error
-	name = "Bureaucratic Error"
+	name = "Бюрократическая ошибка"
 	typepath = /datum/round_event/bureaucratic_error
 	max_occurrences = 1
 	weight = 5
 	category = EVENT_CATEGORY_BUREAUCRATIC
-	description = "Randomly opens and closes job slots, along with changing the overflow role."
+	description = "Случайным образом открывает и закрывает рабочие места, а также меняет переполность рабочих мест."
 
 /datum/round_event/bureaucratic_error
 	announce_when = 1
 
 /datum/round_event/bureaucratic_error/announce(fake)
-	priority_announce("A recent bureaucratic error in the Organic Resources Department may result in personnel shortages in some departments and redundant staffing in others.", "Paperwork Mishap Alert")
+	priority_announce("Недавняя бюрократическая ошибка в Департаменте органических ресурсов может привести к нехватке персонала в одних отделах и к избыточному персоналу в других.", "Предупреждение о казусах бумажной работы")
 
 /datum/round_event/bureaucratic_error/start()
 	var/list/jobs = SSjob.joinable_occupations.Copy()

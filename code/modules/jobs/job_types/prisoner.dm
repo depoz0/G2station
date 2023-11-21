@@ -1,6 +1,6 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
-	description = "Keep yourself occupied in permabrig."
+	description = "Займите себя чем-нибудь."
 	department_head = list("The Security Team")
 	faction = FACTION_STATION
 	total_positions = 0
@@ -44,7 +44,7 @@
 	var/datum/record/crew/target_record = find_record(crewmember.real_name)
 	var/datum/crime/past_crime = new(crime.name, crime.desc, "Central Command", "Indefinite.")
 	target_record.crimes += past_crime
-	to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
+	to_chat(crewmember, span_warning("Вы заключены в тюрьму за \"[crime_name]\"."))
 
 /datum/outfit/job/prisoner
 	name = "Prisoner"

@@ -1,12 +1,12 @@
 #define MOB_SPAWN_MINIMUM 3
 
 /datum/round_event_control/vent_clog
-	name = "Ventilation Clog: Minor"
+	name = "Засор в вентиляции: Незначительный"
 	typepath = /datum/round_event/vent_clog
 	weight = 25
 	earliest_start = 5 MINUTES
 	category = EVENT_CATEGORY_JANITORIAL
-	description = "Harmless mobs climb out of a vent."
+	description = "Безобидные мобы вылезают из вентиляционного канала."
 
 /datum/round_event_control/vent_clog/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()
@@ -37,7 +37,7 @@
 	var/list/filth_spawn_types = list()
 
 /datum/round_event/vent_clog/announce()
-	priority_announce("Minor biological obstruction detected in the ventilation network. Blockage is believed to be in the [get_area_name(vent)].", "Custodial Notification")
+	priority_announce("В вентиляционных каналах обнаружено незначительное биологическое препятствие. Засорение находится в [get_area_name(vent)].", "Custodial Notification")
 
 /datum/round_event/vent_clog/setup()
 	vent = get_vent()
@@ -96,7 +96,7 @@
 
 	if(!length(vent_list))
 		kill()
-		CRASH("Unable to find suitable vent.")
+		CRASH("Невозможно найти подходящую вентиляцию.")
 
 	return pick(vent_list)
 
@@ -128,7 +128,7 @@
 	clog_vent()
 
 	announce_to_ghosts(vent)
-	priority_announce("Lifesign readings have moved to a new location in the ventilation network. New Location: [prob(50) ? "Unknown.":"[get_area_name(vent)]."]", "Lifesign Notification")
+	priority_announce("Показания сенсоров говорит что биологический объект переместился в новое место в вентиляционных каналах. Новое местоположение: [prob(50) ? "Unknown.":"[get_area_name(vent)]."]", "Уведомление о биологическом объекте")
 
 /**
  * Handles the production of our mob and adds it to our living_mobs list
@@ -148,7 +148,7 @@
 
 	var/mob/new_mob = new spawned_mob(vent_loc) // we spawn it early so we can actually use is_blocked_turf
 	living_mobs += WEAKREF(new_mob)
-	vent.visible_message(span_warning("[new_mob] crawls out of [vent]!"))
+	vent.visible_message(span_warning("[new_mob] выползает из [vent]!"))
 
 	var/list/potential_locations = list(vent_loc) // already confirmed to be accessable via the 2nd if check of the proc
 
@@ -173,12 +173,12 @@
 ///Handles the actual unclogging action and ends the event on completion.
 /datum/round_event/vent_clog/proc/attempt_unclog(mob/user)
 	if(vent.welded)
-		to_chat(user, span_notice("You cannot pump [vent] if it's welded shut!"))
+		to_chat(user, span_notice("Вы не можете прокачать [vent] когда она заварена наглухо!"))
 		return
 
-	to_chat(user, span_notice("You begin pumping [vent] with your plunger."))
+	to_chat(user, span_notice("Вы начинаете прокачивать [vent] с помощью плунжера."))
 	if(do_after(user, 6 SECONDS, target = vent))
-		to_chat(user, span_notice("You finish pumping [vent]."))
+		to_chat(user, span_notice("Вы заканчиваете прокачку [vent]."))
 		clear_signals()
 		kill()
 
@@ -198,12 +198,12 @@
 	UnregisterSignal(vent, list(COMSIG_QDELETING, COMSIG_PLUNGER_ACT))
 
 /datum/round_event_control/vent_clog/major
-	name = "Ventilation Clog: Major"
+	name = "Засор в вентиляции: Большой"
 	typepath = /datum/round_event/vent_clog/major
 	weight = 12
 	max_occurrences = 5
 	earliest_start = 10 MINUTES
-	description = "Dangerous mobs climb out of a vent."
+	description = "Опасные мобы вылезают из вентиляционного канала."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 4
 
@@ -228,16 +228,16 @@
 	return pick(mob_list)
 
 /datum/round_event/vent_clog/major/announce()
-	priority_announce("Major biological obstruction detected in the ventilation network. Blockage is believed to be in the [get_area_name(vent)] area.", "Infestation Alert")
+	priority_announce("В вентиляционных каналах обнаружено крупное биологическое препятствие. Засорение находится в [get_area_name(vent)].", "Infestation Alert")
 
 /datum/round_event_control/vent_clog/critical
-	name = "Ventilation Clog: Critical"
+	name = "Засор в вентиляции: Критическое"
 	typepath = /datum/round_event/vent_clog/critical
 	weight = 8
 	min_players = 15
 	max_occurrences = 3
 	earliest_start = 25 MINUTES
-	description = "Really dangerous mobs climb out of a vent."
+	description = "Очень опасные мобы вылезают из вентиляционного канала."
 	min_wizard_trigger_potency = 3
 	max_wizard_trigger_potency = 6
 
@@ -251,7 +251,7 @@
 	)
 
 /datum/round_event/vent_clog/critical/announce()
-	priority_announce("Potentially hazardous lifesigns detected in the [get_area_name(vent)] ventilation network.", "Security Alert")
+	priority_announce("Потенциально опасные признаки жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Предупреждение об опасности")
 
 /datum/round_event/vent_clog/critical/get_mob()
 	var/static/list/mob_list = list(

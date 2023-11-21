@@ -9,8 +9,8 @@
  * First Aid Kits
  */
 /obj/item/storage/medkit
-	name = "medkit"
-	desc = "It's an emergency medical kit for those serious boo-boos."
+	name = "аптечка"
+	desc = "Это аптечка для оказания экстренной медицинской помощи при серьезных травмах."
 	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "medkit"
 	inhand_icon_state = "medkit"
@@ -82,10 +82,10 @@
 
 /obj/item/storage/medkit/regular
 	icon_state = "medkit"
-	desc = "A first aid kit with the ability to heal common types of injuries."
+	desc = "Аптечка с возможностью лечения обычных видов травм."
 
 /obj/item/storage/medkit/regular/suicide_act(mob/living/carbon/user)
-	user.visible_message(span_suicide("[user] begins giving [user.p_them()]self aids with \the [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("[user] начинает оказывать [user.p_them()]себе помощь с [src]! Это похоже на попытку  [user.p_theyre()] совершить самоубийство!"))
 	return BRUTELOSS
 
 /obj/item/storage/medkit/regular/PopulateContents()
@@ -102,8 +102,8 @@
 
 /obj/item/storage/medkit/emergency
 	icon_state = "medbriefcase"
-	name = "emergency medkit"
-	desc = "A very simple first aid kit meant to secure and stabilize serious wounds for later treatment."
+	name = "аптечка первой помощи"
+	desc = "Очень простая аптечка, предназначенная для фиксации и стабилизации серьезных ран с целью их последующего лечения."
 
 /obj/item/storage/medkit/emergency/PopulateContents()
 	if(empty)
@@ -119,10 +119,10 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/surgery
-	name = "surgical medkit"
+	name = "хирургическая аптечка"
 	icon_state = "medkit_surgery"
 	inhand_icon_state = "medkit"
-	desc = "A high capacity aid kit for doctors, full of medical supplies and basic surgical equipment."
+	desc = "Большая аптечка для врачей, укомплектованная медицинскими препаратами и основным хирургическим инструментом."
 
 /obj/item/storage/medkit/surgery/Initialize(mapload)
 	. = ..()
@@ -149,7 +149,7 @@
 
 /obj/item/storage/medkit/ancient
 	icon_state = "oldfirstaid"
-	desc = "A first aid kit with the ability to heal common types of injuries."
+	desc = "Аптечка с возможностью лечения типичных травм."
 
 /obj/item/storage/medkit/ancient/PopulateContents()
 	if(empty)
@@ -161,18 +161,18 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/ancient/heirloom
-	desc = "A first aid kit with the ability to heal common types of injuries. You start thinking of the good old days just by looking at it."
+	desc = "Аптечка с возможностью лечения типичных травм. При одном только взгляде на нее начинаешь вспоминать старые добрые времена."
 	empty = TRUE // long since been ransacked by hungry powergaming assistants breaking into med storage
 
 /obj/item/storage/medkit/fire
-	name = "burn treatment kit"
-	desc = "A specialized medical kit for when the ordnance lab <i>-spontaneously-</i> burns down."
+	name = "аптечка для обработки ожогов"
+	desc = "Специализированная аптечка на случай <i>самопроизвольного</i> возгорания лаборатории боеприпасов."
 	icon_state = "medkit_burn"
 	inhand_icon_state = "medkit-ointment"
 	damagetype_healed = BURN
 
 /obj/item/storage/medkit/fire/suicide_act(mob/living/carbon/user)
-	user.visible_message(span_suicide("[user] begins rubbing \the [src] against [user.p_them()]self! It looks like [user.p_theyre()] trying to start a fire!"))
+	user.visible_message(span_suicide("[user] begins rubbing \the [src] against [user.p_them()]self! Это похоже на попытку [user.p_theyre()] разжечь огонь!"))
 	return FIRELOSS
 
 /obj/item/storage/medkit/fire/PopulateContents()
@@ -186,8 +186,8 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/toxin
-	name = "toxin treatment kit"
-	desc = "Used to treat toxic blood content and radiation poisoning."
+	name = "аптечка для лечения отравлений"
+	desc = "Применяется для лечения ядов в крови и радиационных отравлений."
 	icon_state = "medkit_toxin"
 	inhand_icon_state = "medkit-toxin"
 	damagetype_healed = TOX
@@ -210,8 +210,8 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/o2
-	name = "oxygen deprivation treatment kit"
-	desc = "A box full of oxygen goodies."
+	name = "аптечка для лечения кислородного голодания"
+	desc = "Ящик, наполненный различными товарами для поддержки кислорода в теле."
 	icon_state = "medkit_o2"
 	inhand_icon_state = "medkit-o2"
 	damagetype_healed = OXY
@@ -231,7 +231,7 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/brute
-	name = "brute trauma treatment kit"
+	name = "аптечка для лечения тяжелых травм"
 	desc = "A first aid kit for when you get toolboxed."
 	icon_state = "medkit_brute"
 	inhand_icon_state = "medkit-brute"
@@ -254,8 +254,8 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/advanced
-	name = "advanced first aid kit"
-	desc = "An advanced kit to help deal with advanced wounds."
+	name = "передовая аптечка первой помощи"
+	desc = "Передовая аптечка, помогающая справиться с тяжелыми ранами."
 	icon_state = "medkit_advanced"
 	inhand_icon_state = "medkit-rad"
 	custom_premium_price = PAYCHECK_COMMAND * 6
@@ -272,8 +272,8 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/tactical
-	name = "combat medical kit"
-	desc = "I hope you've got insurance."
+	name = "боевая медицинская аптечка"
+	desc = "Надеюсь, у вас есть страховка."
 	icon_state = "medkit_tactical"
 	inhand_icon_state = "medkit-tactical"
 	damagetype_healed = "all"
@@ -306,8 +306,8 @@
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/medkit/tactical/premium
-	name = "premium combat medical kit"
-	desc = "May or may not contain traces of lead."
+	name = "боевая медицинская аптечка премиум класса"
+	desc = "Может содержать или не содержать частицы свинца."
 	grind_results = list(/datum/reagent/lead = 10)
 
 /obj/item/storage/medkit/tactical/premium/Initialize(mapload)
@@ -343,8 +343,8 @@
 	list_of_everything_medkits_can_hold += items_inside
 
 /obj/item/storage/medkit/coroner
-	name = "compact coroner's medkit"
-	desc = "A smaller medical kit designed primarily for assisting in dissecting the deceased, rather than treating the living."
+	name = "компактная аптечка судмедэксперта"
+	desc = "Небольшая медицинская аптечка, предназначенная в первую очередь для оказания помощи при препарировании умерших, а не для лечения живых."
 	icon = 'icons/obj/storage/medkit.dmi'
 	icon_state = "compact_coronerkit"
 	inhand_icon_state = "coronerkit"
@@ -387,7 +387,7 @@
 
 	//Making a medibot!
 	if(contents.len >= 1)
-		balloon_alert(user, "items inside!")
+		balloon_alert(user, "предметы внутри!")
 		return
 
 	///if you add a new one don't forget to update /datum/crafting_recipe/medbot/on_craft_completion()
@@ -416,8 +416,8 @@
  */
 
 /obj/item/storage/pill_bottle
-	name = "pill bottle"
-	desc = "It's an airtight container for storing medication."
+	name = "контейнер с таблетками"
+	desc = "Это герметичный контейнер для хранения лекарств."
 	icon_state = "pill_canister"
 	icon = 'icons/obj/medical/chemical.dmi'
 	inhand_icon_state = "contsolid"
@@ -435,12 +435,12 @@
 	))
 
 /obj/item/storage/pill_bottle/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] is trying to get the cap off [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("[user] пытается снять крышку с [src]! Это похоже на попытку [user.p_theyre()] совершить самоубийство!"))
 	return TOXLOSS
 
 /obj/item/storage/pill_bottle/multiver
-	name = "bottle of multiver pills"
-	desc = "Contains pills used to counter toxins."
+	name = "упаковка таблеток Мультивер"
+	desc = "Содержит таблетки, используемые для противодействия отравлениям."
 
 /obj/item/storage/pill_bottle/multiver/PopulateContents()
 	for(var/i in 1 to 7)
@@ -453,48 +453,48 @@
 		new /obj/item/reagent_containers/pill/multiver(src)
 
 /obj/item/storage/pill_bottle/epinephrine
-	name = "bottle of epinephrine pills"
-	desc = "Contains pills used to stabilize patients."
+	name = "упаковка таблеток эпинефрина"
+	desc = "Содержит таблетки, используемые для стабилизации состояния пациентов."
 
 /obj/item/storage/pill_bottle/epinephrine/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/epinephrine(src)
 
 /obj/item/storage/pill_bottle/mutadone
-	name = "bottle of mutadone pills"
-	desc = "Contains pills used to treat genetic abnormalities."
+	name = "упаковка таблеток мутадона"
+	desc = "Содержит таблетки, используемые для лечения генетических аномалий."
 
 /obj/item/storage/pill_bottle/mutadone/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/mutadone(src)
 
 /obj/item/storage/pill_bottle/potassiodide
-	name = "bottle of potassium iodide pills"
-	desc = "Contains pills used to reduce radiation damage."
+	name = "упаковка таблеток йодистого калия"
+	desc = "Содержит таблетки, используемые для снижения радиационного поражения."
 
 /obj/item/storage/pill_bottle/potassiodide/PopulateContents()
 	for(var/i in 1 to 3)
 		new /obj/item/reagent_containers/pill/potassiodide(src)
 
 /obj/item/storage/pill_bottle/probital
-	name = "bottle of probital pills"
-	desc = "Contains pills used to treat brute damage. The tag in the bottle states 'Eat before ingesting, may cause fatigue'."
+	name = "упаковка таблеток пробитал"
+	desc = "Содержит таблетки, используемые для лечения тяжелых травм. На бутылке имеется надпись: 'Употребление после еды, может вызвать усталость'."
 
 /obj/item/storage/pill_bottle/probital/PopulateContents()
 	for(var/i in 1 to 4)
 		new /obj/item/reagent_containers/pill/probital(src)
 
 /obj/item/storage/pill_bottle/iron
-	name = "bottle of iron pills"
-	desc = "Contains pills used to reduce blood loss slowly. The tag in the bottle states 'Only take one each five minutes'."
+	name = "упаковка таблеток железа"
+	desc = "Содержит таблетки, используемые для медленного уменьшения кровопотери. На этикетке флакона указано: 'Принимать только по одной каждые пять минут'."
 
 /obj/item/storage/pill_bottle/iron/PopulateContents()
 	for(var/i in 1 to 4)
 		new /obj/item/reagent_containers/pill/iron(src)
 
 /obj/item/storage/pill_bottle/mannitol
-	name = "bottle of mannitol pills"
-	desc = "Contains pills used to treat brain damage."
+	name = "упаковка таблеток маннитола"
+	desc = "Содержит таблетки, используемые для лечения повреждений головного мозга."
 
 /obj/item/storage/pill_bottle/mannitol/PopulateContents()
 	for(var/i in 1 to 7)
@@ -502,31 +502,31 @@
 
 //Contains 4 pills instead of 7, and 5u pills instead of 50u (50u pills heal 250 brain damage, 5u pills heal 25)
 /obj/item/storage/pill_bottle/mannitol/braintumor
-	desc = "Contains diluted pills used to treat brain tumor symptoms. Take one when feeling lightheaded."
+	desc = "Содержит разбавленные таблетки, используемые для лечения симптомов опухоли головного мозга. Примите одну таблетку при головокружении."
 
 /obj/item/storage/pill_bottle/mannitol/braintumor/PopulateContents()
 	for(var/i in 1 to 4)
 		new /obj/item/reagent_containers/pill/mannitol/braintumor(src)
 
 /obj/item/storage/pill_bottle/stimulant
-	name = "bottle of stimulant pills"
-	desc = "Guaranteed to give you that extra burst of energy during a long shift!"
+	name = "упаковка стимулирующих таблеток"
+	desc = "Гарантированно обеспечит дополнительный прилив энергии во время длительного прибывания на станции!"
 
 /obj/item/storage/pill_bottle/stimulant/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/stimulant(src)
 
 /obj/item/storage/pill_bottle/sansufentanyl
-	name = "bottle of experimental medication"
-	desc = "A bottle of pills developed by Interdyne Pharmaceuticals. They're used to treat Hereditary Manifold Sickness."
+	name = "упаковка с экспериментальным препаратом"
+	desc = "Упаковка таблеток, разработанных компанией Interdyne Pharmaceuticals. Они используются для лечения наследственной болезни."
 
 /obj/item/storage/pill_bottle/sansufentanyl/PopulateContents()
 	for(var/i in 1 to 6)
 		new /obj/item/reagent_containers/pill/sansufentanyl(src)
 
 /obj/item/storage/pill_bottle/mining
-	name = "bottle of patches"
-	desc = "Contains patches used to treat brute and burn damage."
+	name = "упаковка с пластырями"
+	desc = "Содержит пластыри, используемые для лечения тяжелых и ожоговых ран."
 
 /obj/item/storage/pill_bottle/mining/PopulateContents()
 	new /obj/item/reagent_containers/pill/patch/aiuri(src)
@@ -534,48 +534,48 @@
 		new /obj/item/reagent_containers/pill/patch/libital(src)
 
 /obj/item/storage/pill_bottle/zoom
-	name = "suspicious pill bottle"
-	desc = "The label is pretty old and almost unreadable, you recognize some chemical compounds."
+	name = "подозрительная упаковка с таблетками"
+	desc = "Этикетка довольно старая и почти не читаемая, на ней можно разглядеть некоторые химические соединения."
 
 /obj/item/storage/pill_bottle/zoom/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/zoom(src)
 
 /obj/item/storage/pill_bottle/happy
-	name = "suspicious pill bottle"
-	desc = "There is a smiley on the top."
+	name = "подозрительная упаковка с таблетками"
+	desc = "На верхней стороне упаковки нарисован смайлик."
 
 /obj/item/storage/pill_bottle/happy/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/happy(src)
 
 /obj/item/storage/pill_bottle/lsd
-	name = "suspicious pill bottle"
-	desc = "There is a crude drawing which could be either a mushroom, or a deformed moon."
+	name = "подозрительная упаковка с таблетками"
+	desc = "Имеется неразборчивый рисунок, который может быть либо грибом, либо покореженной луной."
 
 /obj/item/storage/pill_bottle/lsd/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/lsd(src)
 
 /obj/item/storage/pill_bottle/aranesp
-	name = "suspicious pill bottle"
-	desc = "The label has 'fuck disablers' hastily scrawled in black marker."
+	name = "подозрительная упаковка с таблетками"
+	desc = "На этикетке черным маркером торопливо написано 'fuck disablers'."
 
 /obj/item/storage/pill_bottle/aranesp/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/aranesp(src)
 
 /obj/item/storage/pill_bottle/psicodine
-	name = "bottle of psicodine pills"
-	desc = "Contains pills used to treat mental distress and traumas."
+	name = "упаковка таблеток псикодина"
+	desc = "Содержит таблетки, используемые для лечения психических расстройств и травм."
 
 /obj/item/storage/pill_bottle/psicodine/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/pill/psicodine(src)
 
 /obj/item/storage/pill_bottle/penacid
-	name = "bottle of pentetic acid pills"
-	desc = "Contains pills to expunge radiation and toxins."
+	name = "упаковка таблеток пентеиновой кислоты"
+	desc = "Содержит таблетки для выведения из организма радиации и ядов."
 
 /obj/item/storage/pill_bottle/penacid/PopulateContents()
 	for(var/i in 1 to 3)
@@ -583,21 +583,21 @@
 
 
 /obj/item/storage/pill_bottle/neurine
-	name = "bottle of neurine pills"
-	desc = "Contains pills to treat non-severe mental traumas."
+	name = "упаковка таблеток неврин"
+	desc = "Содержит таблетки для лечения нетяжелых психических травм."
 
 /obj/item/storage/pill_bottle/neurine/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/neurine(src)
 
 /obj/item/storage/pill_bottle/maintenance_pill
-	name = "bottle of maintenance pills"
-	desc = "An old pill bottle. It smells musty."
+	name = "упаковка профилактических таблеток"
+	desc = "Старая упаковка таблеток. Пахнет дурно."
 
 /obj/item/storage/pill_bottle/maintenance_pill/Initialize(mapload)
 	. = ..()
 	var/obj/item/reagent_containers/pill/P = locate() in src
-	name = "bottle of [P.name]s"
+	name = "упаковка выписана на имя [P.name]"
 
 /obj/item/storage/pill_bottle/maintenance_pill/PopulateContents()
 	for(var/i in 1 to rand(1,7))
@@ -609,24 +609,24 @@
 
 ///////////////////////////////////////// Psychologist inventory pillbottles
 /obj/item/storage/pill_bottle/happinesspsych
-	name = "happiness pills"
-	desc = "Contains pills used as a last resort means to temporarily stabilize depression and anxiety. WARNING: side effects may include slurred speech, drooling, and severe addiction."
+	name = "таблетки счастья"
+	desc = "Эти таблетки используются в качестве последнего средства для временной борьбы с депрессией и тревогой. ВНИМАНИЕ: побочные эффекты могут включать невнятную речь, выделение слюны и сильную зависимость."
 
 /obj/item/storage/pill_bottle/happinesspsych/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/happinesspsych(src)
 
 /obj/item/storage/pill_bottle/lsdpsych
-	name = "mindbreaker toxin pills"
-	desc = "!FOR THERAPEUTIC USE ONLY! Contains pills used to alleviate the symptoms of Reality Dissociation Syndrome."
+	name = "таблетки разрушающие разум"
+	desc = "ТОЛЬКО ДЛЯ ТЕРАПЕВТИЧЕСКОГО ИСПОЛЬЗОВАНИЯ! Таблетки, используемые для облегчения симптомов синдрома диссоциации реальности."
 
 /obj/item/storage/pill_bottle/lsdpsych/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/lsdpsych(src)
 
 /obj/item/storage/pill_bottle/paxpsych
-	name = "pax pills"
-	desc = "Contains pills used to temporarily pacify patients that are deemed a harm to themselves or others."
+	name = "таблетки пакс"
+	desc = "Содержит таблетки, используемые для временного успокоения пациентов, представляющих опасность для себя и окружающих."
 
 /obj/item/storage/pill_bottle/paxpsych/PopulateContents()
 	for(var/i in 1 to 5)
@@ -641,8 +641,8 @@
 		new /obj/item/food/bait/natural(src)
 
 /obj/item/storage/pill_bottle/ondansetron
-	name = "ondansetron patches"
-	desc = "A bottle containing patches of ondansetron, a drug used to treat nausea and vomiting. May cause drowsiness."
+	name = "пластыри с ондансетроном"
+	desc = "Упаковка, содержащая пластыри с ондансетроном - препаратом, применяемым для лечения тошноты и рвоты. Может вызывать сонливость."
 
 /obj/item/storage/pill_bottle/ondansetron/PopulateContents()
 	for(var/i in 1 to 5)
@@ -650,8 +650,8 @@
 
 /// A box which takes in coolant and uses it to preserve organs and body parts
 /obj/item/storage/organbox
-	name = "organ transport box"
-	desc = "An advanced box with an cooling mechanism that uses cryostylane or other cold reagents to keep the organs or bodyparts inside preserved."
+	name = "контейнер для транспортировки органов"
+	desc = "Усовершенствованный контейнер с охлаждающим механизмом, в котором используется криостилан или другие холодные реагенты для сохранения находящихся в нем органов или частей тела."
 	icon = 'icons/obj/storage/case.dmi'
 	icon_state = "organbox"
 	base_icon_state = "organbox"
@@ -750,8 +750,8 @@
 	reagents.add_reagent(/datum/reagent/cryostylane, reagents.maximum_volume)
 
 /obj/item/storage/test_tube_rack
-	name = "test tube rack"
-	desc = "A wooden rack for storing test tubes."
+	name = "стеллаж для пробирок"
+	desc = "Деревянный стеллаж для хранения пробирок."
 	icon_state = "rack"
 	base_icon_state = "rack"
 	icon = 'icons/obj/medical/chemical.dmi'

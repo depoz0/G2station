@@ -1,6 +1,6 @@
 /datum/brain_trauma/mild/phobia
-	name = "Phobia"
-	desc = "Patient is unreasonably afraid of something."
+	name = "Фобия"
+	desc = "Пациент беспричинно боится чего-либо."
 	scan_desc = "phobia"
 	gain_text = span_warning("You start finding default values very unnerving...")
 	lose_text = span_notice("You no longer feel afraid of default values.")

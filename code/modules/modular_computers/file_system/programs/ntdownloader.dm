@@ -1,8 +1,8 @@
 /datum/computer_file/program/ntnetdownload
 	filename = "ntsoftwarehub"
-	filedesc = "NT Software Hub"
+	filedesc = "NT Хаб софта"
 	program_open_overlay = "generic"
-	extended_desc = "This program allows downloads of software from official NT repositories"
+	extended_desc = "Эта программа позволяет загружать софт из официальных репозиториев NT"
 	undeletable = TRUE
 	size = 4
 	requires_ntnet = TRUE
@@ -55,13 +55,13 @@
 	ui_header = "downloader_running.gif"
 
 	if(PRG in SSmodular_computers.available_station_software)
-		generate_network_log("Began downloading file [PRG.filename].[PRG.filetype] from NTNet Software Repository.")
+		generate_network_log("Началась загрузка файла [PRG.filename].[PRG.filetype] из репозитория NT.")
 		hacked_download = FALSE
 	else if(PRG in SSmodular_computers.available_antag_software)
-		generate_network_log("Began downloading file **ENCRYPTED**.[PRG.filetype] from unspecified server.")
+		generate_network_log("Началась загрузка файла **ЗАШИФРОВАНО**.[PRG.filetype] с неопределенного сервера.")
 		hacked_download = TRUE
 	else
-		generate_network_log("Began downloading file [PRG.filename].[PRG.filetype] from unspecified server.")
+		generate_network_log("Началась загрузка файла [PRG.filename].[PRG.filetype] с неопределенного сервера.")
 		hacked_download = FALSE
 
 	downloaded_file = PRG.clone()
@@ -69,7 +69,7 @@
 /datum/computer_file/program/ntnetdownload/proc/abort_file_download()
 	if(!downloaded_file)
 		return
-	generate_network_log("Aborted download of file [hacked_download ? "**ENCRYPTED**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
+	generate_network_log("Прервано скачивание файла [hacked_download ? "**ЗАШИФРОВАНО**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
 	downloaded_file = null
 	download_completion = FALSE
 	ui_header = null
@@ -77,10 +77,10 @@
 /datum/computer_file/program/ntnetdownload/proc/complete_file_download()
 	if(!downloaded_file)
 		return
-	generate_network_log("Completed download of file [hacked_download ? "**ENCRYPTED**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
+	generate_network_log("Завершена загрузка файла [hacked_download ? "**ЗАШИФРОВАНО**" : "[downloaded_file.filename].[downloaded_file.filetype]"].")
 	if(!computer || !computer.store_file(downloaded_file))
 		// The download failed
-		downloaderror = "I/O ERROR - Unable to save file. Check whether you have enough free space on your hard drive and whether your hard drive is properly connected. If the issue persists contact your system administrator for assistance."
+		downloaderror = "I/O ОШИБКА - Невозможно сохранить файл. Проверьте, достаточно ли свободного места на жестком диске и правильно ли подключен жесткий диск. Если проблема не исчезла, обратитесь за помощью к системному администратору."
 	downloaded_file = null
 	download_completion = FALSE
 	ui_header = "downloader_finished.gif"
