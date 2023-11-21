@@ -262,7 +262,7 @@
 //Stool
 
 /obj/structure/chair/stool
-	name = "стул"
+	name = "табурет"
 	desc = "Применить зад."
 	icon_state = "stool"
 	can_buckle = FALSE
