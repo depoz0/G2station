@@ -51,11 +51,11 @@
 		if (STAGE_DROP_ITEM)
 			show_instruction(keybinding_message(
 				/datum/keybinding/mob/drop_item,
-				"Press '%KEY%' to drop your current item",
-				"Click '<b>DROP</b>' to drop your current item",
+				"Нажмите на '%KEY%' чтобы выбросить предмет из руки на пол",
+				"Щелкните на надпись '<b>DROP</b>' чтобы выбросить предмет из руки на пол",
 			))
 		if (STAGE_PICK_SOMETHING_UP)
-			show_instruction("Pick something up!")
+			show_instruction("Подберите что-нибудь!")
 
 /datum/tutorial/drop/proc/on_swap_hands()
 	SIGNAL_HANDLER
