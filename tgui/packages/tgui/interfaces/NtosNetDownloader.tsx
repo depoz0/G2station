@@ -84,13 +84,13 @@ export const NtosNetDownloader = (props, context) => {
         {!!error && (
           <NoticeBox>
             <Box mb={1}>{error}</Box>
-            <Button content="Reset" onClick={() => act('PRG_reseterror')} />
+            <Button content="Сброс" onClick={() => act('PRG_reseterror')} />
           </NoticeBox>
         )}
         <Section>
           <LabeledList>
             <LabeledList.Item
-              label="Hard drive"
+              label="Жесткий диск"
               buttons={
                 (!!downloading && (
                   <Button
@@ -99,7 +99,7 @@ export const NtosNetDownloader = (props, context) => {
                     tooltipPosition="left"
                     tooltip={
                       !!downloading &&
-                      `Download: ${downloadname}.prg (${downloadpercentage}%)`
+                      `Загрузка: ${downloadname}.prg (${downloadpercentage}%)`
                     }
                   />
                 )) ||
@@ -108,7 +108,7 @@ export const NtosNetDownloader = (props, context) => {
                     color="good"
                     icon="download"
                     tooltipPosition="left"
-                    tooltip={`${downloadname}.prg downloaded`}
+                    tooltip={`${downloadname}.prg загружен`}
                   />
                 ))
               }>
@@ -117,7 +117,7 @@ export const NtosNetDownloader = (props, context) => {
                 minValue={0}
                 maxValue={disk_size}>
                 <Box textAlign="left">
-                  {`${disk_free_space} GQ free of ${disk_size} GQ`}
+                  {`${disk_free_space} GQ свободно из ${disk_size} GQ`}
                 </Box>
               </ProgressBar>
             </LabeledList.Item>
@@ -205,10 +205,10 @@ const Program = (props, context) => {
                 <Button
                   bold
                   icon="download"
-                  content="Download"
+                  content="Скачать"
                   disabled={downloading}
                   tooltipPosition="left"
-                  tooltip={!!downloading && 'Awaiting download completion...'}
+                  tooltip={!!downloading && 'Ожидание завершения загрузки...'}
                   onClick={() =>
                     act('PRG_downloadfile', {
                       filename: program.filename,
@@ -244,8 +244,8 @@ const Program = (props, context) => {
       </Box>
       {!program.verifiedsource && (
         <NoticeBox mt={1} mb={0} danger fontSize="12px">
-          Unverified source. Please note that Nanotrasen does not recommend
-          download and usage of software from non-official servers.
+          Непроверенный источник. Обратите внимание, что компания Нанотрасен не
+          рекомендует загружать и использовать софт с неофициальных серверов.
         </NoticeBox>
       )}
     </Section>

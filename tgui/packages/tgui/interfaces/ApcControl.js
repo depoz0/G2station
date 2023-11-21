@@ -9,7 +9,7 @@ import { AreaCharge, powerRank } from './PowerMonitor';
 export const ApcControl = (props, context) => {
   const { data } = useBackend(context);
   return (
-    <Window title="APC Controller" width={550} height={500}>
+    <Window title="ЛКП Контроллер" width={550} height={500}>
       <Window.Content>
         {data.authenticated === 1 && <ApcLoggedIn />}
         {data.authenticated === 0 && <ApcLoggedOut />}
@@ -21,7 +21,7 @@ export const ApcControl = (props, context) => {
 const ApcLoggedOut = (props, context) => {
   const { act, data } = useBackend(context);
   const { emagged } = data;
-  const text = emagged === 1 ? 'Open' : 'Log In';
+  const text = emagged === 1 ? 'Open' : 'Вход';
   return (
     <Section>
       <Button
@@ -48,7 +48,7 @@ const ApcLoggedIn = (props, context) => {
             setTabIndex(1);
             act('check-apcs');
           }}>
-          APC Control Panel
+          ЛКП Контроллеры
         </Tabs.Tab>
         <Tabs.Tab
           selected={tabIndex === 2}
@@ -56,7 +56,7 @@ const ApcLoggedIn = (props, context) => {
             setTabIndex(2);
             act('check-logs');
           }}>
-          Log View Panel
+          Журнал
         </Tabs.Tab>
       </Tabs>
       {restoring === 1 && (
@@ -102,21 +102,21 @@ const ControlPanel = (props, context) => {
     <Stack justify="space-between">
       <Stack.Item>
         <Box inline mr={2} color="label">
-          Sort by:
+          Сортировать по:
         </Box>
         <Button.Checkbox
           checked={sortByField === 'name'}
-          content="Name"
+          content="Имя"
           onClick={() => setSortByField(sortByField !== 'name' && 'name')}
         />
         <Button.Checkbox
           checked={sortByField === 'charge'}
-          content="Charge"
+          content="Заряд"
           onClick={() => setSortByField(sortByField !== 'charge' && 'charge')}
         />
         <Button.Checkbox
           checked={sortByField === 'draw'}
-          content="Draw"
+          content="Потребление"
           onClick={() => setSortByField(sortByField !== 'draw' && 'draw')}
         />
       </Stack.Item>
@@ -138,7 +138,7 @@ const ControlPanel = (props, context) => {
         <Button
           icon="sign-out-alt"
           color="bad"
-          content="Log Out"
+          content="Выход"
           onClick={() => act('log-out')}
         />
       </Stack.Item>
@@ -169,20 +169,20 @@ const ApcControlScene = (props, context) => {
     <Box height={30}>
       <Table>
         <Table.Row header>
-          <Table.Cell>On/Off</Table.Cell>
-          <Table.Cell>Area</Table.Cell>
-          <Table.Cell collapsing>Charge</Table.Cell>
+          <Table.Cell>Вкл/Выкл</Table.Cell>
+          <Table.Cell>Зона</Table.Cell>
+          <Table.Cell collapsing>Заряд</Table.Cell>
           <Table.Cell collapsing textAlign="right">
-            Draw
+            Потребление
           </Table.Cell>
           <Table.Cell collapsing title="Equipment">
-            Eqp
+            Оборудование
           </Table.Cell>
           <Table.Cell collapsing title="Lighting">
-            Lgt
+            Свет
           </Table.Cell>
           <Table.Cell collapsing title="Environment">
-            Env
+            Среда
           </Table.Cell>
         </Table.Row>
         {apcs.map((apc, i) => (

@@ -31,7 +31,7 @@ const EmergencyBox = (props, context) => {
               fluid
               color="red"
               icon="shield"
-              content="Call Security"
+              content="Вызов охраны"
               onClick={() =>
                 act('set_emergency', {
                   emergency: 'Security',
@@ -44,7 +44,7 @@ const EmergencyBox = (props, context) => {
               fluid
               color="red"
               icon="screwdriver-wrench"
-              content="Call Engineering"
+              content="Вызов инженера"
               onClick={() =>
                 act('set_emergency', {
                   emergency: 'Engineering',
@@ -57,7 +57,7 @@ const EmergencyBox = (props, context) => {
               fluid
               color="red"
               icon="suitcase-medical"
-              content="Call Medical"
+              content="Вызов врача"
               onClick={() =>
                 act('set_emergency', {
                   emergency: 'Medical',
@@ -73,7 +73,7 @@ const EmergencyBox = (props, context) => {
 
 const ErrorNoticeBox = (props, context) => {
   return (
-    <NoticeBox danger>{'Error occured while sending a message!'}</NoticeBox>
+    <NoticeBox danger>{'При передаче сообщения возникла ошибка!'}</NoticeBox>
   );
 };
 

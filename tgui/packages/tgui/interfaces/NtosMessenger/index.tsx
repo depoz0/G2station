@@ -152,7 +152,7 @@ const ContactsScreen = (props: any, context: any) => {
               SpaceMessenger V6.5.3
             </Box>
             <Box italic opacity={0.3} mt={1}>
-              Bringing you spy-proof communications since 2467.
+              Защищаем вас от шпионажа с 2467 года.
             </Box>
             <Divider hidden />
             <Box>
@@ -160,7 +160,7 @@ const ContactsScreen = (props: any, context: any) => {
                 icon="bell"
                 disabled={!alert_able}
                 content={
-                  alert_able && !alert_silenced ? 'Ringer: On' : 'Ringer: Off'
+                  alert_able && !alert_silenced ? 'Звонок: Вкл' : 'Звонок: Выкл'
                 }
                 onClick={() => act('PDA_toggleAlerts')}
               />
@@ -168,26 +168,26 @@ const ContactsScreen = (props: any, context: any) => {
                 icon="address-card"
                 content={
                   sending_and_receiving
-                    ? 'Send / Receive: On'
-                    : 'Send / Receive: Off'
+                    ? 'Отправка / Получение: Вкл'
+                    : 'Отправка / Получение: Выкл'
                 }
                 onClick={() => act('PDA_toggleSendingAndReceiving')}
               />
               <Button
                 icon="bell"
-                content="Set Ringtone"
+                content="Рингтон"
                 onClick={() => act('PDA_ringSet')}
               />
               <Button
                 icon="sort"
-                content={`Sort by: ${sort_by_job ? 'Job' : 'Name'}`}
+                content={`Сортировка: ${sort_by_job ? 'Дол' : 'Имя'}`}
                 onClick={() => act('PDA_changeSortStyle')}
               />
               {!!virus_attach && (
                 <Button
                   icon="bug"
                   color="bad"
-                  content={`Attach Virus: ${sending_virus ? 'Yes' : 'No'}`}
+                  content={`Прикрепить вирус: ${sending_virus ? 'Да' : 'Нет'}`}
                   onClick={() => act('PDA_toggleVirus')}
                 />
               )}
@@ -197,11 +197,11 @@ const ContactsScreen = (props: any, context: any) => {
           <Stack justify="space-between">
             <Box m={0.5}>
               <Icon name="magnifying-glass" mr={1} />
-              Search For User
+              Поиск пользователя
             </Box>
             <Input
               width="220px"
-              placeholder="Search by name or job..."
+              placeholder="Поиск по имени или должности..."
               value={searchUser}
               onInput={(_: any, value: string) => setSearchUser(value)}
             />
@@ -213,7 +213,7 @@ const ContactsScreen = (props: any, context: any) => {
           <Stack vertical fill>
             <Section>
               <Icon name="comments" mr={1} />
-              Previous Messages
+              Предыдущие сообщения
             </Section>
             <Section fill scrollable>
               <Stack vertical>{filteredChatButtons}</Stack>
@@ -237,7 +237,7 @@ const ContactsScreen = (props: any, context: any) => {
                 <Stack align="center" justify="center" fill pl={4}>
                   <Icon color="gray" name="user-slash" size={2} />
                   <Stack.Item fontSize={1.5} ml={3}>
-                    No users found.
+                    Пользователи не найдены.
                   </Stack.Item>
                 </Stack>
               )}
@@ -295,19 +295,19 @@ const SendToAllSection = (props, context) => {
         <Stack justify="space-between">
           <Stack.Item align="center">
             <Icon name="satellite-dish" mr={1} ml={0.5} />
-            Send To All
+            Отправить всем
           </Stack.Item>
           <Stack.Item>
             <Button
               icon="arrow-right"
               disabled={on_spam_cooldown || message === ''}
-              tooltip={on_spam_cooldown && 'Wait before sending more messages!'}
+              tooltip={on_spam_cooldown && 'Подождите перед отправкой новых сообщений!'}
               tooltipPosition="auto-start"
               onClick={() => {
                 act('PDA_sendEveryone', { message: message });
                 setmessage('');
               }}>
-              Send
+              Отправить
             </Button>
           </Stack.Item>
         </Stack>
@@ -316,7 +316,7 @@ const SendToAllSection = (props, context) => {
         <TextArea
           height={6}
           value={message}
-          placeholder="Send message to everyone..."
+          placeholder="Отправить сообщение всем..."
           onInput={(_: any, v: string) => setmessage(v)}
         />
       </Section>
@@ -332,7 +332,7 @@ const NoIDDimmer = () => {
           <Icon color="red" name="address-card" size={10} />
         </Stack>
         <Stack.Item fontSize="18px">
-          Please imprint an ID to continue.
+          Для продолжения сделайте снимок ID.
         </Stack.Item>
       </Stack>
     </Dimmer>
