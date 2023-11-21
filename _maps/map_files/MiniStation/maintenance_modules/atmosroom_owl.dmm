@@ -1,0 +1,107 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 10
+	},
+/obj/structure/rack,
+/obj/item/clothing/suit/toggle/owlwings,
+/obj/item/clothing/mask/gas/owl_mask,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"c" = (
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"e" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 9
+	},
+/obj/structure/rack,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/under/costume/owl,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"i" = (
+/obj/effect/spawner/random/structure/grille,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"s" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/structure/sign/poster/official/the_owl,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"w" = (
+/obj/effect/turf_decal/siding/wood,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"E" = (
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+"J" = (
+/obj/modular_map_connector,
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+"Q" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
+/obj/effect/spawner/random/structure/barricade,
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"S" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 5
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"U" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
+	},
+/obj/structure/table,
+/obj/item/toy/talking/owl{
+	pixel_y = 9
+	},
+/obj/effect/spawner/random/exotic/antag_gear_weak{
+	spawn_loot_chance = 20
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"X" = (
+/obj/structure/table,
+/obj/item/clothing/mask/gas,
+/obj/item/tank/internals/emergency_oxygen,
+/obj/effect/spawner/random/maintenance,
+/obj/effect/mapping_helpers/burnt_floor,
+/obj/structure/sign/poster/contraband/random/directional/west,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+
+(1,1,1) = {"
+J
+e
+a
+"}
+(2,1,1) = {"
+E
+s
+w
+"}
+(3,1,1) = {"
+E
+S
+U
+"}
+(4,1,1) = {"
+E
+Q
+E
+"}
+(5,1,1) = {"
+i
+c
+X
+"}
