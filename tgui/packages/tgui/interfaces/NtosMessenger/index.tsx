@@ -301,7 +301,9 @@ const SendToAllSection = (props, context) => {
             <Button
               icon="arrow-right"
               disabled={on_spam_cooldown || message === ''}
-              tooltip={on_spam_cooldown && 'Подождите перед отправкой новых сообщений!'}
+              tooltip={
+                on_spam_cooldown && 'Подождите перед отправкой новых сообщений!'
+              }
               tooltipPosition="auto-start"
               onClick={() => {
                 act('PDA_sendEveryone', { message: message });

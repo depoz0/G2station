@@ -243,11 +243,7 @@ const SpeciesPageInner = (
   return (
     <Stack vertical fill>
       <Stack.Item>
-        <Button
-          icon="arrow-left"
-          onClick={props.handleClose}
-          content="Назад"
-        />
+        <Button icon="arrow-left" onClick={props.handleClose} content="Назад" />
       </Stack.Item>
 
       <Stack.Item grow>
@@ -292,9 +288,7 @@ const SpeciesPageInner = (
                           <Diet diet={currentSpecies.diet} />
                         )
                       }>
-                      <Section title="Описание">
-                        {currentSpecies.desc}
-                      </Section>
+                      <Section title="Описание">{currentSpecies.desc}</Section>
 
                       <Section title="Особенности">
                         <SpeciesPerks perks={currentSpecies.perks} />

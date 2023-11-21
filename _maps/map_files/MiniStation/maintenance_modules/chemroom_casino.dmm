@@ -5,9 +5,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/maintenance/aft/lesser)
 "p" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access_txt = "12"
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/modular_map_connector,

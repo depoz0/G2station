@@ -34,8 +34,7 @@
 /area/station/maintenance/aft/lesser)
 "H" = (
 /obj/machinery/door/airlock/medical{
-	name = "Auxiliary Operating Theatre";
-	req_access_txt = "45"
+	name = "Auxiliary Operating Theatre"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
