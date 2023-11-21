@@ -89,8 +89,8 @@
 		},
 		{
 			"id": "bartender",
-			"name": "Bartender",
-			"desc": "Prior to the introduction of on-station psychologists, the Bartender served to alleviate many employees' woes and fears. Remember, always drink responsibly.",
+			"name": "Бармен",
+			"desc": "До появления штатных психологов 'бармен' служил для облегчения страданий и страхов многих сотрудников. Помните, что пить нужно всегда ответственно.",
 			"rules": "",
 			"icon_state": "bartender",
 			"power": "3",
@@ -104,8 +104,8 @@
 		},
 		{
 			"id": "botanist",
-			"name": "Botanist",
-			"desc": "The Botanist is in charge of keeping the station's food supply happy, healthy, and preferably not laced with hallucinogens.",
+			"name": "Ботаник",
+			"desc": "Ботаник отвечает за то, чтобы продукты питания на станции были качественными, здоровыми и, желательно, не содержали галлюциногенов.",
 			"rules": "",
 			"icon_state": "botanist",
 			"power": "1",

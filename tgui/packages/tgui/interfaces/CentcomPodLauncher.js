@@ -525,7 +525,7 @@ const TabBay = (props, context) => {
         onClick={() => act('teleportCentcom')}
       />
       <Button
-        content={data.oldArea ? data.oldArea.substring(0, 17) : 'Go Back'}
+        content={data.oldArea ? data.oldArea.substring(0, 17) : 'Назад'}
         disabled={!data.oldArea}
         icon="undo-alt"
         onClick={() => act('teleportBack')}
@@ -544,7 +544,7 @@ const TabDrop = (props, context) => {
         onClick={() => act('teleportDropoff')}
       />
       <Button
-        content={data.oldArea ? data.oldArea.substring(0, 17) : 'Go Back'}
+        content={data.oldArea ? data.oldArea.substring(0, 17) : 'Назад'}
         disabled={!data.oldArea}
         icon="undo-alt"
         onClick={() => act('teleportBack')}

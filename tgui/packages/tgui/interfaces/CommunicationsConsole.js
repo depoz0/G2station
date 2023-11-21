@@ -215,7 +215,7 @@ const PageChangingStatus = (props, context) => {
       <Section>
         <Button
           icon="chevron-left"
-          content="Back"
+          content="Назад"
           onClick={() => act('setState', { state: STATE_MAIN })}
         />
       </Section>
@@ -281,7 +281,7 @@ const PageMain = (props, context) => {
   return (
     <Box>
       {!syndicate && (
-        <Section title="Emergency Shuttle">
+        <Section title="Аварийный шаттл">
           {(!!shuttleCalled && (
             <Button.Confirm
               icon="space-shuttle"
@@ -300,7 +300,7 @@ const PageMain = (props, context) => {
           )) || (
             <Button
               icon="space-shuttle"
-              content="Call Emergency Shuttle"
+              content="Вызвать аварийный шаттл"
               disabled={shuttleCanEvacOrFailReason !== 1}
               tooltip={
                 shuttleCanEvacOrFailReason !== 1
@@ -324,7 +324,7 @@ const PageMain = (props, context) => {
       )}
 
       {!!canSetAlertLevel && (
-        <Section title="Alert Level">
+        <Section title="Уровень тревоги">
           <Flex justify="space-between">
             <Flex.Item>
               <Box>
@@ -349,12 +349,12 @@ const PageMain = (props, context) => {
         </Section>
       )}
 
-      <Section title="Functions">
+      <Section title="Функции">
         <Flex direction="column">
           {!!canMakeAnnouncement && (
             <Button
               icon="bullhorn"
-              content="Make Priority Announcement"
+              content="Сделать приоритетное объявление"
               onClick={() => act('makePriorityAnnouncement')}
             />
           )}
@@ -363,8 +363,8 @@ const PageMain = (props, context) => {
             <Button.Confirm
               icon="id-card-o"
               content={`${
-                emergencyAccess ? 'Disable' : 'Enable'
-              } Emergency Maintenance Access`}
+                emergencyAccess ? 'Отключить' : 'Включить'
+              } Доступ к аварийным отсекам`}
               color={emergencyAccess ? 'bad' : undefined}
               onClick={() => act('toggleEmergencyAccess')}
             />
@@ -380,14 +380,14 @@ const PageMain = (props, context) => {
 
           <Button
             icon="envelope-o"
-            content="Message List"
+            content="Список сообщений"
             onClick={() => act('setState', { state: STATE_MESSAGES })}
           />
 
           {canBuyShuttles !== 0 && (
             <Button
               icon="shopping-cart"
-              content="Purchase Shuttle"
+              content="Покупка шаттла"
               disabled={canBuyShuttles !== 1}
               // canBuyShuttles is a string detailing the fail reason
               // if one can be given
@@ -400,7 +400,9 @@ const PageMain = (props, context) => {
           {!!canMessageAssociates && (
             <Button
               icon="comment-o"
-              content={`Send message to ${emagged ? '[UNKNOWN]' : 'CentCom'}`}
+              content={`Отправить сообщение ${
+                emagged ? '[UNKNOWN]' : 'CentCom'
+              }`}
               disabled={!importantActionReady}
               onClick={() => setMessagingAssociates(true)}
             />
@@ -409,7 +411,7 @@ const PageMain = (props, context) => {
           {!!canRequestNuke && (
             <Button
               icon="radiation"
-              content="Request Nuclear Authentication Codes"
+              content="Запрос кодов ядерной аутентификации"
               disabled={!importantActionReady}
               onClick={() => setRequestingNukeCodes(true)}
             />
@@ -445,10 +447,10 @@ const PageMain = (props, context) => {
 
       {!!canRequestNuke && requestingNukeCodes && (
         <MessageModal
-          label="Reason for requesting nuclear self-destruct codes"
-          notice="Misuse of the nuclear request system will not be tolerated under any circumstances. Transmission does not guarantee a response."
+          label="Причина запроса кодов ядерного самоуничтожения"
+          notice="Злоупотребление системой ядерных запросов недопустимо ни при каких обстоятельствах. Передача запроса не гарантирует что Вы получите ответ."
           icon="bomb"
-          buttonText="Request Codes"
+          buttonText="Запросить коды"
           onBack={() => setRequestingNukeCodes(false)}
           onSubmit={(reason) => {
             setRequestingNukeCodes(false);
@@ -461,9 +463,9 @@ const PageMain = (props, context) => {
 
       {!!callingShuttle && (
         <MessageModal
-          label="Nature of emergency"
+          label="Описание чрезвычайной ситуации"
           icon="space-shuttle"
-          buttonText="Call Shuttle"
+          buttonText="Вызов шаттла"
           minLength={callShuttleReasonMinLength}
           onBack={() => setCallingShuttle(false)}
           onSubmit={(reason) => {
@@ -487,7 +489,7 @@ const PageMain = (props, context) => {
               <Flex.Item mr={2} mb={1}>
                 <Button
                   icon="id-card-o"
-                  content="Swipe ID"
+                  content="Проведите ID"
                   color="good"
                   fontSize="16px"
                   onClick={() =>
@@ -499,7 +501,7 @@ const PageMain = (props, context) => {
 
                 <Button
                   icon="times"
-                  content="Cancel"
+                  content="Отменить"
                   color="bad"
                   fontSize="16px"
                   onClick={() => setShowAlertLevelConfirm(false)}
@@ -566,7 +568,7 @@ const PageMessages = (props, context) => {
     <Section>
       <Button
         icon="chevron-left"
-        content="Back"
+        content="Назад"
         onClick={() => act('setState', { state: STATE_MAIN })}
       />
     </Section>
@@ -611,7 +613,7 @@ const PageMessages = (props, context) => {
         buttons={
           <Button.Confirm
             icon="trash"
-            content="Delete"
+            content="Удалить"
             color="red"
             onClick={() =>
               act('deleteMessage', {
@@ -652,13 +654,13 @@ export const CommunicationsConsole = (props, context) => {
         {!hasConnection && <NoConnectionModal />}
 
         {(canLogOut || !authenticated) && (
-          <Section title="Authentication">
+          <Section title="Аутентификация">
             <Button
               icon={authenticated ? 'sign-out-alt' : 'sign-in-alt'}
               content={
                 authenticated
-                  ? `Log Out${authorizeName ? ` (${authorizeName})` : ''}`
-                  : 'Log In'
+                  ? `Выход${authorizeName ? ` (${authorizeName})` : ''}`
+                  : 'Войти'
               }
               color={authenticated ? 'bad' : 'good'}
               onClick={() => act('toggleAuthentication')}

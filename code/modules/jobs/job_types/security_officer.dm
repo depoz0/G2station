@@ -1,13 +1,13 @@
 /datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
-	description = "Protect company assets, follow the Standard Operating \
-		Procedure, eat donuts."
+	description = "Защищайте имущество корпорации, следуйте стандартным оперативным \
+			процедурам, ешьте пончики."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	supervisors = "the Head of Security, and the head of your assigned department (if applicable)"
+	supervisors = "руководитель службы безопасности и руководитель назначенного вам отдела (если имеется)"
 	minimal_player_age = 7
 	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
@@ -133,9 +133,9 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 	if(player_client)
 		if(department)
-			to_chat(player_client, "<b>You have been assigned to [department]!</b>")
+			to_chat(player_client, "<b>Вы назначены в [department]!</b>")
 		else
-			to_chat(player_client, "<b>You have not been assigned to any department. Patrol the halls and help where needed.</b>")
+			to_chat(player_client, "<b>Вы не были назначены ни в один из отделов. Патрулируйте коридоры и помогайте там, где это необходимо.</b>")
 
 	return department
 
@@ -171,9 +171,9 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		return
 
 	var/datum/signal/subspace/messaging/tablet_message/signal = new(announcement_system, list(
-		"fakename" = "Security Department Update",
-		"fakejob" = "Automated Announcement System",
-		"message" = "Officer [officer.real_name] has been assigned to your department, [department].",
+		"fakename" = "Новое извещение Департамента безопасности",
+		"fakejob" = "Автоматизированная система оповещения",
+		"message" = "Офицер  [officer.real_name] был назначен в ваш отдел, [department].",
 		"targets" = targets,
 		"automated" = TRUE,
 	))

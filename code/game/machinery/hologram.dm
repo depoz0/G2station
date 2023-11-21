@@ -34,8 +34,8 @@ Possible to do for anyone motivated enough:
 #define HOLOGRAM_POWER_USAGE 2
 
 /obj/machinery/holopad
-	name = "holopad"
-	desc = "It's a floor-mounted device for projecting holographic images."
+	name = "голопад"
+	desc = "Это напольное устройство для проецирования голографических изображений."
 	icon = 'icons/obj/machines/floor.dmi'
 	icon_state = "holopad0"
 	base_icon_state = "holopad"
@@ -111,8 +111,8 @@ Possible to do for anyone motivated enough:
 	AddElement(/datum/element/contextual_screentip_mob_typechecks, hovering_mob_typechecks)
 
 /obj/machinery/holopad/secure
-	name = "secure holopad"
-	desc = "It's a floor-mounted device for projecting holographic images. This one will refuse to auto-connect incoming calls."
+	name = "защищенный голопад"
+	desc = "Это напольное устройство для проецирования голографических изображений. Этот голопад отклоняет автоподключения входящих вызовов."
 	secure = TRUE
 
 /obj/machinery/holopad/secure/Initialize(mapload)
@@ -224,9 +224,9 @@ Possible to do for anyone motivated enough:
 /obj/machinery/holopad/examine(mob/user)
 	. = ..()
 	if(isAI(user))
-		. += span_notice("The status display reads: Current projection range: <b>[holo_range]</b> units. Use :h to speak through the projection. Right-click to project or cancel a projection. Alt-click to hangup all active and incomming calls. Ctrl-click to end projection without jumping to your last location.")
+		. += span_notice("На дисплее состояния отображается: Текущая дальность проекции: <b>[holo_range]</b> единиц. Используйте :h, чтобы говорить через проекцию. Щелкните правой кнопкой мыши, чтобы проецировать или отменить проекцию. Alt-клик позволяет прервать все активные и текущие вызовы. Нажмите Ctrl+клик, чтобы завершить проекцию без перехода в последнее местоположение.")
 	else if(in_range(user, src) || isobserver(user))
-		. += span_notice("The status display reads: Current projection range: <b>[holo_range]</b> units.")
+		. += span_notice("На дисплее состояния отображается: Текущая дальность проекции: <b>[holo_range]</b> единиц.")
 
 /obj/machinery/holopad/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
@@ -261,11 +261,11 @@ Possible to do for anyone motivated enough:
 
 	if(istype(P,/obj/item/disk/holodisk))
 		if(disk)
-			to_chat(user,span_warning("There's already a disk inside [src]!"))
+			to_chat(user,span_warning("Внутри уже находится диск [src]!"))
 			return
 		if (!user.transferItemToLoc(P,src))
 			return
-		to_chat(user,span_notice("You insert [P] into [src]."))
+		to_chat(user,span_notice("Вы вставляете [P] в [src]."))
 		disk = P
 		return
 
@@ -354,7 +354,7 @@ Possible to do for anyone motivated enough:
 					calling = TRUE
 					return TRUE
 			else
-				to_chat(usr, span_warning("You must stand on the holopad to make a call!"))
+				to_chat(usr, span_warning("Для совершения вызова необходимо встать на голопад!"))
 		if("connectcall")
 			var/datum/holocall/call_to_connect = locate(params["holopad"]) in holo_calls
 			if(!QDELETED(call_to_connect))
@@ -534,7 +534,7 @@ Possible to do for anyone motivated enough:
 
 	if(is_operational)//If the projector has power
 		if(AI && istype(AI.current, /obj/machinery/holopad))
-			to_chat(user, "[span_danger("ERROR:")] \black Image feed in progress.")
+			to_chat(user, "[span_danger("ERROR:")] \black Идет передача изображения.")
 			return
 
 		// What to pull our appearance out of
@@ -558,11 +558,11 @@ Possible to do for anyone motivated enough:
 		set_holo(user, hologram)
 
 		set_holo(user, hologram)
-		visible_message(span_notice("A holographic image of [user] flickers to life before your eyes!"))
+		visible_message(span_notice("Голографическое изображение [user] мерцает перед глазами!"))
 
 		return hologram
 	else
-		to_chat(user, "[span_danger("ERROR:")] Unable to project hologram.")
+		to_chat(user, "[span_danger("ERROR:")] Невозможно спроецировать голограмму.")
 
 /*This is the proc for special two-way communication between AI and holopad/people talking near holopad.
 For the other part of the code, check silicon say.dm. Particularly robot talk.*/
@@ -745,7 +745,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	hologram.name = "[record.caller_name] (Hologram)"//If someone decides to right click.
 	set_holo(record, hologram)
 
-	visible_message(span_notice("A holographic image of [record.caller_name] flickers to life before your eyes!"))
+	visible_message(span_notice("Голографическое изображение [record.caller_name] мерцает перед глазами!"))
 	return hologram
 
 /obj/machinery/holopad/proc/replay_start()

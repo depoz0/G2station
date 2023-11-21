@@ -1,11 +1,11 @@
 /datum/round_event_control/anomaly/anomaly_dimensional
-	name = "Anomaly: Dimensional"
+	name = "Аномалия: пространственная"
 	typepath = /datum/round_event/anomaly/anomaly_dimensional
 
 	min_players = 10
 	max_occurrences = 5
 	weight = 20
-	description = "This anomaly replaces the materials of the surrounding area."
+	description = "Эта аномалия заменяет собой материалы окружающего пространства."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 2
 	admin_setup = list(/datum/event_admin_setup/set_location/anomaly, /datum/event_admin_setup/listed_options/anomaly_dimensional)
@@ -23,7 +23,7 @@
 	new_anomaly.prepare_area(new_theme_path = anomaly_theme)
 
 /datum/round_event/anomaly/anomaly_dimensional/announce(fake)
-	priority_announce("Dimensional instability detected on [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Anomaly Alert")
+	priority_announce("Обнаружена пространственная нестабильность на [ANOMALY_ANNOUNCE_MEDIUM_TEXT] [impact_area.name].", "Предупреждение об аномалиях")
 
 /datum/event_admin_setup/listed_options/anomaly_dimensional
 	input_text = "Select a dimensional anomaly theme?"

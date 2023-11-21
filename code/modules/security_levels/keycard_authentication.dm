@@ -7,8 +7,8 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 #define ACCESS_GRANTING_COOLDOWN (30 SECONDS)
 
 /obj/machinery/keycard_auth
-	name = "Keycard Authentication Device"
-	desc = "This device is used to trigger station functions, which require more than one ID card to authenticate, or to give the Janitor access to a department."
+	name = "Устройство аутентификации по карте"
+	desc = "Это устройство используется для запуска функций станции, для аутентификации которых требуется более одной ID карты, или предоставьте уборщику доступа к отделу."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "auth_off"
 	power_channel = AREA_USAGE_ENVIRON
@@ -165,7 +165,7 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 			for(var/obj/machinery/door/airlock/D in in_area)
 				D.emergency = TRUE
 				D.update_icon(ALL, 0)
-	minor_announce("Access restrictions on maintenance and external airlocks have been lifted.", "Attention! Station-wide emergency declared!",1)
+	minor_announce("Сняты ограничения на доступ к обслуживанию и внешним шлюзам.", "Внимание! Объявлена чрезвычайная ситуация на всей станции!",1)
 	GLOB.emergency_access = TRUE
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("emergency maintenance access", "enabled"))
 
@@ -175,7 +175,7 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 			for(var/obj/machinery/door/airlock/D in in_area)
 				D.emergency = FALSE
 				D.update_icon(ALL, 0)
-	minor_announce("Access restrictions in maintenance areas have been restored.", "Attention! Station-wide emergency rescinded:")
+	minor_announce("Ограничения доступа в зоны обслуживания восстановлены.", "Внимание! Общестанционная чрезвычайная ситуация отменена:")
 	GLOB.emergency_access = FALSE
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("emergency maintenance access", "disabled"))
 

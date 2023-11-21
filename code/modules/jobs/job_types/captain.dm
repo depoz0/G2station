@@ -1,8 +1,8 @@
 /datum/job/captain
 	title = JOB_CAPTAIN
-	description = "Be responsible for the station, manage your Heads of Staff, \
-		keep the crew alive, be prepared to do anything and everything or die \
-		horribly trying."
+	description = "Управляйте станцией, руководите подчиненными,\
+		поддерживайте жизнедеятельность экипажа, будьте готовы делать все и вся или ужасно умереть \
+		в попытках восстановить станцию."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
 	faction = FACTION_STATION
@@ -49,14 +49,14 @@
 
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "Captain [captain.real_name] on deck!"
+	return "Капитан [captain.real_name] на борту!"
 
 /datum/job/captain/get_radio_information()
 	. = ..()
-	. += "\nYou have access to all radio channels, but they are not automatically tuned. Check your radio for more information."
+	. += "\nВы имеете доступ ко всем радиоканалам, но они не настраиваются автоматически. Проверьте свой радиоприемник для получения дополнительной информации."
 
 /datum/outfit/job/captain
-	name = "Captain"
+	name = "Капитан"
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/advanced/gold

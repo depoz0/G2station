@@ -1,11 +1,11 @@
 /datum/round_event_control/anomaly/anomaly_flux
-	name = "Anomaly: Hyper-Energetic Flux"
+	name = "Аномалия: гиперэнергетический разряд"
 	typepath = /datum/round_event/anomaly/anomaly_flux
 
 	min_players = 10
 	max_occurrences = 5
 	weight = 20
-	description = "This anomaly shocks and explodes."
+	description = "Эта аномалия бьет током и взрывается."
 	min_wizard_trigger_potency = 1
 	max_wizard_trigger_potency = 4
 
@@ -15,4 +15,4 @@
 	anomaly_path = /obj/effect/anomaly/flux
 
 /datum/round_event/anomaly/anomaly_flux/announce(fake)
-	priority_announce("Hyper-energetic flux wave detected on [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Anomaly Alert")
+	priority_announce("Обнаружена волна гиперэнергетического разряда на [ANOMALY_ANNOUNCE_DANGEROUS_TEXT] [impact_area.name].", "Предупреждение об аномалиях")

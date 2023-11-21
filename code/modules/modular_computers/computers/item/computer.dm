@@ -590,7 +590,7 @@
 		return FALSE
 
 	if(program.requires_ntnet && !get_ntnet_status()) // The program requires NTNet connection, but we are not connected to NTNet.
-		to_chat(user, span_danger("\The [src]'s screen shows \"Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning."))
+		to_chat(user, span_danger("На экране [src] появляется надпись \"Невозможно подключиться к NTNet. Пожалуйста, повторите попытку. Если проблема не исчезает, обратитесь к системному администратору.\" предупреждение."))
 		return FALSE
 
 	if(!program.on_start(user))

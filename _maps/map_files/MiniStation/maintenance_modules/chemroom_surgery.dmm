@@ -1,0 +1,83 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/table/optable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/old,
+/obj/item/clothing/mask/surgical,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+"b" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+"c" = (
+/obj/effect/decal/cleanable/ash/crematorium,
+/obj/item/cigbutt,
+/obj/structure/sign/departments/medbay/alt/directional/west,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+"n" = (
+/mob/living/simple_animal/bot/medbot/autopatrol{
+	name = "Head Surgeon"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/modular_map_connector,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"u" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+"w" = (
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+"H" = (
+/obj/machinery/door/airlock/medical{
+	name = "Auxiliary Operating Theatre"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/spawner/random/structure/barricade,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"L" = (
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"P" = (
+/obj/structure/table_frame,
+/obj/item/shard,
+/obj/item/knife,
+/obj/item/hatchet,
+/obj/item/retractor,
+/obj/item/hemostat,
+/obj/effect/spawner/random/entertainment/lighter,
+/obj/item/surgical_drapes,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+"T" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/freezer,
+/obj/effect/spawner/random/medical/organs,
+/obj/item/tape{
+	desc = "Conceptualization: Success. The only thing this tape contains is the swan song of missed potential.";
+	name = "off-site copy"
+	},
+/obj/effect/spawner/random/medical/organs,
+/turf/open/floor/iron/white,
+/area/station/maintenance/aft/lesser)
+
+(1,1,1) = {"
+n
+w
+T
+c
+a
+"}
+(2,1,1) = {"
+L
+H
+u
+b
+P
+"}

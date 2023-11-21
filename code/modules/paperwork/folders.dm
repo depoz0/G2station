@@ -1,6 +1,6 @@
 /obj/item/folder
-	name = "folder"
-	desc = "A folder."
+	name = "папка"
+	desc = "Папка для бумаг"
 	icon = 'icons/obj/service/bureaucracy.dmi'
 	icon_state = "folder"
 	w_class = WEIGHT_CLASS_SMALL
@@ -36,13 +36,13 @@
 /obj/item/folder/examine()
 	. = ..()
 	if(length(contents) && !contents_hidden)
-		. += span_notice("<b>Right-click</b> to remove [contents[1]].")
+		. += span_notice("<b>Правая кнопка мыши</b>, чтобы удалить [contents[1]].")
 
 /obj/item/folder/proc/rename(mob/user, obj/item/writing_instrument)
 	if(!user.can_write(writing_instrument))
 		return
 
-	var/inputvalue = tgui_input_text(user, "What would you like to label the folder?", "Folder Labelling", max_length = MAX_NAME_LEN)
+	var/inputvalue = tgui_input_text(user, "Как бы вы хотели назвать папку?", "Название папки", max_length = MAX_NAME_LEN)
 
 	if(!inputvalue)
 		return
@@ -54,7 +54,7 @@
 	if(istype(Item))
 		Item.forceMove(user.loc)
 		user.put_in_hands(Item)
-		to_chat(user, span_notice("You remove [Item] from [src]."))
+		to_chat(user, span_notice("Вы удаляете [Item] из [src]."))
 		update_icon()
 
 /obj/item/folder/attack_hand(mob/user, list/modifiers)
@@ -75,7 +75,7 @@
 		//Add paper, photo or documents into the folder
 		if(!user.transferItemToLoc(weapon, src))
 			return
-		to_chat(user, span_notice("You put [weapon] into [src]."))
+		to_chat(user, span_notice("Вы вкладываете [weapon] в [src]."))
 		update_appearance()
 	else if(istype(weapon, /obj/item/pen))
 		rename(user, weapon)

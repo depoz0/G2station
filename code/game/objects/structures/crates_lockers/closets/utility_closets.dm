@@ -13,8 +13,8 @@
  * Emergency Closet
  */
 /obj/structure/closet/emcloset
-	name = "emergency closet"
-	desc = "It's a storage unit for emergency breath masks and O2 tanks."
+	name = "аварийный шкаф"
+	desc = "Это хранилище для запасных дыхательных масок и баллонов с кислородом."
 	icon_state = "emergency"
 
 /obj/structure/closet/emcloset/anchored

@@ -1,7 +1,7 @@
 /datum/job/paramedic
 	title = JOB_PARAMEDIC
-	description = "Run around the station looking for patients, respond to \
-		emergencies, give patients a roller bed ride to medbay."
+	description = "Бегайте по станции в поисках пациентов, реагируйте на чрезвычайные ситуации \
+			катать пациентов на каталке до медпункта."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
 	faction = FACTION_STATION
 	total_positions = 2

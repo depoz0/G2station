@@ -344,7 +344,7 @@
 	user.toggle_move_intent(user)
 
 /atom/movable/screen/pull
-	name = "stop pulling"
+	name = "прекратить тянуть"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "pull"
 	base_icon_state = "pull"

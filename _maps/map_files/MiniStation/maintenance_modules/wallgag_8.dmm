@@ -1,0 +1,19 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/modular_map_connector,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/mob/living/simple_animal/butterfly,
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+a
+"}

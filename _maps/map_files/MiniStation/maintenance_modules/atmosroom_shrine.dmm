@@ -1,0 +1,101 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/item/flashlight/flare/candle{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/item/flashlight/flare/candle,
+/obj/item/toy/figure/ce{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"i" = (
+/obj/effect/spawner/random/structure/girder,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"l" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/engineering/material_cheap,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"n" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/item/flashlight/flare/candle,
+/obj/item/flashlight/flare/candle{
+	pixel_x = -8;
+	pixel_y = 14
+	},
+/obj/item/toy/figure/engineer{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"o" = (
+/obj/structure/rack,
+/obj/item/clothing/suit/hooded/wintercoat/engineering,
+/obj/effect/spawner/random/engineering/tool,
+/obj/effect/spawner/random/engineering/tool,
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
+"v" = (
+/obj/modular_map_connector,
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+"H" = (
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"N" = (
+/obj/structure/table/wood/fancy/royalblack,
+/obj/item/toy/spinningtoy,
+/obj/machinery/light/small/blacklight/directional/south,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"S" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering"
+	},
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/mapping_helpers/airlock/access/all/engineering/maintenance,
+/obj/effect/spawner/random/structure/barricade,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"U" = (
+/obj/effect/decal/cleanable/crayon,
+/turf/open/floor/wood,
+/area/station/maintenance/aft/lesser)
+"V" = (
+/turf/closed/wall,
+/area/station/maintenance/aft/lesser)
+
+(1,1,1) = {"
+v
+H
+a
+"}
+(2,1,1) = {"
+S
+U
+N
+"}
+(3,1,1) = {"
+V
+H
+n
+"}
+(4,1,1) = {"
+V
+V
+V
+"}
+(5,1,1) = {"
+i
+o
+l
+"}

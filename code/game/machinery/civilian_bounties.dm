@@ -237,8 +237,8 @@
 		else
 			id_eject(user, target)
 
-	user.visible_message(span_notice("[user] inserts \the [card_to_insert] into \the [src]."),
-						span_notice("You insert \the [card_to_insert] into \the [src]."))
+	user.visible_message(span_notice("[user] вставляет \the [card_to_insert] в \the [src]."),
+						span_notice("Вы вставляете \the [card_to_insert] в \the [src]."))
 	playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, FALSE)
 	ui_interact(user)
 	return TRUE
