@@ -22,7 +22,7 @@
 	hallucinator.apply_status_effect(/datum/status_effect/grouped/screwy_hud/fake_dead, REF(src))
 	hallucinator.add_traits(list(TRAIT_MUTE, TRAIT_EMOTEMUTE), REF(src))
 
-	to_chat(hallucinator, span_deadsay("<b>[hallucinator.real_name]</b> has died at <b>[get_area_name(hallucinator)]</b>."))
+	to_chat(hallucinator, span_deadsay("<b>[hallucinator.real_name]</b> умер в <b>[get_area_name(hallucinator)]</b>."))
 
 	var/delay = 0
 
