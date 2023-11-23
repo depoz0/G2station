@@ -63,20 +63,20 @@ const AirAlarmStatus = (props, context) => {
   const dangerMap = {
     0: {
       color: 'good',
-      localStatusText: 'Optimal',
+      localStatusText: 'Оптимально',
     },
     1: {
       color: 'average',
-      localStatusText: 'Caution',
+      localStatusText: 'Предостережение',
     },
     2: {
       color: 'bad',
-      localStatusText: 'Danger (Internals Required)',
+      localStatusText: 'Опасность (Internals Required)',
     },
   };
   const localStatus = dangerMap[data.dangerLevel] || dangerMap[0];
   return (
-    <Section title="Air Status">
+    <Section title="Состояние воздуха">
       <LabeledList>
         {(envData.length > 0 && (
           <>

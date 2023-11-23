@@ -14,7 +14,7 @@ path/corner/color_name {\
 }
 
 /obj/structure/chair/sofa
-	name = "old ratty sofa"
+	name = "старый рваный диван"
 	icon_state = "error"
 	icon = 'icons/obj/chairs_wide.dmi'
 	buildstackamount = 1
@@ -78,8 +78,8 @@ COLORED_SOFA(/obj/structure/chair/sofa, maroon, SOFA_MAROON)
 
 // Original icon ported from Eris(?) and updated to work here.
 /obj/structure/chair/sofa/corp
-	name = "sofa"
-	desc = "Soft and cushy."
+	name = "диван"
+	desc = "Мягкий и приятный на ощупь."
 	icon_state = "corp_sofamiddle"
 
 /obj/structure/chair/sofa/corp/left

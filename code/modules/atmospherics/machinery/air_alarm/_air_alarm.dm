@@ -241,12 +241,12 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			"value" = my_area.name
 		))
 	data["envData"] += list(list(
-		"name" = "Pressure",
+		"name" = "Давление",
 		"value" = "[round(pressure, 0.01)] kPa",
 		"danger" = tlv_collection["pressure"].check_value(pressure)
 	))
 	data["envData"] += list(list(
-		"name" = "Temperature",
+		"name" = "Температура",
 		"value" = "[round(temp, 0.01)] Kelvin / [round(temp, 0.01) - T0C] Celcius",
 		"danger" = tlv_collection["temperature"].check_value(temp),
 	))

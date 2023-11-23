@@ -1,6 +1,6 @@
 /obj/item/assembly/mousetrap
-	name = "mousetrap"
-	desc = "A handy little spring-loaded trap for catching pesty rodents."
+	name = "мышеловка"
+	desc = "Удобная маленькая пружинная мышеловка для отлова вредных грызунов."
 	icon_state = "mousetrap"
 	inhand_icon_state = "mousetrap"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT)
@@ -167,11 +167,11 @@
 
 /obj/item/assembly/mousetrap/attack_self(mob/living/carbon/human/user)
 	if(!armed)
-		to_chat(user, span_notice("You arm [src]."))
+		to_chat(user, span_notice(" Вы взводите [src]."))
 	else
 		if(clumsy_check(user))
 			return
-		to_chat(user, span_notice("You disarm [src]."))
+		to_chat(user, span_notice("Вы обезвреживаете [src]."))
 	armed = !armed
 	update_appearance()
 	playsound(src, 'sound/weapons/handcuffs.ogg', 30, TRUE, -3)
@@ -194,8 +194,8 @@
 					var/mob/living/carbon/H = AM
 					if(H.move_intent == MOVE_INTENT_RUN)
 						INVOKE_ASYNC(src, PROC_REF(triggered), H)
-						H.visible_message(span_warning("[H] accidentally steps on [src]."), \
-							span_warning("You accidentally step on [src]"))
+						H.visible_message(span_warning("[H] случайно наступает на [src]."), \
+							span_warning("Вы случайно наступаете на [src]"))
 				else if(ismouse(MM) || isregalrat(MM))
 					INVOKE_ASYNC(src, PROC_REF(triggered), MM)
 		else if(AM.density) // For mousetrap grenades, set off by anything heavy

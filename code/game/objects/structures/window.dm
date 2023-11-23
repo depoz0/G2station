@@ -1,5 +1,5 @@
 /obj/structure/window
-	name = "window"
+	name = "окно"
 	desc = "A directional window."
 	icon_state = "window"
 	density = TRUE
@@ -450,8 +450,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/spawner, 0)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/unanchored/spawner, 0)
 
 /obj/structure/window/reinforced
-	name = "reinforced window"
-	desc = "A window that is reinforced with metal rods."
+	name = "армированное окно"
+	desc = "Окно, армированное металлическими стержнями."
 	icon_state = "rwindow"
 	reinf = TRUE
 	heat_resistance = 1600
