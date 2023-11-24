@@ -251,7 +251,7 @@
 	)
 
 /datum/round_event/vent_clog/critical/announce()
-	priority_announce("Потенциально опасные признаки жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Предупреждение об опасности")
+	priority_announce("Потенциально опасные признаки жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Сигнал тревоги об опасности")
 
 /datum/round_event/vent_clog/critical/get_mob()
 	var/static/list/mob_list = list(
@@ -262,11 +262,11 @@
 	return pick(mob_list)
 
 /datum/round_event_control/vent_clog/strange
-	name = "Ventilation Clog: Strange"
+	name = "Засор в вентиляции: Странный"
 	typepath = /datum/round_event/vent_clog/strange
 	weight = 5
 	max_occurrences = 2
-	description = "Strange mobs climb out of a vent, harmfulness varies."
+	description = "Из вентиляционного отверстия вылезают странные мобы, вредоносность которых варьируется."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 7
 
@@ -283,7 +283,7 @@
 	)
 
 /datum/round_event/vent_clog/strange/announce()
-	priority_announce("Unusual lifesign readings detected in the [get_area_name(vent)] ventilation network.", "Lifesign Alert", ANNOUNCER_ALIENS)
+	priority_announce("Необычные показания признаков жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Сигнал тревоги о признаках жизни", ANNOUNCER_ALIENS)
 
 /datum/round_event/vent_clog/strange/get_mob()
 	var/static/list/mob_list = list(

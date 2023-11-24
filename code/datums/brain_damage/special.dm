@@ -423,6 +423,6 @@
 	forceMove(get_step_towards(src, victim))
 	if(prob(5))
 		var/beepskys_cry = "Level 10 infraction alert!"
-		to_chat(victim, "[span_name("[name]")] exclaims, \"[span_robot("[beepskys_cry]")]")
+		to_chat(victim, "[span_name("[name]")] восклицает, \"[span_robot("[beepskys_cry]")]")
 		if(victim.client?.prefs.read_preference(/datum/preference/toggle/enable_runechat))
 			victim.create_chat_message(src, raw_message = beepskys_cry, spans = list("robotic"))
