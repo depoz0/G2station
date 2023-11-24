@@ -3,7 +3,7 @@
 // consoles use "procssor" item that is held inside it.
 /obj/item/modular_computer
 	name = "modular microcomputer"
-	desc = "A small portable microcomputer."
+	desc = "Малогабаритный портативный микрокомпьютер."
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "laptop"
 	light_on = FALSE
@@ -642,7 +642,7 @@
 	if(looping_sound)
 		soundloop.stop()
 	if(physical && loud)
-		physical.visible_message(span_notice("\The [src] shuts down."))
+		physical.visible_message(span_notice("[src] PDA выключается."))
 	enabled = FALSE
 	update_appearance()
 

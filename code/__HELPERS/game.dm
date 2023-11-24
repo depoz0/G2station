@@ -226,25 +226,25 @@
 	SEND_SOUND(candidate_mob, 'sound/misc/notice2.ogg') //Alerting them to their consideration
 	if(flashwindow)
 		window_flash(candidate_mob.client)
-	var/list/answers = ignore_category ? list("Yes", "No", "Never for this round") : list("Yes", "No")
-	switch(tgui_alert(candidate_mob, question, "A limited-time offer!", answers, poll_time, autofocus = FALSE))
-		if("Yes")
-			to_chat(candidate_mob, span_notice("Choice registered: Yes."))
+	var/list/answers = ignore_category ? list("Да", "Нет", "Никогда в этом раунде") : list("Да", "Нет")
+	switch(tgui_alert(candidate_mob, question, "Предложение ограничено по времени!", answers, poll_time, autofocus = FALSE))
+		if("Да")
+			to_chat(candidate_mob, span_notice("Выбор сделан: Да."))
 			if(time_passed + poll_time <= world.time)
-				to_chat(candidate_mob, span_danger("Sorry, you answered too late to be considered!"))
+				to_chat(candidate_mob, span_danger("Извините, вы ответили слишком поздно, чтобы принять Ваш ответ!"))
 				SEND_SOUND(candidate_mob, 'sound/machines/buzz-sigh.ogg')
 				candidates -= candidate_mob
 			else
 				candidates += candidate_mob
-		if("No")
-			to_chat(candidate_mob, span_danger("Choice registered: No."))
+		if("Нет")
+			to_chat(candidate_mob, span_danger("Выбор сделан: Нет."))
 			candidates -= candidate_mob
-		if("Never for this round")
+		if("Никогда в этом раунде")
 			var/list/ignore_list = GLOB.poll_ignore[ignore_category]
 			if(!ignore_list)
 				GLOB.poll_ignore[ignore_category] = list()
 			GLOB.poll_ignore[ignore_category] += candidate_mob.ckey
-			to_chat(candidate_mob, span_danger("Choice registered: Never for this round."))
+			to_chat(candidate_mob, span_danger("Выбор сделан: Никогда в этом раунде."))
 			candidates -= candidate_mob
 		else
 			candidates -= candidate_mob
@@ -267,7 +267,7 @@
 
 	var/time_passed = world.time
 	if (!question)
-		question = "Would you like to be a special role?"
+		question = "Хотели бы Вы сыграть особую роль?"
 	var/list/result = list()
 	for(var/mob/candidate_mob as anything in group)
 		if(!candidate_mob.key || !candidate_mob.client || (ignore_category && GLOB.poll_ignore[ignore_category] && (candidate_mob.ckey in GLOB.poll_ignore[ignore_category])))
@@ -394,7 +394,7 @@
 	if(!SSticker.IsRoundInProgress() || QDELETED(character))
 		return
 	var/area/player_area = get_area(character)
-	deadchat_broadcast("<span class='game'> has arrived at the station at <span class='name'>[player_area.name]</span>.</span>", "<span class='game'><span class='name'>[character.real_name]</span> ([rank])</span>", follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
+	deadchat_broadcast("<span class='game'> прибыл на станцию в <span class='name'>[player_area.name]</span>.</span>", "<span class='game'><span class='name'>[character.real_name]</span> ([rank])</span>", follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
 	if(!character.mind)
 		return
 	if(!GLOB.announcement_systems.len)
@@ -471,4 +471,4 @@
 		message = html_encode(message)
 	else
 		message = copytext(message, 2)
-	to_chat(target, span_purple(examine_block("<span class='oocplain'><b>Tip of the round: </b>[message]</span>")))
+	to_chat(target, span_purple(examine_block("<span class='oocplain'><b>Совет дня: </b>[message]</span>")))

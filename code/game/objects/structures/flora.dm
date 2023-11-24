@@ -277,8 +277,8 @@
 //Can *you* speak their language?
 
 /obj/structure/flora/tree
-	name = "tree"
-	desc = "A large tree."
+	name = "дерево"
+	desc = "Большое дерево."
 	density = TRUE
 	pixel_x = -16
 	layer = FLY_LAYER
@@ -315,8 +315,8 @@
 	playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE)
 
 /obj/structure/flora/tree/stump
-	name = "stump"
-	desc = "This represents our promise to the crew, and the station itself, to cut down as many trees as possible." //running naked through the trees
+	name = "пень"
+	desc = "Это символизирует наше обещание экипажу и самой станции вырубить как можно больше деревьев." //running naked through the trees
 	icon = 'icons/obj/fluff/flora/pinetrees.dmi'
 	icon_state = "tree_stump"
 	density = FALSE
@@ -333,7 +333,7 @@
 
 /obj/structure/flora/tree/dead
 	icon = 'icons/obj/fluff/flora/deadtrees.dmi'
-	desc = "A dead tree. How it died, you know not."
+	desc = "Мертвое дерево. Как оно умерло, вам неизвестно."
 	icon_state = "tree_1"
 	harvest_amount_low = 2
 	harvest_amount_high = 6
@@ -423,8 +423,8 @@
  **************/
 
 /obj/structure/flora/tree/pine
-	name = "pine tree"
-	desc = "A coniferous pine tree."
+	name = "сосна"
+	desc = "Хвойное дерево семейства сосновых."
 	icon = 'icons/obj/fluff/flora/pinetrees.dmi'
 	icon_state = "pine_1"
 
@@ -500,12 +500,12 @@
 
 /obj/structure/flora/coconuts
 	gender = PLURAL
-	name = "coconuts"
+	name = "кокосы"
 	icon = 'icons/misc/beach.dmi'
 	icon_state = "coconuts"
 
 /obj/structure/flora/tree/palm
-	name = "palm tree"
+	name = "пальма"
 	desc = "A tree straight from the tropics."
 	icon = 'icons/misc/beach2.dmi'
 	icon_state = "palm1"
@@ -523,8 +523,8 @@
  * Grass *
  *********/
 /obj/structure/flora/grass
-	name = "grass"
-	desc = "A patch of overgrown grass."
+	name = "трава"
+	desc = "Участок заросшей травы."
 	icon = 'icons/obj/fluff/flora/snowflora.dmi'
 	gender = PLURAL //"this is grass" not "this is a grass"
 	product_types = list(/obj/item/food/grown/grass = 10, /obj/item/seeds/grass = 1)
@@ -627,8 +627,8 @@
  **********/
 
 /obj/structure/flora/bush
-	name = "bush"
-	desc = "Some type of shrubbery. Known for causing considerable economic stress on designers."
+	name = "куст"
+	desc = "Некоторые виды кустарников. Известны тем, что доставляют немалый материальный убыток проектировщикам."
 	icon = 'icons/obj/fluff/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
 	flora_flags = FLORA_HERBAL
@@ -900,7 +900,7 @@
 	update_appearance()
 
 /obj/structure/flora/bush/jungle
-	desc = "A wild plant that is found in jungles."
+	desc = "Дикорастущее растение, встречающееся в джунглях."
 	icon = 'icons/obj/fluff/flora/jungleflora.dmi'
 	icon_state = "busha1"
 	flora_flags = FLORA_HERBAL
@@ -1113,4 +1113,3 @@
 	. = ..()
 	icon_state = "lavarocks[rand(1, 3)]"
 	update_appearance()
-

@@ -4,11 +4,11 @@
  * Done by decreasing the station_target by a high value per crew member, resulting in the station total being much higher than the target, and causing artificial inflation.
  */
 /datum/round_event_control/market_crash
-	name = "Market Crash"
+	name = "Обвал рынка"
 	typepath = /datum/round_event/market_crash
 	weight = 10
 	category = EVENT_CATEGORY_BUREAUCRATIC
-	description = "Temporarily increases the prices of vending machines."
+	description = "Временное повышение цен в торговых автоматах."
 
 /datum/round_event/market_crash
 	/// This counts the number of ticks that the market crash event has been processing, so that we don't call vendor price updates every tick, but we still iterate for other mechanics that use inflation.
@@ -20,20 +20,20 @@
 	announce_when = 2
 
 /datum/round_event/market_crash/announce(fake)
-	var/list/poss_reasons = list("the alignment of the moon and the sun",\
-		"some risky housing market outcomes",\
+	var/list/poss_reasons = list("расположением Луны и Солнца",\
+		"некоторыми рискованными ситуациями на рынке жилья",\
 		"the B.E.P.I.S. team's untimely downfall",\
 		"speculative Terragov grants backfiring",\
-		"greatly exaggerated reports of Nanotrasen accountancy personnel being \"laid off\"",\
-		"a \"great investment\" into \"non-fungible tokens\" by a \"moron\"",\
-		"a number of raids from Tiger Cooperative agents",\
-		"supply chain shortages",\
+		"сильно преувеличенными сообщениями об \"увольнении\" сотрудников бухгалтерии компании Нанотрасен.",\
+		"\"большими инвестициями\" в \"неплатежеспособные токены\", сделанными \"дебилом\".",\
+		"серией рейдов агентов Тигр",\
+		"дефицитом в системе снабжения",\
 		"the \"Nanotrasen+\" social media network's untimely downfall",\
 		"the \"Nanotrasen+\" social media network's unfortunate success",\
-		"uhh, bad luck, we guess"
+		"эээ, не повезло, наверное."
 	)
 	var/reason = pick(poss_reasons)
-	priority_announce("Due to [reason], prices for on-station vendors will be increased for a short period.", "Nanotrasen Accounting Division")
+	priority_announce("В связи с [reason], цены на торговых автоматах будут повышены на короткий период.", "Бухгалтерское подразделение Нанотрасен")
 
 /datum/round_event/market_crash/start()
 	. = ..()
@@ -46,7 +46,7 @@
 	REMOVE_TRAIT(SSeconomy, TRAIT_MARKET_CRASHING, MARKET_CRASH_EVENT_TRAIT)
 	SSeconomy.price_update()
 	SSeconomy.update_vending_prices()
-	priority_announce("Prices for on-station vendors have now stabilized.", "Nanotrasen Accounting Division")
+	priority_announce("В данный момент цены в торговых автоматах стабилизировались.", "Бухгалтерское подразделение Нанотрасен")
 
 /datum/round_event/market_crash/tick()
 	. = ..()

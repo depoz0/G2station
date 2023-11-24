@@ -54,13 +54,13 @@ export const JobEntry: SFC<{
             : Color.fromHex(department.color)
               .darken(10)
               .toString(),
-        'color': job.unavailable_reason
+        color: job.unavailable_reason
           ? '#616161' // Dark grey font
           : Color.fromHex(department.color)
             .darken(90)
             .toString(),
         'font-size': '1.1rem',
-        'cursor': job.unavailable_reason ? 'initial' : 'pointer',
+        cursor: job.unavailable_reason ? 'initial' : 'pointer',
       }}
       tooltip={
         job.unavailable_reason ||
@@ -84,8 +84,8 @@ export const JobEntry: SFC<{
         <span
           style={{
             'white-space': 'nowrap',
-            'position': 'absolute',
-            'right': '0.5em',
+            position: 'absolute',
+            right: '0.5em',
           }}>
           {job.used_slots} / {job.open_slots}
         </span>
@@ -119,19 +119,19 @@ export const JobSelection = (props, context) => {
               {data.shuttle_status && (
                 <NoticeBox info>{data.shuttle_status}</NoticeBox>
               )}
-              <span style={{ 'color': 'grey' }}>
-                It is currently {data.round_duration} into the shift.
+              <span style={{ color: 'grey' }}>
+                Время с начала раунда {data.round_duration}.
               </span>
               <Button
-                style={{ 'position': 'absolute', 'right': '1em' }}
-                onClick={() => act('select_job', { 'job': 'Random' })}
+                style={{ position: 'absolute', right: '1em' }}
+                onClick={() => act('select_job', { job: 'Random' })}
                 content="Случайная вакансия!"
                 tooltip="Выбрать случайную вакансию. Вы можете повторно выбрать другую или отменить случайную вакансию, если она Вам не нравится."
               />
             </>
           }
           titleStyle={{ 'min-height': '3.4em' }}>
-          <Box wrap="wrap" style={{ 'columns': '20em' }}>
+          <Box wrap="wrap" style={{ columns: '20em' }}>
             {Object.entries(departments).map((departmentEntry) => {
               const departmentName = departmentEntry[0];
               const entry = departmentEntry[1];
@@ -145,15 +145,13 @@ export const JobSelection = (props, context) => {
                           style={{
                             'font-size': '1rem',
                             'white-space': 'nowrap',
-                            'position': 'absolute',
-                            'right': '1em',
-                            'color': Color.fromHex(entry.color)
+                            position: 'absolute',
+                            right: '1em',
+                            color: Color.fromHex(entry.color)
                               .darken(60)
                               .toString(),
                           }}>
-                          {entry.open_slots +
-                            (entry.open_slots === 1 ? ' slot' : ' slots') +
-                            ' available'}
+                          {'свободно мест: ' + entry.open_slots}
                         </span>
                       </>
                     }
@@ -168,7 +166,7 @@ export const JobSelection = (props, context) => {
                         .toString(),
                     }}
                     textStyle={{
-                      'color': Color.fromHex(entry.color)
+                      color: Color.fromHex(entry.color)
                         .darken(80)
                         .toString(),
                     }}>

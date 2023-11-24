@@ -450,7 +450,7 @@
 		check_break(M)
 
 /obj/structure/table/glass/proc/check_break(mob/living/M)
-	if(M.has_gravity() && M.mob_size > MOB_SIZE_SMALL && !(M.movement_type & FLYING))
+	if(M.has_gravity() && M.mob_size > MOB_SIZE_SMALL && !(M.movement_type & MOVETYPES_NOT_TOUCHING_GROUND))
 		table_shatter(M)
 
 /obj/structure/table/glass/proc/table_shatter(mob/living/victim)
@@ -518,8 +518,8 @@
 		..()
 
 /obj/structure/table/wood/poker //No specialties, Just a mapping object.
-	name = "gambling table"
-	desc = "A seedy table for seedy dealings in seedy places."
+	name = "игровой стол"
+	desc = "Сомнительный стол для сомнительных сделок в сомнительных местах."
 	icon = 'icons/obj/smooth_structures/poker_table.dmi'
 	icon_state = "poker_table-0"
 	base_icon_state = "poker_table"

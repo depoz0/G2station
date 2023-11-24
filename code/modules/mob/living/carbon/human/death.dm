@@ -33,12 +33,12 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()], CLONE: [src.getCloneLoss()])", LOG_ATTACK)
 		if(key) // Prevents log spamming of keyless mob deaths (like xenobio monkeys)
-			investigate_log("has died at [loc_name(src)].<br>\
+			investigate_log("умер в [loc_name(src)].<br>\
 				BRUTE: [src.getBruteLoss()] BURN: [src.getFireLoss()] TOX: [src.getToxLoss()] OXY: [src.getOxyLoss()] CLONE: [src.getCloneLoss()] STAM: [src.getStaminaLoss()]<br>\
 				<b>Brain damage</b>: [src.get_organ_loss(ORGAN_SLOT_BRAIN) || "0"]<br>\
 				<b>Blood volume</b>: [src.blood_volume]cl ([round((src.blood_volume / BLOOD_VOLUME_NORMAL) * 100, 0.1)]%)<br>\
 				<b>Reagents</b>:<br>[reagents_readout()]", INVESTIGATE_DEATHS)
-	to_chat(src, span_warning("You have died. Barring complete bodyloss, you can in most cases be revived by other players. If you do not wish to be brought back, use the \"Do Not Resuscitate\" verb in the ghost tab."))
+	to_chat(src, span_warning("Вы умерли. За исключением случаев полной потери тела, в большинстве случаев вы можете быть оживлены другими игроками. Если вы не хотите, чтобы вас оживляли, воспользуйтесь иконкой \"Не реанимировать\" на вкладке Призрак."))
 
 /mob/living/carbon/human/proc/reagents_readout()
 	var/readout = "Blood:"

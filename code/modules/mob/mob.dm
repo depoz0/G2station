@@ -244,7 +244,7 @@
 	// voice muffling
 	if(stat == UNCONSCIOUS || stat == HARD_CRIT)
 		if(type & MSG_AUDIBLE) //audio
-			to_chat(src, "<I>... You can almost hear something ...</I>")
+			to_chat(src, "<I>... Вы почти можете услышать что-то ...</I>")
 		return FALSE
 	to_chat(src, msg, avoid_highlighting = avoid_highlighting)
 	return .
@@ -434,7 +434,7 @@
 		if(qdel_on_fail)
 			qdel(W)
 		else if(!disable_warning)
-			to_chat(src, span_warning("You are unable to equip that!"))
+			to_chat(src, span_warning("Вы не можете установить это!"))
 		return FALSE
 	equip_to_slot(W, slot, initial, redraw_mob, indirect_action = indirect_action) //This proc should not ever fail.
 	return TRUE
@@ -574,7 +574,7 @@
 		if(examine_time && (world.time - examine_time < EXAMINE_MORE_WINDOW))
 			result = examinify.examine_more(src)
 			if(!length(result))
-				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
+				result += span_notice("<i>Вы изучаете [examinify] ближе, но не находите ничего интересного...</i>")
 		else
 			result = examinify.examine(src)
 			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
@@ -598,7 +598,7 @@
 /mob/living/blind_examine_check(atom/examined_thing)
 	//need to be next to something and awake
 	if(!Adjacent(examined_thing) || incapacitated())
-		to_chat(src, span_warning("Something is there, but you can't see it!"))
+		to_chat(src, span_warning("Что-то там есть, но вы не можете этого увидеть!"))
 		return FALSE
 
 	//you can examine things you're holding directly, but you can't examine other things if your hands are full
@@ -609,14 +609,14 @@
 		if(HAS_TRAIT(active_item, TRAIT_BLIND_TOOL))
 			boosted = TRUE
 		else if(active_item != examined_thing)
-			to_chat(src, span_warning("Your hands are too full to examine this!"))
+			to_chat(src, span_warning("Ваши руки заняты, чтобы изучать это!"))
 			return FALSE
 
 	//you can only initiate exaimines if you have a hand, it's not disabled, and only as many examines as you have hands
 	/// our active hand, to check if it's disabled/detatched
 	var/obj/item/bodypart/active_hand = has_active_hand()? get_active_hand() : null
 	if(!active_hand || active_hand.bodypart_disabled || do_after_count() >= usable_hands)
-		to_chat(src, span_warning("You don't have a free hand to examine this!"))
+		to_chat(src, span_warning("У вас нет свободной руки, чтобы изучить это!"))
 		return FALSE
 
 	//you can only queue up one examine on something at a time
@@ -683,11 +683,11 @@
 
 	// check to see if their face is blocked or, if not, a signal blocks it
 	if(examined_mob.is_face_visible() && SEND_SIGNAL(src, COMSIG_MOB_EYECONTACT, examined_mob, TRUE) != COMSIG_BLOCK_EYECONTACT)
-		var/msg = span_smallnotice("You make eye contact with [examined_mob].")
+		var/msg = span_smallnotice("Вы устанавливаете зрительный контакт с [examined_mob].")
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), src, msg), 3) // so the examine signal has time to fire and this will print after
 
 	if(!imagined_eye_contact && is_face_visible() && SEND_SIGNAL(examined_mob, COMSIG_MOB_EYECONTACT, src, FALSE) != COMSIG_BLOCK_EYECONTACT)
-		var/msg = span_smallnotice("[src] makes eye contact with you.")
+		var/msg = span_smallnotice("[src] устанавливает с вами зрительный контакт.")
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), examined_mob, msg), 3)
 
 /**

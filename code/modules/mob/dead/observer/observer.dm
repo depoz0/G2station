@@ -375,15 +375,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return TRUE
 
 /mob/dead/observer/verb/reenter_corpse()
-	set category = "Ghost"
-	set name = "Re-enter Corpse"
+	set category = "Призрак"
+	set name = "Вернуться в тело"
 	if(!client)
 		return
 	if(!mind || QDELETED(mind.current))
-		to_chat(src, span_warning("You have no body."))
+		to_chat(src, span_warning("У вас нет тела."))
 		return
 	if(!can_reenter_corpse)
-		to_chat(src, span_warning("You cannot re-enter your body."))
+		to_chat(src, span_warning("Вы не можете вернуться в свое тело."))
 		return
 	if(mind.current.key && mind.current.key[1] != "@") //makes sure we don't accidentally kick any clients
 		to_chat(usr, span_warning("Another consciousness is in your body...It is resisting you."))
@@ -397,8 +397,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return TRUE
 
 /mob/dead/observer/verb/stay_dead()
-	set category = "Ghost"
-	set name = "Do Not Resuscitate"
+	set category = "Призрак"
+	set name = "Не реанимировать"
 	if(!client)
 		return
 	if(!can_reenter_corpse)
@@ -447,9 +447,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		SEND_SOUND(src, sound(sound))
 
 /mob/dead/observer/proc/dead_tele()
-	set category = "Ghost"
-	set name = "Teleport"
-	set desc= "Teleport to a location"
+	set category = "Призрак"
+	set name = "Телепорт"
+	set desc= "Телепортироваться в место"
 	if(!isobserver(usr))
 		to_chat(usr, span_warning("Not when you're not dead!"))
 		return

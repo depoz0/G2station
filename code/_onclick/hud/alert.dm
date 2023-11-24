@@ -215,23 +215,23 @@
 	icon_state = "gross3"
 
 /atom/movable/screen/alert/hot
-	name = "Too Hot"
-	desc = "You're flaming hot! Get somewhere cooler and take off any insulating clothing like a fire suit."
+	name = "Слишком жарко"
+	desc = "Вы очень горячи! Переместитесь в более прохладное место и снимите любую изолирующую одежду, например, пожарный костюм."
 	icon_state = "hot"
 
 /atom/movable/screen/alert/cold
-	name = "Too Cold"
-	desc = "You're freezing cold! Get somewhere warmer and take off any insulating clothing like a space suit."
+	name = "Слишком холодно"
+	desc = "Вы замерзаете от холода! Переместитесь в более теплое место и снимите любую изолирующую одежду, например, скафандр."
 	icon_state = "cold"
 
 /atom/movable/screen/alert/lowpressure
-	name = "Low Pressure"
-	desc = "The air around you is hazardously thin. A space suit would protect you."
+	name = "Низкое давление"
+	desc = "Воздух вокруг вас опасно разрежен. Скафандр защитит вас."
 	icon_state = "lowpressure"
 
 /atom/movable/screen/alert/highpressure
-	name = "High Pressure"
-	desc = "The air around you is hazardously thick. A fire suit would protect you."
+	name = "Высокое давление"
+	desc = "Воздух вокруг вас опасно плотный. Пожарный костюм защитит вас."
 	icon_state = "highpressure"
 
 /atom/movable/screen/alert/hypnosis
@@ -268,31 +268,31 @@
 	return carbon_owner.help_shake_act(carbon_owner)
 
 /atom/movable/screen/alert/negative
-	name = "Negative Gravity"
-	desc = "You're getting pulled upwards. While you won't have to worry about falling down anymore, you may accidentally fall upwards!"
+	name = "Отрицательная гравитация"
+	desc = "Вас тянет вверх. Хотя Вам больше не придется беспокоиться о падении вниз, Вы можете случайно упасть вверх!"
 	icon_state = "negative"
 
 /atom/movable/screen/alert/weightless
-	name = "Weightless"
-	desc = "Gravity has ceased affecting you, and you're floating around aimlessly. You'll need something large and heavy, like a \
-wall or lattice, to push yourself off if you want to move. A jetpack would enable free range of motion. A pair of \
-magboots would let you walk around normally on the floor. Barring those, you can throw things, use a fire extinguisher, \
-or shoot a gun to move around via Newton's 3rd Law of Motion."
+	name = "Невесомость"
+	desc = "Гравитация перестала действовать на Вас, и Вы бесцельно парите по воздуху. Вам понадобится что-то большое и тяжелое, например \
+стена или решетка, чтобы оттолкнуться от нее, если вы хотите двигаться. Реактивный ранец обеспечит свободное движение. Пара \
+магботинок позволит вам нормально передвигаться по полу. Кроме этого, вы можете бросать предметы, использовать огнетушитель,\
+или стрелять из пистолета, чтобы передвигаться по 3-м законам движения Ньютона."
 	icon_state = "weightless"
 
 /atom/movable/screen/alert/highgravity
-	name = "High Gravity"
-	desc = "You're getting crushed by high gravity, picking up items and movement will be slowed."
+	name = "Высокая гравитация"
+	desc = "Вас раздавливает высокая гравитация, подбор предметов и передвижение замедляются."
 	icon_state = "paralysis"
 
 /atom/movable/screen/alert/veryhighgravity
-	name = "Crushing Gravity"
-	desc = "You're getting crushed by high gravity, picking up items and movement will be slowed. You'll also accumulate brute damage!"
+	name = "Гравитационное давление"
+	desc = "Вас раздавливает высокая гравитация, подбор предметов и передвижение замедляются. Кроме того, вы будете получать грубый урон!"
 	icon_state = "paralysis"
 
 /atom/movable/screen/alert/fire
-	name = "On Fire"
-	desc = "You're on fire. Stop, drop and roll to put the fire out or move to a vacuum area."
+	name = "В огне"
+	desc = "Вы охвачены огнем. Остановитесь, падайте на пол и перекатывайтесь, чтобы потушить огонь или переместитесь в вакуумную зону."
 	icon_state = "fire"
 
 /atom/movable/screen/alert/fire/Click()
@@ -482,8 +482,8 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 
 /atom/movable/screen/alert/alien_fire
 // This alert is temporarily gonna be thrown for all hot air but one day it will be used for literally being on fire
-	name = "Too Hot"
-	desc = "It's too hot! Flee to space or at least away from the flames. Standing on weeds will heal you."
+	name = "Слишком жарко"
+	desc = "Слишком жарко! Бегите в космос или хотя бы подальше от пламени. Стояние на траве исцелит вас."
 	icon_state = ALERT_XENO_FIRE
 	alerttooltipstyle = "alien"
 
@@ -765,8 +765,8 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 //GHOSTS
 //TODO: expand this system to replace the pollCandidates/CheckAntagonist/"choose quickly"/etc Yes/No messages
 /atom/movable/screen/alert/notify_cloning
-	name = "Revival"
-	desc = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!"
+	name = "Возрождение"
+	desc = "Кто-то пытается возродить вас. Если хотите возродиться, вернитесь в свое тело!"
 	icon_state = "template"
 	timeout = 300
 
@@ -778,8 +778,8 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	dead_owner.reenter_corpse()
 
 /atom/movable/screen/alert/notify_action
-	name = "Something interesting is happening!"
-	desc = "This can be clicked on to perform an action."
+	name = "Происходит что-то интересное!"
+	desc = "По нажатию на эту иконку можно выполнить действие."
 	icon_state = "template"
 	timeout = 30 SECONDS
 	/// Weakref to the target atom to use the action on
@@ -805,18 +805,18 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 //OBJECT-BASED
 
 /atom/movable/screen/alert/buckled
-	name = "Buckled"
-	desc = "You've been buckled to something. Click the alert to unbuckle unless you're handcuffed."
+	name = "Пристегнут"
+	desc = "Вы к чему-то пристегнуты. Нажмите на эту иконку, чтобы отстегнуться, если вы конечно не пристегнуты наручниками."
 	icon_state = ALERT_BUCKLED
 
 /atom/movable/screen/alert/restrained/handcuffed
-	name = "Handcuffed"
-	desc = "You're handcuffed and can't act. If anyone drags you, you won't be able to move. Click the alert to free yourself."
+	name = "В наручниках"
+	desc = "Вы скованы наручниками и не можете ничего делать. Если кто-то потащит вас, вы не сможете двигаться. Нажмите на эту иконку, чтобы освободиться."
 	click_master = FALSE
 
 /atom/movable/screen/alert/restrained/legcuffed
-	name = "Legcuffed"
-	desc = "You're legcuffed, which slows you down considerably. Click the alert to free yourself."
+	name = "Ножные наручники"
+	desc = "На вас надеты ножные наручники, что значительно замедляет ваше движение. Нажмите на эту иконку, чтобы освободиться."
 	click_master = FALSE
 
 /atom/movable/screen/alert/restrained/Click()

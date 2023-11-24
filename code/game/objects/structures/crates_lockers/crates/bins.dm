@@ -1,6 +1,6 @@
 /obj/structure/closet/crate/bin
-	desc = "A trash bin, place your trash here for the janitor to collect."
-	name = "trash bin"
+	desc = "Контейнер для мусора - поместите сюда свой мусор, чтобы уборщик мог его забрать."
+	name = "мусорный контейнер"
 	icon_state = "trashbin"
 	base_icon_state = "trashbin"
 	open_sound = 'sound/effects/bin_open.ogg'
@@ -63,5 +63,5 @@
 
 	items_to_sweep.Cut()
 
-	to_chat(user, span_notice("You sweep the pile of garbage into [src]."))
+	to_chat(user, span_notice("Вы сметаете кучу мусора в [src]."))
 	playsound(broom.loc, 'sound/weapons/thudswoosh.ogg', 30, TRUE, -1)
