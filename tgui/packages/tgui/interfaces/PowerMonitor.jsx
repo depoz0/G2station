@@ -60,7 +60,7 @@ export const PowerMonitorContent = (props, context) => {
               <Icon name="plug-circle-exclamation" size={2} />
             </Stack.Item>
             <Stack.Item>
-              <h1>No APCs found!</h1>
+              <h1>ЛКП не найдены!</h1>
             </Stack.Item>
           </Stack>
         </Dimmer>
@@ -69,22 +69,22 @@ export const PowerMonitorContent = (props, context) => {
         <Flex.Item mx={0.5} width="200px">
           <Section>
             <LabeledList>
-              <LabeledList.Item label="Supply">
+              <LabeledList.Item label="Производство">
                 <ProgressBar
                   value={supply}
                   minValue={0}
                   maxValue={maxValue}
                   color="teal">
-                  {toFixed(supply / 1000) + ' kW'}
+                  {toFixed(supply / 1000) + ' кВ'}
                 </ProgressBar>
               </LabeledList.Item>
-              <LabeledList.Item label="Draw">
+              <LabeledList.Item label="Потребление">
                 <ProgressBar
                   value={demand}
                   minValue={0}
                   maxValue={maxValue}
                   color="pink">
-                  {toFixed(demand / 1000) + ' kW'}
+                  {toFixed(demand / 1000) + ' кВ'}
                 </ProgressBar>
               </LabeledList.Item>
             </LabeledList>
@@ -114,21 +114,21 @@ export const PowerMonitorContent = (props, context) => {
       <Section>
         <Box mb={1}>
           <Box inline mr={2} color="label">
-            Sort by:
+            Сортировать по:
           </Box>
           <Button.Checkbox
             checked={sortByField === 'name'}
-            content="Name"
+            content="Название"
             onClick={() => setSortByField(sortByField !== 'name' && 'name')}
           />
           <Button.Checkbox
             checked={sortByField === 'charge'}
-            content="Charge"
+            content="Заряд"
             onClick={() => setSortByField(sortByField !== 'charge' && 'charge')}
           />
           <Button.Checkbox
             checked={sortByField === 'draw'}
-            content="Draw"
+            content="Потребление"
             onClick={() => setSortByField(sortByField !== 'draw' && 'draw')}
           />
         </Box>
@@ -137,14 +137,14 @@ export const PowerMonitorContent = (props, context) => {
             <Table.Cell>Area</Table.Cell>
             <Table.Cell collapsing>Charge</Table.Cell>
             <Table.Cell textAlign="right">Draw</Table.Cell>
-            <Table.Cell collapsing title="Equipment">
-              Eqp
+            <Table.Cell collapsing title="Оборудование">
+              Об
             </Table.Cell>
-            <Table.Cell collapsing title="Lighting">
-              Lgt
+            <Table.Cell collapsing title="Свет">
+              Св
             </Table.Cell>
-            <Table.Cell collapsing title="Environment">
-              Env
+            <Table.Cell collapsing title="Среда">
+              Ср
             </Table.Cell>
           </Table.Row>
           {areas.map((area, i) => (
@@ -205,7 +205,8 @@ const AreaStatusColorBox = (props) => {
   const { status } = props;
   const power = Boolean(status & 2);
   const mode = Boolean(status & 1);
-  const tooltipText = (power ? 'On' : 'Off') + ` [${mode ? 'auto' : 'manual'}]`;
+  const tooltipText =
+    (power ? 'Вкл' : 'Выкл') + ` [${mode ? 'авто' : 'мануал'}]`;
   return (
     <ColorBox
       color={power ? 'good' : 'bad'}

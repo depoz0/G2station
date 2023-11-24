@@ -31,7 +31,7 @@ export const SignalerContent = (props, context) => {
   return (
     <Section>
       <Stack>
-        <Stack.Item color="label">Frequency:</Stack.Item>
+        <Stack.Item color="label">Частота:</Stack.Item>
         <Stack.Item>
           <NumberInput
             animate
@@ -54,7 +54,7 @@ export const SignalerContent = (props, context) => {
           <Button
             ml={1.3}
             icon="sync"
-            content="Reset"
+            content="Сброс"
             onClick={() =>
               act('reset', {
                 reset: 'freq',
@@ -87,7 +87,7 @@ export const SignalerContent = (props, context) => {
           <Button
             ml={1.3}
             icon="sync"
-            content="Reset"
+            content="Сброс"
             onClick={() =>
               act('reset', {
                 reset: 'code',

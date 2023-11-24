@@ -53,11 +53,11 @@ export const MedicalRecordView = (props, context) => {
         <Section
           buttons={
             <Button.Confirm
-              content="Delete"
+              content="Удалить"
               icon="trash"
               disabled={!station_z}
               onClick={() => act('expunge_record', { crew_ref: crew_ref })}
-              tooltip="Expunge record data."
+              tooltip="Удалить данные о записях."
             />
           }
           fill
@@ -65,13 +65,13 @@ export const MedicalRecordView = (props, context) => {
           title={name}
           wrap>
           <LabeledList>
-            <LabeledList.Item label="Name">
+            <LabeledList.Item label="Имя">
               <EditableText field="name" target_ref={crew_ref} text={name} />
             </LabeledList.Item>
-            <LabeledList.Item label="Job">
+            <LabeledList.Item label="Работа">
               <EditableText field="job" target_ref={crew_ref} text={rank} />
             </LabeledList.Item>
-            <LabeledList.Item label="Age">
+            <LabeledList.Item label="Возраст">
               <RestrictedInput
                 minValue={min_age}
                 maxValue={max_age}
@@ -85,21 +85,21 @@ export const MedicalRecordView = (props, context) => {
                 value={age}
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Species">
+            <LabeledList.Item label="Вид">
               <EditableText
                 field="species"
                 target_ref={crew_ref}
                 text={species}
               />
             </LabeledList.Item>
-            <LabeledList.Item label="Gender">
+            <LabeledList.Item label="Пол">
               <EditableText
                 field="gender"
                 target_ref={crew_ref}
                 text={gender}
               />
             </LabeledList.Item>
-            <LabeledList.Item label="DNA">
+            <LabeledList.Item label="ДНК">
               <EditableText
                 color="good"
                 field="dna"
@@ -107,7 +107,7 @@ export const MedicalRecordView = (props, context) => {
                 text={dna}
               />
             </LabeledList.Item>
-            <LabeledList.Item color="bad" label="Blood Type">
+            <LabeledList.Item color="bad" label="Группа крови">
               <EditableText
                 field="blood_type"
                 target_ref={crew_ref}
@@ -137,7 +137,7 @@ export const MedicalRecordView = (props, context) => {
                   </Button>
                 );
               })}
-              label="Physical Status">
+              label="Физическое состояние">
               <Box color={PHYSICALSTATUS2COLOR[physical_status]}>
                 {physical_status}
               </Box>
@@ -165,7 +165,7 @@ export const MedicalRecordView = (props, context) => {
                   </Button>
                 );
               })}
-              label="Mental Status">
+              label="Психическое состояние">
               <Box color={MENTALSTATUS2COLOR[mental_status]}>
                 {mental_status}
               </Box>

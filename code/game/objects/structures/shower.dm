@@ -27,8 +27,8 @@ GLOBAL_LIST_INIT(shower_mode_descriptions, list(
 ))
 
 /obj/machinery/shower
-	name = "shower"
-	desc = "The HS-452. Installed in the 2550s by the Nanotrasen Hygiene Division, now with 2560 lead compliance! Passively replenishes itself with water when not in use."
+	name = "душ"
+	desc = "HS-452. Установлен в 2550-х годах отделом гигиены компании Nanotrasen, теперь соответствует требованиям 2560 по содержанию свинца! Пассивно пополняет запасы воды, когда не используется."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = FALSE
@@ -95,11 +95,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 
 /obj/machinery/shower/examine(mob/user)
 	. = ..()
-	. += span_notice("It looks like the thermostat has an adjustment screw.")
+	. += span_notice("Похоже, что термостат имеет регулировочный винт.")
 	if(has_water_reclaimer)
-		. += span_notice("A water recycler is installed. It looks like you could pry it out.")
-	. += span_notice("The auto shut-off is programmed to [GLOB.shower_mode_descriptions["[mode]"]].")
-	. += span_notice("[reagents.total_volume]/[reagents.maximum_volume] liquids remaining.")
+		. += span_notice("Установлен рециркулятор воды. Кажется его можно вырвать.")
+	. += span_notice("Автоотключение запрограммировано на [GLOB.shower_mode_descriptions["[mode]"]].")
+	. += span_notice("[reagents.total_volume]/[reagents.maximum_volume] осталось жидкости.")
 
 /obj/machinery/shower/Destroy()
 	QDEL_NULL(soundloop)
@@ -116,7 +116,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 		balloon_alert(user, "[src] is dry!")
 		return FALSE
 
-	balloon_alert(user, "turned [intended_on ? "on" : "off"]")
+	balloon_alert(user, "Вы [intended_on ? "включили" : "выключили"]")
 
 	return TRUE
 
@@ -124,13 +124,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	. = ..()
 
 	tool.play_tool_sound(src)
-	to_chat(user, span_notice("The water temperature seems to be [current_temperature]."))
+	to_chat(user, span_notice("Температура воды составляет [current_temperature]."))
 	return TRUE
 
 /obj/machinery/shower/attackby(obj/item/tool, mob/user, params)
 	if(istype(tool, /obj/item/stock_parts/water_recycler))
 		if(has_water_reclaimer)
-			to_chat(user, span_warning("There is already has a water recycler installed."))
+			to_chat(user, span_warning("Здесь уже установлен рециркулятор воды."))
 			return
 
 		playsound(src, 'sound/machines/click.ogg', 20, TRUE)
@@ -148,7 +148,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	tool.play_tool_sound(src)
 	mode = (mode + 1) % SHOWER_MODE_COUNT
 	begin_processing()
-	to_chat(user, span_notice("You change the shower's auto shut-off mode to [GLOB.shower_mode_descriptions["[mode]"]]."))
+	to_chat(user, span_notice("Вы изменяете режим автоотключения душа на [GLOB.shower_mode_descriptions["[mode]"]]."))
 	return TRUE
 
 /obj/machinery/shower/crowbar_act(mob/living/user, obj/item/tool)

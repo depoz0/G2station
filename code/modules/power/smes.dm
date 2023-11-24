@@ -15,8 +15,8 @@
 #define SMES_INPUT_ATTEMPT 9
 
 /obj/machinery/power/smes
-	name = "power storage unit"
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit."
+	name = "накопитель электроэнергии"
+	desc = "Сверхпроводящий магнитный накопитель энергии (SMES) большой емкости."
 	icon_state = "smes"
 	density = TRUE
 	use_power = NO_POWER_USE

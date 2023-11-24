@@ -132,5 +132,5 @@ GLOBAL_LIST_INIT(sm_delam_list, list(
 	var/list/messages = list()
 	messages += "РАСЩЕПЛЕНИЕ КРИСТАЛЛА НЕИЗБЕЖНО. Суперматерия достигла критического уровня дестабилизации. Активировано аварийное поле дестабилизации."
 	messages += "Кристаллическая гиперструктура возвращается к безопасным рабочим значениям. Защита от сбоев отключена."
-	messages += "remain before causality stabilization."
+	messages += "осталось до самоуничтожения кристалла."
 	return messages

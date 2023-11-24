@@ -249,8 +249,8 @@
 	qdel(src)
 
 /obj/machinery/button/door
-	name = "door button"
-	desc = "A door remote control switch."
+	name = "кнопка двери"
+	desc = "Дверной дистанционный выключатель."
 	var/normaldoorcontrol = FALSE
 	var/specialfunctions = OPEN // Bitflag, see assembly file
 	var/sync_doors = TRUE
