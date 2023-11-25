@@ -1,6 +1,6 @@
 /obj/machinery/griddle
-	name = "griddle"
-	desc = "Because using pans is for pansies."
+	name = "гриль"
+	desc = "Потому что использование сковородок - это для любителей."
 	icon = 'icons/obj/machines/kitchen.dmi'
 	icon_state = "griddle1_off"
 	density = TRUE
@@ -56,7 +56,7 @@
 		AddToGrill(new_pancake)
 		if(griddled_objects.len >= max_items)
 			break
-	visible_message(span_notice("[exposing_reagent] begins to cook on [src]."))
+	visible_message(span_notice("[exposing_reagent] начинает готовиться на [src]."))
 	return NONE
 
 /obj/machinery/griddle/crowbar_act(mob/living/user, obj/item/I)
@@ -66,7 +66,7 @@
 
 /obj/machinery/griddle/attackby(obj/item/I, mob/user, params)
 	if(griddled_objects.len >= max_items)
-		to_chat(user, span_notice("[src] can't fit more items!"))
+		to_chat(user, span_notice("[src] не может вместить больше предметов!"))
 		return
 	var/list/modifiers = params2list(params)
 	//Center the icon where the user clicked.
@@ -76,7 +76,7 @@
 		//Clamp it so that the icon never moves more than 16 pixels in either direction (thus leaving the table turf)
 		I.pixel_x = clamp(text2num(LAZYACCESS(modifiers, ICON_X)) - 16, -(world.icon_size/2), world.icon_size/2)
 		I.pixel_y = clamp(text2num(LAZYACCESS(modifiers, ICON_Y)) - 16, -(world.icon_size/2), world.icon_size/2)
-		to_chat(user, span_notice("You place [I] on [src]."))
+		to_chat(user, span_notice("Вы кладете [I] на [src]."))
 		AddToGrill(I, user)
 	else
 		return ..()

@@ -43,30 +43,30 @@ export const ChemDispenser = (props, context) => {
     <Window width={565} height={620}>
       <Window.Content scrollable>
         <Section
-          title="Status"
+          title="Состояние"
           buttons={
             <>
               {recording && (
                 <Box inline mx={1} color="red">
                   <Icon name="circle" mr={1} />
-                  Recording
+                  Запись
                 </Box>
               )}
               <Button
                 icon="book"
                 disabled={!beaker}
-                content={'Reaction search'}
+                content={'Поиск реакций'}
                 tooltip={
                   beaker
-                    ? 'Look up recipes and reagents!'
-                    : 'Please insert a beaker!'
+                    ? 'Ищите рецепты и реактивы!'
+                    : 'Пожалуйста, вставьте стакан!'
                 }
                 tooltipPosition="bottom-start"
                 onClick={() => act('reaction_lookup')}
               />
               <Button
                 icon="cog"
-                tooltip="Color code the reagents by pH"
+                tooltip="Цветовая маркировка реагентов по уровню pH"
                 tooltipPosition="bottom-start"
                 selected={hasCol}
                 onClick={() => setHasCol(!hasCol)}
@@ -82,14 +82,14 @@ export const ChemDispenser = (props, context) => {
           </LabeledList>
         </Section>
         <Section
-          title="Recipes"
+          title="Рецепты"
           buttons={
             <>
               {!recording && (
                 <Box inline mx={1}>
                   <Button
                     color="transparent"
-                    content="Clear recipes"
+                    content="Очистить рецепты"
                     onClick={() => act('clear_recipes')}
                   />
                 </Box>
@@ -98,7 +98,7 @@ export const ChemDispenser = (props, context) => {
                 <Button
                   icon="circle"
                   disabled={!beaker}
-                  content="Record"
+                  content="Запись"
                   onClick={() => act('record_recipe')}
                 />
               )}
@@ -106,7 +106,7 @@ export const ChemDispenser = (props, context) => {
                 <Button
                   icon="ban"
                   color="transparent"
-                  content="Discard"
+                  content="Отменить"
                   onClick={() => act('cancel_recording')}
                 />
               )}
@@ -114,7 +114,7 @@ export const ChemDispenser = (props, context) => {
                 <Button
                   icon="save"
                   color="green"
-                  content="Save"
+                  content="Сохранить"
                   onClick={() => act('save_recording')}
                 />
               )}
@@ -135,11 +135,13 @@ export const ChemDispenser = (props, context) => {
                 }
               />
             ))}
-            {recipes.length === 0 && <Box color="light-gray">No recipes.</Box>}
+            {recipes.length === 0 && (
+              <Box color="light-gray">Рецепты отсутствуют.</Box>
+            )}
           </Box>
         </Section>
         <Section
-          title="Dispense"
+          title="Дозатор"
           buttons={beakerTransferAmounts.map((amount) => (
             <Button
               key={amount}
@@ -181,7 +183,7 @@ export const ChemDispenser = (props, context) => {
           </Box>
         </Section>
         <Section
-          title="Beaker"
+          title="Стакан"
           buttons={beakerTransferAmounts.map((amount) => (
             <Button
               key={amount}

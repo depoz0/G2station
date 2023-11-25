@@ -158,7 +158,7 @@
 		apply_organ_damage(min(liver_damage * seconds_per_tick , MAX_TOXIN_LIVER_DAMAGE * seconds_per_tick))
 
 	if(provide_pain_message && damage > 10 && SPT_PROB(damage/6, seconds_per_tick)) //the higher the damage the higher the probability
-		to_chat(owner, span_warning("You feel a dull pain in your abdomen."))
+		to_chat(owner, span_warning("Вы чувствуете тупую боль в животе."))
 
 
 /obj/item/organ/internal/liver/handle_failing_organs(seconds_per_tick)

@@ -603,8 +603,8 @@
 //Raw cutlets
 
 /obj/item/food/meat/rawcutlet
-	name = "raw cutlet"
-	desc = "A raw meat cutlet."
+	name = "сырая котлета"
+	desc = "Сырая мясная котлета."
 	icon_state = "rawcutlet"
 	bite_consumption = 2
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)
@@ -712,8 +712,8 @@
 //Cooked cutlets
 
 /obj/item/food/meat/cutlet
-	name = "cutlet"
-	desc = "A cooked meat cutlet."
+	name = "котлета"
+	desc = "Приготовленная мясная котлета."
 	icon_state = "cutlet"
 	bite_consumption = 2
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)

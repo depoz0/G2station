@@ -741,7 +741,7 @@
  * Calls attack self on the item and updates the inventory hud for hands
  */
 /mob/verb/mode()
-	set name = "Activate Held Object"
+	set name = "Активировать объект в руке"
 	set category = "Object"
 	set src = usr
 

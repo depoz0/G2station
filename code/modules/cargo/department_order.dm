@@ -133,7 +133,7 @@ GLOBAL_LIST_INIT(department_order_cooldowns, list(
 		return
 
 	if(!check_access(id_card))
-		balloon_alert(usr, "access denied!")
+		balloon_alert(usr, "доступ запрещен!")
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 30, TRUE)
 		return
 

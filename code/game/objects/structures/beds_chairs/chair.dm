@@ -292,8 +292,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool, 0)
 	return ..()
 
 /obj/structure/chair/stool/bar
-	name = "bar stool"
-	desc = "It has some unsavory stains on it..."
+	name = "барный стул"
+	desc = "На нем есть несколько подозрительных пятен..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar
 

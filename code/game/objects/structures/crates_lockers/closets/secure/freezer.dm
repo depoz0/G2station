@@ -79,7 +79,7 @@
 	req_access = null
 
 /obj/structure/closet/secure_closet/freezer/meat
-	name = "meat fridge"
+	name = "холодильник для мяса"
 	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/meat/PopulateContents()

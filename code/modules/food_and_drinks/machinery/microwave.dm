@@ -18,8 +18,8 @@
 #define TIER_1_CELL_CHARGE_RATE 250
 
 /obj/machinery/microwave
-	name = "microwave oven"
-	desc = "Cooks and boils stuff."
+	name = "микроволновая печь"
+	desc = "Готовит и кипятит разные вкусности."
 	icon = 'icons/obj/machines/microwave.dmi'
 	base_icon_state = ""
 	icon_state = "mw_complete"
@@ -131,14 +131,14 @@
 
 	if(broken > NOT_BROKEN)
 		if(broken == REALLY_BROKEN && held_item?.tool_behaviour == TOOL_WIRECUTTER)
-			context[SCREENTIP_CONTEXT_LMB] = "Repair"
+			context[SCREENTIP_CONTEXT_LMB] = "Ремонтировать"
 			return CONTEXTUAL_SCREENTIP_SET
 
 		else if(broken == KINDA_BROKEN && held_item?.tool_behaviour == TOOL_WELDER)
-			context[SCREENTIP_CONTEXT_LMB] = "Repair"
+			context[SCREENTIP_CONTEXT_LMB] = "Ремонтировать"
 			return CONTEXTUAL_SCREENTIP_SET
 
-	context[SCREENTIP_CONTEXT_LMB] = "Show menu"
+	context[SCREENTIP_CONTEXT_LMB] = "Показать меню"
 
 	if(vampire_charging_capable)
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Change to [vampire_charging_enabled ? "cook" : "charge"]"
@@ -166,11 +166,11 @@
 /obj/machinery/microwave/examine(mob/user)
 	. = ..()
 	if(vampire_charging_capable)
-		. += span_info("This model features Wave™: a Nanotrasen exclusive. Our latest and greatest, Wave™ allows your PDA to be charged wirelessly through microwave frequencies! You can Wave-charge your device by placing it inside and selecting the charge mode.")
-		. += span_info("Because nothing says 'future' like charging your PDA while overcooking your leftovers. Nanotrasen Wave™ - Multitasking, redefined.")
+		. += span_info("Эта модель оснащена Wave™ - эксклюзивной разработкой компании Nanotrasen. Наша новейшая разработка Wave™ позволяет заряжать КПК без проводов с помощью микроволновых частот! Вы можете зарядить свое устройство с помощью Wave, поместив его внутрь и выбрав режим зарядки.")
+		. += span_info("Ведь ничто так не говорит о будущем, как зарядка КПК во время переваривания пищи. Nanotrasen Wave™ - многозадачность в новом понимании.")
 
 	if(cell_powered)
-		. += span_notice("This model is wireless, powered by portable cells. [isnull(cell) ? "The cell slot is empty." : "[EXAMINE_HINT("Ctrl-click")] to remove the power cell."]")
+		. += span_notice("Данная модель является беспроводной, питается от портативных батарей. [isnull(cell) ? "The cell slot is empty." : "[EXAMINE_HINT("Ctrl-click")] to remove the power cell."]")
 
 	if(!operating)
 		if(!operating && vampire_charging_capable)
@@ -182,14 +182,14 @@
 		. += span_warning("You're too far away to examine [src]'s contents and display!")
 		return
 	if(operating)
-		. += span_notice("\The [src] is operating.")
+		. += span_notice("[src] работает.")
 		return
 
 	if(length(ingredients))
 		if(issilicon(user))
 			. += span_notice("\The [src] camera shows:")
 		else
-			. += span_notice("\The [src] contains:")
+			. += span_notice("[src] содержит:")
 		var/list/items_counts = new
 		for(var/i in ingredients)
 			if(isstack(i))
@@ -201,13 +201,13 @@
 		for(var/item in items_counts)
 			. += span_notice("- [items_counts[item]]x [item].")
 	else
-		. += span_notice("\The [src] is empty.")
+		. += span_notice("[src] пуста.")
 
 	if(!(machine_stat & (NOPOWER|BROKEN)))
-		. += "[span_notice("The status display reads:")]\n"+\
-		"[span_notice("- Mode: <b>[vampire_charging_enabled ? "Charge" : "Cook"]</b>.")]\n"+\
-		"[span_notice("- Capacity: <b>[max_n_of_items]</b> items.")]\n"+\
-		span_notice("- Power: <b>[efficiency * TIER_1_CELL_CHARGE_RATE]W</b>.")
+		. += "[span_notice("На дисплее отображается статус:")]\n"+\
+		"[span_notice("- Режим: <b>[vampire_charging_enabled ? "Зарядка" : "Готовка"]</b>.")]\n"+\
+		"[span_notice("- Емкость: <b>[max_n_of_items]</b> предметов.")]\n"+\
+		span_notice("- Мощность: <b>[efficiency * TIER_1_CELL_CHARGE_RATE]W</b>.")
 
 		if(cell_powered)
 			. += span_notice("- Charge: <b>[isnull(cell) ? "INSERT CELL" : "[round(cell.percent())]%"]</b>.")

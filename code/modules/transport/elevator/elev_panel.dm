@@ -314,7 +314,7 @@
 	switch(action)
 		if("move_lift")
 			if(!allowed(usr))
-				balloon_alert(usr, "access denied!")
+				balloon_alert(usr, "доступ запрещен!")
 				return
 
 			var/desired_z = params["z"]

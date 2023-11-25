@@ -76,8 +76,8 @@
 
 /obj/item/food/grown/grass/carpet
 	seed = /obj/item/seeds/grass/carpet
-	name = "carpet"
-	desc = "The textile industry's dark secret."
+	name = "ковер"
+	desc = "Темная тайна текстильной промышленности."
 	icon_state = "carpetclump"
 	stacktype = /obj/item/stack/tile/carpet
 	can_distill = FALSE

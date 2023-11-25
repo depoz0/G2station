@@ -83,8 +83,8 @@
 		/obj/item/reagent_containers/cup/glass/bottle/bitters = 5,
 	)
 
-	product_slogans = "I hope nobody asks me for a bloody cup o' tea...;Alcohol is humanity's friend. Would you abandon a friend?;Quite delighted to serve you!;Is nobody thirsty on this station?"
-	product_ads = "Drink up!;Booze is good for you!;Alcohol is humanity's best friend.;Quite delighted to serve you!;Care for a nice, cold beer?;Nothing cures you like booze!;Have a sip!;Have a drink!;Have a beer!;Beer is good for you!;Only the finest alcohol!;Best quality booze since 2053!;Award-winning wine!;Maximum alcohol!;Man loves beer.;A toast for progress!"
+	product_slogans = "Надеюсь, никто не попросит у меня чертову чашку чая...;Алкоголь - друг человечества. Вы бы отказались от друга?;Очень рад обслужить Вас!;Неужели на этой станции никто не хочет пить?"
+	product_ads = "Пейте!;Выпивка полезна для вас!;Алкоголь - лучший друг человечества.;Очень рад обслужить Вас!;Не хотите ли выпить холодного пива?;Ничто так не лечит, как выпивка!;Сделайте глоток!;Выпейте пива!;Пиво полезно для здоровья!;Только самый лучший алкоголь!;Лучшее качество алкоголя с 2053 года!;Вино, получившее награду!;Мужчины любят пиво.;Выпьем за прогресс!"
 	req_access = list(ACCESS_BAR)
 	refill_canister = /obj/item/vending_refill/boozeomat
 	default_price = PAYCHECK_CREW * 0.9
@@ -93,7 +93,7 @@
 	light_mask = "boozeomat-light-mask"
 
 /obj/machinery/vending/boozeomat/all_access
-	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one. This model appears to have no access restrictions."
+	desc = "Чудо техники, якобы способное приготовить именно ту коктейльную смесь, которую вы хотите выпить, как только попросите. Эта модель, судя по всему, не имеет ограничений по доступу."
 	req_access = null
 
 /obj/machinery/vending/boozeomat/syndicate_access
