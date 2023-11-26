@@ -1,8 +1,8 @@
 // A receptionist's bell
 
 /obj/structure/desk_bell
-	name = "desk bell"
-	desc = "The cornerstone of any customer service job. You feel an unending urge to ring it."
+	name = "звонок"
+	desc = "В основе работы любого сервиса с клиентами лежит это. Вы испытываете непреодолимое желание позвонить."
 	icon = 'icons/obj/service/bureaucracy.dmi'
 	icon_state = "desk_bell"
 	layer = OBJ_LAYER
@@ -28,14 +28,14 @@
 	. = ..()
 
 	if(held_item?.tool_behaviour == TOOL_WRENCH)
-		context[SCREENTIP_CONTEXT_RMB] = "Disassemble"
+		context[SCREENTIP_CONTEXT_RMB] = "Разобрать"
 		return CONTEXTUAL_SCREENTIP_SET
 
 	if(broken_ringer)
 		if(held_item?.tool_behaviour == TOOL_SCREWDRIVER)
-			context[SCREENTIP_CONTEXT_LMB] = "Fix"
+			context[SCREENTIP_CONTEXT_LMB] = "Починить"
 	else
-		var/click_context = "Ring"
+		var/click_context = "Позвонить"
 		if(prob(1))
 			click_context = "Annoy"
 		context[SCREENTIP_CONTEXT_LMB] = click_context
@@ -46,7 +46,7 @@
 	if(!COOLDOWN_FINISHED(src, ring_cooldown) && ring_cooldown_length)
 		return TRUE
 	if(!ring_bell(user))
-		to_chat(user, span_notice("[src] is silent. Some idiot broke it."))
+		to_chat(user, span_notice("[src] молчит. Какой-то идиот сломал его."))
 	if(ring_cooldown_length)
 		COOLDOWN_START(src, ring_cooldown, ring_cooldown_length)
 	return TRUE

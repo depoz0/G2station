@@ -52,18 +52,18 @@ export const NtosRecords = (props, context) => {
                 {record.name}
               </Box>
               <br />
-              Rank: {record.rank}
+              Ранг: {record.rank}
               <br />
-              Species: {record.species}
+              Вид: {record.species}
               <br />
-              Gender: {record.gender}
+              Пол: {record.gender}
               <br />
-              Age: {record.age}
+              Возраст: {record.age}
               <br />
-              Fingerprint Hash: {record.fingerprint}
+              Хэш отпечатка пальца: {record.fingerprint}
               <br />
               <br />
-              Criminal Status: {record.wanted || 'DELETED'}
+              Криминальное положение: {record.wanted || 'DELETED'}
             </Section>
           ))}
         {mode === 'medical' &&
@@ -89,7 +89,7 @@ export const NtosRecords = (props, context) => {
                 {record.name}
               </Box>
               <br />
-              Bloodtype: {record.bloodtype}
+              Группа крови: {record.bloodtype}
               <br />
               Minor Disabilities: {record.mi_dis}
               <br />

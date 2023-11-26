@@ -704,7 +704,7 @@ LINEN BINS
 
 		B.forceMove(drop_location())
 		user.put_in_hands(B)
-		to_chat(user, span_notice("You take [B] out of [src]."))
+		to_chat(user, span_notice("Вы берёте [B] из [src]."))
 		update_appearance()
 
 		if(hidden)

@@ -1,8 +1,8 @@
 #define MAX_NOTICES 8
 
 /obj/structure/noticeboard
-	name = "notice board"
-	desc = "A board for pinning important notices upon. It is made of the finest Spanish cork."
+	name = "доска объявлений"
+	desc = "Доска для прикрепления важных объявлений. Она изготовлена из лучшей испанской пробки."
 	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "noticeboard"
 	density = FALSE
@@ -32,16 +32,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 /obj/structure/noticeboard/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/paper) || istype(O, /obj/item/photo))
 		if(!allowed(user))
-			to_chat(user, span_warning("You are not authorized to add notices!"))
+			to_chat(user, span_warning("Вы не имеете права добавлять объявления!"))
 			return
 		if(notices < MAX_NOTICES)
 			if(!user.transferItemToLoc(O, src))
 				return
 			notices++
 			update_appearance(UPDATE_ICON)
-			to_chat(user, span_notice("You pin the [O] to the noticeboard."))
+			to_chat(user, span_notice("Вы прикрепляете [O] к доске объявлений."))
 		else
-			to_chat(user, span_warning("The notice board is full!"))
+			to_chat(user, span_warning("Доска объявлений переполнена!"))
 	else
 		return ..()
 
@@ -135,43 +135,43 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 // Notice boards for the heads of staff (plus the qm)
 
 /obj/structure/noticeboard/captain
-	name = "Captain's Notice Board"
-	desc = "Important notices from the Captain."
+	name = "Доска объявлений капитана"
+	desc = "Важные объявления от капитана."
 	req_access = list(ACCESS_CAPTAIN)
 
 /obj/structure/noticeboard/hop
-	name = "Head of Personnel's Notice Board"
-	desc = "Important notices from the Head of Personnel."
+	name = "Доска объявлений начальника отдела кадров"
+	desc = "Важные объявления от начальника отдела кадров."
 	req_access = list(ACCESS_HOP)
 
 /obj/structure/noticeboard/ce
-	name = "Chief Engineer's Notice Board"
-	desc = "Important notices from the Chief Engineer."
+	name = "Доска объявлений главного инженера"
+	desc = "Важные объявления от главного инженера."
 	req_access = list(ACCESS_CE)
 
 /obj/structure/noticeboard/hos
-	name = "Head of Security's Notice Board"
-	desc = "Important notices from the Head of Security."
+	name = "Доска объявлений начальника службы безопасности"
+	desc = "Важные объявления от начальника службы безопасности."
 	req_access = list(ACCESS_HOS)
 
 /obj/structure/noticeboard/cmo
-	name = "Chief Medical Officer's Notice Board"
-	desc = "Important notices from the Chief Medical Officer."
+	name = "Доска объявлений главного врача"
+	desc = "Важные объявления от главного врача."
 	req_access = list(ACCESS_CMO)
 
 /obj/structure/noticeboard/rd
-	name = "Research Director's Notice Board"
-	desc = "Important notices from the Research Director."
+	name = "Доска объявлений директора по исследованиям"
+	desc = "Важные объявления от директора по исследованиям."
 	req_access = list(ACCESS_RD)
 
 /obj/structure/noticeboard/qm
-	name = "Quartermaster's Notice Board"
-	desc = "Important notices from the Quartermaster."
+	name = "Доска объявлений квартермейстера"
+	desc = "Важные уведомления от Квартермейстера."
 	req_access = list(ACCESS_QM)
 
 /obj/structure/noticeboard/staff
-	name = "Staff Notice Board"
-	desc = "Important notices from the heads of staff."
+	name = "Доска объявлений для руководителей"
+	desc = "Важные уведомления от руководителей отделов."
 	req_access = list(ACCESS_COMMAND)
 
 #undef MAX_NOTICES

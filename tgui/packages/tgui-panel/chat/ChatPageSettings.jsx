@@ -41,12 +41,12 @@ export const ChatPageSettings = (props, context) => {
                 })
               )
             }>
-            Remove
+            Удалить
           </Button>
         </Stack.Item>
       </Stack>
       <Divider />
-      <Section title="Messages to display" level={2}>
+      <Section title="Отображение сообщений" level={2}>
         {MESSAGE_TYPES.filter(
           (typeDef) => !typeDef.important && !typeDef.admin
         ).map((typeDef) => (

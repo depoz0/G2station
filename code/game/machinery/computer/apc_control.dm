@@ -139,7 +139,7 @@
 					auth_id = "[ID.registered_name] ([ID.assignment]):"
 					log_activity("[auth_id] attempted to log into the terminal")
 					playsound(src, 'sound/machines/terminal_error.ogg', 50, FALSE)
-					say("ID rejected, access denied!")
+					say("ID rejected, доступ запрещен!")
 				return
 			auth_id = "Unknown (Unknown):"
 			log_activity("[auth_id] attempted to log into the terminal")

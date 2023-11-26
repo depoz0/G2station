@@ -45,7 +45,7 @@
 			return
 
 		else
-			balloon_alert(user, "access denied!")
+			balloon_alert(user, "доступ запрещен!")
 			return
 	if(!locked)
 		return ..()

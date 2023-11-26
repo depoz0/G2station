@@ -102,7 +102,7 @@
 		pen.add_fingerprint(user)
 		pen.forceMove(user.loc)
 		user.put_in_hands(pen)
-		to_chat(user, span_notice("You take [pen] out of [src]."))
+		to_chat(user, span_notice("Вы достате [pen] из [src]."))
 		bin_pen = null
 		update_appearance()
 	else if(total_paper > 0)
@@ -111,7 +111,7 @@
 		top_paper.add_fingerprint(user)
 		top_paper.forceMove(user.loc)
 		user.put_in_hands(top_paper)
-		to_chat(user, span_notice("You take [top_paper] out of [src]."))
+		to_chat(user, span_notice("Вы достате [top_paper] из [src]."))
 		update_appearance()
 	else
 		to_chat(user, span_warning("[src] is empty!"))

@@ -175,15 +175,15 @@
 		return
 	if(user.get_inactive_held_item())
 		if(require_twohands)
-			to_chat(user, span_notice("[parent] is too cumbersome to carry in one hand!"))
+			to_chat(user, span_notice("[parent] слишком громоздкий, чтобы нести его в одной руке!"))
 			user.dropItemToGround(parent, force=TRUE)
 		else
-			to_chat(user, span_warning("You need your other hand to be empty!"))
+			to_chat(user, span_warning("Другая рука должна быть пустой!"))
 		return
 	if(user.usable_hands < 2)
 		if(require_twohands)
 			user.dropItemToGround(parent, force=TRUE)
-		to_chat(user, span_warning("You don't have enough intact hands."))
+		to_chat(user, span_warning("У вас недостаточно неповрежденных рук."))
 		return
 
 	// wield update status
@@ -208,7 +208,7 @@
 	if(iscyborg(user))
 		to_chat(user, span_notice("You dedicate your module to [parent]."))
 	else
-		to_chat(user, span_notice("You grab [parent] with both hands."))
+		to_chat(user, span_notice("Вы хватаете [parent] двумя руками."))
 
 	// Play sound if one is set
 	if(wieldsound)

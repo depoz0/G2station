@@ -521,7 +521,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	START_PROCESSING(SSplumbing, src)
 
 /obj/structure/sink/kitchen
-	name = "kitchen sink"
+	name = "кухонная раковина"
 	icon_state = "sink_alt"
 	pixel_z = 4
 	pixel_shift = 16

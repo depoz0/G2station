@@ -111,8 +111,8 @@
 	. += span_warning("Remember, the enzyme isn't used up, so return it to the bottle, dingus!")
 
 /obj/item/reagent_containers/condiment/sugar
-	name = "sugar sack"
-	desc = "Tasty spacey sugar!"
+	name = "мешок сахара"
+	desc = "Вкуснейший космический сахар!"
 	icon_state = "sugar"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
@@ -129,8 +129,8 @@
 	. += span_notice("[flour_required] flour, [eggyolk_required] egg yolk (or soy milk), [sugar_required] sugar makes cake dough. You can make pie dough from it.")
 
 /obj/item/reagent_containers/condiment/saltshaker //Separate from above since it's a small shaker rather then
-	name = "salt shaker" // a large one.
-	desc = "Salt. From space oceans, presumably."
+	name = "солонка" // a large one.
+	desc = "Соль. Предположительно, из космических океанов."
 	icon_state = "saltshakersmall"
 	icon_empty = "emptyshaker"
 	inhand_icon_state = ""
@@ -146,7 +146,7 @@
 	name = "[user.name]"
 	user.name = newname
 	user.real_name = newname
-	desc = "Salt. From dead crew, presumably."
+	desc = "Соль. Предположительно, из мертвого экипажа."
 	return TOXLOSS
 
 /obj/item/reagent_containers/condiment/saltshaker/afterattack(obj/target, mob/living/user, proximity)
@@ -164,8 +164,8 @@
 		return
 
 /obj/item/reagent_containers/condiment/peppermill
-	name = "pepper mill"
-	desc = "Often used to flavor food or make people sneeze."
+	name = "перечница"
+	desc = "Часто используется для ароматизации пищи или для того, чтобы заставить человека чихнуть."
 	icon_state = "peppermillsmall"
 	icon_empty = "emptyshaker"
 	inhand_icon_state = ""
@@ -176,8 +176,8 @@
 	fill_icon_thresholds = null
 
 /obj/item/reagent_containers/condiment/milk
-	name = "space milk"
-	desc = "It's milk. White and nutritious goodness!"
+	name = "космическое молоко"
+	desc = "Это молоко. Белое и питательное вещество!"
 	icon_state = "milk"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
@@ -194,8 +194,8 @@
 	. += span_warning("Remember, the enzyme isn't used up, so return it to the bottle, dingus!")
 
 /obj/item/reagent_containers/condiment/flour
-	name = "flour sack"
-	desc = "A big bag of flour. Good for baking!"
+	name = "мешок муки"
+	desc = "Большой мешок муки. Хорошо подходит для выпечки!"
 	icon_state = "flour"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
@@ -212,13 +212,13 @@
 	var/cakebatter_flour_required = recipe_cakebatter.required_reagents[/datum/reagent/consumable/flour]
 	var/cakebatter_eggyolk_required = recipe_cakebatter.required_reagents[/datum/reagent/consumable/eggyolk]
 	var/cakebatter_sugar_required = recipe_cakebatter.required_reagents[/datum/reagent/consumable/sugar]
-	. += "<b><i>You retreat inward and recall the teachings of... Making Dough...</i></b>"
-	. += span_notice("[dough_flour_required] flour, [dough_water_required] water makes normal dough. You can make flat dough from it.")
-	. += span_notice("[cakebatter_flour_required] flour, [cakebatter_eggyolk_required] egg yolk (or soy milk), [cakebatter_sugar_required] sugar makes cake dough. You can make pie dough from it.")
+	. += "<b><i>Вы уходите в себя и вспоминаете учение о... Приготовление теста...</i></b>"
+	. += span_notice("[dough_flour_required] мука, [dough_water_required] воды получается обычное тесто. Из него можно приготовить плоское тесто.")
+	. += span_notice("[cakebatter_flour_required] мука, [cakebatter_eggyolk_required] яичный желток (или соевое молоко), [cakebatter_sugar_required] сахара получается тесто для тортов. Из него можно приготовить тесто для пирогов.")
 
 /obj/item/reagent_containers/condiment/soymilk
-	name = "soy milk"
-	desc = "It's soy milk. White and nutritious goodness!"
+	name = "соевое молоко"
+	desc = "Это соевое молоко. Белая и питательная масса!"
 	icon_state = "soymilk"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
@@ -227,8 +227,8 @@
 	fill_icon_thresholds = null
 
 /obj/item/reagent_containers/condiment/rice
-	name = "rice sack"
-	desc = "A big bag of rice. Good for cooking!"
+	name = "мешок риса"
+	desc = "Большой мешок риса. Хорошо подходит для приготовления пищи!"
 	icon_state = "rice"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'

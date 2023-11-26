@@ -59,7 +59,7 @@ export const SettingsGeneral = (props, context) => {
   return (
     <Section>
       <LabeledList>
-        <LabeledList.Item label="Theme">
+        <LabeledList.Item label="Тема">
           <Dropdown
             selected={theme}
             options={THEMES}
@@ -72,7 +72,7 @@ export const SettingsGeneral = (props, context) => {
             }
           />
         </LabeledList.Item>
-        <LabeledList.Item label="Font style">
+        <LabeledList.Item label="Шрифт">
           <Stack inline align="baseline">
             <Stack.Item>
               {(!freeFont && (
@@ -102,7 +102,7 @@ export const SettingsGeneral = (props, context) => {
             </Stack.Item>
             <Stack.Item>
               <Button
-                content="Custom font"
+                content="Свой шрифт"
                 icon={freeFont ? 'lock-open' : 'lock'}
                 color={freeFont ? 'good' : 'bad'}
                 ml={1}
@@ -113,7 +113,7 @@ export const SettingsGeneral = (props, context) => {
             </Stack.Item>
           </Stack>
         </LabeledList.Item>
-        <LabeledList.Item label="Font size">
+        <LabeledList.Item label="Размер шрифта">
           <NumberInput
             width="4em"
             step={1}
@@ -132,7 +132,7 @@ export const SettingsGeneral = (props, context) => {
             }
           />
         </LabeledList.Item>
-        <LabeledList.Item label="Line height">
+        <LabeledList.Item label="Высота строк">
           <NumberInput
             width="4em"
             step={0.01}
@@ -153,7 +153,7 @@ export const SettingsGeneral = (props, context) => {
       </LabeledList>
       <Divider />
       <Button icon="save" onClick={() => dispatch(saveChatToDisk())}>
-        Save chat log
+        Сохранить журнал чата
       </Button>
     </Section>
   );
@@ -178,7 +178,7 @@ const TextHighlightSettings = (props, context) => {
               <Button
                 color="transparent"
                 icon="plus"
-                content="Add Highlight Setting"
+                content="Добавить настройки выделения"
                 onClick={() => {
                   dispatch(addHighlightSetting());
                 }}
@@ -190,10 +190,10 @@ const TextHighlightSettings = (props, context) => {
       <Divider />
       <Box>
         <Button icon="check" onClick={() => dispatch(rebuildChat())}>
-          Apply now
+          Применить
         </Button>
         <Box inline fontSize="0.9em" ml={1} color="label">
-          Can freeze the chat for a while.
+          Возможно зависание чата на некоторое время.
         </Box>
       </Box>
     </Section>
@@ -216,7 +216,7 @@ const TextHighlightSetting = (props, context) => {
       <Flex mb={1} color="label" align="baseline">
         <Flex.Item grow>
           <Button
-            content="Delete"
+            content="Удалить"
             color="transparent"
             icon="times"
             onClick={() =>
@@ -231,8 +231,8 @@ const TextHighlightSetting = (props, context) => {
         <Flex.Item>
           <Button.Checkbox
             checked={highlightWholeMessage}
-            content="Whole Message"
-            tooltip="If this option is selected, the entire message will be highlighted in yellow."
+            content="Все сообщение"
+            tooltip="При выборе этой опции все сообщение будет выделено желтым цветом."
             mr="5px"
             onClick={() =>
               dispatch(

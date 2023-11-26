@@ -71,8 +71,8 @@
 		new /obj/item/toy/snappop(src)
 
 /obj/item/storage/box/matches
-	name = "matchbox"
-	desc = "A small box of Almost But Not Quite Plasma Premium Matches."
+	name = "спичечный коробок"
+	desc = "Небольшая коробка спичек"
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	inhand_icon_state = "zippo"

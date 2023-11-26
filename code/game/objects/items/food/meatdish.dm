@@ -375,8 +375,8 @@
 	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/raw_meatball
-	name = "raw meatball"
-	desc = "A great meal all round. Not a cord of wood. Kinda raw"
+	name = "сырая фрикаделька"
+	desc = "Отличная еда. Не очень готова пока еще, выглядит сыровато."
 	icon = 'icons/obj/food/meat.dmi'
 	icon_state = "raw_meatball"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2)

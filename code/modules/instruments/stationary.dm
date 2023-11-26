@@ -35,8 +35,8 @@
 	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/structure/musician/piano
-	name = "space piano"
-	desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
+	name = "пианино"
+	desc = "Это космическое пианино, похожее на обычное пианино, но всегда играющее мелодию! Даже если музыкант не играет."
 	icon = 'icons/obj/art/musician.dmi'
 	icon_state = "piano"
 	anchored = TRUE

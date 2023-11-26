@@ -18,8 +18,8 @@
 	ADD_TRAIT(src, TRAIT_APC_SHOCKING, INNATE_TRAIT)
 
 /obj/item/kitchen/fork
-	name = "fork"
-	desc = "Pointy."
+	name = "вилка"
+	desc = "Заостренная."
 	icon_state = "fork"
 	force = 4
 	w_class = WEIGHT_CLASS_TINY
@@ -66,7 +66,7 @@
 		return ..()
 
 /obj/item/kitchen/fork/plastic
-	name = "plastic fork"
+	name = "пластиковая вилка"
 	desc = "Really takes you back to highschool lunch."
 	icon_state = "plastic_fork"
 	force = 0
@@ -80,14 +80,14 @@
 	AddElement(/datum/element/easily_fragmented, PLASTIC_BREAK_PROBABILITY)
 
 /obj/item/knife/kitchen
-	name = "kitchen knife"
-	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
+	name = "кухонный нож"
+	desc = "Кухонный нож общего назначения, изготовленный компанией SpaceCook Incorporated. Гарантированно сохраняет остроту в течение многих лет."
 
 /obj/item/knife/plastic
-	name = "plastic knife"
+	name = "пластиковый нож"
 	icon_state = "plastic_knife"
 	inhand_icon_state = "knife"
-	desc = "A very safe, barely sharp knife made of plastic. Good for cutting food and not much else."
+	desc = "Очень безопасный и не очень острый нож из пластика. Хорошо подходит для нарезки продуктов и не более того."
 	force = 0
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0
@@ -145,8 +145,8 @@
 		attack_verb_simple = list("prod", "whiff", "scratch", "poke")
 
 /obj/item/kitchen/rollingpin
-	name = "rolling pin"
-	desc = "Used to knock out the Bartender."
+	name = "скалка"
+	desc = "Используется для того, чтобы вырубить бармена."
 	icon = 'icons/obj/service/kitchen.dmi'
 	icon_state = "rolling_pin"
 	worn_icon_state = "rolling_pin"
@@ -164,8 +164,8 @@
 	tool_behaviour = TOOL_ROLLINGPIN
 
 /obj/item/kitchen/rollingpin/illegal
-	name = "metal rolling pin"
-	desc = "A heavy metallic rolling pin used to bash in those annoying ingredients."
+	name = "металлическая скалка"
+	desc = "Тяжелая металлическая скалка, используемая для раскатки раздражающих ингредиентов."
 	icon_state = "metal_rolling_pin"
 	inhand_icon_state = "metal_rolling_pin"
 	force = 12
@@ -180,8 +180,8 @@
 /* Trays  moved to /obj/item/storage/bag */
 
 /obj/item/kitchen/spoon
-	name = "spoon"
-	desc = "Just be careful your food doesn't melt the spoon first."
+	name = "ложка"
+	desc = "Только следите за тем, чтобы пища не расплавила ложку."
 	icon_state = "spoon"
 	base_icon_state = "spoon"
 	w_class = WEIGHT_CLASS_TINY
@@ -297,7 +297,7 @@
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/kitchen/spoon/plastic
-	name = "plastic spoon"
+	name = "пластиковая ложка"
 	icon_state = "plastic_spoon"
 	force = 0
 	custom_materials = list(/datum/material/plastic = SMALL_MATERIAL_AMOUNT * 1.2)
@@ -313,8 +313,8 @@
 	AddElement(/datum/element/easily_fragmented, PLASTIC_BREAK_PROBABILITY)
 
 /obj/item/kitchen/spoon/soup_ladle
-	name = "ladle"
-	desc = "What is a ladle but a comically large spoon?"
+	name = "поварёшка"
+	desc = "Что такое поварёшка, это же большая ложка?"
 	icon_state = "ladle"
 	base_icon_state = "ladle"
 	inhand_icon_state = "spoon"

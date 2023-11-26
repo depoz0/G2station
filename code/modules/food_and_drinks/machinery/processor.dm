@@ -1,8 +1,8 @@
 #define PROCESSOR_SELECT_RECIPE(movable_input) LAZYACCESS(processor_inputs[type], movable_input.type)
 
 /obj/machinery/processor
-	name = "food processor"
-	desc = "An industrial grinder used to process meat and other foods. Keep hands clear of intake area while operating."
+	name = "кухонный комбайн"
+	desc = "Промышленная мясорубка, используемая для обработки мяса и других продуктов. Во время работы необходимо держать руки подальше от заборной горловины."
 	icon = 'icons/obj/machines/kitchen.dmi'
 	icon_state = "processor1"
 	layer = BELOW_OBJ_LAYER
@@ -112,8 +112,8 @@
 	var/datum/food_processor_process/recipe = PROCESSOR_SELECT_RECIPE(attacking_item)
 	if(recipe)
 		user.visible_message(
-			span_notice("[user] put [attacking_item] into [src]."),
-			span_notice("You put [attacking_item] into [src]."),
+			span_notice("[user] положил [attacking_item] в [src]."),
+			span_notice("Вы положили [attacking_item] в [src]."),
 		)
 		user.transferItemToLoc(attacking_item, src, TRUE)
 		LAZYADD(processor_contents, attacking_item)
@@ -143,8 +143,8 @@
 		return TRUE
 	processing = TRUE
 	user.visible_message(span_notice("[user] turns on [src]."), \
-		span_notice("You turn on [src]."), \
-		span_hear("You hear a food processor."))
+		span_notice("Вы включили [src]."), \
+		span_hear("Вы слышите, как работает кухонный комбайн."))
 	playsound(src.loc, 'sound/machines/blender.ogg', 50, TRUE)
 	use_power(active_power_usage)
 	var/total_time = 0
@@ -165,7 +165,7 @@
 			continue
 		process_food(recipe, content_item)
 	processing = FALSE
-	visible_message(span_notice("\The [src] finishes processing."))
+	visible_message(span_notice("[src] закончил работу."))
 
 /obj/machinery/processor/verb/eject()
 	set category = "Object"
@@ -236,9 +236,9 @@
 		return
 	var/core_count = processed_slime.cores
 	for(var/i in 1 to (core_count+rating_amount-1))
-		var/atom/movable/item = new processed_slime.coretype(drop_location())
+		var/atom/movable/item = new processed_slime.slime_type.core_type(drop_location())
 		adjust_item_drop_location(item)
-		SSblackbox.record_feedback("tally", "slime_core_harvested", 1, processed_slime.colour)
+		SSblackbox.record_feedback("tally", "slime_core_harvested", 1, processed_slime.slime_type.colour)
 	return ..()
 
 #undef PROCESSOR_SELECT_RECIPE

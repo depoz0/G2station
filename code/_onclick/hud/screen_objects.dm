@@ -65,7 +65,7 @@
 
 /atom/movable/screen/swap_hand
 	plane = HUD_PLANE
-	name = "swap hand"
+	name = "сменить руку"
 
 /atom/movable/screen/swap_hand/Click()
 	// At this point in client Click() code we have passed the 1/10 sec check and little else
@@ -82,7 +82,7 @@
 	return 1
 
 /atom/movable/screen/navigate
-	name = "navigate"
+	name = "навигация"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "navigate"
 	screen_loc = ui_navigate_menu
@@ -94,7 +94,7 @@
 	navigator.navigate()
 
 /atom/movable/screen/craft
-	name = "crafting menu"
+	name = "меню крафта"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "craft"
 	screen_loc = ui_crafting
@@ -115,7 +115,7 @@
 	create_area(usr)
 
 /atom/movable/screen/language_menu
-	name = "language menu"
+	name = "языковое меню"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "talk_wheel"
 	screen_loc = ui_language_menu
@@ -243,7 +243,7 @@
 	return TRUE
 
 /atom/movable/screen/close
-	name = "close"
+	name = "закрыть"
 	plane = ABOVE_HUD_PLANE
 	icon_state = "backpack_close"
 
@@ -259,7 +259,7 @@
 	return TRUE
 
 /atom/movable/screen/drop
-	name = "drop"
+	name = "выбросить"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "act_drop"
 	plane = HUD_PLANE
@@ -269,7 +269,7 @@
 		usr.dropItemToGround(usr.get_active_held_item())
 
 /atom/movable/screen/combattoggle
-	name = "toggle combat mode"
+	name = "боевой режим"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "combat_off"
 	screen_loc = ui_combat_toggle
@@ -320,7 +320,7 @@
 	screen_loc = ui_spacesuit
 
 /atom/movable/screen/mov_intent
-	name = "run/walk toggle"
+	name = "бег/ходьба"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "running"
 
@@ -359,7 +359,7 @@
 	return ..()
 
 /atom/movable/screen/resist
-	name = "resist"
+	name = "сопротивление"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "act_resist"
 	plane = HUD_PLANE
@@ -370,7 +370,7 @@
 		L.resist()
 
 /atom/movable/screen/rest
-	name = "rest"
+	name = "отдых"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "act_rest"
 	base_icon_state = "act_rest"
@@ -389,7 +389,7 @@
 	return ..()
 
 /atom/movable/screen/storage
-	name = "storage"
+	name = "хранилище"
 	icon_state = "block"
 	screen_loc = "7,7 to 10,8"
 	plane = HUD_PLANE
@@ -417,7 +417,7 @@
 	return TRUE
 
 /atom/movable/screen/throw_catch
-	name = "throw/catch"
+	name = "бросать/ловить"
 	icon = 'icons/hud/screen_midnight.dmi'
 	icon_state = "act_throw_off"
 
@@ -427,7 +427,7 @@
 		C.toggle_throw_mode()
 
 /atom/movable/screen/zone_sel
-	name = "damage zone"
+	name = "зона нанесения урона"
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
 	var/overlay_icon = 'icons/hud/screen_gen.dmi'
@@ -568,7 +568,7 @@
 	plane = FULLSCREEN_PLANE
 
 /atom/movable/screen/healths
-	name = "health"
+	name = "здоровье"
 	icon_state = "health0"
 	screen_loc = ui_health
 
@@ -605,7 +605,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /atom/movable/screen/healthdoll
-	name = "health doll"
+	name = "состояние"
 	screen_loc = ui_healthdoll
 
 /atom/movable/screen/healthdoll/Click()
@@ -619,7 +619,7 @@
 	var/filtered = FALSE //so we don't repeatedly create the mask of the mob every update
 
 /atom/movable/screen/mood
-	name = "mood"
+	name = "настроение"
 	icon_state = "mood5"
 	screen_loc = ui_mood
 
