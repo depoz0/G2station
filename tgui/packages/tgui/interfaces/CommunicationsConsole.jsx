@@ -328,7 +328,7 @@ const PageMain = (props, context) => {
           <Flex justify="space-between">
             <Flex.Item>
               <Box>
-                Currently on <b>{capitalize(alertLevel)}</b> Alert
+                Сейчас на уровне <b>{capitalize(alertLevel)}</b>
               </Box>
             </Flex.Item>
 

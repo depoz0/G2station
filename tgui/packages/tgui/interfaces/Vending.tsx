@@ -145,7 +145,9 @@ export const UserDetails = (props, context) => {
 
   if (!user) {
     return (
-      <NoticeBox>No ID detected! Contact the Head of Personnel.</NoticeBox>
+      <NoticeBox>
+        ID не найден! Обратитесь к начальнику отдела кадров.
+      </NoticeBox>
     );
   } else {
     return (
@@ -156,9 +158,11 @@ export const UserDetails = (props, context) => {
           </Stack.Item>
           <Stack.Item>
             <LabeledList>
-              <LabeledList.Item label="User">{user.name}</LabeledList.Item>
-              <LabeledList.Item label="Occupation">
-                {user.job || 'Unemployed'}
+              <LabeledList.Item label="Пользователь">
+                {user.name}
+              </LabeledList.Item>
+              <LabeledList.Item label="Профессия">
+                {user.job || 'Безработный'}
               </LabeledList.Item>
             </LabeledList>
           </Stack.Item>
@@ -191,7 +195,7 @@ const ProductDisplay = (
     <Section
       fill
       scrollable
-      title="Products"
+      title="Продукты"
       buttons={
         !!onstation &&
         user && (
@@ -322,7 +326,7 @@ const ProductStock = (props) => {
         (!custom && remaining <= product.max_amount / 2 && 'average') ||
         'good'
       }>
-      {remaining} left
+      {remaining} шт.
     </Box>
   );
 };
@@ -367,8 +371,8 @@ const ProductButton = (props, context) => {
 };
 
 const CATEGORY_COLORS = {
-  'Contraband': 'red',
-  'Premium': 'yellow',
+  'Контрабанда': 'red',
+  'Премиум': 'yellow',
 };
 
 const CategorySelector = (props: {
