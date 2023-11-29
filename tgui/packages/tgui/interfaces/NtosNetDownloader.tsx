@@ -228,12 +228,12 @@ const Program = (props, context) => {
                 }
                 content={
                   program.installed
-                    ? 'Installed'
+                    ? 'Установлено'
                     : !program.compatible
-                      ? 'Incompatible'
+                      ? 'Несовместимый'
                       : !program.access
-                        ? 'No Access'
-                        : 'No Space'
+                        ? 'Нет доступа'
+                        : 'Нет места'
                 }
               />
             )}

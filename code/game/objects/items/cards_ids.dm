@@ -804,14 +804,14 @@
 
 /// Updates the name based on the card's vars and state.
 /obj/item/card/id/proc/update_label()
-	var/name_string = registered_name ? "[registered_name]'s ID Card" : initial(name)
+	var/name_string = registered_name ? "[registered_name] ID карта" : initial(name)
 	var/assignment_string
 
 	if(is_intern)
 		if(assignment)
-			assignment_string = trim?.intern_alt_name || "Intern [assignment]"
+			assignment_string = trim?.intern_alt_name || "Стажер [assignment]"
 		else
-			assignment_string = "Intern"
+			assignment_string = "Стажер"
 	else
 		assignment_string = assignment
 
@@ -1806,7 +1806,7 @@
 	if(!scribbled_name)
 		name = initial(name)
 		return
-	name = "[scribbled_name]'s ID Card ([scribbled_assignment])"
+	name = "[scribbled_name] ID карта ([scribbled_assignment])"
 
 /obj/item/card/cardboard/update_overlays()
 	. = ..()

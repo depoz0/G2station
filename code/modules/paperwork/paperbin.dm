@@ -1,8 +1,8 @@
 #define PAPERS_PER_OVERLAY 8
 #define PAPER_OVERLAY_PIXEL_SHIFT 2
 /obj/item/paper_bin
-	name = "paper bin"
-	desc = "Contains all the paper you'll never need."
+	name = "лоток для бумаги"
+	desc = "Содержит кучу бумаги, которая вам никогда не понадобится."
 	icon = 'icons/obj/service/bureaucracy.dmi'
 	icon_state = "paper_bin0"
 	inhand_icon_state = "sheet-metal"
@@ -102,7 +102,7 @@
 		pen.add_fingerprint(user)
 		pen.forceMove(user.loc)
 		user.put_in_hands(pen)
-		to_chat(user, span_notice("Вы достате [pen] из [src]."))
+		to_chat(user, span_notice("Вы достаете [pen] из [src]."))
 		bin_pen = null
 		update_appearance()
 	else if(total_paper > 0)
@@ -111,10 +111,10 @@
 		top_paper.add_fingerprint(user)
 		top_paper.forceMove(user.loc)
 		user.put_in_hands(top_paper)
-		to_chat(user, span_notice("Вы достате [top_paper] из [src]."))
+		to_chat(user, span_notice("Вы достаете [top_paper] из [src]."))
 		update_appearance()
 	else
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("[src] пустой!"))
 	add_fingerprint(user)
 	return ..()
 
@@ -126,7 +126,7 @@
 		var/obj/item/paper/paper = I
 		if(!user.transferItemToLoc(paper, src))
 			return
-		to_chat(user, span_notice("You put [paper] in [src]."))
+		to_chat(user, span_notice("Вы положили [paper] в [src]."))
 		paper_stack += paper
 		total_paper += 1
 		update_appearance()
@@ -134,7 +134,7 @@
 		var/obj/item/pen/pen = I
 		if(!user.transferItemToLoc(pen, src))
 			return
-		to_chat(user, span_notice("You put [pen] in [src]."))
+		to_chat(user, span_notice("Вы положили [pen] в [src]."))
 		bin_pen = pen
 		update_appearance()
 	else
@@ -152,9 +152,9 @@
 /obj/item/paper_bin/examine(mob/user)
 	. = ..()
 	if(total_paper)
-		. += "It contains [total_paper > 1 ? "[total_paper] papers" : "one paper"]."
+		. += "Он содержит [total_paper > 1 ? "[total_paper] [runam(total_paper, "бумагу", "бумаги", "бумаг")]" : "одну бумагу"]."
 	else
-		. += "It doesn't contain anything."
+		. += "В нем ничего нет."
 
 /obj/item/paper_bin/update_icon_state()
 	if(total_paper < 1)
