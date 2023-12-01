@@ -75,7 +75,7 @@
 		less_input_message = " - Notice: Observer freelook is currently disabled."
 	// Don't convert this to tgui please, it's way too important
 	var/this_is_like_playing_right = alert(usr, "Вы уверены, что хотите наблюдать? Вы не сможете сыграть этот раунд![less_input_message]", "Наблюдать за раундом", "Да", "Нет")
-	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Yes")
+	if(QDELETED(src) || !src.client || this_is_like_playing_right != "Да")
 		ready = PLAYER_NOT_READY
 		return FALSE
 
