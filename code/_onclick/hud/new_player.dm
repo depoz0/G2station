@@ -127,7 +127,7 @@
 
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
-	name = "View Character Setup"
+	name = "Просмотр настроек персонажа"
 	screen_loc = "TOP:-70,CENTER:-54"
 	icon = 'icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
@@ -145,7 +145,7 @@
 
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
-	name = "Toggle Readiness"
+	name = "Выключить готовность"
 	screen_loc = "TOP:-8,CENTER:-65"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
@@ -193,7 +193,7 @@
 
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
-	name = "Join Game"
+	name = "Присоединиться к игре"
 	screen_loc = "TOP:-13,CENTER:-58"
 	icon = 'icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
@@ -217,7 +217,7 @@
 		return
 
 	if(!SSticker?.IsRoundInProgress())
-		to_chat(hud.mymob, span_boldwarning("The round is either not ready, or has already finished..."))
+		to_chat(hud.mymob, span_boldwarning("Раунд либо еще не готов, либо уже завершился..."))
 		return
 
 	//Determines Relevent Population Cap
@@ -236,12 +236,12 @@
 
 		var/queue_position = SSticker.queued_players.Find(new_player)
 		if(queue_position == 1)
-			to_chat(new_player, span_notice("You are next in line to join the game. You will be notified when a slot opens up."))
+			to_chat(new_player, span_notice("Вы следующий в очереди на присоединение к игре. Вы получите уведомление, когда откроется свободный слот."))
 		else if(queue_position)
-			to_chat(new_player, span_notice("There are [queue_position-1] players in front of you in the queue to join the game."))
+			to_chat(new_player, span_notice("Перед вами в очереди на подключение к игре стоит [queue_position-1] [runam(queue_position-1, "игрок", "игрока", "игроков")]."))
 		else
 			SSticker.queued_players += new_player
-			to_chat(new_player, span_notice("You have been added to the queue to join the game. Your position in queue is [SSticker.queued_players.len]."))
+			to_chat(new_player, span_notice("Вы были добавлены в очередь на подключение к игре. Ваша позиция в очереди [SSticker.queued_players.len]."))
 		return
 
 	if(!LAZYACCESS(params2list(params), CTRL_CLICK))
@@ -264,7 +264,7 @@
 	RegisterSignal(SSticker, COMSIG_TICKER_ENTER_SETTING_UP, PROC_REF(show_join_button))
 
 /atom/movable/screen/lobby/button/observe
-	name = "Observe"
+	name = "Наблюдать"
 	screen_loc = "TOP:-40,CENTER:-54"
 	icon = 'icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
@@ -297,7 +297,7 @@
 	icon = 'icons/hud/lobby/bottom_buttons.dmi'
 
 /atom/movable/screen/lobby/button/bottom/settings
-	name = "View Game Preferences"
+	name = "Просмотр игровых параметров"
 	icon_state = "settings"
 	base_icon_state = "settings"
 	screen_loc = "TOP:-122,CENTER:+29"
@@ -313,7 +313,7 @@
 	preferences.ui_interact(usr)
 
 /atom/movable/screen/lobby/button/bottom/changelog_button
-	name = "View Changelog"
+	name = "Посмотреть список изменений"
 	icon_state = "changelog"
 	base_icon_state = "changelog"
 	screen_loc ="TOP:-122,CENTER:+57"
@@ -336,7 +336,7 @@
 	new_player.ViewManifest()
 
 /atom/movable/screen/lobby/button/bottom/poll
-	name = "View Available Polls"
+	name = "Просмотр доступных опросов"
 	icon_state = "poll"
 	base_icon_state = "poll"
 	screen_loc = "TOP:-122,CENTER:-26"
@@ -400,7 +400,7 @@
 	new_player.handle_player_polling()
 
 /atom/movable/screen/lobby/button/collapse
-	name = "Collapse Lobby Menu"
+	name = "Свернуть меню лобби"
 	icon = 'icons/hud/lobby/collapse_expand.dmi'
 	icon_state = "collapse"
 	base_icon_state = "collapse"
@@ -438,7 +438,7 @@
 		return
 	var/datum/hud/new_player/our_hud = hud
 	base_icon_state = our_hud.menu_hud_status ? "expand" : "collapse"
-	name = "[our_hud.menu_hud_status ? "Expand" : "Collapse"] Lobby Menu"
+	name = "[our_hud.menu_hud_status ? "Развернуть" : "Свернуть"] меню лобби"
 	set_button_status(FALSE)
 
 	//get the shutter object used by our hud

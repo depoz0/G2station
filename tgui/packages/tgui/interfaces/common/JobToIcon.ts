@@ -51,5 +51,5 @@ export const JOB2ICON = {
   'Станционный инженер': 'gears',
   'Syndicate Operative': 'dragon',
   'Вирусолог': 'virus',
-  'Смотритель': 'handcuffs',
+  'Надзиратель': 'handcuffs',
 } as const;
