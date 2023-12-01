@@ -68,7 +68,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/mob/living/simple_animal/pet/cat/runtime,
+/mob/living/basic/pet/cat/runtime,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "aag" = (
@@ -110,7 +110,7 @@
 /obj/structure/bed/dogbed/runtime{
 	name = "Jerry's bed"
 	},
-/mob/living/simple_animal/pet/cat/jerry,
+/mob/living/basic/pet/cat/jerry,
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "aal" = (
