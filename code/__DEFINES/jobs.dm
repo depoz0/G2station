@@ -53,7 +53,7 @@
 #define JOB_CYBORG "Cyborg"
 #define JOB_PERSONAL_AI "Personal AI"
 //Security
-#define JOB_WARDEN "Смотритель"
+#define JOB_WARDEN "Надзиратель"
 #define JOB_DETECTIVE "Детектив"
 #define JOB_SECURITY_OFFICER "Офицер службы безопасности"
 #define JOB_SECURITY_OFFICER_MEDICAL "Офицер службы безопасности (Медицина)"

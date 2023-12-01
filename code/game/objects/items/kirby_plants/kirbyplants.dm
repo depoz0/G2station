@@ -1,10 +1,10 @@
 
 /obj/item/kirbyplants
-	name = "potted plant"
+	name = "комнатное растение"
 	icon = 'icons/obj/fluff/flora/plants.dmi'
 	icon_state = "plant-01"
 	base_icon_state = "plant-01"
-	desc = "A little bit of nature contained in a pot."
+	desc = "Немного природы в горшке."
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 	w_class = WEIGHT_CLASS_HUGE
@@ -35,11 +35,11 @@
 	. = ..()
 	if(custom_plant_name)
 		return
-	name = "[dead ? "dead ":null][initial(name)]"
+	name = "[dead ? "мертвое ":null][initial(name)]"
 
 /obj/item/kirbyplants/update_desc(updates)
 	. = ..()
-	desc = dead ? "The unidentifiable plant remnants make you feel like planting something new in the pot." : initial(desc)
+	desc = dead ? "Неизвестные остатки растения вызывают желание посадить в горшок что-то новое." : initial(desc)
 
 /obj/item/kirbyplants/vv_edit_var(vname, vval)
 	. = ..()
@@ -53,12 +53,12 @@
 /obj/item/kirbyplants/attackby(obj/item/I, mob/living/user, params)
 	. = ..()
 	if(!dead && trimmable && HAS_TRAIT(user,TRAIT_BONSAI) && isturf(loc) && I.get_sharpness())
-		to_chat(user,span_notice("You start trimming [src]."))
+		to_chat(user,span_notice("Вы начинаете обрезать [src]."))
 		if(do_after(user,3 SECONDS,target=src))
-			to_chat(user,span_notice("You finish trimming [src]."))
+			to_chat(user,span_notice("Вы заканчиваете обрезать [src]."))
 			change_visual()
 	if(dead && istype(I, /obj/item/seeds))
-		to_chat(user,span_notice("You start planting a new seed into the pot."))
+		to_chat(user,span_notice("Вы начинаете сажать в горшок новое семя."))
 		if(do_after(user,3 SECONDS,target=src))
 			qdel(I)
 			dead = FALSE
@@ -114,8 +114,8 @@
 	desc = "A gift from the botanical staff, presented after the RD's reassignment. There's a tag on it that says \"Y'all come back now, y'hear?\"[dead ? "\nIt doesn't look very healthy...":null]"
 
 /obj/item/kirbyplants/random/fullysynthetic
-	name = "plastic potted plant"
-	desc = "A fake, cheap looking, plastic tree. Perfect for people who kill every plant they touch."
+	name = "искусственное комнатное растение"
+	desc = "Искусственное, дешевое, пластиковое дерево. Идеально подходит для людей, которые убивают все растения, к которым прикасаются."
 	icon_state = "plant-26"
 	custom_materials = (list(/datum/material/plastic = SHEET_MATERIAL_AMOUNT * 4))
 	trimmable = FALSE

@@ -5,8 +5,8 @@ import { Box, Button, LabeledList, NumberInput, Section } from '../components';
 import { RADIO_CHANNELS } from '../constants';
 import { Window } from '../layouts';
 
-export const Radio = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Radio = (props) => {
+  const { act, data } = useBackend();
   const {
     freqlock,
     frequency,
@@ -40,7 +40,7 @@ export const Radio = (props, context) => {
       <Window.Content>
         <Section>
           <LabeledList>
-            <LabeledList.Item label="Frequency">
+            <LabeledList.Item label="Частота">
               {(freqlock && (
                 <Box inline color="light-gray">
                   {toFixed(frequency / 10, 1) + ' kHz'}
@@ -68,7 +68,7 @@ export const Radio = (props, context) => {
                 </Box>
               )}
             </LabeledList.Item>
-            <LabeledList.Item label="Audio">
+            <LabeledList.Item label="Звук">
               <Button
                 textAlign="center"
                 width="37px"

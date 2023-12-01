@@ -1,8 +1,8 @@
 #define AIRALARM_WARNING_COOLDOWN (10 SECONDS)
 
 /obj/machinery/airalarm
-	name = "air alarm"
-	desc = "A machine that monitors atmosphere levels. Goes off if the area is dangerous."
+	name = "воздушная сигнализация"
+	desc = "Устройство для отслеживания состояния атмосферы на станции в помещении. Срабатывает, если в помещение опасно."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "alarmp"
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.05
@@ -94,7 +94,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		set_panel_open(TRUE)
 
 	if(name == initial(name))
-		name = "[get_area_name(src)] Air Alarm"
+		name = "[get_area_name(src)] воздушная сигнализация"
 
 	tlv_collection = list()
 	tlv_collection["pressure"] = new /datum/tlv/pressure
@@ -158,7 +158,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 
 /obj/machinery/airalarm/update_name(updates)
 	. = ..()
-	name = "[get_area_name(my_area)] Air Alarm"
+	name = "[get_area_name(my_area)] воздушная сигнализация"
 
 /obj/machinery/airalarm/on_exit_area(datum/source, area/area_to_unregister)
 	//we cannot unregister from an area we never registered to in the first place
@@ -172,11 +172,11 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 	. = ..()
 	switch(buildstage)
 		if(AIR_ALARM_BUILD_NO_CIRCUIT)
-			. += span_notice("It is missing air alarm electronics.")
+			. += span_notice("В нем отсутствует электроника воздушной сигнализации.")
 		if(AIR_ALARM_BUILD_NO_WIRES)
-			. += span_notice("It is missing wiring.")
+			. += span_notice("В нем отсутствует проводка.")
 		if(AIR_ALARM_BUILD_COMPLETE)
-			. += span_notice("Right-click to [locked ? "unlock" : "lock"] the interface.")
+			. += span_notice("Правая кнопка мыши, чтобы [locked ? "разблокировать" : "заблокировать"] интерфейс.")
 
 /obj/machinery/airalarm/ui_status(mob/user)
 	if(user.has_unlimited_silicon_privilege && aidisabled)
@@ -196,7 +196,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			balloon_alert(user, "linking disabled")
 			return TOOL_ACT_SIGNAL_BLOCKING
 		connect_sensor(multi_tool.buffer)
-		balloon_alert(user, "connected sensor")
+		balloon_alert(user, "подключен датчик")
 		return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/airalarm/ui_interact(mob/user, datum/tgui/ui)
@@ -242,12 +242,12 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		))
 	data["envData"] += list(list(
 		"name" = "Давление",
-		"value" = "[round(pressure, 0.01)] kPa",
+		"value" = "[round(pressure, 0.01)] кПа",
 		"danger" = tlv_collection["pressure"].check_value(pressure)
 	))
 	data["envData"] += list(list(
 		"name" = "Температура",
-		"value" = "[round(temp, 0.01)] Kelvin / [round(temp, 0.01) - T0C] Celcius",
+		"value" = "[round(temp, 0.01)] K / [round(temp, 0.01) - T0C] °C",
 		"danger" = tlv_collection["temperature"].check_value(temp),
 	))
 	if(total_moles)
@@ -256,7 +256,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			var/portion = moles / total_moles
 			data["envData"] += list(list(
 				"name" = GLOB.meta_gas_info[gas_path][META_GAS_NAME],
-				"value" = "[round(moles, 0.01)] moles / [round(100 * portion, 0.01)] % / [round(portion * pressure, 0.01)] kPa",
+				"value" = "[round(moles, 0.01)] моль / [round(100 * portion, 0.01)] % / [round(portion * pressure, 0.01)] кПа",
 				"danger" = tlv_collection[gas_path].check_value(portion * pressure),
 			))
 
@@ -265,14 +265,14 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		var/datum/tlv/tlv = tlv_collection[threshold]
 		var/list/singular_tlv = list()
 		if(threshold == "pressure")
-			singular_tlv["name"] = "Pressure"
-			singular_tlv["unit"] = "kPa"
+			singular_tlv["name"] = "Давление"
+			singular_tlv["unit"] = "кПа"
 		else if (threshold == "temperature")
-			singular_tlv["name"] = "Temperature"
+			singular_tlv["name"] = "Температура"
 			singular_tlv["unit"] = "K"
 		else
 			singular_tlv["name"] = GLOB.meta_gas_info[threshold][META_GAS_NAME]
-			singular_tlv["unit"] = "kPa"
+			singular_tlv["unit"] = "кПа"
 		singular_tlv["id"] = threshold
 		singular_tlv["warning_min"] = tlv.warning_min
 		singular_tlv["hazard_min"] = tlv.hazard_min
@@ -362,7 +362,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 		if("overclock")
 			if(isnull(vent))
 				return TRUE
-			vent.toggle_overclock()
+			vent.toggle_overclock(source = key_name(user))
 			vent.update_appearance(UPDATE_ICON)
 			return TRUE
 
@@ -397,14 +397,14 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			var/new_pressure = clamp(text2num(params["value"]), 0, ATMOS_PUMP_MAX_PRESSURE)
 			vent.internal_pressure_bound = new_pressure
 			if (old_pressure != new_pressure)
-				vent.investigate_log("internal pressure was set to [new_pressure] by [key_name(user)]", INVESTIGATE_ATMOS)
+				vent.investigate_log("внутреннее давление было установлено на [new_pressure], персонажем: [key_name(user)]", INVESTIGATE_ATMOS)
 		if ("reset_internal_pressure")
 			if (isnull(vent))
 				return TRUE
 
 			if (vent.internal_pressure_bound != 0)
 				vent.internal_pressure_bound = 0
-				vent.investigate_log("internal pressure was reset by [key_name(user)]", INVESTIGATE_ATMOS)
+				vent.investigate_log("внутреннее давление было сброшено персонажем [key_name(user)]", INVESTIGATE_ATMOS)
 		if ("set_external_pressure")
 			if (isnull(vent))
 				return TRUE
@@ -416,7 +416,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 				return TRUE
 
 			vent.external_pressure_bound = new_pressure
-			vent.investigate_log("external pressure was set to [new_pressure] by [key_name(user)]", INVESTIGATE_ATMOS)
+			vent.investigate_log("внешнее давление было установлено на [new_pressure], персонажем: [key_name(user)]", INVESTIGATE_ATMOS)
 			vent.update_appearance(UPDATE_ICON)
 		if ("reset_external_pressure")
 			if (isnull(vent))
@@ -426,7 +426,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 				return TRUE
 
 			vent.external_pressure_bound = ATMOS_PUMP_MAX_PRESSURE
-			vent.investigate_log("internal pressure was reset by [key_name(user)]", INVESTIGATE_ATMOS)
+			vent.investigate_log("внутреннее давление было сброшено персонажем [key_name(user)]", INVESTIGATE_ATMOS)
 			vent.update_appearance(UPDATE_ICON)
 		if ("scrubbing")
 			if (isnull(scrubber))
@@ -445,7 +445,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			scrubber.toggle_filters(params["val"])
 		if ("mode")
 			select_mode(user, text2path(params["mode"]))
-			investigate_log("was turned to [selected_mode.name] mode by [key_name(user)]", INVESTIGATE_ATMOS)
+			investigate_log("был включен режим [selected_mode.name] персонажем [key_name(user)]", INVESTIGATE_ATMOS)
 
 		if ("set_threshold")
 			var/threshold = text2path(params["threshold"]) || params["threshold"]
@@ -455,7 +455,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 			var/threshold_type = params["threshold_type"]
 			var/value = params["value"]
 			tlv.set_value(threshold_type, value)
-			investigate_log("threshold value for [threshold]:[threshold_type] was set to [value] by [key_name(usr)]", INVESTIGATE_ATMOS)
+			investigate_log("пороговое значение для [threshold]:[threshold_type] было установлен на [value] персонажем [key_name(usr)]", INVESTIGATE_ATMOS)
 
 			var/turf/our_turf = connected_sensor ? get_turf(connected_sensor) : get_turf(src)
 			var/datum/gas_mixture/environment = our_turf.return_air()
@@ -468,7 +468,7 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 				return
 			var/threshold_type = params["threshold_type"]
 			tlv.reset_value(threshold_type)
-			investigate_log("threshold value for [threshold]:[threshold_type] was reset by [key_name(usr)]", INVESTIGATE_ATMOS)
+			investigate_log("пороговое значение для [threshold]:[threshold_type] был сброшен персонажем [key_name(usr)]", INVESTIGATE_ATMOS)
 
 			var/turf/our_turf = connected_sensor ? get_turf(connected_sensor) : get_turf(src)
 			var/datum/gas_mixture/environment = our_turf.return_air()
@@ -562,28 +562,28 @@ GLOBAL_LIST_EMPTY_TYPED(air_alarms, /obj/machinery/airalarm)
 	if(danger_level)
 		alarm_manager.send_alarm(ALARM_ATMOS)
 		if(pressure <= WARNING_LOW_PRESSURE && temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! Low pressure and temperature detected."
+			warning_message = "Опасность! Обнаружено низкое давление и температура."
 			return
 		if(pressure <= WARNING_LOW_PRESSURE && temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! Low pressure and high temperature detected."
+			warning_message = "Опасность! Обнаружено низкое давление и высокая температура."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE && temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! High pressure and temperature detected."
+			warning_message = "Опасность! Обнаружено высокое давление и температура."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE && temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! High pressure and low temperature detected."
+			warning_message = "Опасность! Обнаружено высокое давление и низкая температура."
 			return
 		if(pressure <= WARNING_LOW_PRESSURE)
-			warning_message = "Danger! Low pressure detected."
+			warning_message = "Опасность! Обнаружено низкое давление."
 			return
 		if(pressure >= WARNING_HIGH_PRESSURE)
-			warning_message = "Danger! High pressure detected."
+			warning_message = "Опасность! Обнаружено высокое давление."
 			return
 		if(temp <= BODYTEMP_COLD_WARNING_1+10)
-			warning_message = "Danger! Low temperature detected."
+			warning_message = "Опасность! Обнаружена низкая температура."
 			return
 		if(temp >= BODYTEMP_HEAT_WARNING_1-27)
-			warning_message = "Danger! High temperature detected."
+			warning_message = "Опасность! Обнаружена высокая температура."
 			return
 		else
 			warning_message = null

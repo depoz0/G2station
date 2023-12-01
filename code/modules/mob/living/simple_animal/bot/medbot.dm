@@ -15,7 +15,7 @@
 
 /mob/living/simple_animal/bot/medbot
 	name = "\improper Medibot"
-	desc = "A little medical robot. He looks somewhat underwhelmed."
+	desc = "Маленький медицинский робот. Он выглядит немного озадаченным."
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "medibot0"
 	base_icon_state = "medibot"
@@ -33,7 +33,7 @@
 	data_hud_type = DATA_HUD_MEDICAL_ADVANCED
 	hackables = "health processor circuits"
 	path_image_color = "#DDDDFF"
-	possessed_message = "You are a medbot! Ensure good health among the crew to the best of your ability!"
+	possessed_message = "Вы - медбот! Обеспечьте здоровье экипажа в меру своих возможностей!"
 
 	automated_announcements = list(
 		MEDIBOT_VOICED_HOLD_ON = 'sound/voice/medbot/coming.ogg',
@@ -340,9 +340,9 @@
 	if(COOLDOWN_FINISHED(src, last_newpatient_speak))
 		COOLDOWN_START(src, last_newpatient_speak, MEDBOT_NEW_PATIENTSPEAK_DELAY)
 		var/list/messagevoice = list(
-			"Hey, [H.name]! Hold on, I'm coming." = 'sound/voice/medbot/coming.ogg',
-			"Wait [H.name]! I want to help!" = 'sound/voice/medbot/help.ogg',
-			"[H.name], you appear to be injured!" = 'sound/voice/medbot/injured.ogg',
+			"Эй, [H.name]! Подожди, я иду." = 'sound/voice/medbot/coming.ogg',
+			"Подожди [H.name]! Я хочу помочь!" = 'sound/voice/medbot/help.ogg',
+			"[H.name], вы кажется ранены!" = 'sound/voice/medbot/injured.ogg',
 		)
 		var/message = pick(messagevoice)
 		speak(message)
@@ -643,8 +643,8 @@
 			bot_reset()
 			tending = FALSE
 		else if(patient)
-			C.visible_message(span_danger("[src] is trying to tend the wounds of [patient]!"), \
-				span_userdanger("[src] is trying to tend your wounds!"))
+			C.visible_message(span_danger("[src] пытается залечить раны [patient]!"), \
+				span_userdanger("[src] пытается залечить ваши раны!"))
 
 			if(do_after(src, 2 SECONDS, patient)) //Slightly faster than default tend wounds, but does less HPS
 				if((get_dist(src, patient) <= 1) && (bot_mode_flags & BOT_MODE_ON) && assess_patient(patient))
@@ -659,8 +659,8 @@
 					else
 						patient.heal_damage_type((healies * 1), treatment_method) //don't need to check treatment_method since we know by this point that they were actually damaged.
 						log_combat(src, patient, "tended the wounds of", "internal tools", "([uppertext(treatment_method)])")
-					C.visible_message(span_notice("[src] tends the wounds of [patient]!"), \
-						"<span class='infoplain'>[span_green("[src] tends your wounds!")]</span>")
+					C.visible_message(span_notice("[src] лечит раны [patient]!"), \
+						"<span class='infoplain'>[span_green("[src] обрабатывает ваши раны!")]</span>")
 					ADD_TRAIT(patient,TRAIT_MEDIBOTCOMINGTHROUGH,tag)
 					addtimer(TRAIT_CALLBACK_REMOVE(patient, TRAIT_MEDIBOTCOMINGTHROUGH, tag), (30 SECONDS))
 				else

@@ -33,9 +33,10 @@
 	set hidden = TRUE
 	var/rulesurl = CONFIG_GET(string/rulesurl)
 	if(rulesurl)
-		if(tgui_alert(src, "В вашем браузере откроются правила.. Вы уверены?",, list("Да","Нет"))!="Да")
+//		if(tgui_alert(src, "В вашем браузере откроются правила.. Вы уверены?",, list("Да","Нет"))!="Да")
+		if(tgui_alert(src, "В данный момент на сервере отсутствуют правила.",, list("OK"))!="OK")
 			return
-		src << link(rulesurl)
+//		src << link(rulesurl)
 	else
 		to_chat(src, span_danger("URL-адрес правил не задан в конфигурации сервера."))
 	return

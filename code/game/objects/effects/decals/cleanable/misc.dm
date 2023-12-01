@@ -6,7 +6,7 @@
 	beauty = -50
 
 /obj/effect/decal/cleanable/ash
-	name = "ashes"
+	name = "пепел"
 	desc = "Ashes to ashes, dust to dust, and into space."
 	icon = 'icons/obj/debris.dmi'
 	icon_state = "ash"
@@ -24,7 +24,7 @@
 	return !istype(here_turf, /obj/structure/bodycontainer/crematorium) && ..()
 
 /obj/effect/decal/cleanable/ash/large
-	name = "large pile of ashes"
+	name = "большая куча пепла"
 	icon_state = "big_ash"
 	beauty = -100
 	decal_reagent = /datum/reagent/ash
@@ -60,8 +60,8 @@
 	desc = "Looks like they fell from the ceiling"
 
 /obj/effect/decal/cleanable/dirt
-	name = "dirt"
-	desc = "Someone should clean that up."
+	name = "грязь"
+	desc = "Кто-то должен прибрать это."
 	icon = 'icons/effects/dirt.dmi'
 	icon_state = "dirt-flat-0"
 	base_icon_state = "dirt"
@@ -90,8 +90,8 @@
 	return ..()
 
 /obj/effect/decal/cleanable/dirt/dust
-	name = "dust"
-	desc = "A thin layer of dust coating the floor."
+	name = "пыль"
+	desc = "Тонкий слой пыли покрывает пол."
 	icon_state = "dust"
 	base_icon_state = "dust"
 
@@ -155,8 +155,8 @@
 
 //Vomit (sorry)
 /obj/effect/decal/cleanable/vomit
-	name = "vomit"
-	desc = "Gosh, how unpleasant."
+	name = "рвота"
+	desc = "Боже, как неприятно."
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
@@ -273,8 +273,8 @@
 	color = "#2D2D2D"
 
 /obj/effect/decal/cleanable/insectguts
-	name = "insect guts"
-	desc = "One bug squashed. Four more will rise in its place."
+	name = "внутренности насекомого"
+	desc = "Один жук раздавлен. На его месте появится еще четыре."
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "xfloor1"
 	random_icon_states = list("xfloor1", "xfloor2", "xfloor3", "xfloor4", "xfloor5", "xfloor6", "xfloor7")
@@ -322,8 +322,8 @@
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SLUDGE, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 15)
 
 /obj/effect/decal/cleanable/ants
-	name = "space ants"
-	desc = "A small colony of space ants. They're normally used to the vacuum of space, so they can't climb too well."
+	name = "космические муравьи"
+	desc = "Небольшая колония космических муравьев. Они привыкли к космическому вакууму, поэтому не могут больше так хорошо передвигаться."
 	icon = 'icons/obj/debris.dmi'
 	icon_state = "ants"
 	beauty = -150

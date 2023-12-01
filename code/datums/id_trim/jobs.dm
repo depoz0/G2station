@@ -775,6 +775,7 @@
 		ACCESS_HOS,
 		)
 	job = /datum/job/prisoner
+	threat_modifier = 1 // I'm watching you
 
 /datum/id_trim/job/prisoner/one
 	trim_state = "trim_prisoner_1"
@@ -1181,7 +1182,7 @@
 	job = /datum/job/virologist
 
 /datum/id_trim/job/warden
-	assignment = "Смотритель"
+	assignment = "Надзиратель"
 	trim_state = "trim_warden"
 	department_color = COLOR_SECURITY_RED
 	subdepartment_color = COLOR_SECURITY_RED

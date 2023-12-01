@@ -215,9 +215,9 @@
 
 //Carpets
 /obj/item/stack/tile/carpet
-	name = "carpet"
+	name = "ковер"
 	singular_name = "carpet tile"
-	desc = "A piece of carpet. It is the same size as a floor tile."
+	desc = "Кусок ковра. Он такого же размера, как и напольная плитка."
 	icon_state = "tile-carpet"
 	inhand_icon_state = "tile-carpet"
 	turf_type = /turf/open/floor/carpet

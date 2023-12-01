@@ -4,10 +4,10 @@
 // using this solves the problem of having the APC in a wall yet also inside an area
 
 /obj/machinery/power/terminal
-	name = "terminal"
+	name = "распределительная коробка"
 	icon = 'icons/obj/pipes_n_cables/structures.dmi'
 	icon_state = "term"
-	desc = "It's an underfloor wiring terminal, used to draw power from the grid."
+	desc = "Это распределительная коробка для подпольной проводки, используемая для получения энергии из сети."
 	layer = WIRE_TERMINAL_LAYER //a bit above wires
 	var/obj/machinery/power/master = null
 
@@ -57,7 +57,7 @@
 		return
 
 	user.visible_message(span_notice("[user.name] dismantles the cable terminal from [master]."))
-	balloon_alert(user, "cutting the cables...")
+	balloon_alert(user, "перерезает кабели...")
 
 	playsound(src.loc, 'sound/items/deconstruct.ogg', 50, TRUE)
 	if(I.use_tool(src, user, 50))

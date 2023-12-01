@@ -236,8 +236,8 @@
 		set_basalt_light(src)
 
 /turf/open/floor/carpet
-	name = "carpet"
-	desc = "Soft velvet carpeting. Feels good between your toes."
+	name = "ковер"
+	desc = "Мягкое бархатное ковровое покрытие. Приятные ощущения под ногами."
 	icon = 'icons/turf/floors/carpet.dmi'
 	icon_state = "carpet-255"
 	base_icon_state = "carpet"

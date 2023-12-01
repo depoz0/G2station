@@ -309,8 +309,8 @@
 	// we'll try it with a 2 second do_after delay.
 	if(M != user && (get_turf(M) != get_turf(src)))
 		M.visible_message(span_warning("[user] starts buckling [M] to [src]!"),\
-			span_userdanger("[user] starts buckling you to [src]!"),\
-			span_hear("You hear metal clanking."))
+			span_userdanger("[user] начинает пристегивать вас к [src]!"),\
+			span_hear("Слышен металлический скрежет."))
 		if(!do_after(user, 2 SECONDS, M))
 			return FALSE
 
@@ -323,12 +323,12 @@
 	if(.)
 		if(M == user)
 			M.visible_message(span_notice("[M] buckles [M.p_them()]self to [src]."),\
-				span_notice("You buckle yourself to [src]."),\
-				span_hear("You hear metal clanking."))
+				span_notice("Вы пристегиваетесь к [src]."),\
+				span_hear("Слышен металлический скрежет."))
 		else
 			M.visible_message(span_warning("[user] buckles [M] to [src]!"),\
-				span_warning("[user] buckles you to [src]!"),\
-				span_hear("You hear metal clanking."))
+				span_warning("[user] пристегивает вас к [src]!"),\
+				span_hear("Слышен металлический скрежет."))
 /**
  * Handles a user unbuckling a mob from src and sends a visible_message
  *
@@ -345,12 +345,12 @@
 	if(M)
 		if(M != user)
 			M.visible_message(span_notice("[user] unbuckles [M] from [src]."),\
-				span_notice("[user] unbuckles you from [src]."),\
+				span_notice("[user] отстегивает вас от [src]."),\
 				span_hear("You hear metal clanking."))
 		else
 			M.visible_message(span_notice("[M] unbuckles [M.p_them()]self from [src]."),\
-				span_notice("You unbuckle yourself from [src]."),\
-				span_hear("You hear metal clanking."))
+				span_notice("Вы отстегиваетесь от [src]."),\
+				span_hear("Слышен металлический скрежет."))
 		add_fingerprint(user)
 		if(isliving(M.pulledby))
 			var/mob/living/L = M.pulledby
