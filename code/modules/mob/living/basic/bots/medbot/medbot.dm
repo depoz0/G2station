@@ -2,7 +2,7 @@
 
 /mob/living/basic/bot/medbot
 	name = "\improper Medibot"
-	desc = "A little medical robot. He looks somewhat underwhelmed."
+	desc = "Маленький медицинский робот. Он выглядит немного озадаченным."
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "medibot0"
 	base_icon_state = "medibot"
@@ -20,7 +20,7 @@
 	bot_type = MED_BOT
 	data_hud_type = DATA_HUD_MEDICAL_ADVANCED
 	hackables = "health processor circuits"
-	possessed_message = "You are a medbot! Ensure good health among the crew to the best of your ability!"
+	possessed_message = "Вы - медбот! Обеспечьте здоровье экипажа в меру своих возможностей!"
 
 	additional_access = /datum/id_trim/job/paramedic
 	announcement_type = /datum/action/cooldown/bot_announcement/medbot
