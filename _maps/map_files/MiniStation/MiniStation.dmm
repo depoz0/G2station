@@ -4925,6 +4925,9 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
 	},
+/obj/machinery/light/directional/west{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "fbb" = (
@@ -10140,6 +10143,7 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "kxE" = (
@@ -10987,7 +10991,7 @@
 	},
 /obj/machinery/button/door{
 	id = "Potty1";
-	name = "Bathroom Bolt Control";
+	name = "Затвор уборной";
 	normaldoorcontrol = 1;
 	pixel_x = -25;
 	pixel_y = -25;

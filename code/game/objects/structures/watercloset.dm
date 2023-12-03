@@ -1,6 +1,6 @@
 /obj/structure/toilet
-	name = "toilet"
-	desc = "The HT-451, a torque rotation-based, waste disposal unit for small matter. This one seems remarkably clean."
+	name = "туалет"
+	desc = "HT-451 - устройство для удаления мелких отходов с вращательным механизмом. Этот выглядит на удивление чистым."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "toilet00"
 	density = FALSE
@@ -275,10 +275,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	sound_file = 'sound/effects/quack.ogg'
 
 /obj/structure/sink
-	name = "sink"
+	name = "раковина"
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "sink"
-	desc = "A sink used for washing one's hands and face. Passively reclaims water over time."
+	desc = "Раковина, используемая для мытья рук и лица. Пассивно набирает воду с течением времени."
 	anchored = TRUE
 	layer = ABOVE_OBJ_LAYER
 	pixel_z = 1
@@ -347,14 +347,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 		to_chat(user, span_warning("The sink has no more contents left!"))
 		return
 	if(busy)
-		to_chat(user, span_warning("Someone's already washing here!"))
+		to_chat(user, span_warning("Здесь уже кто-то умывается!"))
 		return
 	var/selected_area = parse_zone(user.zone_selected)
 	var/washing_face = 0
 	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
 		washing_face = 1
-	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
-						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
+	user.visible_message(span_notice("[user] начинает умывать [user.p_their()] [washing_face ? "лицо" : "руки"]..."), \
+						span_notice("Вы начинаете умывать [washing_face ? "лицо" : "руки"]..."))
 	busy = TRUE
 
 	if(!do_after(user, 40, target = src))
@@ -370,17 +370,17 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	else if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
 		if(!human_user.wash_hands(CLEAN_WASH))
-			to_chat(user, span_warning("Your hands are covered by something!"))
+			to_chat(user, span_warning("Ваши руки чем-то покрыты!"))
 			return
 	else
 		user.wash(CLEAN_WASH)
 
-	user.visible_message(span_notice("[user] washes [user.p_their()] [washing_face ? "face" : "hands"] using [src]."), \
-						span_notice("You wash your [washing_face ? "face" : "hands"] using [src]."))
+	user.visible_message(span_notice("[user] умывает [user.p_their()] [washing_face ? "лицо" : "руки"] используя [src]."), \
+						span_notice("Вы умываете [washing_face ? "лицо" : "руки"] используя [src]."))
 
 /obj/structure/sink/attackby(obj/item/O, mob/living/user, params)
 	if(busy)
-		to_chat(user, span_warning("Someone's already washing here!"))
+		to_chat(user, span_warning("Здесь уже кто-то умывается!"))
 		return
 
 	if(is_reagent_container(O))

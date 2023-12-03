@@ -11,8 +11,8 @@
  */
 
 /obj/item/soap
-	name = "soap"
-	desc = "A cheap bar of soap. Doesn't smell."
+	name = "мыло"
+	desc = "Дешевый кусок мыла. Не пахнет."
 	gender = PLURAL
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "soap"
@@ -38,24 +38,24 @@
 /obj/item/soap/examine(mob/user)
 	. = ..()
 	var/max_uses = initial(uses)
-	var/msg = "It looks like it just came out of the package."
+	var/msg = "Выглядит так, как будто его только что достали из упаковки."
 	if(uses != max_uses)
 		var/percentage_left = uses / max_uses
 		switch(percentage_left)
 			if(0 to 0.15)
-				msg = "There's just a tiny bit left of what it used to be, you're not sure it'll last much longer."
+				msg = "От былого куска осталось совсем немного, и вы не уверены, на долго ли его хватит."
 			if(0.15 to 0.30)
-				msg = "It's dissolved quite a bit, but there's still some life to it."
+				msg = "Он немного уменьшился и его еще хватит на какое-то время."
 			if(0.30 to 0.50)
-				msg = "It's past its prime, but it's definitely still good."
+				msg = "Он уже повидал свои лучшие времена, но все еще хорош."
 			if(0.50 to 0.75)
-				msg = "It's started to get a little smaller than it used to be, but it'll definitely still last for a while."
+				msg = "Он стал немного меньше, чем раньше, но его точно хватит надолго."
 			else
-				msg = "It's seen some light use, but it's still pretty fresh."
+				msg = "Он был немного использован, но все еще довольно свежий."
 	. += span_notice("[msg]")
 
 /obj/item/soap/homemade
-	desc = "A homemade bar of soap. Smells of... well...."
+	desc = "Домашний брусок мыла. Пахнет... ну...."
 	grind_results = list(/datum/reagent/consumable/liquidgibs = 9, /datum/reagent/lye = 9)
 	icon_state = "soapgibs"
 	inhand_icon_state = "soapgibs"
@@ -63,7 +63,7 @@
 	cleanspeed = 3 SECONDS // faster than base soap to reward chemists for going to the effort
 
 /obj/item/soap/nanotrasen
-	desc = "A heavy duty bar of Nanotrasen brand soap. Smells of plasma."
+	desc = "Тяжеленный брусок мыла марки Нанотрасен. Пахнет плазмой."
 	grind_results = list(/datum/reagent/toxin/plasma = 10, /datum/reagent/lye = 10)
 	icon_state = "soapnt"
 	inhand_icon_state = "soapnt"
@@ -74,7 +74,7 @@
 /obj/item/soap/nanotrasen/cyborg
 
 /obj/item/soap/deluxe
-	desc = "A deluxe Waffle Co. brand bar of soap. Smells of high-class luxury."
+	desc = "Роскошный брусок мыла от бренда Waffle Co. Пахнет роскошью высокого класса."
 	grind_results = list(/datum/reagent/consumable/aloejuice = 10, /datum/reagent/lye = 10)
 	icon_state = "soapdeluxe"
 	inhand_icon_state = "soapdeluxe"
@@ -82,7 +82,7 @@
 	cleanspeed = 2 SECONDS //captain gets one of these
 
 /obj/item/soap/syndie
-	desc = "An untrustworthy bar of soap made of strong chemical agents that dissolve blood faster."
+	desc = "Не вызывающий доверия брусок мыла, изготовленный из сильных химических веществ, которые быстрее растворяют кровь."
 	grind_results = list(/datum/reagent/toxin/acid = 10, /datum/reagent/lye = 10)
 	icon_state = "soapsyndie"
 	inhand_icon_state = "soapsyndie"
@@ -90,8 +90,8 @@
 	cleanspeed = 0.5 SECONDS //faster than mops so it's useful for traitors who want to clean crime scenes
 
 /obj/item/soap/omega
-	name = "\improper Omega soap"
-	desc = "The most advanced soap known to mankind. The beginning of the end for germs."
+	name = "мыло Омега"
+	desc = "Самое совершенное мыло, известное человечеству. Это начало конца для микробов."
 	grind_results = list(/datum/reagent/consumable/potato_juice = 9, /datum/reagent/consumable/ethanol/lizardwine = 9, /datum/reagent/monkey_powder = 9, /datum/reagent/drug/krokodil = 9, /datum/reagent/toxin/acid/nitracid = 9, /datum/reagent/baldium = 9, /datum/reagent/consumable/ethanol/hooch = 9, /datum/reagent/bluespace = 9, /datum/reagent/drug/pumpup = 9, /datum/reagent/consumable/space_cola = 9)
 	icon_state = "soapomega"
 	inhand_icon_state = "soapomega"
@@ -100,13 +100,13 @@
 	uses = 800 //In the Greek numeric system, Omega has a value of 800
 
 /obj/item/soap/omega/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] is using [src] to scrub themselves from the timeline! It looks like [user.p_theyre()] trying to commit suicide!"))
+	user.visible_message(span_suicide("[user] использует [src] чтобы удалить себя с временной шкалы! Это похоже на попытку [user.p_theyre()] совершить самоубийство!"))
 	new /obj/structure/chrono_field(user.loc, user)
 	return MANUAL_SUICIDE
 
 /obj/item/paper/fluff/stations/soap
-	name = "ancient janitorial poem"
-	desc = "An old paper that has passed many hands."
+	name = "древняя поэма о дворниках"
+	desc = "Старая бумага, прошедшая через множество рук."
 	default_raw_text = "<B>The legend of the omega soap</B><BR><BR> Essence of <B>potato</B>. Juice, not grind.<BR><BR> A <B>lizard's</B> tail, turned into <B>wine</B>.<BR><BR> <B>powder of monkey</B>, to help the workload.<BR><BR> Some <B>Krokodil</B>, because meth would explode.<BR><BR> <B>Nitric acid</B> and <B>Baldium</B>, for organic dissolving.<BR><BR> A cup filled with <B>Hooch</B>, for sinful absolving<BR><BR> Some <B>Bluespace Dust</B>, for removal of stains.<BR><BR> A syringe full of <B>Pump-up</B>, it's security's bane.<BR><BR> Add a can of <B>Space Cola</B>, because we've been paid.<BR><BR> <B>Heat</B> as hot as you can, let the soap be your blade.<BR><BR> <B>Ten units of each reagent create a soap that could topple all others.</B>"
 
 /obj/item/soap/suicide_act(mob/living/user)
@@ -139,11 +139,11 @@
 		noUses(user)
 
 /obj/item/soap/proc/noUses(mob/user)
-	to_chat(user, span_warning("[src] crumbles into tiny bits!"))
+	to_chat(user, span_warning("[src] распадается на мелкие кусочки!"))
 	qdel(src)
 
 /obj/item/soap/nanotrasen/cyborg/noUses(mob/user)
-	to_chat(user, span_warning("The soap has ran out of chemicals"))
+	to_chat(user, span_warning("В мыле закончились химикаты"))
 
 /obj/item/soap/nanotrasen/cyborg/afterattack(atom/target, mob/user, proximity)
 	. = isitem(target) ? AFTERATTACK_PROCESSED_ITEM : NONE

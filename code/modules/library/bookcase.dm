@@ -3,7 +3,7 @@
 #define BOOKCASE_FINISHED 2
 
 /obj/structure/bookcase
-	name = "bookcase"
+	name = "книжный шкаф"
 	icon = 'icons/obj/service/library.dmi'
 	icon_state = "bookempty"
 	desc = "A great place for storing knowledge."

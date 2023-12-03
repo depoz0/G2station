@@ -9,8 +9,8 @@ LINEN BINS
 #define BEDSHEET_DOUBLE "double"
 
 /obj/item/bedsheet
-	name = "bedsheet"
-	desc = "A surprisingly soft linen bedsheet."
+	name = "постельное белье"
+	desc = "Удивительно мягкое льняное постельное белье."
 	icon = 'icons/obj/bedsheets.dmi'
 	lefthand_file = 'icons/mob/inhands/items/bedsheet_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/bedsheet_righthand.dmi'
@@ -46,14 +46,14 @@ LINEN BINS
 
 /obj/item/bedsheet/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	if(istype(held_item) && (held_item.tool_behaviour == TOOL_WIRECUTTER || held_item.get_sharpness()))
-		context[SCREENTIP_CONTEXT_LMB] = "Shred into cloth"
+		context[SCREENTIP_CONTEXT_LMB] = "Нарезать на куски ткани"
 
-	context[SCREENTIP_CONTEXT_ALT_LMB] = "Rotate"
+	context[SCREENTIP_CONTEXT_ALT_LMB] = "Повернуть"
 	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/item/bedsheet/add_item_context(datum/source, list/context, mob/living/target)
 	if(isliving(target) && target.body_position == LYING_DOWN)
-		context[SCREENTIP_CONTEXT_RMB] = "Cover"
+		context[SCREENTIP_CONTEXT_RMB] = "Накрыть"
 		return CONTEXTUAL_SCREENTIP_SET
 
 	return NONE
@@ -67,7 +67,7 @@ LINEN BINS
 		return ..()
 
 	forceMove(get_turf(target))
-	balloon_alert(user, "covered")
+	balloon_alert(user, "накрыт")
 	coverup(target)
 	add_fingerprint(user)
 
@@ -89,7 +89,7 @@ LINEN BINS
 	SET_PLANE_IMPLICIT(src, GAME_PLANE_UPPER)
 	pixel_x = 0
 	pixel_y = 0
-	balloon_alert(sleeper, "covered")
+	balloon_alert(sleeper, "накрыт")
 	var/angle = sleeper.lying_prev
 	dir = angle2dir(angle + 180) // 180 flips it to be the same direction as the mob
 

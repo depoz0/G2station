@@ -27,7 +27,7 @@ export const CrewManifest = (props) => {
             title={
               dept +
               (dept !== 'Misc'
-                ? ` (${positions[dept].open} positions open)`
+                ? ` (${positions[dept].open} открытые вакансии)`
                 : '')
             }>
             <Table>

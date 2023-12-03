@@ -65,8 +65,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 ))
 
 /obj/item/book/bible
-	name = "bible"
-	desc = "Apply to head repeatedly."
+	name = "библия"
+	desc = "Дайте по голове несколько раз."
 	icon = 'icons/obj/storage/book.dmi'
 	icon_state = "bible"
 	worn_icon_state = "bible"

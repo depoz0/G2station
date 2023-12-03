@@ -274,13 +274,13 @@
 ///Syndicate Listening Post
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate
-	name = "Syndicate Bioweapon Scientist"
+	name = "Ученый по биооружию из Синдиката"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a syndicate science technician"
-	you_are_text = "You are a syndicate science technician, employed in a top secret research facility developing biological weapons."
-	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Continue your research as best you can, and try to keep a low profile."
-	important_text = "The base is rigged with explosives, DO NOT abandon it or let it fall into enemy hands!"
+	you_are_text = "Вы - научный техник Синдиката, работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие."
+	flavour_text = "К сожалению ваш ненавистный враг Нанотрасен, начал добычу полезных ископаемых в этом секторе. Продолжайте исследования как можно активнее и старайтесь держаться в тени."
+	important_text = "База напичкана взрывчаткой, НЕ покидайте ее и не позволяйте ей попасть в руки врага!"
 	outfit = /datum/outfit/lavaland_syndicate
 	spawner_job_path = /datum/job/lavaland_syndicate
 
@@ -289,10 +289,10 @@
 	new_spawn.grant_language(/datum/language/codespeak, source = LANGUAGE_MIND)
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/comms
-	name = "Syndicate Comms Agent"
+	name = "Связной агент синдиката"
 	prompt_name = "a syndicate comms agent"
-	you_are_text = "You are a syndicate comms agent, employed in a top secret research facility developing biological weapons."
-	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Monitor enemy activity as best you can, and try to keep a low profile. Use the communication equipment to provide support to any field agents, and sow disinformation to throw Nanotrasen off your trail. Do not let the base fall into enemy hands!"
+	you_are_text = "Вы - связной агент синдиката, работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие."
+	flavour_text = "К сожалению ваш ненавистный враг Нанотрасен, начал добычу полезных ископаемых в этом секторе. Как можно лучше отслеживайте активность врага и старайтесь держаться в тени. Используйте средства связи для поддержки полевых агентов и сейте дезинформацию, чтобы сбить Нанотрасена со следа. Не дайте базе попасть в руки врага!"
 	important_text = "НЕ покидайте базу."
 	outfit = /datum/outfit/lavaland_syndicate/comms
 
