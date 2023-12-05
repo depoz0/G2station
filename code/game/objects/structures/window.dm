@@ -584,8 +584,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/spawner, 0)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/unanchored/spawner, 0)
 
 /obj/structure/window/plasma
-	name = "plasma window"
-	desc = "A window made out of a plasma-silicate alloy. It looks insanely tough to break and burn through."
+	name = "плазменное окно"
+	desc = "Окно из плазменно-силикатного сплава. Оно выглядит невероятно прочным и врятли его можно разбить или прожечь."
 	icon_state = "plasmawindow"
 	reinf = FALSE
 	heat_resistance = 25000
@@ -613,8 +613,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/plasma/spawner, 0)
 	anchored = FALSE
 
 /obj/structure/window/reinforced/plasma
-	name = "reinforced plasma window"
-	desc = "A window made out of a plasma-silicate alloy and a rod matrix. It looks hopelessly tough to break and is most likely nigh fireproof."
+	name = "армированное плазменное окно"
+	desc = "Окно из плазменно-силикатного сплава и стержневой матрицы. Оно выглядит невероятно прочным и скорее всего обладает высокой огнестойкостью."
 	icon_state = "plasmarwindow"
 	reinf = TRUE
 	heat_resistance = 50000

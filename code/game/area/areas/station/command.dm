@@ -8,7 +8,7 @@
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
 /area/station/command/bridge
-	name = "\improper Bridge"
+	name = "Мостик"
 	icon_state = "bridge"
 
 /area/station/command/meeting_room

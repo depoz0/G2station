@@ -9,16 +9,16 @@
 	icon_state = "cargo_delivery"
 
 /area/station/cargo/warehouse
-	name = "\improper Warehouse"
+	name = "Склад"
 	icon_state = "cargo_warehouse"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
 /area/station/cargo/drone_bay
-	name = "\improper Drone Bay"
+	name = "Отсек дронов"
 	icon_state = "cargo_drone"
 
 /area/station/cargo/boutique
-	name = "\improper Boutique"
+	name = "Бутик"
 	icon_state = "cargo_delivery"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
@@ -26,11 +26,11 @@
 	name = "\improper Upper Warehouse"
 
 /area/station/cargo/office
-	name = "\improper Cargo Office"
+	name = "Офис доставки грузов"
 	icon_state = "cargo_office"
 
 /area/station/cargo/storage
-	name = "\improper Cargo Bay"
+	name = "Грузовой отсек"
 	icon_state = "cargo_bay"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 

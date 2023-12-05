@@ -3,7 +3,7 @@
 //Multi area shuttles are a thing now, use subtypes! ~ninjanomnom
 
 /area/shuttle
-	name = "Shuttle"
+	name = "Шаттл"
 	requires_power = FALSE
 	static_lighting = TRUE
 	has_gravity = STANDARD_GRAVITY
@@ -57,7 +57,7 @@
 ////////////////////////////Pirate Shuttle////////////////////////////
 
 /area/shuttle/pirate
-	name = "Pirate Shuttle"
+	name = "Пиратский шаттл"
 	requires_power = TRUE
 
 /area/shuttle/pirate/flying_dutchman
@@ -76,7 +76,7 @@
 ////////////////////////////White Ship////////////////////////////
 
 /area/shuttle/abandoned
-	name = "Abandoned Ship"
+	name = "Заброшенный корабль"
 	requires_power = TRUE
 	area_limited_icon_smoothing = /area/shuttle/abandoned
 

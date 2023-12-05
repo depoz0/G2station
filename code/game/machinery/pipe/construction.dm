@@ -8,8 +8,8 @@ Buildable meters
 //...otherwise construction will stop working
 
 /obj/item/pipe
-	name = "pipe"
-	desc = "A pipe."
+	name = "труба"
+	desc = "Tруба."
 	var/pipe_type
 	var/pipename
 	force = 7
@@ -234,7 +234,7 @@ Buildable meters
 			// We have a conflict!
 			if (length(potentially_conflicting_machines) != 1 || !try_smart_reconfiguration(machine, our_init_dirs, user))
 				// No solutions found
-				to_chat(user, span_warning("There is already a pipe at that location!"))
+				to_chat(user, span_warning("В этом месте уже есть труба!"))
 				return TRUE
 	// no conflicts found
 

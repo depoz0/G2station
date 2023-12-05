@@ -17,12 +17,12 @@
 	airlock_wires = /datum/wires/airlock/engineering
 
 /area/station/tcommsat/computer
-	name = "\improper Telecomms Control Room"
+	name = "Диспетчерская телекоммуникаций"
 	icon_state = "tcomsatcomp"
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/station/tcommsat/server
-	name = "\improper Telecomms Server Room"
+	name = "Серверная комната телекоммуникаций"
 	icon_state = "tcomsatcham"
 
 /area/station/tcommsat/server/upper

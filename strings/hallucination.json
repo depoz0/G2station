@@ -1,15 +1,15 @@
 {
 	"suspicion": [
-		"@pick(add_name)i'm watching you...",
-		"@pick(add_name)i know what you're doing",
-		"@pick(add_name)what are you hiding?",
+		"@pick(add_name)я слежу за тобой...",
+		"@pick(add_name)я знаю что ты делаешь.",
+		"@pick(add_name)что ты скрываешь?",
 		"I saw that"
 	],
 
 	"conversation": [
-		"But...",
-		"Hmm",
-		"Hold on",
+		"Но...",
+		"Хмм",
+		"Подождите",
 		"I doubt it",
 		"Nah",
 		"No",
@@ -24,16 +24,16 @@
 
 	"greetings": [
 		"",
-		"Hello ",
-		"Hey, ",
-		"Hi ",
-		"It's ",
-		"Wait, "
+		"Привет ",
+		"Эй, ",
+		"Здравствуйте ",
+		"Это ",
+		"Подожди, "
 	],
 
 	"getout": [
-		"@pick(add_name)fuck off",
-		"@pick(add_name)get out!",
+		"@pick(add_name)отвали",
+		"@pick(add_name)убирайся!",
 		"@pick(add_name)get out",
 		"@pick(add_name)go away",
 		"@pick(add_name)out!",
@@ -51,9 +51,9 @@
 	],
 
 	"didyouhearthat": [
-		"Did you hear that?",
-		"Did you see that?",
-		"What was that?"
+		"Ты слышал это?",
+		"Ты это видел?",
+		"Что это было?"
 	],
 
 	"add_name": [
@@ -102,85 +102,77 @@
 	],
 
 	"infection_advice": [
-		"@pick(add_name)be careful",
-		"@pick(add_name)don't get close",
-		"@pick(add_name)help me",
-		"@pick(add_name)kill me",
-		"@pick(add_name)stay away"
+		"@pick(add_name)будьте осторожны",
+		"@pick(add_name)не подходите близко",
+		"@pick(add_name)помогите мне",
+		"@pick(add_name)убейте меня",
+		"@pick(add_name)держитесь подальше"
 	],
 
 	"people": [
 		"%TARGETNAME%",
 		"AI",
 		"Borg",
-		"Captain",
-		"Ce",
-		"Cmo",
-		"Geneticist",
-		"Hop",
-		"Hos",
-		"Janitor",
-		"Qm",
-		"Rd",
-		"Robo",
-		"Viro"
+		"Капитан",
+		"Главный инженер",
+		"Главный врач",
+		"Генетик",
+		"Глава персонала",
+		"Глава службы безопасности",
+		"Уборщик",
+		"Квартирмейстер",
+		"Учёный",
+		"Робототехник",
+		"Вирусолог"
 	],
 
 	"accusations": [
-		"a changeling",
-		"a cultist",
-		"a gang leader",
-		"a heretic",
-		"a ling",
-		"a rev",
-		"a revhead",
-		"a tator",
-		"a traitor",
-		"a wizard",
-		"bad",
-		"cult",
-		"dead",
-		"mindswapped",
-		"rogue",
-		"the traitor",
-		"the wizard"
+		"культист",
+		"главарь банды",
+		"еретик",
+		"рукожоп",
+		"предатель",
+		"волшебник",
+		"плохой",
+		"мертвый",
+		"псих",
+		"мошенник",
+		"изменник",
+		"клоун"
 	],
 
 	"threat": [
 		"%TARGETNAME%",
-		"Blob",
+		"Блоб",
 		"Blue APC",
 		"Changeling",
-		"Cult",
-		"Harm",
-		"Help",
-		"Heretics",
-		"Heretic",
+		"Культ",
+		"Помогите",
+		"Еретики",
+		"Еретик",
 		"I hear flashing",
 		"Ling",
 		"Ops",
 		"Revenant",
-		"Spiders",
-		"Traitor",
-		"Wizard",
+		"Пауки",
+		"Предатель",
+		"Волшебник",
 		"Xenos"
 	],
 
 	"location": [
-		"@pick(sublocation) maint",
-		"atmos",
-		"botany",
-		"captains office",
-		"cargo",
-		"engineering",
-		"hops office",
-		"maint",
-		"medbay",
-		"morgue",
-		"science",
-		"sec",
-		"security",
-		"space near @pick(sublocation)",
+		"@pick(sublocation) техобслуживание",
+		"атмос",
+		"ботанике",
+		"кабинете капитана",
+		"грузовом отсеке",
+		"инженерном отсеке",
+		"тунелях техобслуживания",
+		"больнице",
+		"морге",
+		"исследовательском центре",
+		"комнате охраны",
+		"космосе около @pick(sublocation)",
 		"the ai sat",
 		"the armory",
 		"the bridge",

@@ -5,7 +5,7 @@ Unused icons for new areas are "awaycontent1" ~ "awaycontent30"
 
 // Away Missions
 /area/awaymission
-	name = "Strange Location"
+	name = "Странное место"
 	icon = 'icons/area/areas_away_missions.dmi'
 	icon_state = "away"
 	has_gravity = STANDARD_GRAVITY
@@ -14,7 +14,7 @@ Unused icons for new areas are "awaycontent1" ~ "awaycontent30"
 	area_flags = UNIQUE_AREA
 
 /area/awaymission/beach
-	name = "Beach"
+	name = "Пляж"
 	icon_state = "away"
 	static_lighting = FALSE
 	base_lighting_alpha = 255
@@ -24,7 +24,7 @@ Unused icons for new areas are "awaycontent1" ~ "awaycontent30"
 	ambientsounds = list('sound/ambience/shore.ogg', 'sound/ambience/seag1.ogg','sound/ambience/seag2.ogg','sound/ambience/seag2.ogg','sound/ambience/ambiodd.ogg','sound/ambience/ambinice.ogg')
 
 /area/awaymission/errorroom
-	name = "Super Secret Room"
+	name = "Суперсекретная комната"
 	static_lighting = FALSE
 	base_lighting_alpha = 255
 	area_flags = UNIQUE_AREA|NOTELEPORT

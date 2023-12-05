@@ -1,18 +1,18 @@
 // When adding a new area to the security areas, make sure to add it to /datum/bounty/item/security/paperwork as well!
 
 /area/station/security
-	name = "Security"
+	name = "Охрана"
 	icon_state = "security"
 	ambience_index = AMBIENCE_DANGER
 	airlock_wires = /datum/wires/airlock/security
 	sound_environment = SOUND_AREA_STANDARD_STATION
 
 /area/station/security/office
-	name = "\improper Security Office"
+	name = "Офис службы безопасности"
 	icon_state = "security"
 
 /area/station/security/breakroom
-	name = "\improper Security Break Room"
+	name = "Комната отдыха службы безопасности"
 	icon_state = "brig"
 
 /area/station/security/tram
@@ -20,7 +20,7 @@
 	icon_state = "security"
 
 /area/station/security/lockers
-	name = "\improper Security Locker Room"
+	name = "Раздевалка службы безопасности"
 	icon_state = "securitylockerroom"
 
 /area/station/security/brig
@@ -44,12 +44,12 @@
 	icon_state = "brigentry"
 
 /area/station/security/courtroom
-	name = "\improper Courtroom"
+	name = "Зал суда"
 	icon_state = "courtroom"
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
 /area/station/security/courtroom/holding
-	name = "\improper Courtroom Prisoner Holding Room"
+	name = "Комната содержания заключенных"
 
 /area/station/security/processing
 	name = "\improper Labor Shuttle Dock"
@@ -71,12 +71,12 @@
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
 /area/station/security/evidence
-	name = "Evidence Storage"
+	name = "Хранилище вещественных доказательств"
 	icon_state = "evidence"
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/security/detectives_office
-	name = "\improper Detective's Office"
+	name = "Офис детектива"
 	icon_state = "detective"
 	ambientsounds = list(
 		'sound/ambience/ambidet1.ogg',
@@ -179,18 +179,18 @@
 
 
 /area/station/security/prison
-	name = "\improper Prison Wing"
+	name = "Тюремное крыло"
 	icon_state = "sec_prison"
 	area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED | PERSISTENT_ENGRAVINGS
 
 //Rad proof
 /area/station/security/prison/toilet
-	name = "\improper Prison Toilet"
+	name = "Тюремный туалет"
 	icon_state = "sec_prison_safe"
 
 // Rad proof
 /area/station/security/prison/safe
-	name = "\improper Prison Wing Cells"
+	name = "Камеры тюремного крыла"
 	icon_state = "sec_prison_safe"
 
 /area/station/security/prison/upper
@@ -214,13 +214,13 @@
 	icon_state = "prison_work"
 
 /area/station/security/prison/shower
-	name = "\improper Prison Shower"
+	name = "Тюремный душ"
 	icon_state = "prison_shower"
 
 /area/station/security/prison/workout
-	name = "\improper Prison Gym"
+	name = "Тюремный тренажерный зал"
 	icon_state = "prison_workout"
 
 /area/station/security/prison/garden
-	name = "\improper Prison Garden"
+	name = "Тюремный сад"
 	icon_state = "prison_garden"

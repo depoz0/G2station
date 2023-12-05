@@ -1,6 +1,6 @@
 /obj/item/clothing/head/cone
-	desc = "This cone is trying to warn you of something!"
-	name = "warning cone"
+	desc = "Этот конус пытается вас о чем-то предупредить!"
+	name = "предупреждающий конус"
 	icon = 'icons/obj/service/janitor.dmi'
 	worn_icon = 'icons/mob/clothing/head/utility.dmi'
 	icon_state = "cone"
@@ -18,5 +18,3 @@
 	. = ..()
 	if(!isinhands)
 		. += emissive_appearance(icon_file, "[icon_state]-emissive", src, alpha = src.alpha)
-
-

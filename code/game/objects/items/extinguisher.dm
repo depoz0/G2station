@@ -1,6 +1,6 @@
 /obj/item/extinguisher
-	name = "fire extinguisher"
-	desc = "A traditional red fire extinguisher."
+	name = "огнетушитель"
+	desc = "Традиционный красный огнетушитель."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "fire_extinguisher0"
 	worn_icon_state = "fire_extinguisher"
@@ -56,8 +56,8 @@
 	starting_water = FALSE
 
 /obj/item/extinguisher/mini
-	name = "pocket fire extinguisher"
-	desc = "A light and compact fibreglass-framed model fire extinguisher."
+	name = "карманный огнетушитель"
+	desc = "Легкая и компактная модель огнетушителя в стекловолоконном корпусе."
 	icon_state = "miniFE0"
 	worn_icon_state = "miniFE"
 	inhand_icon_state = "miniFE"
@@ -75,8 +75,8 @@
 	starting_water = FALSE
 
 /obj/item/extinguisher/crafted
-	name = "Improvised cooling spray"
-	desc = "Spraycan turned coolant dispenser. Can be sprayed on containers to cool them. Refill using water."
+	name = "Самодельный охлаждающий распылитель"
+	desc = "Распылитель охлаждающей жидкости. Можно распылять на контейнеры для их охлаждения. Заправляйте водой."
 	icon_state = "coolant0"
 	worn_icon_state = "miniFE"
 	inhand_icon_state = "miniFE"
@@ -113,8 +113,8 @@
 		create_reagents(max_water, AMOUNT_VISIBLE)
 
 /obj/item/extinguisher/advanced
-	name = "advanced fire extinguisher"
-	desc = "Used to stop thermonuclear fires from spreading inside your engine."
+	name = "передовой огнетушитель"
+	desc = "Используется для предотвращения распространения термоядерного пожара внутри двигателя."
 	icon_state = "foam_extinguisher0"
 	worn_icon_state = "foam_extinguisher"
 	inhand_icon_state = "foam_extinguisher"
@@ -169,7 +169,7 @@
 /obj/item/extinguisher/proc/AttemptRefill(atom/target, mob/user)
 	if(istype(target, tanktype) && target.Adjacent(user))
 		if(reagents.total_volume == reagents.maximum_volume)
-			balloon_alert(user, "already full!")
+			balloon_alert(user, "уже заполнен!")
 			return TRUE
 		var/obj/structure/reagent_dispensers/W = target //will it work?
 		var/transferred = W.reagents.trans_to(src, max_water, transferred_by = user)
@@ -200,7 +200,7 @@
 
 
 		if (src.reagents.total_volume < 1)
-			balloon_alert(user, "it's empty!")
+			balloon_alert(user, "он пустой!")
 			return .
 
 		if (world.time < src.last_use + 12)
