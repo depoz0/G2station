@@ -1945,7 +1945,6 @@
 /turf/open/floor/iron/dark,
 /area/station/science/genetics)
 "bSL" = (
-/obj/effect/spawner/random/structure/crate_empty,
 /obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating,
 /area/station/maintenance/central)
@@ -7731,7 +7730,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "hYv" = (
-/obj/structure/closet/crate/maint,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
@@ -14706,7 +14704,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/spawner/random/structure/crate_empty,
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
 /obj/effect/spawner/random/engineering/tool,
@@ -16592,7 +16589,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
 "rAh" = (
-/obj/effect/spawner/random/structure/crate_empty,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/upper)
@@ -18249,7 +18245,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "tuY" = (
-/obj/effect/spawner/random/structure/crate_empty,
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
@@ -20724,12 +20719,6 @@
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/visible,
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"weO" = (
-/obj/effect/turf_decal/bot,
-/obj/effect/spawner/random/structure/crate_empty,
-/obj/effect/spawner/random/maintenance,
-/turf/open/floor/iron,
-/area/station/cargo)
 "weR" = (
 /obj/docking_port/stationary/mining_home/common,
 /turf/open/space/basic,
@@ -50348,7 +50337,7 @@ gXB
 hZm
 pfz
 wfw
-weO
+wfw
 cLH
 sXT
 auF
