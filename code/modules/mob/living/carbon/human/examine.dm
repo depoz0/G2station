@@ -203,16 +203,6 @@
 			else
 				msg += "<B>серьезные [damage_desc[BURN]]!</B>\n"
 
-		temp = getCloneLoss()
-		if(temp)
-			if(temp < 25)
-				msg += "незначительные [damage_desc[CLONE]].\n"
-			else if(temp < 50)
-				msg += "<b>средние</b> [damage_desc[CLONE]]!\n"
-			else
-				msg += "<b>серьезные [damage_desc[CLONE]]!</b>\n"
-
-
 	if(has_status_effect(/datum/status_effect/fire_handler/fire_stacks))
 		msg += "покрыто чем-то легковоспламеняющимся.\n"
 	if(has_status_effect(/datum/status_effect/fire_handler/wet_stacks))
