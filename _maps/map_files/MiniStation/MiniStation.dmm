@@ -3227,14 +3227,6 @@
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/circuit,
 /area/station/tcommsat/server)
-"drl" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/machinery/firealarm/directional/north,
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "drp" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/item/target/clown,
@@ -52927,7 +52919,7 @@ hGc
 vKJ
 oLG
 hGc
-drl
+rLL
 fOk
 lVI
 vPr

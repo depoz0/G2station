@@ -227,7 +227,7 @@
 					carbon_owner.mind.adjust_experience(/datum/skill/fitness, seconds_between_ticks * sleep_quality * SLEEP_QUALITY_WORKOUT_MULTIPLER)
 					carbon_owner.adjust_timed_status_effect(-1 * seconds_between_ticks * sleep_quality * SLEEP_QUALITY_WORKOUT_MULTIPLER, /datum/status_effect/exercised)
 					if(prob(2))
-						to_chat(carbon_owner, span_notice("You feel your fitness improving!"))
+						to_chat(carbon_owner, span_notice("Вы чувствуете, как улучшается ваша физическая форма!"))
 
 			if(health_ratio > 0.8) // only heals minor physical damage
 				need_mob_update += owner.adjustBruteLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
@@ -247,8 +247,8 @@
 		owner.emote("snore")
 
 /atom/movable/screen/alert/status_effect/asleep
-	name = "Asleep"
-	desc = "You've fallen asleep. Wait a bit and you should wake up. Unless you don't, considering how helpless you are."
+	name = "Сон"
+	desc = "Вы заснули. Подождите немного и вы проснетесь. Если конечно проснетесь, учитывая насколько вы беспомощны."
 	icon_state = "asleep"
 
 //STASIS
@@ -301,7 +301,7 @@
 
 /atom/movable/screen/alert/status_effect/stasis
 	name = "Stasis"
-	desc = "Your biological functions have halted. You could live forever this way, but it's pretty boring."
+	desc = "Ваши биологические функции остановлены. Так можно жить вечно, но это довольно скучно."
 	icon_state = "stasis"
 
 /datum/status_effect/his_wrath //does minor damage over time unless holding His Grace
@@ -539,7 +539,7 @@
 	. = ..()
 	owner.add_traits(list(TRAIT_PACIFISM, TRAIT_MUTE), CLOTHING_TRAIT)
 	owner.add_mood_event(type, /datum/mood_event/gondola)
-	to_chat(owner, span_notice("You suddenly feel at peace and feel no need to make any sudden or rash actions..."))
+	to_chat(owner, span_notice("Вы внезапно ощущаете покой и не чувствуете необходимости совершать какие-либо резкие или необдуманные действия..."))
 
 /datum/status_effect/gonbola_pacify/on_remove()
 	owner.remove_traits(list(TRAIT_PACIFISM, TRAIT_MUTE), CLOTHING_TRAIT)
@@ -555,8 +555,8 @@
 	alert_type = /atom/movable/screen/alert/status_effect/trance
 
 /atom/movable/screen/alert/status_effect/trance
-	name = "Trance"
-	desc = "Everything feels so distant, and you can feel your thoughts forming loops inside your head..."
+	name = "Транс"
+	desc = "Все кажется таким далеким и вы чувствуете как ваши мысли зацикливаются в голове..."
 	icon_state = "high"
 
 /datum/status_effect/trance/tick(seconds_between_ticks)
@@ -570,8 +570,8 @@
 	RegisterSignal(owner, COMSIG_MOVABLE_HEAR, PROC_REF(hypnotize))
 	ADD_TRAIT(owner, TRAIT_MUTE, STATUS_EFFECT_TRAIT)
 	owner.add_client_colour(/datum/client_colour/monochrome/trance)
-	owner.visible_message("[stun ? span_warning("[owner] stands still as [owner.p_their()] eyes seem to focus on a distant point.") : ""]", \
-	span_warning(pick("You feel your thoughts slow down...", "You suddenly feel extremely dizzy...", "You feel like you're in the middle of a dream...","You feel incredibly relaxed...")))
+	owner.visible_message("[stun ? span_warning("[owner] стоит неподвижно, а глаза [owner.p_their()] словно сфокусировались на далекой точке.") : ""]", \
+	span_warning(pick("Вы чувствуете как ваши мысли замедляются...", "У вас вдруг сильно закружилась голова...", "Вы чувствуете себя как во сне...","Вы чувствуете себя невероятно расслабленным...")))
 	return TRUE
 
 /datum/status_effect/trance/on_creation(mob/living/new_owner, _duration, _stun = TRUE)
@@ -584,7 +584,7 @@
 	REMOVE_TRAIT(owner, TRAIT_MUTE, STATUS_EFFECT_TRAIT)
 	owner.remove_status_effect(/datum/status_effect/dizziness)
 	owner.remove_client_colour(/datum/client_colour/monochrome/trance)
-	to_chat(owner, span_warning("You snap out of your trance!"))
+	to_chat(owner, span_warning("Вы выходите из транса!"))
 
 /datum/status_effect/trance/get_examine_text()
 	return span_warning("[owner.p_They()] seem[owner.p_s()] slow and unfocused.")
@@ -599,8 +599,8 @@
 	var/mob/living/carbon/C = owner
 	C.cure_trauma_type(/datum/brain_trauma/hypnosis, TRAUMA_RESILIENCE_SURGERY) //clear previous hypnosis
 	// The brain trauma itself does its own set of logging, but this is the only place the source of the hypnosis phrase can be found.
-	hearing_speaker.log_message("hypnotised [key_name(C)] with the phrase '[hearing_args[HEARING_RAW_MESSAGE]]'", LOG_ATTACK, color="red")
-	C.log_message("has been hypnotised by the phrase '[hearing_args[HEARING_RAW_MESSAGE]]' spoken by [key_name(hearing_speaker)]", LOG_VICTIM, color="orange", log_globally = FALSE)
+	hearing_speaker.log_message("загипнотизировал [key_name(C)] фразой '[hearing_args[HEARING_RAW_MESSAGE]]'", LOG_ATTACK, color="red")
+	C.log_message("был загипнотизирован фразой '[hearing_args[HEARING_RAW_MESSAGE]]' произнесенное [key_name(hearing_speaker)]", LOG_VICTIM, color="orange", log_globally = FALSE)
 	addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living/carbon, gain_trauma), /datum/brain_trauma/hypnosis, TRAUMA_RESILIENCE_SURGERY, hearing_args[HEARING_RAW_MESSAGE]), 10)
 	addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living, Stun), 60, TRUE, TRUE), 15) //Take some time to think about it
 	qdel(src)
@@ -618,13 +618,13 @@
 	switch(rand(1,5))
 		if(1)
 			if((owner.mobility_flags & MOBILITY_MOVE) && isturf(owner.loc))
-				to_chat(owner, span_warning("Your leg spasms!"))
+				to_chat(owner, span_warning("У вас судороги в ноге!"))
 				step(owner, pick(GLOB.cardinals))
 		if(2)
 			var/obj/item/held_item = owner.get_active_held_item()
 			if(!held_item)
 				return
-			to_chat(owner, span_warning("Your fingers spasm!"))
+			to_chat(owner, span_warning("Ваши пальцы сводит судорогой!"))
 			owner.log_message("used [held_item] due to a Muscle Spasm", LOG_ATTACK)
 			held_item.attack_self(owner)
 		if(3)
@@ -638,13 +638,13 @@
 			for(var/mob/living/nearby_mobs in oview(owner, range))
 				targets += nearby_mobs
 			if(LAZYLEN(targets))
-				to_chat(owner, span_warning("Your arm spasms!"))
+				to_chat(owner, span_warning("У вас судороги в руке!"))
 				owner.log_message(" attacked someone due to a Muscle Spasm", LOG_ATTACK) //the following attack will log itself
 				owner.ClickOn(pick(targets))
 			owner.set_combat_mode(FALSE)
 		if(4)
 			owner.set_combat_mode(TRUE)
-			to_chat(owner, span_warning("Your arm spasms!"))
+			to_chat(owner, span_warning("У вас судороги в руке!"))
 			owner.log_message("attacked [owner.p_them()]self to a Muscle Spasm", LOG_ATTACK)
 			owner.ClickOn(owner)
 			owner.set_combat_mode(FALSE)
@@ -654,7 +654,7 @@
 			for(var/turf/nearby_turfs in oview(owner, 3))
 				targets += nearby_turfs
 			if(LAZYLEN(targets) && held_item)
-				to_chat(owner, span_warning("Your arm spasms!"))
+				to_chat(owner, span_warning("У вас судороги в руке!"))
 				owner.log_message("threw [held_item] due to a Muscle Spasm", LOG_ATTACK)
 				owner.throw_item(pick(targets))
 
@@ -666,7 +666,7 @@
 
 /datum/status_effect/convulsing/on_creation(mob/living/zappy_boy)
 	. = ..()
-	to_chat(zappy_boy, span_boldwarning("You feel a shock moving through your body! Your hands start shaking!"))
+	to_chat(zappy_boy, span_boldwarning("Вы чувствуете как по вашему телу проходит импульс! Ваши руки начинают дрожать!"))
 
 /datum/status_effect/convulsing/tick(seconds_between_ticks)
 	var/mob/living/carbon/H = owner
@@ -674,14 +674,14 @@
 		var/obj/item/I = H.get_active_held_item()
 		if(I && H.dropItemToGround(I))
 			H.visible_message(
-				span_notice("[H]'s hand convulses, and they drop their [I.name]!"),
-				span_userdanger("Your hand convulses violently, and you drop what you were holding!"),
+				span_notice("Руки [H] судорожно сжимаются и они роняют [I.name]!"),
+				span_userdanger("Ваша рука судорожно сжимается и вы роняете то, что держали в руках!"),
 			)
 			H.adjust_jitter(10 SECONDS)
 
 /atom/movable/screen/alert/status_effect/convulsing
-	name = "Shaky Hands"
-	desc = "You've been zapped with something and your hands can't stop shaking! You can't seem to hold on to anything."
+	name = "Трясущиеся руки"
+	desc = "Вас чем-то ударило и ваши руки не перестают дрожать! Вы не можете ни за что ухватиться."
 	icon_state = "convulsing"
 
 /datum/status_effect/dna_melt
@@ -693,7 +693,7 @@
 
 /datum/status_effect/dna_melt/on_creation(mob/living/new_owner, set_duration)
 	. = ..()
-	to_chat(new_owner, span_boldwarning("My body can't handle the mutations! I need to get my mutations removed fast!"))
+	to_chat(new_owner, span_boldwarning("Мое тело не может справиться с мутациями! Мне нужно срочно удалить мутации!"))
 
 /datum/status_effect/dna_melt/on_remove()
 	if(!ishuman(owner))
@@ -704,7 +704,7 @@
 
 /atom/movable/screen/alert/status_effect/dna_melt
 	name = "Genetic Breakdown"
-	desc = "I don't feel so good. Your body can't handle the mutations! You have one minute to remove your mutations, or you will be met with a horrible fate."
+	desc = "Я чувствую себя не очень хорошо. Ваше тело не справляется с мутациями! У вас есть одна минута чтобы избавиться от мутаций иначе вас ждет ужасная участь."
 	icon_state = "dna_melt"
 
 /datum/status_effect/go_away
@@ -726,8 +726,8 @@
 	owner.forceMove(T)
 
 /atom/movable/screen/alert/status_effect/go_away
-	name = "TO THE STARS AND BEYOND!"
-	desc = "I must go, my people need me!"
+	name = "К ЗВЕЗДАМ И ЗА ИХ ПРЕДЕЛЫ!"
+	desc = "Я должен идти, я нужен моему народу!"
 	icon_state = "high"
 
 /datum/status_effect/fake_virus
@@ -798,7 +798,7 @@
 /datum/status_effect/ants/on_creation(mob/living/new_owner, amount_left)
 	if(isnum(amount_left) && new_owner.stat < HARD_CRIT)
 		if(new_owner.stat < UNCONSCIOUS) // Unconscious people won't get messages
-			to_chat(new_owner, span_userdanger("You're covered in ants!"))
+			to_chat(new_owner, span_userdanger("Вы покрыты муравьями!"))
 		ants_remaining += amount_left
 		RegisterSignal(new_owner, COMSIG_COMPONENT_CLEAN_ACT, PROC_REF(ants_washed))
 	. = ..()
@@ -808,15 +808,15 @@
 	if(isnum(amount_left) && ants_remaining >= 1 && victim.stat < HARD_CRIT)
 		if(victim.stat < UNCONSCIOUS) // Unconscious people won't get messages
 			if(!prob(1)) // 99%
-				to_chat(victim, span_userdanger("You're covered in MORE ants!"))
+				to_chat(victim, span_userdanger("Вы покрыты БОЛЬШИМ количеством муравьев!"))
 			else // 1%
-				victim.say("AAHH! THIS SITUATION HAS ONLY BEEN MADE WORSE WITH THE ADDITION OF YET MORE ANTS!!", forced = /datum/status_effect/ants)
+				victim.say("АААА! СИТУАЦИЯ ТОЛЬКО УСУГУБИЛАСЬ С ПОЯВЛЕНИЕМ ЕЩЕ БОЛЬШЕГО КОЛИЧЕСТВА МУРАВЬЕВ!!!", forced = /datum/status_effect/ants)
 		ants_remaining += amount_left
 	. = ..()
 
 /datum/status_effect/ants/on_remove()
 	ants_remaining = 0
-	to_chat(owner, span_notice("All of the ants are off of your body!"))
+	to_chat(owner, span_notice("Все муравьи ушли с вашего тела!"))
 	UnregisterSignal(owner, COMSIG_COMPONENT_CLEAN_ACT)
 	. = ..()
 
@@ -826,7 +826,7 @@
 	return COMPONENT_CLEANED
 
 /datum/status_effect/ants/get_examine_text()
-	return span_warning("[owner.p_They()] [owner.p_are()] covered in ants!")
+	return span_warning("[owner.p_They()] [owner.p_are()] покрыто муравьями!")
 
 /datum/status_effect/ants/tick(seconds_between_ticks)
 	var/mob/living/carbon/human/victim = owner
@@ -864,7 +864,7 @@
 		victim.remove_status_effect(/datum/status_effect/ants) //If this person has no more ants on them or are dead, they are no longer affected.
 
 /atom/movable/screen/alert/status_effect/ants
-	name = "Ants!"
+	name = "Муравьи!"
 	desc = span_warning("JESUS FUCKING CHRIST! CLICK TO GET THOSE THINGS OFF!")
 	icon_state = "antalert"
 
@@ -872,11 +872,11 @@
 	var/mob/living/living = owner
 	if(!istype(living) || !living.can_resist() || living != owner)
 		return
-	to_chat(living, span_notice("You start to shake the ants off!"))
+	to_chat(living, span_notice("Вы начинаете стряхивать с себя муравьев!"))
 	if(!do_after(living, 2 SECONDS, target = living))
 		return
 	for (var/datum/status_effect/ants/ant_covered in living.status_effects)
-		to_chat(living, span_notice("You manage to get some of the ants off!"))
+		to_chat(living, span_notice("Вам удалось снять часть муравьев!"))
 		ant_covered.ants_remaining -= 10 // 5 Times more ants removed per second than just waiting in place
 
 /datum/status_effect/stagger

@@ -101,7 +101,7 @@
 */
 
 /area/station/service/chapel
-	name = "Церковь "
+	name = "Церковь"
 	icon_state = "chapel"
 	mood_bonus = 5
 	mood_message = "Пребывание в церкви приносит мне покой."

@@ -106,13 +106,13 @@
 	name = "Upper EVA Storage"
 
 /area/station/ai_monitored/command/nuke_storage
-	name = "\improper Vault"
+	name = "Сейф"
 	icon_state = "nuke_storage"
 	airlock_wires = /datum/wires/airlock/command
 
 //Security - AI Monitored
 /area/station/ai_monitored/security/armory
-	name = "\improper Armory"
+	name = "Оружейная"
 	icon_state = "armory"
 	ambience_index = AMBIENCE_DANGER
 	airlock_wires = /datum/wires/airlock/security

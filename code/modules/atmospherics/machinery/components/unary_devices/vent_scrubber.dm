@@ -1,8 +1,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber
 	icon_state = "scrub_map-3"
 
-	name = "air scrubber"
-	desc = "Has a valve and pump attached to it."
+	name = "вытяжная вентиляция"
+	desc = "В ней имеется клапан и насос."
 	use_power = IDLE_POWER_USE
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.1
 	active_power_usage = BASE_MACHINE_ACTIVE_CONSUMPTION * 0.15
@@ -318,18 +318,18 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/can_unwrench(mob/user)
 	. = ..()
 	if(. && on && is_operational)
-		to_chat(user, span_warning("You cannot unwrench [src], turn it off first!"))
+		to_chat(user, span_warning("Вы не можете открутить [src], сначала выключите его!"))
 		return FALSE
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/examine(mob/user)
 	. = ..()
 	if(welded)
-		. += "It seems welded shut."
+		. += "Кажется она заварена наглухо."
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/attack_alien(mob/user, list/modifiers)
 	if(!welded || !(do_after(user, 20, target = src)))
 		return
-	user.visible_message(span_warning("[user] furiously claws at [src]!"), span_notice("You manage to clear away the stuff blocking the scrubber."), span_hear("You hear loud scraping noises."))
+	user.visible_message(span_warning("[user] яростно вцепляется руками в [src]!"), span_notice("Вам удается очистить вентиляционное отверстие от засора."), span_hear("Вы слышите громкие скребущие звуки."))
 	welded = FALSE
 	update_appearance()
 	pipe_vision_img = image(src, loc, dir = dir)

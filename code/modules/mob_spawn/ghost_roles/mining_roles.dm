@@ -72,18 +72,18 @@
 
 /obj/effect/mob_spawn/ghost_role/human/beach
 	prompt_name = "a beach bum"
-	name = "beach bum sleeper"
+	name = "пляжный бомж"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	you_are_text = "You're, like, totally a dudebro, bruh."
-	flavour_text = "Ch'yea. You came here, like, on spring break, hopin' to pick up some bangin' hot chicks, y'knaw?"
+	you_are_text = "Ты, типа, полный пижон, братан."
+	flavour_text = "Ты приехал сюда на весенние каникулы, в надежде подцепить парочку горячих цыпочек, понимаешь?"
 	spawner_job_path = /datum/job/beach_bum
 	outfit = /datum/outfit/beachbum
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard
-	you_are_text = "You're a spunky lifeguard!"
-	flavour_text = "It's up to you to make sure nobody drowns or gets eaten by sharks and stuff."
-	name = "lifeguard sleeper"
+	you_are_text = "Вы - пылкий спасатель!"
+	flavour_text = "От вас зависит, чтобы никто не утонул, не был съеден акулами и прочее."
+	name = "спасатель"
 	outfit = /datum/outfit/beachbum/lifeguard
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard/special(mob/living/carbon/human/lifeguard, mob/mob_possessor)
@@ -92,7 +92,7 @@
 	lifeguard.update_body()
 
 /datum/outfit/beachbum
-	name = "Beach Bum"
+	name = "Пляжный Бомж"
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/pants/jeans
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -111,12 +111,12 @@
 	uniform = /obj/item/clothing/under/shorts/red
 
 /obj/effect/mob_spawn/ghost_role/human/bartender
-	name = "bartender sleeper"
+	name = "бармен"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space bartender"
-	you_are_text = "You are a space bartender!"
-	flavour_text = "Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect."
+	you_are_text = "Вы - космический бармен!"
+	flavour_text = "Пора смешивать напитки и менять жизнь. Курение космических наркотиков облегчает понимание странного диалекта ваших завсегдатаев."
 	spawner_job_path = /datum/job/space_bartender
 	outfit = /datum/outfit/spacebartender
 
