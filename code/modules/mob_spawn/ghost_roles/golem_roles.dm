@@ -4,7 +4,7 @@
 //Golem shells: Spawns in Free Golem ships in lavaland. Ghosts become mineral golems and are advised to spread personal freedom.
 /obj/effect/mob_spawn/ghost_role/human/golem
 	name = "inert free golem shell"
-	desc = "A humanoid shape, empty, lifeless, and full of potential."
+	desc = "Гуманоидная форма, пустая, безжизненная и полная потенциала."
 	icon = 'icons/mob/shells.dmi'
 	icon_state = "shell_complete"
 	mob_species = /datum/species/golem
@@ -12,8 +12,8 @@
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
 	prompt_name = "a free golem"
-	you_are_text = "You are a Free Golem. Your family worships The Liberator."
-	flavour_text = "In his infinite and divine wisdom, he set your clan free to travel the stars with a single declaration: \"Yeah go do whatever.\""
+	you_are_text = "Вы - свободный голем. Ваша семья поклоняется Освободителю."
+	flavour_text = "В своей бесконечной и божественной мудрости он отпустил ваш клан путешествовать по звездам с единственным указанием: \" Да, делайте что хотите.\""
 	spawner_job_path = /datum/job/free_golem
 	/// Typepath to a material to feed to the golem as soon as it is built
 	var/initial_type
@@ -58,7 +58,7 @@
 	if(is_station_level(new_spawn.z))
 		return
 	to_chat(new_spawn, "Build golem shells in the autolathe, and feed refined mineral sheets to the shells to bring them to life! \
-		You are generally a peaceful group unless provoked.")
+		В целом вы мирные существа, если вас не провоцировать.")
 	try_keep_home(new_spawn)
 
 /// Makes free golems slow and sad on the space station

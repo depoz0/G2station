@@ -83,7 +83,7 @@
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard
 	you_are_text = "Вы - пылкий спасатель!"
 	flavour_text = "От вас зависит, чтобы никто не утонул, не был съеден акулами и прочее."
-	name = "спасатель"
+	name = "пляжный спасатель"
 	outfit = /datum/outfit/beachbum/lifeguard
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard/special(mob/living/carbon/human/lifeguard, mob/mob_possessor)
@@ -111,7 +111,7 @@
 	uniform = /obj/item/clothing/under/shorts/red
 
 /obj/effect/mob_spawn/ghost_role/human/bartender
-	name = "бармен"
+	name = "пляжный бармен"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space bartender"
@@ -140,19 +140,19 @@
 
 //Preserved terrarium/seed vault: Spawns in seed vault structures in lavaland. Ghosts become plantpeople and are advised to begin growing plants in the room near them.
 /obj/effect/mob_spawn/ghost_role/human/seed_vault
-	name = "preserved terrarium"
-	desc = "An ancient machine that seems to be used for storing plant matter. The glass is obstructed by a mat of vines."
+	name = "уцелевший террариум"
+	desc = "Древняя установка которая похоже использовалась для хранения растительной массы. Стекло заросло зарослями виноградной лозы."
 	prompt_name = "lifebringer"
 	icon = 'icons/obj/mining_zones/spawners.dmi'
 	icon_state = "terrarium"
 	density = TRUE
 	mob_species = /datum/species/pod
-	you_are_text = "You are a sentient ecosystem, an example of the mastery over life that your creators possessed."
-	flavour_text = "Your masters, benevolent as they were, created uncounted seed vaults and spread them across \
-	the universe to every planet they could chart. You are in one such seed vault. \
-	Your goal is to protect the vault you are assigned to, cultivate the seeds passed onto you, \
-	and eventually bring life to this desolate planet while waiting for contact from your creators. \
-	Estimated time of last contact: Deployment, 5000 millennia ago."
+	you_are_text = "Вы - разумная экосистема, пример мастерства над жизнью, которым обладали ваши создатели."
+	flavour_text = "Ваши хозяева, как бы ни были они благосклонны, создали бесчисленные хранилища семян и распространили их по всей \
+	вселенной на каждой планете, которую они смогли обнаружить. Вы находитесь в одном из таких хранилищ семян. \
+	Ваша цель - защищать хранилище в которое вы попали и выращивать семена переданные вам \
+	и в конце концов подарить жизнь этой заброшенной планете в ожидании контакта с вашими создателями. \
+	Предполагаемое время последнего контакта: 5000 тысячелетий назад."
 	spawner_job_path = /datum/job/lifebringer
 
 /obj/effect/mob_spawn/ghost_role/human/seed_vault/Initialize(mapload)
@@ -205,8 +205,8 @@
 	return ..()
 
 /obj/effect/mob_spawn/ghost_role/human/ash_walker
-	name = "ash walker egg"
-	desc = "A man-sized yellow egg, spawned from some unfathomable creature. A humanoid silhouette lurks within."
+	name = "пепельный человек."
+	desc = "Желтое яйцо размером с человека порожденное каким-то непостижимым существом. Внутри скрывается человекоподобный силуэт."
 	prompt_name = "necropolis ash walker"
 	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
@@ -214,10 +214,10 @@
 	outfit = /datum/outfit/ashwalker
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
-	you_are_text = "You are an ash walker. Your tribe worships the Necropolis."
-	flavour_text = "The wastes are sacred ground, its monsters a blessed bounty. \
-	You have seen lights in the distance... they foreshadow the arrival of outsiders that seek to tear apart the Necropolis and its domain. \
-	Fresh sacrifices for your nest."
+	you_are_text = "Вы - Пепельный человек. Ваше племя поклоняется Некрополису."
+	flavour_text = "Пустоши - священная земля, а их чудовища - благословенная щедрость. \
+	Вы видели вдалеке огни... они предвещают появление чужаков, которые стремятся уничтожить Некрополь и его владения. \
+	Свежие жертвы для вашего гнездышка."
 	spawner_job_path = /datum/job/ash_walker
 	var/datum/team/ashwalkers/team
 	var/obj/structure/ash_walker_eggshell/eggshell

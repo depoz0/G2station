@@ -8,8 +8,8 @@
 
 //Floorbot
 /mob/living/simple_animal/bot/floorbot
-	name = "\improper Floorbot"
-	desc = "A little floor repairing robot, he looks so excited!"
+	name = "Робот Пол"
+	desc = "Маленький робот для ремонта полов, он выглядит таким радостным!"
 	icon = 'icons/mob/silicon/aibots.dmi'
 	icon_state = "floorbot0"
 	density = FALSE
@@ -22,7 +22,7 @@
 	bot_type = FLOOR_BOT
 	hackables = "floor construction protocols"
 	path_image_color = "#FFA500"
-	possessed_message = "You are a floorbot! Repair the hull to the best of your ability!"
+	possessed_message = "Вы - робот для ремонта пола! Отремонтируйте все что найдете поломаное как можно лучше!"
 
 	var/process_type //Determines what to do when process_scan() receives a target. See process_scan() for details.
 	var/targetdirection

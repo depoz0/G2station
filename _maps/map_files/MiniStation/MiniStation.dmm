@@ -17299,6 +17299,11 @@
 /obj/structure/cable,
 /turf/open/floor/iron/smooth,
 /area/station/tcommsat/computer)
+"soV" = (
+/obj/machinery/door/airlock/maintenance,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/general,
+/turf/open/floor/plating,
+/area/station/maintenance/starboard)
 "spw" = (
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
 	id = "engsm"
@@ -60622,7 +60627,7 @@ nYE
 sgZ
 dQq
 sUL
-uPt
+soV
 owf
 vgD
 vgD

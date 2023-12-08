@@ -134,17 +134,17 @@
 	AddComponent(/datum/component/stationstuck, PUNISHMENT_GIB, "01000110 01010101 01000011 01001011 00100000 01011001 01001111 01010101<br>WARNING: Dereliction of KS13 detected. Self-destruct activated.")
 
 /obj/effect/mob_spawn/ghost_role/drone/derelict
-	name = "derelict drone shell"
-	desc = "A long-forgotten drone shell. It seems kind of... Space Russian."
+	name = "заброшенный дрон"
+	desc = "Давно забытый беспилотный дрон. Он кажется каким-то... знакомым."
 	icon = 'icons/mob/silicon/drone.dmi'
 	icon_state = "drone_maint_hat"
 	mob_name = "derelict drone"
 	mob_type = /mob/living/basic/drone/derelict
 	anchored = TRUE
 	prompt_name = "a derelict drone"
-	you_are_text = "You are a drone on Kosmicheskaya Stantsiya 13."
-	flavour_text = "Something has brought you out of hibernation, and the station is in gross disrepair."
-	important_text = "Build, repair, maintain and improve the station that housed you on activation."
+	you_are_text = "Вы - дрон на Космической Станции 13."
+	flavour_text = "Что-то вывело вас из спячки, а станция находится в плачевном состоянии."
+	important_text = "Стройте, ремонтируйте, обслуживайте и улучшайте станцию, которая досталась вам."
 	spawner_job_path = /datum/job/derelict_drone
 
 /datum/job/derelict_drone
