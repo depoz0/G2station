@@ -475,7 +475,7 @@
 		if(I.atom_storage?.attempt_insert(src, M))
 			return TRUE
 
-	to_chat(M, span_warning("You are unable to equip that!"))
+	to_chat(M, span_warning("Вы не можете снарядить это!"))
 	return FALSE
 
 
@@ -489,7 +489,7 @@
 /mob/proc/execute_quick_equip()
 	var/obj/item/I = get_active_held_item()
 	if(!I)
-		to_chat(src, span_warning("You are not holding anything to equip!"))
+		to_chat(src, span_warning("Вы ничего не держите в руках для снаряжения!"))
 		return
 	if (temporarilyRemoveItemFromInventory(I) && !QDELETED(I))
 		if(I.equip_to_best_slot(src))

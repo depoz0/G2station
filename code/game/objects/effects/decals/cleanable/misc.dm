@@ -125,8 +125,8 @@
 	light_power = 2
 
 /obj/effect/decal/cleanable/cobweb
-	name = "cobweb"
-	desc = "Somebody should remove that."
+	name = "паутина"
+	desc = "Кто-то должен это удалить."
 	gender = NEUTER
 	layer = WALL_OBJ_LAYER
 	plane = GAME_PLANE_UPPER

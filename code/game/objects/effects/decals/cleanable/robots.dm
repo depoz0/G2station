@@ -73,8 +73,8 @@
 	random_icon_states = list("gib1", "gib2", "gib3", "gib4", "gib5", "gib6", "gib7","gibdown","gibdown")
 
 /obj/effect/decal/cleanable/oil
-	name = "motor oil"
-	desc = "It's black and greasy. Looks like Beepsky made another mess."
+	name = "моторное масло"
+	desc = "Оно черное и жирное. Похоже Бипски опять устроил беспорядок."
 	icon = 'icons/mob/silicon/robots.dmi'
 	icon_state = "floor1"
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")

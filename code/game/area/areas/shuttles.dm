@@ -3,7 +3,7 @@
 //Multi area shuttles are a thing now, use subtypes! ~ninjanomnom
 
 /area/shuttle
-	name = "Shuttle"
+	name = "Шаттл"
 	requires_power = FALSE
 	static_lighting = TRUE
 	has_gravity = STANDARD_GRAVITY
@@ -57,7 +57,7 @@
 ////////////////////////////Pirate Shuttle////////////////////////////
 
 /area/shuttle/pirate
-	name = "Pirate Shuttle"
+	name = "Пиратский шаттл"
 	requires_power = TRUE
 
 /area/shuttle/pirate/flying_dutchman
@@ -76,7 +76,7 @@
 ////////////////////////////White Ship////////////////////////////
 
 /area/shuttle/abandoned
-	name = "Abandoned Ship"
+	name = "Заброшенный корабль"
 	requires_power = TRUE
 	area_limited_icon_smoothing = /area/shuttle/abandoned
 
@@ -110,7 +110,7 @@
 
 
 /area/shuttle/arrival
-	name = "Arrival Shuttle"
+	name = "Шаттл прибытия"
 	area_flags = UNIQUE_AREA// SSjob refers to this area for latejoiners
 
 
@@ -123,33 +123,33 @@
 
 
 /area/shuttle/pod_1
-	name = "Escape Pod One"
+	name = "Спасательная капсула один"
 	area_flags = NONE
 
 /area/shuttle/pod_2
-	name = "Escape Pod Two"
+	name = "Спасательная капсула два"
 	area_flags = NONE
 
 /area/shuttle/pod_3
-	name = "Escape Pod Three"
+	name = "Спасательная капсула три"
 	area_flags = NONE
 
 /area/shuttle/pod_4
-	name = "Escape Pod Four"
+	name = "Спасательная капсула четыре"
 	area_flags = NONE
 
 /area/shuttle/mining
-	name = "Mining Shuttle"
+	name = "Шахтерский шаттл"
 
 /area/shuttle/mining/large
-	name = "Mining Shuttle"
+	name = "Шахтерский шаттл"
 	requires_power = TRUE
 
 /area/shuttle/labor
 	name = "Labor Camp Shuttle"
 
 /area/shuttle/supply
-	name = "Supply Shuttle"
+	name = "Шаттл снабжения"
 	area_flags = NOTELEPORT
 
 /area/shuttle/escape
@@ -189,7 +189,7 @@
 	name = "Escape Shuttle Engine"
 
 /area/shuttle/transport
-	name = "Transport Shuttle"
+	name = "Транспортный шаттл"
 
 /area/shuttle/assault_pod
 	name = "Steel Rain"
@@ -210,10 +210,10 @@
 	name = "SBC corvette"
 
 /area/shuttle/syndicate_scout
-	name = "Syndicate Scout"
+	name = "Разведчик синдиката"
 
 /area/shuttle/ruin
-	name = "Ruined Shuttle"
+	name = "Разрушенный шаттл"
 
 /// Special shuttles made for the Caravan Ambush ruin.
 /area/shuttle/ruin/caravan
@@ -221,10 +221,10 @@
 	name = "Ruined Caravan Shuttle"
 
 /area/shuttle/ruin/caravan/syndicate1
-	name = "Syndicate Fighter"
+	name = "Истребитель синдиката"
 
 /area/shuttle/ruin/caravan/syndicate2
-	name = "Syndicate Fighter"
+	name = "Истребитель синдиката"
 
 /area/shuttle/ruin/caravan/syndicate3
 	name = "Syndicate Drop Ship"
@@ -233,13 +233,13 @@
 	name = "Pirate Cutter"
 
 /area/shuttle/ruin/caravan/freighter1
-	name = "Small Freighter"
+	name = "Небольшое грузовое судно"
 
 /area/shuttle/ruin/caravan/freighter2
-	name = "Tiny Freighter"
+	name = "Крошечный грузовой корабль"
 
 /area/shuttle/ruin/caravan/freighter3
-	name = "Tiny Freighter"
+	name = "Крошечный грузовой корабль"
 
 // ----------- Cyborg Mothership
 

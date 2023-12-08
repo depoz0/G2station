@@ -20,7 +20,7 @@ export const SpawnersMenu = (props) => {
   const { act, data } = useBackend<SpawnersMenuContext>();
   const spawners = data.spawners || [];
   return (
-    <Window title="Spawners Menu" width={700} height={525}>
+    <Window title="Меню перерождения" width={700} height={525}>
       <Window.Content scrollable>
         <Stack vertical>
           {spawners.map((spawner) => (
@@ -32,11 +32,11 @@ export const SpawnersMenu = (props) => {
                 buttons={
                   <Stack>
                     <Stack.Item fontSize="14px" color="green">
-                      {spawner.amount_left} left
+                      {spawner.amount_left} мест свободно
                     </Stack.Item>
                     <Stack.Item>
                       <Button
-                        content="Jump"
+                        content="Посмотреть"
                         onClick={() =>
                           act('jump', {
                             name: spawner.name,
@@ -44,7 +44,7 @@ export const SpawnersMenu = (props) => {
                         }
                       />
                       <Button
-                        content="Spawn"
+                        content="Переродиться"
                         onClick={() =>
                           act('spawn', {
                             name: spawner.name,
@@ -56,19 +56,19 @@ export const SpawnersMenu = (props) => {
                 }>
                 <LabeledList>
                   {spawner.desc ? (
-                    <LabeledList.Item label="Description">
+                    <LabeledList.Item label="Описание">
                       {spawner.desc}
                     </LabeledList.Item>
                   ) : (
                     <div>
-                      <LabeledList.Item label="Origin">
-                        {spawner.you_are_text || 'Unknown'}
+                      <LabeledList.Item label="Происхождение">
+                        {spawner.you_are_text || 'Неизвестно'}
                       </LabeledList.Item>
-                      <LabeledList.Item label="Directives">
-                        {spawner.flavor_text || 'None'}
+                      <LabeledList.Item label="Указания">
+                        {spawner.flavor_text || 'Нет'}
                       </LabeledList.Item>
-                      <LabeledList.Item color="bad" label="Conditions">
-                        {spawner.important_text || 'None'}
+                      <LabeledList.Item color="bad" label="Условия">
+                        {spawner.important_text || 'Нет'}
                       </LabeledList.Item>
                     </div>
                   )}

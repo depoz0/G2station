@@ -191,7 +191,7 @@ const ProductDisplay = (props: {
     <Section
       fill
       scrollable
-      title="Продукты"
+      title="Товары"
       buttons={
         !!onstation &&
         user && (

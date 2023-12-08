@@ -40,7 +40,7 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_PAPERFRAME
 	canSmoothWith = SMOOTH_GROUP_PAPERFRAME
-	var/static/mutable_appearance/indestructible_paper = mutable_appearance('icons/obj/smooth_structures/paperframes.dmi',icon_state = "paper", layer = CLOSED_TURF_LAYER - 0.1)
+	var/static/mutable_appearance/indestructible_paper = mutable_appearance('icons/obj/smooth_structures/structure_variations.dmi',icon_state = "paper-whole", layer = CLOSED_TURF_LAYER - 0.1)
 
 /turf/closed/indestructible/weeb/Initialize(mapload)
 	. = ..()
@@ -107,8 +107,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /turf/closed/indestructible/reinforced
-	name = "reinforced wall"
-	desc = "A huge chunk of reinforced metal used to separate rooms. Effectively impervious to conventional methods of destruction."
+	name = "армированная стена"
+	desc = "Огромный кусок армированного металла, используемый для разделения комнат. Не поддается обычным методам разрушения."
 	icon = 'icons/turf/walls/reinforced_wall.dmi'
 	icon_state = "reinforced_wall-0"
 	base_icon_state = "reinforced_wall"
@@ -193,8 +193,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 /turf/closed/indestructible/fakeglass
 	name = "window"
-	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
-	icon_state = "fake_window"
+	icon = MAP_SWITCH('icons/obj/smooth_structures/reinforced_window.dmi', 'icons/obj/smooth_structures/structure_variations.dmi')
+	icon_state = MAP_SWITCH("reinforced_window-0", "fake_window")
 	base_icon_state = "reinforced_window"
 	opacity = FALSE
 	smoothing_flags = SMOOTH_BITMASK
@@ -363,9 +363,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 /turf/closed/indestructible/meat
 	name = "dense meat wall"
 	desc = "A huge chunk of dense, packed meat. Effectively impervious to conventional methods of destruction."
-	icon = 'icons/turf/walls/meat.dmi'
-	icon_state = "meatwall-0"
-	base_icon_state = "meatwall"
+	icon = 'icons/turf/walls/meat_wall.dmi'
+	icon_state = "meat_wall-0"
+	base_icon_state = "meat_wall"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_WALLS
 	canSmoothWith = SMOOTH_GROUP_WALLS

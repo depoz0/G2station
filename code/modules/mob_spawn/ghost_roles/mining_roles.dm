@@ -72,18 +72,18 @@
 
 /obj/effect/mob_spawn/ghost_role/human/beach
 	prompt_name = "a beach bum"
-	name = "beach bum sleeper"
+	name = "пляжный бомж"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	you_are_text = "You're, like, totally a dudebro, bruh."
-	flavour_text = "Ch'yea. You came here, like, on spring break, hopin' to pick up some bangin' hot chicks, y'knaw?"
+	you_are_text = "Ты, типа, полный пижон, братан."
+	flavour_text = "Ты приехал сюда на весенние каникулы, в надежде подцепить парочку горячих цыпочек, понимаешь?"
 	spawner_job_path = /datum/job/beach_bum
 	outfit = /datum/outfit/beachbum
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard
-	you_are_text = "You're a spunky lifeguard!"
-	flavour_text = "It's up to you to make sure nobody drowns or gets eaten by sharks and stuff."
-	name = "lifeguard sleeper"
+	you_are_text = "Вы - пылкий спасатель!"
+	flavour_text = "От вас зависит, чтобы никто не утонул, не был съеден акулами и прочее."
+	name = "пляжный спасатель"
 	outfit = /datum/outfit/beachbum/lifeguard
 
 /obj/effect/mob_spawn/ghost_role/human/beach/lifeguard/special(mob/living/carbon/human/lifeguard, mob/mob_possessor)
@@ -92,7 +92,7 @@
 	lifeguard.update_body()
 
 /datum/outfit/beachbum
-	name = "Beach Bum"
+	name = "Пляжный Бомж"
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/pants/jeans
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -111,12 +111,12 @@
 	uniform = /obj/item/clothing/under/shorts/red
 
 /obj/effect/mob_spawn/ghost_role/human/bartender
-	name = "bartender sleeper"
+	name = "пляжный бармен"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
 	prompt_name = "a space bartender"
-	you_are_text = "You are a space bartender!"
-	flavour_text = "Time to mix drinks and change lives. Smoking space drugs makes it easier to understand your patrons' odd dialect."
+	you_are_text = "Вы - космический бармен!"
+	flavour_text = "Пора смешивать напитки и менять жизнь. Курение космических наркотиков облегчает понимание странного диалекта ваших завсегдатаев."
 	spawner_job_path = /datum/job/space_bartender
 	outfit = /datum/outfit/spacebartender
 
@@ -140,19 +140,19 @@
 
 //Preserved terrarium/seed vault: Spawns in seed vault structures in lavaland. Ghosts become plantpeople and are advised to begin growing plants in the room near them.
 /obj/effect/mob_spawn/ghost_role/human/seed_vault
-	name = "preserved terrarium"
-	desc = "An ancient machine that seems to be used for storing plant matter. The glass is obstructed by a mat of vines."
+	name = "уцелевший террариум"
+	desc = "Древняя установка которая похоже использовалась для хранения растительной массы. Стекло заросло зарослями виноградной лозы."
 	prompt_name = "lifebringer"
 	icon = 'icons/obj/mining_zones/spawners.dmi'
 	icon_state = "terrarium"
 	density = TRUE
 	mob_species = /datum/species/pod
-	you_are_text = "You are a sentient ecosystem, an example of the mastery over life that your creators possessed."
-	flavour_text = "Your masters, benevolent as they were, created uncounted seed vaults and spread them across \
-	the universe to every planet they could chart. You are in one such seed vault. \
-	Your goal is to protect the vault you are assigned to, cultivate the seeds passed onto you, \
-	and eventually bring life to this desolate planet while waiting for contact from your creators. \
-	Estimated time of last contact: Deployment, 5000 millennia ago."
+	you_are_text = "Вы - разумная экосистема, пример мастерства над жизнью, которым обладали ваши создатели."
+	flavour_text = "Ваши хозяева, как бы ни были они благосклонны, создали бесчисленные хранилища семян и распространили их по всей \
+	вселенной на каждой планете, которую они смогли обнаружить. Вы находитесь в одном из таких хранилищ семян. \
+	Ваша цель - защищать хранилище в которое вы попали и выращивать семена переданные вам \
+	и в конце концов подарить жизнь этой заброшенной планете в ожидании контакта с вашими создателями. \
+	Предполагаемое время последнего контакта: 5000 тысячелетий назад."
 	spawner_job_path = /datum/job/lifebringer
 
 /obj/effect/mob_spawn/ghost_role/human/seed_vault/Initialize(mapload)
@@ -205,8 +205,8 @@
 	return ..()
 
 /obj/effect/mob_spawn/ghost_role/human/ash_walker
-	name = "ash walker egg"
-	desc = "A man-sized yellow egg, spawned from some unfathomable creature. A humanoid silhouette lurks within."
+	name = "пепельный человек."
+	desc = "Желтое яйцо размером с человека порожденное каким-то непостижимым существом. Внутри скрывается человекоподобный силуэт."
 	prompt_name = "necropolis ash walker"
 	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "large_egg"
@@ -214,10 +214,10 @@
 	outfit = /datum/outfit/ashwalker
 	move_resist = MOVE_FORCE_NORMAL
 	density = FALSE
-	you_are_text = "You are an ash walker. Your tribe worships the Necropolis."
-	flavour_text = "The wastes are sacred ground, its monsters a blessed bounty. \
-	You have seen lights in the distance... they foreshadow the arrival of outsiders that seek to tear apart the Necropolis and its domain. \
-	Fresh sacrifices for your nest."
+	you_are_text = "Вы - Пепельный человек. Ваше племя поклоняется Некрополису."
+	flavour_text = "Пустоши - священная земля, а их чудовища - благословенная щедрость. \
+	Вы видели вдалеке огни... они предвещают появление чужаков, которые стремятся уничтожить Некрополь и его владения. \
+	Свежие жертвы для вашего гнездышка."
 	spawner_job_path = /datum/job/ash_walker
 	var/datum/team/ashwalkers/team
 	var/obj/structure/ash_walker_eggshell/eggshell
@@ -274,13 +274,13 @@
 ///Syndicate Listening Post
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate
-	name = "Syndicate Bioweapon Scientist"
+	name = "Ученый по биооружию из Синдиката"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper_s"
 	prompt_name = "a syndicate science technician"
-	you_are_text = "You are a syndicate science technician, employed in a top secret research facility developing biological weapons."
-	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Continue your research as best you can, and try to keep a low profile."
-	important_text = "The base is rigged with explosives, DO NOT abandon it or let it fall into enemy hands!"
+	you_are_text = "Вы - научный техник Синдиката, работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие."
+	flavour_text = "К сожалению ваш ненавистный враг Нанотрасен, начал добычу полезных ископаемых в этом секторе. Продолжайте исследования как можно активнее и старайтесь держаться в тени."
+	important_text = "База напичкана взрывчаткой, НЕ покидайте ее и не позволяйте ей попасть в руки врага!"
 	outfit = /datum/outfit/lavaland_syndicate
 	spawner_job_path = /datum/job/lavaland_syndicate
 
@@ -289,10 +289,10 @@
 	new_spawn.grant_language(/datum/language/codespeak, source = LANGUAGE_MIND)
 
 /obj/effect/mob_spawn/ghost_role/human/lavaland_syndicate/comms
-	name = "Syndicate Comms Agent"
+	name = "Связной агент синдиката"
 	prompt_name = "a syndicate comms agent"
-	you_are_text = "You are a syndicate comms agent, employed in a top secret research facility developing biological weapons."
-	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Monitor enemy activity as best you can, and try to keep a low profile. Use the communication equipment to provide support to any field agents, and sow disinformation to throw Nanotrasen off your trail. Do not let the base fall into enemy hands!"
+	you_are_text = "Вы - связной агент синдиката, работающий в сверхсекретном исследовательском центре, разрабатывающем биологическое оружие."
+	flavour_text = "К сожалению ваш ненавистный враг Нанотрасен, начал добычу полезных ископаемых в этом секторе. Как можно лучше отслеживайте активность врага и старайтесь держаться в тени. Используйте средства связи для поддержки полевых агентов и сейте дезинформацию, чтобы сбить Нанотрасена со следа. Не дайте базе попасть в руки врага!"
 	important_text = "НЕ покидайте базу."
 	outfit = /datum/outfit/lavaland_syndicate/comms
 

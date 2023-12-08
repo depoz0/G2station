@@ -6,31 +6,31 @@
 */
 
 /area/station/service/cafeteria
-	name = "\improper Cafeteria"
+	name = "Кафетерия"
 	icon_state = "cafeteria"
 
 /area/station/service/kitchen
-	name = "\improper Kitchen"
+	name = "Кухня"
 	icon_state = "kitchen"
 
 /area/station/service/kitchen/coldroom
-	name = "\improper Kitchen Cold Room"
+	name = "Холодильная камера кухни"
 	icon_state = "kitchen_cold"
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/service/kitchen/diner
-	name = "\improper Diner"
+	name = "Закусочная"
 	icon_state = "diner"
 
 /area/station/service/kitchen/kitchen_backroom
-	name = "\improper Kitchen Backroom"
+	name = "Кухня Подсобка"
 	icon_state = "kitchen_backroom"
 
 /area/station/service/bar
-	name = "\improper Bar"
+	name = "Бар"
 	icon_state = "bar"
 	mood_bonus = 5
-	mood_message = "I love being in the bar!"
+	mood_message = "Я обожаю бывать в баре!"
 	mood_trait = TRAIT_EXTROVERT
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_WOODFLOOR
@@ -45,7 +45,7 @@
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/station/service/bar/backroom
-	name = "\improper Bar Backroom"
+	name = "Подсобка бара"
 	icon_state = "bar_backroom"
 
 /*
@@ -53,35 +53,35 @@
 */
 
 /area/station/service/theater
-	name = "\improper Theater"
+	name = "Театр"
 	icon_state = "theatre"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
 /area/station/service/greenroom
-	name = "\improper Greenroom"
+	name = "Зеленая комната"
 	icon_state = "theatre"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
 /area/station/service/library
-	name = "\improper Library"
+	name = "Библиотека"
 	icon_state = "library"
 	mood_bonus = 5
-	mood_message = "I love being in the library!"
+	mood_message = "Я обожаю бывать в библиотеке!"
 	mood_trait = TRAIT_INTROVERT
 	area_flags = CULT_PERMITTED | BLOBS_ALLOWED | UNIQUE_AREA
 	sound_environment = SOUND_AREA_LARGE_SOFTFLOOR
 
 /area/station/service/library/garden
-	name = "\improper Library Garden"
+	name = "Библиотечный сад"
 	icon_state = "library_garden"
 
 /area/station/service/library/lounge
-	name = "\improper Library Lounge"
+	name = "Библиотечный зал"
 	icon_state = "library_lounge"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
 /area/station/service/library/artgallery
-	name = "\improper  Art Gallery"
+	name = "Галерея искусств"
 	icon_state = "library_gallery"
 
 /area/station/service/library/private
@@ -101,20 +101,20 @@
 */
 
 /area/station/service/chapel
-	name = "\improper Chapel"
+	name = "Церковь"
 	icon_state = "chapel"
 	mood_bonus = 5
-	mood_message = "Being in the chapel brings me peace."
+	mood_message = "Пребывание в церкви приносит мне покой."
 	mood_trait = TRAIT_SPIRITUAL
 	ambience_index = AMBIENCE_HOLY
 	flags_1 = NONE
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
 /area/station/service/chapel/monastery
-	name = "\improper Monastery"
+	name = "Монастырь"
 
 /area/station/service/chapel/office
-	name = "\improper Chapel Office"
+	name = "Офис церкви"
 	icon_state = "chapeloffice"
 
 /area/station/service/chapel/asteroid
@@ -146,7 +146,7 @@
 */
 
 /area/station/service/hydroponics
-	name = "Hydroponics"
+	name = "Гидропоника"
 	icon_state = "hydro"
 	airlock_wires = /datum/wires/airlock/service
 	sound_environment = SOUND_AREA_STANDARD_STATION
@@ -156,7 +156,7 @@
 	icon_state = "hydro"
 
 /area/station/service/hydroponics/garden
-	name = "Garden"
+	name = "Сад"
 	icon_state = "garden"
 
 /*
@@ -164,7 +164,7 @@
 */
 
 /area/station/service/lawoffice
-	name = "\improper Law Office"
+	name = "Адвокатский кабинет"
 	icon_state = "law"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
@@ -175,7 +175,7 @@
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/service/barber
-	name = "\improper Barber"
+	name = "Парикмахерская"
 	icon_state = "barber"
 
 /*
@@ -183,12 +183,12 @@
 */
 
 /area/station/service/hydroponics/garden/abandoned
-	name = "\improper Abandoned Garden"
+	name = "Заброшенный сад"
 	icon_state = "abandoned_garden"
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED
 
 /area/station/service/kitchen/abandoned
-	name = "\improper Abandoned Kitchen"
+	name = "Заброшенная кухня"
 	icon_state = "abandoned_kitchen"
 
 /area/station/service/electronic_marketing_den

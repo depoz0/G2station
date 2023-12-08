@@ -22,7 +22,7 @@
 	ice_overlay = image(ice_icon, hallucinator, ice_icon_state, ABOVE_MOB_LAYER)
 	hallucinator.client?.images |= ice_overlay
 	ADD_TRAIT(hallucinator, TRAIT_IMMOBILIZED, HALLUCINATION_TRAIT)
-	to_chat(hallucinator, span_userdanger("You become frozen in a cube!"))
+	to_chat(hallucinator, span_userdanger("Вы замерзаете и становитесь настоящим куском льда!"))
 	hallucinator.cause_hallucination(/datum/hallucination/fake_alert/cold, "ice hallucination", duration = (ice_duration + 6 SECONDS))
 	if(play_ice_sound)
 		hallucinator.cause_hallucination(/datum/hallucination/fake_sound/weird/ice_crack, "ice hallucination")

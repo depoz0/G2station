@@ -21,12 +21,12 @@
 	/// The list of factions this atom belongs to
 	var/list/faction
 
-	var/verb_say = "says"
-	var/verb_ask = "asks"
-	var/verb_exclaim = "exclaims"
-	var/verb_whisper = "whispers"
-	var/verb_sing = "sings"
-	var/verb_yell = "yells"
+	var/verb_say = "говорит"
+	var/verb_ask = "спрашивает"
+	var/verb_exclaim = "восклицает"
+	var/verb_whisper = "шепчет"
+	var/verb_sing = "поет"
+	var/verb_yell = "кричит"
 	var/speech_span
 	///Are we moving with inertia? Mostly used as an optimization
 	var/inertia_moving = FALSE
@@ -318,18 +318,15 @@
 		overlays.Insert(1, emissive_block)
 	return overlays
 
-/atom/movable/proc/onZImpact(turf/impacted_turf, levels, message = TRUE)
+/atom/movable/proc/onZImpact(turf/impacted_turf, levels, impact_flags = NONE)
 	SHOULD_CALL_PARENT(TRUE)
-	if(message)
-		visible_message(span_danger("[src] crashes into [impacted_turf]!"))
-	var/atom/highest = impacted_turf
-	for(var/atom/hurt_atom as anything in impacted_turf.contents)
-		if(!hurt_atom.density)
-			continue
-		if(isobj(hurt_atom) || ismob(hurt_atom))
-			if(hurt_atom.layer > highest.layer)
-				highest = hurt_atom
-	INVOKE_ASYNC(src, PROC_REF(SpinAnimation), 5, 2)
+	if(!(impact_flags & ZIMPACT_NO_MESSAGE))
+		visible_message(
+			span_danger("[src] врезается в [impacted_turf]!"),
+			span_userdanger("Вы врезаетесь в [impacted_turf]!"),
+		)
+	if(!(impact_flags & ZIMPACT_NO_SPIN))
+		INVOKE_ASYNC(src, PROC_REF(SpinAnimation), 5, 2)
 	SEND_SIGNAL(src, COMSIG_ATOM_ON_Z_IMPACT, impacted_turf, levels)
 	return TRUE
 
@@ -417,20 +414,20 @@
 		destination = get_step_multiz(start, direction)
 		if(!destination)
 			if(z_move_flags & ZMOVE_FEEDBACK)
-				to_chat(rider || src, span_warning("There's nowhere to go in that direction!"))
+				to_chat(rider || src, span_warning("В этом направлении некуда идти!"))
 			return FALSE
 	if(z_move_flags & ZMOVE_FALL_CHECKS && (throwing || (movement_type & (FLYING|FLOATING)) || !has_gravity(start)))
 		return FALSE
 	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS && !(movement_type & (FLYING|FLOATING)) && has_gravity(start))
 		if(z_move_flags & ZMOVE_FEEDBACK)
 			if(rider)
-				to_chat(rider, span_warning("[src] is is not capable of flight."))
+				to_chat(rider, span_warning("[src] не способен летать."))
 			else
-				to_chat(src, span_warning("You are not Superman."))
+				to_chat(src, span_warning("Вы не Супермен."))
 		return FALSE
 	if((!(z_move_flags & ZMOVE_IGNORE_OBSTACLES) && !(start.zPassOut(direction) && destination.zPassIn(direction))) || (!(z_move_flags & ZMOVE_ALLOW_ANCHORED) && anchored))
 		if(z_move_flags & ZMOVE_FEEDBACK)
-			to_chat(rider || src, span_warning("You couldn't move there!"))
+			to_chat(rider || src, span_warning("Вы не можете туда двигаться!"))
 		return FALSE
 	return destination //used by some child types checks and zMove()
 
@@ -517,8 +514,8 @@
 		var/mob/pulled_mob = pulled_atom
 		log_combat(src, pulled_mob, "grabbed", addition="passive grab")
 		if(!supress_message)
-			pulled_mob.visible_message(span_warning("[src] grabs [pulled_mob] passively."), \
-				span_danger("[src] grabs you passively."))
+			pulled_mob.visible_message(span_warning("[src] пассивно хватает [pulled_mob]."), \
+				span_danger("[src] хватает вас пассивно."))
 	return TRUE
 
 /atom/movable/proc/stop_pulling()

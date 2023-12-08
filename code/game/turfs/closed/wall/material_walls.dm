@@ -1,9 +1,9 @@
 /turf/closed/wall/material
 	name = "стена"
 	desc = "Огромный кусок металла, используемый для разделения помещений."
-	icon = 'icons/turf/walls/materialwall.dmi'
-	icon_state = "materialwall-0"
-	base_icon_state = "materialwall"
+	icon = 'icons/turf/walls/material_wall.dmi'
+	icon_state = "material_wall-0"
+	base_icon_state = "material_wall"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_WALLS + SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_MATERIAL_WALLS
 	canSmoothWith = SMOOTH_GROUP_MATERIAL_WALLS
@@ -23,4 +23,3 @@
 
 /turf/closed/wall/material/mat_update_desc(mat)
 	desc = "A huge chunk of [mat] used to separate rooms."
-

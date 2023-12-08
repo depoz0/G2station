@@ -3,8 +3,8 @@
 /obj/machinery/atmospherics/components/unary/vent_pump
 	icon_state = "vent_map-3"
 
-	name = "air vent"
-	desc = "Has a valve and pump attached to it."
+	name = "приточная вентиляция"
+	desc = "В ней имеется клапан и насос."
 
 	use_power = IDLE_POWER_USE
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.15
@@ -58,7 +58,7 @@
 					SCREENTIP_CONTEXT_LMB = "Log to link later with air sensor",
 				),
 				TOOL_SCREWDRIVER = list(
-					SCREENTIP_CONTEXT_LMB = "Repair",
+					SCREENTIP_CONTEXT_LMB = "Ремонт",
 				),
 			))
 		AddElement(/datum/element/contextual_screentip_tools, tool_screentips)
@@ -71,28 +71,28 @@
 	var/condition_string
 	switch(get_integrity_percentage())
 		if(1)
-			condition_string = "perfect"
+			condition_string = "идеальном"
 		if(0.75 to 0.99)
-			condition_string = "good"
+			condition_string = "хорошем"
 		if(0.50 to 0.74)
-			condition_string = "okay"
+			condition_string = "нормальном"
 		if(0.25 to 0.49)
-			condition_string = "bad"
+			condition_string = "плохом"
 		else
-			condition_string = "terrible"
-	examine_condition = "The fan is in [condition_string] condition."
+			condition_string = "ужасном"
+	examine_condition = "Вентилятор находится в [condition_string] состоянии."
 
 /obj/machinery/atmospherics/components/unary/vent_pump/examine(mob/user)
 	. = ..()
 	. += span_notice("You can link it with an air sensor using a multitool.")
 
 	if(fan_overclocked)
-		. += span_warning("It is currently overclocked causing it to take damage over time.")
+		. += span_warning("В данный момент он находится в форсированом состоянии, что со временем приводит к его повреждению.")
 
 	if(get_integrity() > 0)
 		. += span_notice(examine_condition)
 	else
-		. += span_warning("The fan is broken.")
+		. += span_warning("Вентилятор сломан.")
 
 /obj/machinery/atmospherics/components/unary/vent_pump/multitool_act(mob/living/user, obj/item/multitool/multi_tool)
 	if(istype(multi_tool.buffer, /obj/machinery/air_sensor))
@@ -110,13 +110,13 @@
 	if(!time_to_repair)
 		return FALSE
 
-	balloon_alert(user, "repairing vent...")
+	balloon_alert(user, "ремонт вентиляции...")
 	if(do_after(user, time_to_repair, src))
-		balloon_alert(user, "vent repaired")
+		balloon_alert(user, "вентиляция отремонтирована")
 		repair_damage(max_integrity)
 
 	else
-		balloon_alert(user, "interrupted!")
+		balloon_alert(user, "прерван!")
 	return TOOL_ACT_TOOLTYPE_SUCCESS
 
 /obj/machinery/atmospherics/components/unary/vent_pump/atom_fix()
@@ -336,13 +336,13 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/can_unwrench(mob/user)
 	. = ..()
 	if(. && on && is_operational)
-		to_chat(user, span_warning("You cannot unwrench [src], turn it off first!"))
+		to_chat(user, span_warning("Вы не можете открутить [src], сначала выключите его!"))
 		return FALSE
 
 /obj/machinery/atmospherics/components/unary/vent_pump/examine(mob/user)
 	. = ..()
 	if(welded)
-		. += "It seems welded shut."
+		. += "Кажется она заварена наглухо."
 
 /obj/machinery/atmospherics/components/unary/vent_pump/power_change()
 	. = ..()
@@ -351,7 +351,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/attack_alien(mob/user, list/modifiers)
 	if(!welded || !(do_after(user, 20, target = src)))
 		return
-	user.visible_message(span_warning("[user] furiously claws at [src]!"), span_notice("You manage to clear away the stuff blocking the vent."), span_hear("You hear loud scraping noises."))
+	user.visible_message(span_warning("[user] яростно вцепляется руками в [src]!"), span_notice("Вам удается очистить вентиляционное отверстие от засора."), span_hear("Вы слышите громкие скребущие звуки."))
 	welded = FALSE
 	update_appearance()
 	pipe_vision_img = image(src, loc, dir = dir)

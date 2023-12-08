@@ -16,7 +16,7 @@
 #define MAGIC_MIRROR_OPTIONS list(CHANGE_HAIR, CHANGE_BEARD, CHANGE_RACE, CHANGE_SEX, CHANGE_EYES, CHANGE_NAME)
 
 /obj/structure/mirror
-	name = "mirror"
+	name = "зеркало"
 	desc = "Mirror mirror on the wall, who's the most robust of them all?"
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "mirror"
@@ -261,7 +261,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 
 /obj/structure/mirror/atom_break(damage_flag, mapload)
 	. = ..()
-	if(broken || (flags_1 & NODECONSTRUCT_1))
+	if(broken || (obj_flags & NO_DECONSTRUCTION))
 		return
 	icon_state = "mirror_broke"
 	if(!mapload)
@@ -271,7 +271,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 	broken = TRUE
 
 /obj/structure/mirror/deconstruct(disassembled = TRUE)
-	if(!(flags_1 & NODECONSTRUCT_1))
+	if(!(obj_flags & NO_DECONSTRUCTION))
 		if(!disassembled)
 			new /obj/item/shard(loc)
 		else
@@ -306,8 +306,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 			playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, TRUE)
 
 /obj/item/wallframe/mirror
-	name = "mirror"
-	desc = "An unmounted mirror. Attach it to a wall to use."
+	name = "зеркало"
+	desc = "Зеркало в комплекте. Прикрепите его к стене, чтобы пользоваться."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "mirror"
 	custom_materials = list(
@@ -318,7 +318,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 	pixel_shift = 28
 
 /obj/structure/mirror/magic
-	name = "magic mirror"
+	name = "волшебное зеркало"
 	desc = "Turn and face the strange... face."
 	icon_state = "magic_mirror"
 	mirror_options = MAGIC_MIRROR_OPTIONS

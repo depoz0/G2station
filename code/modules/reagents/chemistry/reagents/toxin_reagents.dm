@@ -1261,7 +1261,7 @@
 		affected_mob.set_confusion(mob_dizziness / 2)
 
 	if(current_cycle >= 13 && SPT_PROB(4, seconds_per_tick))
-		var/tox_message = pick("You feel your heart spasm in your chest.", "You feel faint.","You feel you need to catch your breath.","You feel a prickle of pain in your chest.")
+		var/tox_message = pick("Вы чувствуете как сердце сжимается в груди.", "Вы чувствуете слабость.","Вы чувствуете что вам нужно перевести дух.","Вы чувствуете боль в груди.")
 		to_chat(affected_mob, span_notice("[tox_message]"))
 
 /datum/reagent/toxin/leadacetate
