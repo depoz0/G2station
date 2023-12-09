@@ -101,7 +101,7 @@
 		return
 
 	if (HAS_TRAIT(user, TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION) && !is_station_level(user.z))
-		to_chat(user, span_warning("You get the feeling you shouldn't mess with this."))
+		to_chat(user, span_warning("У вас возникнет чувство что лучше не стоит связываться с этим."))
 		return
 	return ..()
 

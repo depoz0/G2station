@@ -13,8 +13,8 @@
 
 // ===== ENGINEERING CONSOLE =====
 /obj/machinery/modular_computer/preset/engineering
-	name = "engineering console"
-	desc = "A stationary computer. This one comes preloaded with engineering programs."
+	name = "инженерная консоль"
+	desc = "Стационарный компьютер. Этот компьютер поставляется с предустановленными инженерными программами."
 	starting_programs = list(
 		/datum/computer_file/program/power_monitor,
 		/datum/computer_file/program/alarm_monitor,

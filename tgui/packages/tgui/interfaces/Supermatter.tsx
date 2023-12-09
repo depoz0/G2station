@@ -128,7 +128,7 @@ export const SupermatterContent = (props: SupermatterProps) => {
           buttons={sectionButton}>
           <Stack vertical>
             <SupermatterEntry
-              title="Integrity"
+              title="Целостность"
               alwaysShowChevron
               content={
                 <ProgressBar
@@ -159,7 +159,7 @@ export const SupermatterContent = (props: SupermatterProps) => {
               }
             />
             <SupermatterEntry
-              title="Internal Energy"
+              title="Внутренняя энергия"
               alwaysShowChevron
               content={
                 <ProgressBar
@@ -193,7 +193,7 @@ export const SupermatterContent = (props: SupermatterProps) => {
               }
             />
             <SupermatterEntry
-              title="Zap Power Transmission"
+              title="Электропередача урона"
               alwaysShowChevron
               content={
                 <ProgressBar
@@ -241,7 +241,7 @@ export const SupermatterContent = (props: SupermatterProps) => {
               }
             />
             <SupermatterEntry
-              title="Temperature"
+              title="Температура"
               content={
                 <ProgressBar
                   value={logScale(gas_temperature)}
@@ -258,7 +258,7 @@ export const SupermatterContent = (props: SupermatterProps) => {
               }
             />
             <SupermatterEntry
-              title="Temperature Limit"
+              title="Предельная температура"
               alwaysShowChevron
               content={temp_limit + ' K'}
               detail={
