@@ -69,7 +69,7 @@
 	qdel(query_get_random_books)
 
 /obj/structure/bookcase/random/fiction
-	name = "bookcase (Fiction)"
+	name = "книжный шкаф (Фантастика)"
 	random_category = "Fiction"
 	///have we spawned the chuuni granter
 	var/static/chuuni_book_spawned = FALSE
@@ -80,19 +80,19 @@
 		new /obj/item/book/granter/chuunibyou(src)
 
 /obj/structure/bookcase/random/nonfiction
-	name = "bookcase (Non-Fiction)"
+	name = "книжный шкаф (Нехудожественная литература)"
 	random_category = "Non-fiction"
 
 /obj/structure/bookcase/random/religion
-	name = "bookcase (Religion)"
+	name = "книжный шкаф (Религия)"
 	random_category = "Religion"
 
 /obj/structure/bookcase/random/adult
-	name = "bookcase (Adult)"
+	name = "книжный шкаф (Для взрослых)"
 	random_category = "Adult"
 
 /obj/structure/bookcase/random/reference
-	name = "bookcase (Reference)"
+	name = "книжный шкаф (Справочники)"
 	random_category = "Reference"
 	///Chance to spawn a random manual book
 	var/ref_book_prob = 20

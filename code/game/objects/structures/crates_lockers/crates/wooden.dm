@@ -1,6 +1,6 @@
 /obj/structure/closet/crate/wooden
-	name = "wooden crate"
-	desc = "Works just as well as a metal one."
+	name = "деревянный ящик"
+	desc = "Работает так же хорошо как и металлический."
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	material_drop_amount = 6
 	icon_state = "wooden"
@@ -12,8 +12,8 @@
 	paint_jobs = null
 
 /obj/structure/closet/crate/wooden/toy
-	name = "toy box"
-	desc = "It has the words \"Clown + Mime\" written underneath of it with marker."
+	name = "ящик для игрушек"
+	desc = "Под ним маркером написаны слова \"Клоун + мим\"."
 
 /obj/structure/closet/crate/wooden/toy/PopulateContents()
 	. = ..()

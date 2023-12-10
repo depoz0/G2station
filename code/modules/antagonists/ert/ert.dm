@@ -243,7 +243,7 @@
 	if(!ert_team)
 		return
 
-	to_chat(owner, "<span class='warningplain'><B><font size=3 color=red>You are the [name].</font></B></span>")
+	to_chat(owner, "<span class='warningplain'><B><font size=3 color=red>Вы [name].</font></B></span>")
 
 	var/missiondesc = "Your squad is being sent on a mission to [station_name()] by Nanotrasen's Security Division."
 	if(leader) //If Squad Leader

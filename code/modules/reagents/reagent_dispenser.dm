@@ -249,8 +249,8 @@
 	openable = TRUE
 
 /obj/structure/reagent_dispensers/fueltank
-	name = "fuel tank"
-	desc = "A tank full of industrial welding fuel. Do not consume."
+	name = "топливный резервуар"
+	desc = "Емкость полная промышленного сварочного топлива. Не употреблять."
 	icon_state = "fuel"
 	reagent_id = /datum/reagent/fuel
 	openable = TRUE
@@ -290,15 +290,15 @@
 /obj/structure/reagent_dispensers/fueltank/attackby(obj/item/I, mob/living/user, params)
 	if(I.tool_behaviour == TOOL_WELDER)
 		if(!reagents.has_reagent(/datum/reagent/fuel))
-			to_chat(user, span_warning("[src] is out of fuel!"))
+			to_chat(user, span_warning("[src]e закончилось топливо!"))
 			return
 		var/obj/item/weldingtool/W = I
 		if(istype(W) && !W.welding)
 			if(W.reagents.has_reagent(/datum/reagent/fuel, W.max_fuel))
-				to_chat(user, span_warning("Your [W.name] is already full!"))
+				to_chat(user, span_warning("Ваш [W.name] уже заполнен!"))
 				return
 			reagents.trans_to(W, W.max_fuel, transferred_by = user)
-			user.visible_message(span_notice("[user] refills [user.p_their()] [W.name]."), span_notice("You refill [W]."))
+			user.visible_message(span_notice("[user] заправляет [user.p_their()] [W.name]."), span_notice("You refill [W]."))
 			playsound(src, 'sound/effects/refill.ogg', 50, TRUE)
 			W.update_appearance()
 		else
@@ -336,8 +336,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 	find_and_hang_on_wall()
 
 /obj/structure/reagent_dispensers/water_cooler
-	name = "liquid cooler"
-	desc = "A machine that dispenses liquid to drink."
+	name = "жидкостный кулер"
+	desc = "Автомат который выдает жидкость для питья."
 	icon = 'icons/obj/machines/vending.dmi'
 	icon_state = "water_cooler"
 	anchored = TRUE
@@ -347,11 +347,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 /obj/structure/reagent_dispensers/water_cooler/examine(mob/user)
 	. = ..()
 	if (paper_cups > 1)
-		. += "There are [paper_cups] paper cups left."
+		. += "Осталось [paper_cups] [runam(paper_cups, "бумажный стаканчик", "бумажных стаканчика", "бумажных стаканчиков")]."
 	else if (paper_cups == 1)
-		. += "There is one paper cup left."
+		. += "Остался один бумажный стаканчик."
 	else
-		. += "There are no paper cups left."
+		. += "Бумажных стаканчиков больше нет."
 
 /obj/structure/reagent_dispensers/water_cooler/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
@@ -360,7 +360,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 	if(!paper_cups)
 		to_chat(user, span_warning("There aren't any cups left!"))
 		return
-	user.visible_message(span_notice("[user] takes a cup from [src]."), span_notice("You take a paper cup from [src]."))
+	user.visible_message(span_notice("[user] берет чашку из [src]."), span_notice("Вы берете бумажный стаканчик из [src]."))
 	var/obj/item/reagent_containers/cup/glass/sillycup/S = new(get_turf(src))
 	user.put_in_hands(S)
 	paper_cups--
