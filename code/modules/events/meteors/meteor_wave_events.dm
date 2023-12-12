@@ -129,4 +129,4 @@
 	reasons += "[station_name()] has hit a particularly rough patch of space. \
 		Please mind any turbulence or damage from debris."
 
-	priority_announce(pick(reasons), "Collision Alert")
+	priority_announce(pick(reasons), "Предупреждение о столкновении")

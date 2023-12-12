@@ -69,6 +69,32 @@
 				else
 					return "s"
 
+/datum/proc/ruhit(in_what, pp)
+	if(!in_what)
+		in_what = ""
+	if(pp == "in")
+		switch(in_what)
+			if("голова")
+				return "голову"
+			if("правая кисть")
+				return "правую кисть"
+			if("левая кисть")
+				return "левую кисть"
+			if("левая рука")
+				return "левую руку"
+			if("правая рука")
+				return "правую руку"
+			if("левая нога")
+				return "левую ногу"
+			if("правая нога")
+				return "правую ногу"
+			if("левая ступня")
+				return "левую ступню"
+			if("правая ступня")
+				return "правую ступню"
+			else
+				return in_what
+
 //like clients, which do have gender.
 /client/p_they(temp_gender)
 	if(!temp_gender)

@@ -341,7 +341,7 @@
 
 		var/organ_hit_text = ""
 		if(hit_limb_zone)
-			organ_hit_text = " в [parse_zone(hit_limb_zone)]"
+			organ_hit_text = " в [ruhit(parse_zone(hit_limb_zone),"in")]"
 		if(suppressed == SUPPRESSED_VERY)
 			playsound(loc, hitsound, 5, TRUE, -1)
 		else if(suppressed)

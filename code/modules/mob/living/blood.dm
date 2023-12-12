@@ -143,19 +143,19 @@
 		if(-INFINITY to 0)
 			return
 		if(0 to 1)
-			bleeding_severity = "You feel light trickles of blood across your skin"
+			bleeding_severity = "Вы чувствуете легкие потеки крови по коже."
 			next_cooldown *= 2.5
 		if(1 to 3)
-			bleeding_severity = "You feel a small stream of blood running across your body"
+			bleeding_severity = "Вы чувствуете как по вашему телу течет небольшая струйка крови."
 			next_cooldown *= 2
 		if(3 to 5)
-			bleeding_severity = "You skin feels clammy from the flow of blood leaving your body"
+			bleeding_severity = "Вы чувствуете что кожа становится липкой от потока крови покидающей ваше тело."
 			next_cooldown *= 1.7
 		if(5 to 7)
-			bleeding_severity = "Your body grows more and more numb as blood streams out"
+			bleeding_severity = "Ваше тело все больше и больше немеет по мере вытекания крови."
 			next_cooldown *= 1.5
 		if(7 to INFINITY)
-			bleeding_severity = "Your heartbeat thrashes wildly trying to keep up with your bloodloss"
+			bleeding_severity = "Ваше сердце бешено колотится пытаясь справиться с кровопотерей."
 
 	var/rate_of_change = ", but it's getting better." // if there's no wounds actively getting bloodier or maintaining the same flow, we must be getting better!
 	if(HAS_TRAIT(src, TRAIT_COAGULATING)) // if we have coagulant, we're getting better quick
