@@ -281,7 +281,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool, 0)
 			return
 		if(!usr.can_perform_action(src, NEED_DEXTERITY|NEED_HANDS))
 			return
-		usr.visible_message(span_notice("[usr] хватает \the [src.name]."), span_notice("Вы хватаете \the [src.name]."))
+		usr.visible_message(span_notice("[usr] хватает [src.name]."), span_notice("Вы хватаете [src.name]."))
 		var/obj/item/C = new item_chair(loc)
 		C.set_custom_materials(custom_materials)
 		TransferComponents(C)

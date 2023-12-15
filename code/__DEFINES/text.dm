@@ -63,6 +63,7 @@
 
 // JSON text files found in the tgstation/strings folder
 /// File location for brain damage traumas
+#define RUS_T "rus.json"
 #define BRAIN_DAMAGE_FILE "traumas.json"
 /// File location for AI ion laws
 #define ION_FILE "ion_laws.json"

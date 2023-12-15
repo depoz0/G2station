@@ -30,6 +30,17 @@ GLOBAL_VAR(string_filename_current_key)
 	else
 		CRASH("strings list not found: [directory]/[filepath], index=[key]")
 
+/proc/rusrep(keya, key2)
+	var/list/sanalist = strings(RUS_T, "[keya]")
+	if(islist(sanalist))
+		if(sanalist["[key2]"])
+			var/sana = sanalist["[key2]"]
+			return sana
+		else
+			return keya
+	else
+		return keya
+
 /proc/strings_subkey_lookup(match, group1)
 	return pick_list(GLOB.string_filename_current_key, group1)
 
