@@ -6,7 +6,6 @@
 	base_icon_state = "plant-01"
 	desc = "Немного природы в горшке."
 	layer = ABOVE_MOB_LAYER
-	plane = GAME_PLANE_UPPER
 	w_class = WEIGHT_CLASS_HUGE
 	force = 10
 	throwforce = 13

@@ -331,7 +331,7 @@ const SendToAllSection = (props) => {
           height={6}
           value={message}
           placeholder="Отправить сообщение всем..."
-          onInput={(_: any, v: string) => setmessage(v)}
+          onChange={(event, value: string) => setmessage(value)}
         />
       </Section>
     </>
