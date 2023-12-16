@@ -357,9 +357,9 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 	if(isnull(held_item))
 		if(secure && !broken)
-			context[SCREENTIP_CONTEXT_RMB] = opened ? "Lock" : "Unlock"
+			context[SCREENTIP_CONTEXT_RMB] = opened ? "Заблокировать" : "Разблокировать"
 		if(!welded)
-			context[SCREENTIP_CONTEXT_LMB] = opened ? "Close" : "Open"
+			context[SCREENTIP_CONTEXT_LMB] = opened ? "Закрыть" : "Открыть"
 		screentip_change = TRUE
 
 	if(istype(held_item) && held_item.tool_behaviour == TOOL_WELDER)
@@ -1103,7 +1103,7 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	locked = !locked
 	user.visible_message(
 		span_notice("[user] [locked ? "locks" : "unlocks"] [src]."),
-		span_notice("You [locked ? "locked" : "unlocked"] [src]."),
+		span_notice("Вы [locked ? "заблокировали" : "разблокировали"] [src.name]."),
 	)
 	update_appearance()
 

@@ -27,13 +27,13 @@ GLOBAL_VAR(string_filename_current_key)
 	load_strings_file(filepath, directory)
 	if((filepath in GLOB.string_cache) && (key in GLOB.string_cache[filepath]))
 		return GLOB.string_cache[filepath][key]
-	else
-		CRASH("strings list not found: [directory]/[filepath], index=[key]")
+//	else
+//		CRASH("strings list not found: [directory]/[filepath], index=[key]")
 
 /proc/rusrep(keya, key2)
 	var/list/sanalist = strings(RUS_T, "[keya]")
 	if(islist(sanalist))
-		if(sanalist["[key2]"])
+		if(istext(sanalist["[key2]"]))
 			var/sana = sanalist["[key2]"]
 			return sana
 		else

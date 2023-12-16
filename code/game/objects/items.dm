@@ -392,7 +392,7 @@
 /obj/item/examine(mob/user) //This might be spammy. Remove?
 	. = ..()
 
-	. += "[gender == PLURAL ? "They are" : "It is"] a [weight_class_to_text(w_class)] item."
+	. += "Это [weight_class_to_text(w_class)] предмет."
 
 	if(item_flags & CRUEL_IMPLEMENT)
 		. += "[src] seems quite practical for particularly <font color='red'>morbid</font> procedures and experiments."

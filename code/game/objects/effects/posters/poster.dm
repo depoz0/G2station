@@ -87,9 +87,9 @@
  * For the item form that can be spawned for players, see [/obj/item/poster]
  */
 /obj/structure/sign/poster
-	name = "poster"
+	name = "плакат"
 	var/original_name
-	desc = "A large piece of space-resistant printed paper."
+	desc = "Большой лист бумаги с печатью, устойчивой к внешним воздействиям."
 	icon = 'icons/obj/poster.dmi'
 	anchored = TRUE
 	buildable_sign = FALSE //Cannot be unwrenched from a wall.
@@ -114,8 +114,8 @@
 		randomise(random_basetype)
 	if(!ruined)
 		original_name = name // can't use initial because of random posters
-		name = "poster - [name]"
-		desc = "A large piece of space-resistant printed paper. [desc]"
+		name = "плакат - [name]"
+		desc = "Большой лист бумаги с печатью, устойчивой к внешним воздействиям. [desc]"
 
 	AddElement(/datum/element/beauty, 300)
 
@@ -129,9 +129,9 @@
 
 	if (held_item.tool_behaviour == TOOL_WIRECUTTER)
 		if (ruined)
-			context[SCREENTIP_CONTEXT_LMB] = "Clean up remnants"
+			context[SCREENTIP_CONTEXT_LMB] = "Убрать остатки"
 			return CONTEXTUAL_SCREENTIP_SET
-		context[SCREENTIP_CONTEXT_LMB] = "Take down poster"
+		context[SCREENTIP_CONTEXT_LMB] = "Снять плакат"
 		return CONTEXTUAL_SCREENTIP_SET
 	return .
 
@@ -176,10 +176,10 @@
 	if(tool.tool_behaviour == TOOL_WIRECUTTER)
 		tool.play_tool_sound(src, 100)
 		if(ruined)
-			to_chat(user, span_notice("You remove the remnants of the poster."))
+			to_chat(user, span_notice("Вы убираете остатки плаката."))
 			qdel(src)
 		else
-			to_chat(user, span_notice("You carefully remove the poster from the wall."))
+			to_chat(user, span_notice("Вы осторожно снимаете плакат со стены."))
 			roll_and_drop(Adjacent(user) ? get_turf(user) : loc)
 
 /obj/structure/sign/poster/attack_hand(mob/user, list/modifiers)
@@ -195,9 +195,9 @@
 	if (!payload)
 		return
 
-	to_chat(user, span_warning("There's something sharp behind this! What the hell?"))
+	to_chat(user, span_warning("За ним скрывается что-то острое! Что за чертовщина?"))
 	if(!can_embed_trap(user) || !payload.tryEmbed(user.get_active_hand(), forced = TRUE))
-		visible_message(span_notice("A [payload.name] falls from behind the poster.") )
+		visible_message(span_notice("Из-за плаката выпадает [payload.name].") )
 		payload.forceMove(user.drop_location())
 	else
 		SEND_SIGNAL(src, COMSIG_POSTER_TRAP_SUCCEED, user)
@@ -274,8 +274,8 @@
 /obj/structure/sign/poster/ripped
 	ruined = TRUE
 	icon_state = "poster_ripped"
-	name = "ripped poster"
-	desc = "You can't make out anything from the poster's original print. It's ruined."
+	name = "оторванный плакат"
+	desc = "Вы не можете ничего разобрать на оригинальном оттиске плаката. Он испорчен."
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/ripped, 32)
 

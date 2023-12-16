@@ -12,8 +12,8 @@
 	flags_1 = IS_PLAYER_COLORABLE_1
 
 /obj/item/clothing/shoes/sneakers/black
-	name = "black shoes"
-	desc = "A pair of black shoes."
+	name = "чёрные ботинки"
+	desc = "Пара черных ботинок."
 	custom_price = PAYCHECK_CREW
 
 	cold_protection = FEET

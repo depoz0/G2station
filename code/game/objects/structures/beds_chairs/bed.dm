@@ -8,8 +8,8 @@
 
 /// Beds
 /obj/structure/bed
-	name = "bed"
-	desc = "This is used to lie in, sleep in or strap on."
+	name = "кровать"
+	desc = "В ней можно лежать, спать и не только."
 	icon_state = "bed"
 	icon = 'icons/obj/bed.dmi'
 	anchored = TRUE
@@ -35,18 +35,18 @@
 /obj/structure/bed/examine(mob/user)
 	. = ..()
 	if(!(obj_flags & NO_DECONSTRUCTION))
-		. += span_notice("It's held together by a couple of <b>bolts</b>.")
+		. += span_notice("Он закреплен парой <b>болтов</b>.")
 
 /obj/structure/bed/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	if(held_item)
 		if(held_item.tool_behaviour != TOOL_WRENCH || obj_flags & NO_DECONSTRUCTION)
 			return
 
-		context[SCREENTIP_CONTEXT_RMB] = "Dismantle"
+		context[SCREENTIP_CONTEXT_RMB] = "Демонтаж"
 		return CONTEXTUAL_SCREENTIP_SET
 
 	else if(has_buckled_mobs())
-		context[SCREENTIP_CONTEXT_LMB] = "Unbuckle"
+		context[SCREENTIP_CONTEXT_LMB] = "Отстегнуться"
 		return CONTEXTUAL_SCREENTIP_SET
 
 /obj/structure/bed/deconstruct(disassembled = TRUE)
@@ -69,9 +69,9 @@
 
 /// Medical beds
 /obj/structure/bed/medical
-	name = "medical bed"
+	name = "медицинская кровать"
 	icon = 'icons/obj/medical/medical_bed.dmi'
-	desc = "A medical bed with wheels for assisted patient movement or medbay racing tournaments."
+	desc = "Медицинская кровать с колесиками для перемещения пациента или гоночных турниров в медблоке."
 	icon_state = "med_down"
 	base_icon_state = "med"
 	anchored = FALSE
@@ -100,7 +100,7 @@
 
 /obj/structure/bed/medical/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	. = ..()
-	context[SCREENTIP_CONTEXT_ALT_LMB] = "[anchored ? "Release brakes" : "Apply brakes"]"
+	context[SCREENTIP_CONTEXT_ALT_LMB] = "[anchored ? "Разблокировать тормоза" : "Применить тормоза"]"
 	if(!isnull(foldable_type) && !has_buckled_mobs())
 		context[SCREENTIP_CONTEXT_RMB] = "Fold up"
 
@@ -109,9 +109,9 @@
 /obj/structure/bed/medical/examine(mob/user)
 	. = ..()
 	if(anchored)
-		. += span_notice("The brakes are applied. They can be released with an Alt-click.")
+		. += span_notice("Тормоза задействованы. Их можно снять нажатием Alt-клика.")
 	else
-		. += span_notice("The brakes can be applied with an Alt-click.")
+		. += span_notice("Тормоза можно активировать нажатием Alt-клика.")
 
 	if(!isnull(foldable_type))
 		. += span_notice("You can fold it up with a Right-click.")
