@@ -36,8 +36,9 @@
 	///The list of decals we will choose from to spawn when producing a mob
 	var/list/filth_spawn_types = list()
 
-/datum/round_event/vent_clog/announce()
-	priority_announce("В вентиляционных каналах обнаружено незначительное биологическое препятствие. Засорение находится в [get_area_name(vent)].", "Custodial Notification")
+/datum/round_event/vent_clog/announce(fake)
+	var/area/event_area = fake ? pick(GLOB.teleportlocs) : get_area_name(vent)
+	priority_announce("В вентиляционных каналах обнаружено незначительное биологическое препятствие. Засорение находится в [event_area].", "Custodial Notification")
 
 /datum/round_event/vent_clog/setup()
 	vent = get_vent()
@@ -227,8 +228,9 @@
 	)
 	return pick(mob_list)
 
-/datum/round_event/vent_clog/major/announce()
-	priority_announce("В вентиляционных каналах обнаружено крупное биологическое препятствие. Засорение находится в [get_area_name(vent)].", "Infestation Alert")
+/datum/round_event/vent_clog/major/announce(fake)
+	var/area/event_area = fake ? pick(GLOB.teleportlocs) : get_area_name(vent)
+	priority_announce("В вентиляционных каналах обнаружено крупное биологическое препятствие. Засорение находится в [event_area].", "Infestation Alert")
 
 /datum/round_event_control/vent_clog/critical
 	name = "Засор в вентиляции: Критическое"
@@ -250,8 +252,9 @@
 		/obj/effect/decal/cleanable/blood/splatter,
 	)
 
-/datum/round_event/vent_clog/critical/announce()
-	priority_announce("Потенциально опасные признаки жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Сигнал тревоги об опасности")
+/datum/round_event/vent_clog/critical/announce(fake)
+	var/area/event_area = fake ? pick(GLOB.teleportlocs) : get_area_name(vent)
+	priority_announce("Потенциально опасные признаки жизни, обнаруженные в [event_area] канальной системе вентиляции.", "Сигнал тревоги об опасности")
 
 /datum/round_event/vent_clog/critical/get_mob()
 	var/static/list/mob_list = list(
@@ -282,8 +285,9 @@
 		/obj/effect/decal/cleanable/vomit,
 	)
 
-/datum/round_event/vent_clog/strange/announce()
-	priority_announce("Необычные показания признаков жизни, обнаруженные в [get_area_name(vent)] канальной системе вентиляции.", "Сигнал тревоги о признаках жизни", ANNOUNCER_ALIENS)
+/datum/round_event/vent_clog/strange/announce(fake)
+	var/area/event_area = fake ? pick(GLOB.teleportlocs) : get_area_name(vent)
+	priority_announce("Необычные показания признаков жизни, обнаруженные в [event_area] канальной системе вентиляции.", "Сигнал тревоги о признаках жизни", ANNOUNCER_ALIENS)
 
 /datum/round_event/vent_clog/strange/get_mob()
 	var/static/list/mob_list = list(

@@ -28,17 +28,17 @@
 			if(user_unbuckle_mob(buckled_mobs[1],user))
 				return TRUE
 
-/atom/movable/attackby(obj/item/attacking_item, mob/user, params)
-	if(!can_buckle || !istype(attacking_item, /obj/item/riding_offhand) || !user.Adjacent(src))
+/atom/movable/item_interaction(mob/living/user, obj/item/tool, list/modifiers, is_right_clicking)
+	if(!can_buckle || !istype(tool, /obj/item/riding_offhand) || !user.Adjacent(src))
 		return ..()
 
-	var/obj/item/riding_offhand/riding_item = attacking_item
+	var/obj/item/riding_offhand/riding_item = tool
 	var/mob/living/carried_mob = riding_item.rider
 	if(carried_mob == user) //Piggyback user.
-		return
+		return ITEM_INTERACT_BLOCKING
 	user.unbuckle_mob(carried_mob)
 	carried_mob.forceMove(get_turf(src))
-	return mouse_buckle_handling(carried_mob, user)
+	return mouse_buckle_handling(carried_mob, user) ? ITEM_INTERACT_SUCCESS: ITEM_INTERACT_BLOCKING
 
 //literally just the above extension of attack_hand(), but for silicons instead (with an adjacency check, since attack_robot() being called doesn't mean that you're adjacent to something)
 /atom/movable/attack_robot(mob/living/user)
@@ -309,7 +309,7 @@
 	// we'll try it with a 2 second do_after delay.
 	if(M != user && (get_turf(M) != get_turf(src)))
 		M.visible_message(span_warning("[user] starts buckling [M] to [src]!"),\
-			span_userdanger("[user] начинает пристегивать вас к [src]!"),\
+			span_userdanger("[user] начинает пристегивать вас к [rusrep(src.name, 2)]!"),\
 			span_hear("Слышен металлический скрежет."))
 		if(!do_after(user, 2 SECONDS, M))
 			return FALSE
@@ -323,11 +323,11 @@
 	if(.)
 		if(M == user)
 			M.visible_message(span_notice("[M] buckles [M.p_them()]self to [src]."),\
-				span_notice("Вы пристегиваетесь к [src]."),\
+				span_notice("Вы пристегиваетесь к [rusrep(src.name, 2)]."),\
 				span_hear("Слышен металлический скрежет."))
 		else
 			M.visible_message(span_warning("[user] buckles [M] to [src]!"),\
-				span_warning("[user] пристегивает вас к [src]!"),\
+				span_warning("[user] пристегивает вас к [rusrep(src.name, 2)]!"),\
 				span_hear("Слышен металлический скрежет."))
 /**
  * Handles a user unbuckling a mob from src and sends a visible_message
@@ -345,11 +345,11 @@
 	if(M)
 		if(M != user)
 			M.visible_message(span_notice("[user] unbuckles [M] from [src]."),\
-				span_notice("[user] отстегивает вас от [src]."),\
+				span_notice("[user] отстегивает вас от [rusrep(src.name, 1)]."),\
 				span_hear("You hear metal clanking."))
 		else
 			M.visible_message(span_notice("[M] unbuckles [M.p_them()]self from [src]."),\
-				span_notice("Вы отстегиваетесь от [src]."),\
+				span_notice("Вы отстегиваетесь от [rusrep(src.name, 1)]."),\
 				span_hear("Слышен металлический скрежет."))
 		add_fingerprint(user)
 		if(isliving(M.pulledby))

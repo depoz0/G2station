@@ -1,15 +1,17 @@
-import { useBackend, useLocalState } from '../backend';
+import { useBackend } from '../backend';
 import { NtosWindow } from '../layouts';
 import { SupermatterContent, SupermatterData } from './Supermatter';
 import { Button, ProgressBar, Section, Table } from '../components';
+import { useState } from 'react';
 
 type NtosSupermatterData = SupermatterData & { focus_uid?: number };
 
 export const NtosSupermatter = (props) => {
   const { act, data } = useBackend<NtosSupermatterData>();
   const { sm_data, gas_metadata, focus_uid } = data;
-  const [activeUID, setActiveUID] = useLocalState('activeUID', 0);
+  const [activeUID, setActiveUID] = useState(0);
   const activeSM = sm_data.find((sm) => sm.uid === activeUID);
+
   return (
     <NtosWindow height={400} width={700}>
       <NtosWindow.Content>
@@ -25,20 +27,21 @@ export const NtosSupermatter = (props) => {
           />
         ) : (
           <Section
-            title="Detected Supermatters"
+            title="Обнаруженные Суперматерии"
             buttons={
               <Button
                 icon="sync"
-                content="Refresh"
+                content="Обновить"
                 onClick={() => act('PRG_refresh')}
               />
-            }>
+            }
+          >
             <Table>
               {sm_data.map((sm) => (
                 <Table.Row key={sm.uid}>
                   <Table.Cell>{sm.uid + '. ' + sm.area_name}</Table.Cell>
                   <Table.Cell collapsing color="label">
-                    Integrity:
+                    Целостность:
                   </Table.Cell>
                   <Table.Cell collapsing width="120px">
                     <ProgressBar
@@ -54,12 +57,12 @@ export const NtosSupermatter = (props) => {
                     <Button
                       icon="bell"
                       color={focus_uid === sm.uid && 'yellow'}
-                      onClick={() => act('PRG_focus', { 'focus_uid': sm.uid })}
+                      onClick={() => act('PRG_focus', { focus_uid: sm.uid })}
                     />
                   </Table.Cell>
                   <Table.Cell collapsing>
                     <Button
-                      content="Details"
+                      content="Подробнее"
                       onClick={() => setActiveUID(sm.uid)}
                     />
                   </Table.Cell>

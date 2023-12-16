@@ -312,10 +312,10 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be separate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "[span_name("[speaker]")] [speaker.verb_say] something but you cannot hear [speaker.p_them()]."
+			deaf_message = "[span_name("[speaker]")] [speaker.verb_say] что-то, но вы не можете услышать это."
 			deaf_type = MSG_VISUAL
 	else
-		deaf_message = span_notice("You can't hear yourself!")
+		deaf_message = span_notice("Вы себя не слышите!")
 		deaf_type = MSG_AUDIBLE // Since you should be able to hear yourself without looking
 
 	// Create map text prior to modifying message for goonchat
@@ -436,9 +436,9 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 	if(!can_speak())
 		if(HAS_MIND_TRAIT(src, TRAIT_MIMING))
-			to_chat(src, span_green("Your vow of silence prevents you from speaking!"))
+			to_chat(src, span_green("Ваш обет молчания не позволяет вам говорить!"))
 		else
-			to_chat(src, span_warning("You find yourself unable to speak!"))
+			to_chat(src, span_warning("Вы обнаруживаете что не можете говорить!"))
 		return FALSE
 
 	return TRUE

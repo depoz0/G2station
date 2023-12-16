@@ -2,7 +2,7 @@
 	desc = "Портативный диагностический прибор, который сообщает о текущем уровне газа."
 	name = "газоанализатор"
 	custom_price = PAYCHECK_LOWER * 0.9
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/devices/scanner.dmi'
 	icon_state = "analyzer"
 	inhand_icon_state = "analyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'

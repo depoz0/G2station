@@ -200,13 +200,13 @@
 	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
 
 /obj/effect/decal/cleanable/blood/gibs/old
-	name = "old rotting gibs"
-	desc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
+	name = "старые гниющие потроха"
+	desc = "Мой Бог, почему никто не убрал здесь? Пахнет ужасно."
 	icon_state = "gib1-old"
 	bloodiness = 0
 	should_dry = FALSE
-	dryname = "old rotting gibs"
-	drydesc = "Space Jesus, why didn't anyone clean this up? They smell terrible."
+	dryname = "старые гниющие потроха"
+	drydesc = "Мой Бог, почему никто не убрал здесь? Пахнет ужасно."
 
 /obj/effect/decal/cleanable/blood/gibs/old/Initialize(mapload, list/datum/disease/diseases)
 	. = ..()

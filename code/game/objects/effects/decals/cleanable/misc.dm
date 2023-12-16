@@ -129,7 +129,6 @@
 	desc = "Кто-то должен это удалить."
 	gender = NEUTER
 	layer = WALL_OBJ_LAYER
-	plane = GAME_PLANE_UPPER
 	icon_state = "cobweb1"
 	resistance_flags = FLAMMABLE
 	beauty = -100

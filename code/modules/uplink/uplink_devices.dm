@@ -5,7 +5,7 @@
 // simultaneously is an annoying distraction.
 /obj/item/uplink
 	name = "рация"
-	icon = 'icons/obj/device.dmi'
+	icon = 'icons/obj/devices/voice.dmi'
 	icon_state = "radio"
 	inhand_icon_state = "radio"
 	worn_icon_state = "radio"

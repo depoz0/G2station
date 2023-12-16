@@ -8,7 +8,8 @@ import { AnnouncementTab } from './AnnouncementTab';
 export const RequestMainScreen = (props) => {
   const { act, data } = useBackend<RequestsData>();
   const { can_send_announcements } = data;
-  const [tab, setTab] = useSharedState('tab', 1);
+  const [tab, setTab] = useSharedState('tab', RequestTabs.MESSAGE_VIEW);
+
   return (
     <Stack.Item grow>
       <Stack vertical fill>
@@ -20,7 +21,8 @@ export const RequestMainScreen = (props) => {
                 setTab(RequestTabs.MESSAGE_VIEW);
                 act('clear_message_status');
                 act('clear_authentication');
-              }}>
+              }}
+            >
               Просмотр сообщений <Icon name={'envelope-open'} />
             </Tabs.Tab>
             <Tabs.Tab
@@ -32,7 +34,8 @@ export const RequestMainScreen = (props) => {
                   act('clear_authentication');
                 }
                 setTab(RequestTabs.MESSAGE_WRITE);
-              }}>
+              }}
+            >
               Написать сообщение <Icon name="pencil" />
             </Tabs.Tab>
             {!!can_send_announcements && (
@@ -45,7 +48,8 @@ export const RequestMainScreen = (props) => {
                     act('clear_authentication');
                   }
                   setTab(RequestTabs.ANNOUNCE);
-                }}>
+                }}
+              >
                 Сделать объявление <Icon name="bullhorn" />
               </Tabs.Tab>
             )}

@@ -41,9 +41,9 @@
 	switch(A.stage)
 		if(1, 2, 3, 4)
 			if(prob(base_message_chance) && !suppress_warning)
-				to_chat(M, span_warning("[pick("You feel dizzy.", "Your head spins.")]"))
+				to_chat(M, span_warning("[pick("Вы чувствуете головокружение.", "У вас голова идет кругом.")]"))
 		else
-			to_chat(M, span_userdanger("A wave of dizziness washes over you!"))
+			to_chat(M, span_userdanger("Вас охватывает волна головокружения!"))
 			M.adjust_dizzy_up_to(1 MINUTES, 140 SECONDS)
 			if(power >= 2)
 				M.set_drugginess(80 SECONDS)

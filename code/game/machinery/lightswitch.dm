@@ -1,10 +1,10 @@
 /// The light switch. Can have multiple per area.
 /obj/machinery/light_switch
-	name = "light switch"
+	name = "выключатель света"
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "light-nopower"
 	base_icon_state = "light"
-	desc = "Make dark."
+	desc = "Сделай темно."
 	power_channel = AREA_USAGE_LIGHT
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.02
 	/// Set this to a string, path, or area instance to control that area
@@ -32,7 +32,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 	if(!area)
 		area = get_area(src)
 	if(autoname)
-		name = "light switch ([area.name])"
+		name = "выключатель света ([area.name])"
 	find_and_hang_on_wall(custom_drop_callback = CALLBACK(src, PROC_REF(deconstruct), TRUE))
 	register_context()
 	update_appearance()
@@ -40,10 +40,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 /obj/machinery/light_switch/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
 	if(isnull(held_item))
-		context[SCREENTIP_CONTEXT_LMB] = area.lightswitch ? "Flick off" : "Flick on"
+		context[SCREENTIP_CONTEXT_LMB] = area.lightswitch ? "Выключить" : "Включить"
 		return CONTEXTUAL_SCREENTIP_SET
 	if(held_item.tool_behaviour != TOOL_SCREWDRIVER)
-		context[SCREENTIP_CONTEXT_RMB] = "Deconstruct"
+		context[SCREENTIP_CONTEXT_RMB] = "Разобрать"
 		return CONTEXTUAL_SCREENTIP_SET
 	return .
 
@@ -111,8 +111,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 	qdel(src)
 
 /obj/item/wallframe/light_switch
-	name = "light switch"
-	desc = "An unmounted light switch. Attach it to a wall to use."
+	name = "выключатель света"
+	desc = "Неустановленный выключатель. Прикрепите его к стене, чтобы использовать."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "light-nopower"
 	result_path = /obj/machinery/light_switch

@@ -15,7 +15,7 @@
 	owner.announce_objectives()
 
 /datum/objective/pyro_slime
-	explanation_text = "All I know fire. I speak in tongues of flame. Why is everyone so cold?"
+	explanation_text = "Я знаю только o огне. Я говорю на языках пламени. Почему все такие холодные?"
 
 /datum/objective/pyro_slime/check_completion()
 	return owner.current.stat != DEAD

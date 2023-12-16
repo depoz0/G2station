@@ -1,4 +1,14 @@
-import { Box, Button, Icon, Section, Stack, Input, TextArea, Dimmer, Divider } from '../../components';
+import {
+  Box,
+  Button,
+  Icon,
+  Section,
+  Stack,
+  Input,
+  TextArea,
+  Dimmer,
+  Divider,
+} from '../../components';
 import { useBackend, useLocalState } from '../../backend';
 import { createSearch } from 'common/string';
 import { BooleanLike } from 'common/react';
@@ -93,11 +103,11 @@ const ContactsScreen = (props: any) => {
 
   const searchChatByName = createSearch(
     searchUser,
-    (chat: NtChat) => chat.recipient.name + chat.recipient.job
+    (chat: NtChat) => chat.recipient.name + chat.recipient.job,
   );
   const searchMessengerByName = createSearch(
     searchUser,
-    (messenger: NtMessenger) => messenger.name + messenger.job
+    (messenger: NtMessenger) => messenger.name + messenger.job,
   );
 
   const chatToButton = (chat: NtChat) => {
@@ -123,7 +133,7 @@ const ContactsScreen = (props: any) => {
   };
 
   const openChatsArray = sortByUnreads(Object.values(saved_chats)).filter(
-    searchChatByName
+    searchChatByName,
   );
 
   const filteredChatButtons = openChatsArray
@@ -134,7 +144,7 @@ const ContactsScreen = (props: any) => {
     .filter(
       ([ref, messenger]) =>
         openChatsArray.every((chat) => chat.recipient.ref !== ref) &&
-        searchMessengerByName(messenger)
+        searchMessengerByName(messenger),
     )
     .map(([_, messenger]) => messenger)
     .map(messengerToButton)
@@ -273,7 +283,8 @@ const ChatButton = (props: ChatButtonProps) => {
       fluid
       onClick={() => {
         act('PDA_viewMessages', { ref: props.chatRef });
-      }}>
+      }}
+    >
       {hasUnreads &&
         `[${unreadMessages <= 9 ? unreadMessages : '9+'} unread message${
           unreadMessages !== 1 ? 's' : ''
@@ -308,7 +319,8 @@ const SendToAllSection = (props) => {
               onClick={() => {
                 act('PDA_sendEveryone', { message: message });
                 setmessage('');
-              }}>
+              }}
+            >
               Отправить
             </Button>
           </Stack.Item>
@@ -319,7 +331,7 @@ const SendToAllSection = (props) => {
           height={6}
           value={message}
           placeholder="Отправить сообщение всем..."
-          onInput={(_: any, v: string) => setmessage(v)}
+          onChange={(event, value: string) => setmessage(value)}
         />
       </Section>
     </>

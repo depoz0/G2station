@@ -135,7 +135,7 @@
 	return brother_text
 
 /datum/antagonist/brother/greet()
-	to_chat(owner.current, span_alertsyndie("You are the [owner.special_role]."))
+	to_chat(owner.current, span_alertsyndie("Вы [owner.special_role]."))
 	owner.announce_objectives()
 
 /datum/antagonist/brother/proc/finalize_brother()

@@ -212,7 +212,7 @@
 	to_chat(user, span_notice("You start disassembling [src]..."))
 	if(tool.use_tool(src, user, 2 SECONDS, volume=50))
 		deconstruct(TRUE)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/table/wrench_act_secondary(mob/living/user, obj/item/tool)
 	if(obj_flags & NO_DECONSTRUCTION || !deconstruction_ready)
@@ -221,7 +221,7 @@
 	if(tool.use_tool(src, user, 4 SECONDS, volume=50))
 		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE, 1)
-	return TOOL_ACT_TOOLTYPE_SUCCESS
+	return ITEM_INTERACT_SUCCESS
 
 /obj/structure/table/attackby(obj/item/I, mob/living/user, params)
 	var/list/modifiers = params2list(params)
@@ -502,8 +502,8 @@
  */
 
 /obj/structure/table/wood
-	name = "wooden table"
-	desc = "Do not apply fire to this. Rumour says it burns easily."
+	name = "деревянный стол"
+	desc = "Не подвергайте его воздействию огня. Ходят слухи, что он легко воспламеняется."
 	icon = 'icons/obj/smooth_structures/wood_table.dmi'
 	icon_state = "wood_table-0"
 	base_icon_state = "wood_table"
@@ -815,8 +815,8 @@
  * Racks
  */
 /obj/structure/rack
-	name = "rack"
-	desc = "Different from the Middle Ages version."
+	name = "стеллаж"
+	desc = "Отличается от версии Средних веков."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "rack"
 	layer = TABLE_LAYER
@@ -827,7 +827,7 @@
 
 /obj/structure/rack/examine(mob/user)
 	. = ..()
-	. += span_notice("It's held together by a couple of <b>bolts</b>.")
+	. += span_notice("Он соединен парой <b>болтов</b>.")
 
 /obj/structure/rack/CanAllowThrough(atom/movable/mover, border_dir)
 	. = ..()
@@ -867,7 +867,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	user.do_attack_animation(src, ATTACK_EFFECT_KICK)
-	user.visible_message(span_danger("[user] kicks [src]."), null, null, COMBAT_MESSAGE_RANGE)
+	user.visible_message(span_danger("[user] пинает [src]."), null, null, COMBAT_MESSAGE_RANGE)
 	take_damage(rand(4,8), BRUTE, MELEE, 1)
 
 /obj/structure/rack/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
@@ -897,8 +897,8 @@
  */
 
 /obj/item/rack_parts
-	name = "rack parts"
-	desc = "Parts of a rack."
+	name = "части стеллажа"
+	desc = "Части стеллажа."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "rack_parts"
 	inhand_icon_state = "rack_parts"
@@ -917,13 +917,13 @@
 	if(building)
 		return
 	building = TRUE
-	to_chat(user, span_notice("You start constructing a rack..."))
+	to_chat(user, span_notice("Вы начинаете собирать стеллаж..."))
 	if(do_after(user, 50, target = user, progress=TRUE))
 		if(!user.temporarilyRemoveItemFromInventory(src))
 			return
 		var/obj/structure/rack/R = new /obj/structure/rack(get_turf(src))
-		user.visible_message("<span class='notice'>[user] assembles \a [R].\
-			</span>", span_notice("You assemble \a [R]."))
+		user.visible_message("<span class='notice'>[user] собирает [R].\
+			</span>", span_notice("Вы собрали [R]."))
 		R.add_fingerprint(user)
 		qdel(src)
 	building = FALSE

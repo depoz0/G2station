@@ -1,7 +1,16 @@
 import { classes } from 'common/react';
 import { capitalizeAll } from 'common/string';
 import { useBackend, useLocalState } from 'tgui/backend';
-import { Box, Button, Icon, LabeledList, NoticeBox, Section, Stack, Table } from 'tgui/components';
+import {
+  Box,
+  Button,
+  Icon,
+  LabeledList,
+  NoticeBox,
+  Section,
+  Stack,
+  Table,
+} from 'tgui/components';
 import { Window } from 'tgui/layouts';
 
 type VendingData = {
@@ -74,7 +83,7 @@ export const Vending = (props) => {
 
   const [selectedCategory, setSelectedCategory] = useLocalState<string>(
     'selectedCategory',
-    Object.keys(data.categories)[0]
+    Object.keys(data.categories)[0],
   );
 
   let inventory: (ProductRecord | CustomInput)[];
@@ -102,7 +111,7 @@ export const Vending = (props) => {
           return false;
         }
       });
-    })
+    }),
   );
 
   return (
@@ -201,7 +210,8 @@ const ProductDisplay = (props: {
             <Icon name={displayed_currency_icon} color="gold" />
           </Box>
         )
-      }>
+      }
+    >
       <Table>
         {inventory
           .filter((product) => {
@@ -279,16 +289,14 @@ const ProductImage = (props) => {
     <img
       src={`data:image/jpeg;base64,${product.img}`}
       style={{
-        'vertical-align': 'middle',
-        'horizontal-align': 'middle',
+        verticalAlign: 'middle',
       }}
     />
   ) : (
     <span
       className={classes(['vending32x32', product.path])}
       style={{
-        'vertical-align': 'middle',
-        'horizontal-align': 'middle',
+        verticalAlign: 'middle',
       }}
     />
   );
@@ -321,7 +329,8 @@ const ProductStock = (props) => {
         (remaining <= 0 && 'bad') ||
         (!custom && remaining <= product.max_amount / 2 && 'average') ||
         'good'
-      }>
+      }
+    >
       {remaining} шт.
     </Box>
   );
@@ -345,9 +354,10 @@ const ProductButton = (props) => {
       disabled={disabled}
       onClick={() =>
         act('dispense', {
-          'item': product.name,
+          item: product.name,
         })
-      }>
+      }
+    >
       {customPrice}
       {!access && displayed_currency_name}
     </Button>
@@ -357,9 +367,10 @@ const ProductButton = (props) => {
       disabled={disabled}
       onClick={() =>
         act('vend', {
-          'ref': product.ref,
+          ref: product.ref,
         })
-      }>
+      }
+    >
       {standardPrice}
       {!free && displayed_currency_name}
     </Button>
@@ -367,8 +378,8 @@ const ProductButton = (props) => {
 };
 
 const CATEGORY_COLORS = {
-  'Контрабанда': 'red',
-  'Премиум': 'yellow',
+  Контрабанда: 'red',
+  Премиум: 'yellow',
 };
 
 const CategorySelector = (props: {
@@ -388,7 +399,8 @@ const CategorySelector = (props: {
               selected={name === selectedCategory}
               color={CATEGORY_COLORS[name]}
               icon={category.icon}
-              onClick={() => onSelect(name)}>
+              onClick={() => onSelect(name)}
+            >
               {name}
             </Button>
           ))}

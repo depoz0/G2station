@@ -1,6 +1,6 @@
 /obj/item/organ/internal/heart
-	name = "heart"
-	desc = "I feel bad for the heartless bastard who lost this."
+	name = "сердце"
+	desc = "Мне жаль того бессердечного ублюдка, который потерял это."
 	icon_state = "heart-on"
 	base_icon_state = "heart"
 	visual = FALSE
@@ -10,10 +10,10 @@
 	healing_factor = STANDARD_ORGAN_HEALING
 	decay_factor = 2.5 * STANDARD_ORGAN_DECAY //designed to fail around 6 minutes after death
 
-	low_threshold_passed = span_info("Prickles of pain appear then die out from within your chest...")
-	high_threshold_passed = span_warning("Something inside your chest hurts, and the pain isn't subsiding. You notice yourself breathing far faster than before.")
-	now_fixed = span_info("Your heart begins to beat again.")
-	high_threshold_cleared = span_info("The pain in your chest has died down, and your breathing becomes more relaxed.")
+	low_threshold_passed = span_info("В груди то появляются, то исчезают острые боли...")
+	high_threshold_passed = span_warning("У вас болит что-то в груди и боль не утихает. Вы замечаете что дышите гораздо быстрее, чем раньше.")
+	now_fixed = span_info("Ваше сердце снова начинает биться.")
+	high_threshold_cleared = span_info("Боль в груди утихла а дыхание стало более спокойным.")
 
 	attack_verb_continuous = list("beats", "thumps")
 	attack_verb_simple = list("beat", "thump")
@@ -33,7 +33,7 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[beating ? "on" : "off"]"
 
-/obj/item/organ/internal/heart/Remove(mob/living/carbon/heartless, special = 0)
+/obj/item/organ/internal/heart/Remove(mob/living/carbon/heartless, special, movement_flags)
 	. = ..()
 	if(!special)
 		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 12 SECONDS)
@@ -55,8 +55,8 @@
 
 	if(!beating)
 		user.visible_message(
-			span_notice("[user] squeezes [src] to make it beat again!"),
-			span_notice("You squeeze [src] to make it beat again!"),
+			span_notice("[user] давит на [src] чтобы заставить его биться снова!"),
+			span_notice("Вы сжимаете [src] чтобы заставить его биться снова!"),
 		)
 		Restart()
 		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 8 SECONDS)
@@ -101,7 +101,7 @@
 		if(owner.can_heartattack() && Stop())
 			if(owner.stat == CONSCIOUS)
 				owner.visible_message(span_danger("[owner] clutches at [owner.p_their()] chest as if [owner.p_their()] heart is stopping!"))
-			to_chat(owner, span_userdanger("You feel a terrible pain in your chest, as if your heart has stopped!"))
+			to_chat(owner, span_userdanger("Вы чувствуете сильную боль в груди как будто сердце остановилось!"))
 		return
 
 	// Beyond deals with sound effects, so nothing needs to be done if no client
@@ -111,7 +111,7 @@
 	if(owner.stat == SOFT_CRIT)
 		if(beat != BEAT_SLOW)
 			beat = BEAT_SLOW
-			to_chat(owner, span_notice("You feel your heart slow down..."))
+			to_chat(owner, span_notice("Вы чувствуете как ваше сердце замедляется..."))
 			SEND_SOUND(owner, sound('sound/health/slowbeat.ogg', repeat = TRUE, channel = CHANNEL_HEARTBEAT, volume = 40))
 
 	else if(owner.stat == HARD_CRIT)
@@ -146,12 +146,14 @@
 	else
 		return ..()
 
-/obj/item/organ/internal/heart/cursed/on_insert(mob/living/carbon/accursed)
+/obj/item/organ/internal/heart/cursed/on_mob_insert(mob/living/carbon/accursed)
 	. = ..()
+
 	accursed.AddComponent(/datum/component/manual_heart, pump_delay = pump_delay, blood_loss = blood_loss, heal_brute = heal_brute, heal_burn = heal_burn, heal_oxy = heal_oxy)
 
-/obj/item/organ/internal/heart/cursed/Remove(mob/living/carbon/accursed, special = FALSE)
+/obj/item/organ/internal/heart/cursed/on_mob_remove(mob/living/carbon/accursed, special = FALSE)
 	. = ..()
+
 	qdel(accursed.GetComponent(/datum/component/manual_heart))
 
 /obj/item/organ/internal/heart/cybernetic
