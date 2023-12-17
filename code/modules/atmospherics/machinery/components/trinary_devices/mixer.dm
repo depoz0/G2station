@@ -2,8 +2,8 @@
 	icon_state = "mixer_off-0"
 	density = FALSE
 
-	name = "gas mixer"
-	desc = "Very useful for mixing gasses."
+	name = "газовый смеситель"
+	desc = "Очень полезен для смешивания газов."
 
 	can_unwrench = TRUE
 	construction_type = /obj/item/pipe/trinary/flippable
@@ -23,14 +23,14 @@
 
 /obj/machinery/atmospherics/components/trinary/mixer/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
-	context[SCREENTIP_CONTEXT_CTRL_LMB] = "Turn [on ? "off" : "on"]"
-	context[SCREENTIP_CONTEXT_ALT_LMB] = "Maximize target pressure"
+	context[SCREENTIP_CONTEXT_CTRL_LMB] = "[on ? "Выключить" : "Включить"]"
+	context[SCREENTIP_CONTEXT_ALT_LMB] = "Выставить давление на максимум"
 	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/machinery/atmospherics/components/trinary/mixer/CtrlClick(mob/user)
 	if(can_interact(user))
 		on = !on
-		balloon_alert(user, "turned [on ? "on" : "off"]")
+		balloon_alert(user, "[on ? "включение" : "выключение"]")
 		investigate_log("was turned [on ? "on" : "off"] by [key_name(user)]", INVESTIGATE_ATMOS)
 		update_appearance()
 	return ..()

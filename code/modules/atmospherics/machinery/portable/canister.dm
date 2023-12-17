@@ -168,7 +168,7 @@
 	greyscale_colors = "#e9ff5c#f4fce8"
 
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide
-	name = "Баллончик с закисью азота"
+	name = "Баллон с оксидом азота"
 	gas_type = /datum/gas/nitrous_oxide
 	greyscale_config = /datum/greyscale_config/canister/double_stripe
 	greyscale_colors = "#c63e3b#f7d5d3"

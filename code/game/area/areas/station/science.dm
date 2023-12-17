@@ -17,11 +17,11 @@
 	icon_state = "science_breakroom"
 
 /area/station/science/lab
-	name = "Research and Development"
+	name = "Научные исследования и разработки"
 	icon_state = "research"
 
 /area/station/science/xenobiology
-	name = "\improper Xenobiology Lab"
+	name = "Ксенобиологическая лаборатория"
 	icon_state = "xenobio"
 
 /area/station/science/xenobiology/hallway
@@ -38,7 +38,7 @@
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/station/science/genetics
-	name = "\improper Genetics Lab"
+	name = "Генетическая лаборатория"
 	icon_state = "geneticssci"
 
 /area/station/science/server

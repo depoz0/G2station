@@ -308,7 +308,7 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 		. += "Вы узнаете эти следы. Они от:"
 		for(var/sole in shoe_types)
 			var/obj/item/clothing/item = sole
-			var/article = initial(item.gender) == PLURAL ? "Some" : "A"
+//			var/article = initial(item.gender) == PLURAL ? "Some" : "A"
 			. += "[icon2html(initial(item.icon), user, initial(item.icon_state))] <B>[rusrep(initial(item.name), 2)]</B>."
 		for(var/species in species_types)
 			// god help me

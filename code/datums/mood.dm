@@ -307,8 +307,8 @@
 
 /// Prints the users mood, sanity, and moodies to chat
 /datum/mood/proc/print_mood(mob/user)
-	var/msg = "[span_info("<EM>Мое текущее душевное состояние:</EM>")]\n"
-	msg += span_notice("Мое текущее сознание: ") //Long term
+	var/msg = "[span_info("<EM>Мое душевное состояние:</EM>")]\n"
+	msg += span_notice("Мое сознание: ") //Long term
 	switch(sanity)
 		if(SANITY_GREAT to INFINITY)
 			msg += "[span_boldnicegreen("Мой разум - как храм!")]\n"
@@ -323,7 +323,7 @@
 		if(SANITY_INSANE to SANITY_CRAZY)
 			msg += "[span_boldwarning("АХАХАХАХАХАХАХА!!!")]\n"
 
-	msg += span_notice("Мое текущее настроение: ") //Short term
+	msg += span_notice("Мое настроение: ") //Short term
 	switch(mood_level)
 		if(MOOD_LEVEL_SAD4)
 			msg += "[span_boldwarning("Лучше бы я умер!")]\n"
