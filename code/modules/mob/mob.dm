@@ -575,7 +575,7 @@
 		if(examine_time && (world.time - examine_time < EXAMINE_MORE_WINDOW))
 			result = examinify.examine_more(src)
 			if(!length(result))
-				result += span_notice("<i>Вы изучаете [examinify] ближе, но не находите ничего интересного...</i>")
+				result += span_notice("<i>Вы изучаете [rusrep(examinify.name, 3)] ближе, но не находите ничего интересного...</i>")
 		else
 			result = examinify.examine(src)
 			SEND_SIGNAL(src, COMSIG_MOB_EXAMINING, examinify, result)
@@ -1336,10 +1336,6 @@
 	if(!pen_info || (pen_info["interaction_mode"] != MODE_WRITING))
 		if(!silent_if_not_writing_tool)
 			to_chat(src, span_warning("You can't write with the [writing_instrument]!"))
-		return FALSE
-
-	if(HAS_MIND_TRAIT(src, TRAIT_MIMING) && !istype(writing_instrument, /obj/item/toy/crayon/mime))
-		to_chat(src, span_warning("Your vow of silence is preventing you from talking with text."))
 		return FALSE
 
 	if(!is_literate())

@@ -224,130 +224,130 @@
 	on = TRUE
 	icon_state = "filter_on-0"
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2
-	name = "nitrogen filter"
+	name = "азотный фильтр"
 	filter_type = list(/datum/gas/nitrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/o2
-	name = "oxygen filter"
+	name = "кислородный фильтр"
 	filter_type = list(/datum/gas/oxygen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/co2
-	name = "carbon dioxide filter"
+	name = "фильтр углекислого газа"
 	filter_type = list(/datum/gas/carbon_dioxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2o
-	name = "nitrous oxide filter"
+	name = "фильтр оксида азота"
 	filter_type = list(/datum/gas/nitrous_oxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/plasma
-	name = "plasma filter"
+	name = "плазмa фильтр"
 	filter_type = list(/datum/gas/plasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/bz
-	name = "bz filter"
+	name = "bz фильтр"
 	filter_type = list(/datum/gas/bz)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/freon
-	name = "freon filter"
+	name = "фреоновый фильтр"
 	filter_type = list(/datum/gas/freon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/halon
-	name = "halon filter"
+	name = "галоновый фильтр"
 	filter_type = list(/datum/gas/halon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/healium
-	name = "healium filter"
+	name = "геaлиевый фильтр"
 	filter_type = list(/datum/gas/healium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/h2
-	name = "hydrogen filter"
+	name = "водородный фильтр"
 	filter_type = list(/datum/gas/hydrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/hypernoblium
-	name = "hypernoblium filter"
+	name = "гипер-ноблиум фильтр"
 	filter_type = list(/datum/gas/hypernoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/miasma
-	name = "miasma filter"
+	name = "миазма фильтр"
 	filter_type = list(/datum/gas/miasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/no2
-	name = "nitrium filter"
+	name = "нитриевый фильтр"
 	filter_type = list(/datum/gas/nitrium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/pluoxium
-	name = "pluoxium filter"
+	name = "плюоксиум фильтр"
 	filter_type = list(/datum/gas/pluoxium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/proto_nitrate
-	name = "proto-nitrate filter"
+	name = "прото-нитрат фильтр"
 	filter_type = list(/datum/gas/proto_nitrate)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/tritium
-	name = "tritium filter"
+	name = "тритиевый фильтр"
 	filter_type = list(/datum/gas/tritium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/h2o
-	name = "water vapor filter"
+	name = "фильтр водяного пара"
 	filter_type = list(/datum/gas/water_vapor)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/zauker
-	name = "zauker filter"
+	name = "заукер фильтр"
 	filter_type = list(/datum/gas/zauker)
 
 /obj/machinery/atmospherics/components/trinary/filter/atmos/helium
-	name = "helium filter"
+	name = "гелиевый фильтр"
 	filter_type = list(/datum/gas/helium)
 
 /obj/machinery/atmospherics/components/trinary/filter/atmos/antinoblium
-	name = "antinoblium filter"
+	name = "антинобилиум фильтр"
 	filter_type = list(/datum/gas/antinoblium)
 
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped //This feels wrong, I know
 	icon_state = "filter_on-0_f"
 	flipped = TRUE
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2
-	name = "nitrogen filter"
+	name = "азотный фильтр"
 	filter_type = list(/datum/gas/nitrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/o2
-	name = "oxygen filter"
+	name = "кислородный фильтр"
 	filter_type = list(/datum/gas/oxygen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/co2
-	name = "carbon dioxide filter"
+	name = "фильтр углекислого газа"
 	filter_type = list(/datum/gas/carbon_dioxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2o
-	name = "nitrous oxide filter"
+	name = "фильтр оксида азота"
 	filter_type = list(/datum/gas/nitrous_oxide)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/plasma
-	name = "plasma filter"
+	name = "плазмa фильтр"
 	filter_type = list(/datum/gas/plasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/bz
-	name = "bz filter"
+	name = "bz фильтр"
 	filter_type = list(/datum/gas/bz)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/freon
-	name = "freon filter"
+	name = "фреоновый фильтр"
 	filter_type = list(/datum/gas/freon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/halon
-	name = "halon filter"
+	name = "галоновый фильтр"
 	filter_type = list(/datum/gas/halon)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/healium
-	name = "healium filter"
+	name = "геaлиевый фильтр"
 	filter_type = list(/datum/gas/healium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/h2
-	name = "hydrogen filter"
+	name = "водородный фильтр"
 	filter_type = list(/datum/gas/hydrogen)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/hypernoblium
-	name = "hypernoblium filter"
+	name = "гипер-ноблиум фильтр"
 	filter_type = list(/datum/gas/hypernoblium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/miasma
-	name = "miasma filter"
+	name = "миазма фильтр"
 	filter_type = list(/datum/gas/miasma)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/no2
-	name = "nitrium filter"
+	name = "нитриевый фильтр"
 	filter_type = list(/datum/gas/nitrium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/pluoxium
-	name = "pluoxium filter"
+	name = "плюоксиум фильтр"
 	filter_type = list(/datum/gas/pluoxium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/proto_nitrate
-	name = "proto-nitrate filter"
+	name = "прото-нитрат фильтр"
 	filter_type = list(/datum/gas/proto_nitrate)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/tritium
-	name = "tritium filter"
+	name = "тритиевый фильтр"
 	filter_type = list(/datum/gas/tritium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/h2o
-	name = "water vapor filter"
+	name = "фильтр водяного пара"
 	filter_type = list(/datum/gas/water_vapor)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/zauker
-	name = "zauker filter"
+	name = "заукер фильтр"
 	filter_type = list(/datum/gas/zauker)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/helium
-	name = "helium filter"
+	name = "гелиевый фильтр"
 	filter_type = list(/datum/gas/helium)
 /obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/antinoblium
-	name = "antinoblium filter"
+	name = "антинобилиум фильтр"
 	filter_type = list(/datum/gas/antinoblium)
 
 // These two filter types have critical_machine flagged to on and thus causes the area they are in to be exempt from the Grid Check event.

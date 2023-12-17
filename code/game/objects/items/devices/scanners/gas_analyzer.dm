@@ -171,8 +171,8 @@
 	var/icon = target
 	var/message = list()
 	if(!silent && isliving(user))
-		user.visible_message(span_notice("[user] использует анализатор на [icon2html(icon, viewers(user))] [target]."), span_notice("Вы используете анализатор на [icon2html(icon, user)] [target]."))
-	message += span_boldnotice("Результаты анализа [icon2html(icon, user)] [target].")
+		user.visible_message(span_notice("[user] использует анализатор на [icon2html(icon, viewers(user))] [target.name]."), span_notice("Вы используете анализатор на [icon2html(icon, user)] [target.name]."))
+	message += span_boldnotice("Результаты анализа [icon2html(icon, user)] [target.name].")
 
 	var/list/airs = islist(mixture) ? mixture : list(mixture)
 	for(var/datum/gas_mixture/air as anything in airs)

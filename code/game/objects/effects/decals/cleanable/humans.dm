@@ -305,11 +305,11 @@ GLOBAL_LIST_EMPTY(bloody_footprints_cache)
 /obj/effect/decal/cleanable/blood/footprints/examine(mob/user)
 	. = ..()
 	if((shoe_types.len + species_types.len) > 0)
-		. += "You recognise the footprints as belonging to:"
+		. += "Вы узнаете эти следы. Они от:"
 		for(var/sole in shoe_types)
 			var/obj/item/clothing/item = sole
-			var/article = initial(item.gender) == PLURAL ? "Some" : "A"
-			. += "[icon2html(initial(item.icon), user, initial(item.icon_state))] [article] <B>[initial(item.name)]</B>."
+//			var/article = initial(item.gender) == PLURAL ? "Some" : "A"
+			. += "[icon2html(initial(item.icon), user, initial(item.icon_state))] <B>[rusrep(initial(item.name), 2)]</B>."
 		for(var/species in species_types)
 			// god help me
 			if(species == "unknown")

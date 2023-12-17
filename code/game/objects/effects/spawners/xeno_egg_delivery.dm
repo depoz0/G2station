@@ -14,7 +14,7 @@
 
 	message_admins("An alien egg has been delivered to [ADMIN_VERBOSEJMP(spawn_turf)].")
 	log_game("An alien egg has been delivered to [AREACOORD(spawn_turf)]")
-	var/message = "Attention [station_name()], we have entrusted you with a research specimen in [get_area_name(spawn_turf, TRUE)]. Remember to follow all safety precautions when dealing with the specimen."
+	var/message = "Внимание [station_name()], мы доверили вам образец для исследования в [get_area_name(spawn_turf, TRUE)]. Не забывайте соблюдать все меры предосторожности при работе с образцом."
 	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(_addtimer), CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(print_command_report), message), announcement_time))
 
 /obj/structure/alien/egg/delivery

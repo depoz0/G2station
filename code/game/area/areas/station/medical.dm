@@ -61,7 +61,7 @@
 	icon_state = "patients"
 
 /area/station/medical/virology
-	name = "Virology"
+	name = "Вирусология"
 	icon_state = "virology"
 	ambience_index = AMBIENCE_VIROLOGY
 
@@ -70,7 +70,7 @@
 	icon_state = "virology_isolation"
 
 /area/station/medical/morgue
-	name = "\improper Morgue"
+	name = "Морг"
 	icon_state = "morgue"
 	ambience_index = AMBIENCE_SPOOKY
 	sound_environment = SOUND_AREA_SMALL_ENCLOSED

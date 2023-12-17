@@ -1,7 +1,7 @@
 #define DOOR_CLOSE_WAIT 60 ///Default wait until doors autoclose
 /obj/machinery/door
-	name = "door"
-	desc = "It opens and closes."
+	name = "дверь"
+	desc = "Она открывается и закрывается."
 	icon = 'icons/obj/doors/doorint.dmi'
 	icon_state = "door1"
 	base_icon_state = "door"
@@ -120,7 +120,7 @@
 		return .
 
 	if(isnull(held_item) && Adjacent(user))
-		context[SCREENTIP_CONTEXT_LMB] = "Open"
+		context[SCREENTIP_CONTEXT_LMB] = "Открыть"
 		return CONTEXTUAL_SCREENTIP_SET
 
 /obj/machinery/door/check_access_list(list/access_list)

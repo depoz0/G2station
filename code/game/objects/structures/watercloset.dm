@@ -375,8 +375,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	else
 		user.wash(CLEAN_WASH)
 
-	user.visible_message(span_notice("[user] умывает [user.p_their()] [washing_face ? "лицо" : "руки"] используя [src]."), \
-						span_notice("Вы умываете [washing_face ? "лицо" : "руки"] используя [src]."))
+	user.visible_message(span_notice("[user] умывает [user.p_their()] [washing_face ? "лицо" : "руки"] используя [rusrep(src.name, 3)]."), \
+						span_notice("Вы умываете [washing_face ? "лицо" : "руки"] используя [rusrep(src.name, 3)]."))
 
 /obj/structure/sink/attackby(obj/item/O, mob/living/user, params)
 	if(busy)
