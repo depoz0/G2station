@@ -4,7 +4,6 @@
 	desc = "Устройство, отслеживающее данные об атмосфере в горнодобывающих местах. Выдает предупреждения о приближающихся погодных условиях."
 	icon = 'icons/obj/miningradio.dmi'
 	icon_state = "wallmount"
-	luminosity = 1
 	light_power = 1
 	light_range = 1.6
 

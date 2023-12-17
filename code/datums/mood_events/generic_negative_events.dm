@@ -4,7 +4,8 @@
 
 /datum/mood_event/broken_vow //Used for when mimes break their vow of silence
 	description = "Я опозорил свое имя и предал своих коллег-мимов, нарушив нашу священную клятву..."
-	mood_change = -8
+	mood_change = -4
+	timeout = 3 MINUTES
 
 /datum/mood_event/on_fire
 	description = "Я В УДАРЕ!!!"
