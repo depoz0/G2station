@@ -9,8 +9,8 @@
 /datum/hallucination/station_message/blob_alert
 
 /datum/hallucination/station_message/blob_alert/start()
-	priority_announce("Confirmed outbreak of level 5 biohazard aboard [station_name()]. All personnel must contain the outbreak.", \
-		"Biohazard Alert", ANNOUNCER_OUTBREAK5, players = list(hallucinator))
+	priority_announce("Подтверждена вспышка биологической опасности уровня 5 на борту [station_name()]. Весь персонал должен локализовать вспышку.", \
+		"Предупреждение о биологической опасности", ANNOUNCER_OUTBREAK5, players = list(hallucinator))
 	return ..()
 
 /datum/hallucination/station_message/shuttle_dock

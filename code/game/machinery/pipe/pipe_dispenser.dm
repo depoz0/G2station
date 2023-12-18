@@ -152,7 +152,7 @@
 /obj/machinery/pipedispenser/attackby(obj/item/W, mob/user, params)
 	add_fingerprint(user)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
-		to_chat(usr, span_notice("You put [W] back into [src]."))
+		to_chat(usr, span_notice("Вы положили [W] назад в [src]."))
 		qdel(W)
 		return
 	else

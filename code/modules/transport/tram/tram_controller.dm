@@ -744,7 +744,7 @@
 
 /obj/machinery/transport/tram_controller/examine(mob/user)
 	. = ..()
-	. += span_notice("The door appears to be [cover_locked ? "locked. Swipe an ID card to unlock" : "unlocked. Swipe an ID card to lock"].")
+	. += span_notice("Дверь кажется [cover_locked ? "заблокирована. Проведите ID-картой чтобы разблокировать" : "разблокирована. Проведите ID картой чтобы заблокировать"].")
 	if(panel_open)
 		. += span_notice("It is secured to the tram wall with [EXAMINE_HINT("bolts.")]")
 		. += span_notice("The maintenance panel can be closed with a [EXAMINE_HINT("screwdriver.")]")

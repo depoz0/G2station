@@ -491,7 +491,7 @@ const PageMain = (props) => {
           <Modal>
             <Flex direction="column" textAlign="center" width="300px">
               <Flex.Item fontSize="16px" mb={2}>
-                Swipe ID to confirm change
+                Проведите ID картой чтобы подтвердить изменения
               </Flex.Item>
 
               <Flex.Item mr={2} mb={1}>

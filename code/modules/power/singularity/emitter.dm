@@ -319,13 +319,13 @@
 		to_chat(user, span_warning("The lock seems to be broken!"))
 		return
 	if(!allowed(user))
-		to_chat(user, span_danger("Access denied."))
+		to_chat(user, span_danger("Доступ запрещен."))
 		return
 	if(!active)
 		to_chat(user, span_warning("The controls can only be locked when \the [src] is online!"))
 		return
 	locked = !locked
-	to_chat(user, span_notice("You [src.locked ? "lock" : "unlock"] the controls."))
+	to_chat(user, span_notice("Вы [src.locked ? "зблокировали" : "разблокировали"] управление."))
 
 /obj/machinery/power/emitter/attackby(obj/item/item, mob/user, params)
 	if(item.GetID())

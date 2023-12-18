@@ -363,7 +363,7 @@ SUBSYSTEM_DEF(dynamic)
 	if(greenshift)
 		priority_announce("Благодаря неустанным усилиям наших охранных и разведывательных отделов в настоящее время не существует серьезных угроз для [station_name()]. Все строительные проекты станции разрешены. Удачной смены!", "Отчет по безопасности", SSstation.announcer.get_rand_report_sound())
 	else
-		priority_announce("A summary has been copied and printed to all communications consoles.", "Security level elevated.", ANNOUNCER_INTERCEPT)
+		priority_announce("Сводка была скопирована и распечатана на всех коммуникационных консолях.", "Уровень безопасности повышен.", ANNOUNCER_INTERCEPT)
 		if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_BLUE)
 			SSsecurity_level.set_level(SEC_LEVEL_BLUE)
 
