@@ -441,14 +441,14 @@
 		if(issynth)
 			to_chat(user, span_warning("You send an activation signal to \the [src], but it responds with an error code. It must be damaged."))
 		else
-			to_chat(user, span_warning("You press the power button, but the computer fails to boot up, displaying variety of errors before shutting down again."))
+			to_chat(user, span_warning("Вы нажимаете кнопку питания, но компьютер не загружается выдавая различные ошибки а затем снова выключается."))
 		return FALSE
 
 	if(use_power()) // checks if the PC is powered
 		if(issynth)
 			to_chat(user, span_notice("You send an activation signal to \the [src], turning it on."))
 		else
-			to_chat(user, span_notice("You press the power button and start up \the [src]."))
+			to_chat(user, span_notice("Вы нажимаете кнопку питания и запускаете [src]."))
 		if(looping_sound)
 			soundloop.start()
 		enabled = TRUE
@@ -460,7 +460,7 @@
 		if(issynth)
 			to_chat(user, span_warning("You send an activation signal to \the [src] but it does not respond."))
 		else
-			to_chat(user, span_warning("You press the power button but \the [src] does not respond."))
+			to_chat(user, span_warning("Вы нажимаете кнопку питания, но [src] не реагирует."))
 		return FALSE
 
 // Process currently calls handle_power(), may be expanded in future if more things are added.

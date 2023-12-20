@@ -14,7 +14,7 @@ path/corner/color_name {\
 }
 
 /obj/structure/chair/sofa
-	name = "старый рваный диван"
+	name = "старый диван"
 	icon_state = "error"
 	icon = 'icons/obj/chairs_wide.dmi'
 	buildstackamount = 1

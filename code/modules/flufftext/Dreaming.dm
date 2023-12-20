@@ -178,7 +178,7 @@ GLOBAL_LIST_INIT(dreams, populate_dream_list())
 	var/sound/random_sound = sound(pick(SSsounds.all_sounds), channel=reserved_sound_channel)
 	random_sound.status = SOUND_STREAM
 	SEND_SOUND(dreamer, random_sound)
-	return "you hear something you weren't expecting!"
+	return "вы слышите то, чего не ожидали!"
 
 /datum/dream/hear_something/proc/StopSound(mob/living/carbon/dreamer)
 	SEND_SOUND(dreamer, sound(channel=reserved_sound_channel))

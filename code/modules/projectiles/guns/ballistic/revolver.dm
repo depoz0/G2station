@@ -268,7 +268,7 @@
 					to_chat(user, span_userdanger("As your mind concentrates on the revolver, you realize that it's pointing towards your head a little too late!"))
 					shoot_self(user, BODY_ZONE_HEAD)
 				else
-					user.visible_message(span_danger("[user.name] cowardly fires [src] at [user.p_their()] [affecting.name]!"), span_userdanger("Вы боязливо стреляете из [rusrep(src, 1)] себе в [affecting.name]!"), span_hear("You hear a gunshot!"))
+					user.visible_message(span_danger("[user.name] cowardly fires [src] at [user.p_their()] [affecting.name]!"), span_userdanger("Вы боязливо стреляете из [rusrep(src, 2)] себе в [affecting.name]!"), span_hear("You hear a gunshot!"))
 				chambered = null
 				user.add_mood_event("russian_roulette_lose", /datum/mood_event/russian_roulette_lose)
 				return

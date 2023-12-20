@@ -313,8 +313,8 @@ const NewscasterWantedScreen = (props) => {
       ) : (
         <Box>
           {wanted.active
-            ? 'Please contact your local security officer if spotted.'
-            : 'No wanted issue posted. Have a secure day.'}
+            ? 'В случае обнаружения обратитесь к местному сотруднику службы безопасности.'
+            : 'В розыск никто не объявлен. Безопасного дня.'}
         </Box>
       )}
     </Modal>

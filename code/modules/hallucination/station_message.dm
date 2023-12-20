@@ -17,8 +17,8 @@
 
 /datum/hallucination/station_message/shuttle_dock/start()
 	priority_announce(
-					text = "[SSshuttle.emergency] has docked with the station. You have [DisplayTimeText(SSshuttle.emergency_dock_time)] to board the emergency shuttle.",
-					title = "Emergency Shuttle Arrival",
+					text = "[SSshuttle.emergency] пристыковался к станции. У вас есть [DisplayTimeText(SSshuttle.emergency_dock_time)] чтобы подняться на борт аварийного шаттла.",
+					title = "Прибытие аварийного шаттла",
 					sound = ANNOUNCER_SHUTTLEDOCK,
 					sender_override = "Emergency Shuttle Uplink Alert",
 					players = list(hallucinator),

@@ -20,7 +20,7 @@
 	. = ..()
 	. += span_notice("Он закреплен парой <b>болтов</b>.")
 	if(!has_buckled_mobs() && can_buckle)
-		. += span_notice("Находясь на [src], перетащите свой спрайт на [src] чтобы пристегнуться в нем.")
+		. += span_notice("Находясь на [rusrep(src.name, 6)], перетащите свой спрайт на [src.name] чтобы пристегнуться в нем.")
 
 /obj/structure/chair/Initialize(mapload)
 	. = ..()
