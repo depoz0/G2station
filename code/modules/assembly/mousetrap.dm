@@ -167,11 +167,11 @@
 
 /obj/item/assembly/mousetrap/attack_self(mob/living/carbon/human/user)
 	if(!armed)
-		to_chat(user, span_notice(" Вы взводите [rusrep(src.name, 3)]."))
+		to_chat(user, span_notice(" Вы взводите [rusrep(src.name, 4)]."))
 	else
 		if(clumsy_check(user))
 			return
-		to_chat(user, span_notice("Вы обезвреживаете [rusrep(src.name, 3)]."))
+		to_chat(user, span_notice("Вы обезвреживаете [rusrep(src.name, 4)]."))
 	armed = !armed
 	update_appearance()
 	playsound(src, 'sound/weapons/handcuffs.ogg', 30, TRUE, -3)
@@ -194,8 +194,8 @@
 					var/mob/living/carbon/H = AM
 					if(H.move_intent == MOVE_INTENT_RUN)
 						INVOKE_ASYNC(src, PROC_REF(triggered), H)
-						H.visible_message(span_warning("[H] случайно наступает на [rusrep(src.name, 3)]."), \
-							span_warning("Вы случайно наступаете на [rusrep(src.name, 3)]"))
+						H.visible_message(span_warning("[H] случайно наступает на [rusrep(src.name, 4)]."), \
+							span_warning("Вы случайно наступаете на [rusrep(src.name, 4)]"))
 				else if(ismouse(MM) || isregalrat(MM))
 					INVOKE_ASYNC(src, PROC_REF(triggered), MM)
 		else if(AM.density) // For mousetrap grenades, set off by anything heavy

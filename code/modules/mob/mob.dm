@@ -575,7 +575,7 @@
 		if(examine_time && (world.time - examine_time < EXAMINE_MORE_WINDOW))
 			result = examinify.examine_more(src)
 			if(!length(result))
-				result += span_notice("<i>Вы изучаете [rusrep(examinify.name, 3)] ближе, но не находите ничего интересного...</i>")
+				result += span_notice("<i>Вы изучаете [rusrep(examinify.name, 4)] ближе, но не находите ничего интересного...</i>")
 		else
 			result = examinify.examine(src)
 			SEND_SIGNAL(src, COMSIG_MOB_EXAMINING, examinify, result)

@@ -448,7 +448,7 @@
 		if(issynth)
 			to_chat(user, span_notice("You send an activation signal to \the [src], turning it on."))
 		else
-			to_chat(user, span_notice("Вы нажимаете кнопку питания и запускаете [src]."))
+			to_chat(user, span_notice("Вы нажимаете кнопку питания и запускаете [rusrep(src.name, 4)]."))
 		if(looping_sound)
 			soundloop.start()
 		enabled = TRUE
@@ -460,7 +460,7 @@
 		if(issynth)
 			to_chat(user, span_warning("You send an activation signal to \the [src] but it does not respond."))
 		else
-			to_chat(user, span_warning("Вы нажимаете кнопку питания, но [src] не реагирует."))
+			to_chat(user, span_warning("Вы нажимаете кнопку питания, но [src.name] не реагирует."))
 		return FALSE
 
 // Process currently calls handle_power(), may be expanded in future if more things are added.

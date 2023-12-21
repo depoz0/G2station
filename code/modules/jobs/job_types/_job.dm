@@ -290,9 +290,9 @@
 		info += "<b>Вы выполняете работу, которая важна для развития игры. \
 			Если вы вынуждены отключиться, пожалуйста, сообщите об этом администраторам через adminhelp.</b>"
 	if(CONFIG_GET(number/minimal_access_threshold))
-		info += span_boldnotice("Поскольку эта станция изначально была укомплектована сотрудниками \
-			[CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] \
-			have been added to your ID card.")
+		info += span_boldnotice("Поскольку эта станция изначально была укомплектована \
+			[CONFIG_GET(flag/jobs_have_minimal_access) ? "полным составом, в вашу ID карту были добавлены данные только необходимые для вашей должности." : "не полным составом, в вашу ID карту может быть добавлен дополнительный доступ."] \
+			")
 
 	return info
 
