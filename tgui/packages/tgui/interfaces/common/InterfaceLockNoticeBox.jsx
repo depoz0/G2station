@@ -21,7 +21,7 @@ export const InterfaceLockNoticeBox = (props) => {
     siliconUser = data.siliconUser,
     locked = data.locked,
     onLockStatusChange = () => act('lock'),
-    accessText = 'an ID card',
+    accessText = 'ID картой',
     preventLocking = data.preventLocking,
   } = props;
   // For silicon users
@@ -52,7 +52,7 @@ export const InterfaceLockNoticeBox = (props) => {
   // For everyone else
   return (
     <NoticeBox>
-      Swipe {accessText} to {locked ? 'unlock' : 'lock'} this interface.
+      Проведите {accessText} для {locked ? 'разблокировки' : 'блокировки'} этого интерфейса.
     </NoticeBox>
   );
 };

@@ -121,12 +121,12 @@
 	stage2 = list()
 	stage3 = list()
 	stage4 = list(
-		span_warning("You breathe through your mouth."),
-		span_warning("You have a craving for bananas."),
-		span_warning("Your back hurts."),
-		span_warning("Your mind feels clouded."),
+		span_warning("Вы дышите через рот."),
+		span_warning("Вам захотелось бананов."),
+		span_warning("У вас болит спина."),
+		span_warning("Ваш разум словно затуманен."),
 	)
-	stage5 = list(span_warning("You feel like monkeying around."))
+	stage5 = list(span_warning("Вам хочется пошалить."))
 
 /datum/disease/transformation/jungle_flu/do_disease_transformation(mob/living/carbon/affected_mob)
 	affected_mob.monkeyize()
@@ -139,10 +139,10 @@
 	switch(stage)
 		if(2)
 			if(SPT_PROB(1, seconds_per_tick))
-				to_chat(affected_mob, span_notice("Your [pick("arm", "back", "elbow", "head", "leg")] itches."))
+				to_chat(affected_mob, span_notice("У вас зудит [pick("рука", "спина", "локоть", "голова", "нога")]."))
 		if(3)
 			if(SPT_PROB(2, seconds_per_tick))
-				to_chat(affected_mob, span_danger("You feel a stabbing pain in your head."))
+				to_chat(affected_mob, span_danger("Вы чувствуете колющую боль в голове."))
 				affected_mob.adjust_confusion(10 SECONDS)
 		if(4)
 			if(SPT_PROB(1.5, seconds_per_tick))

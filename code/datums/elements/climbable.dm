@@ -32,7 +32,7 @@
 
 /datum/element/climbable/proc/on_examine(atom/source, mob/user, list/examine_texts)
 	SIGNAL_HANDLER
-	examine_texts += span_notice("[source] looks climbable.")
+	examine_texts += span_notice("[source] выглядит вполне устойчивым для подъема.")
 
 /datum/element/climbable/proc/can_climb(atom/source, mob/user)
 	var/dir_step = get_dir(user, source.loc)
@@ -58,8 +58,8 @@
 	if(!can_climb(climbed_thing, user))
 		return
 	climbed_thing.add_fingerprint(user)
-	user.visible_message(span_warning("[user] starts climbing onto [climbed_thing]."), \
-								span_notice("You start climbing onto [climbed_thing]..."))
+	user.visible_message(span_warning("[user] начинает забираться на [climbed_thing.name]."), \
+								span_notice("Вы начинаете забираться на [climbed_thing.name]..."))
 	var/adjusted_climb_time = climb_time
 	var/adjusted_climb_stun = climb_stun
 	if(HAS_TRAIT(user, TRAIT_HANDS_BLOCKED)) //climbing takes twice as long without help from the hands.
@@ -77,13 +77,13 @@
 		if(QDELETED(climbed_thing)) //Checking if structure has been destroyed
 			return
 		if(do_climb(climbed_thing, user, params))
-			user.visible_message(span_warning("[user] climbs onto [climbed_thing]."), \
-								span_notice("You climb onto [climbed_thing]."))
+			user.visible_message(span_warning("[user] залез на [climbed_thing.name]."), \
+								span_notice("Вы залезли на [climbed_thing.name]."))
 			log_combat(user, climbed_thing, "climbed onto")
 			if(adjusted_climb_stun)
 				user.Stun(adjusted_climb_stun)
 		else
-			to_chat(user, span_warning("You fail to climb onto [climbed_thing]."))
+			to_chat(user, span_warning("Вам не удается залезть на [climbed_thing.name]."))
 	LAZYREMOVEASSOC(current_climbers, climbed_thing, user)
 
 

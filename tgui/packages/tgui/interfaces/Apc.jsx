@@ -23,18 +23,18 @@ export const Apc = (props) => {
 const powerStatusMap = {
   2: {
     color: 'good',
-    externalPowerText: 'External Power',
-    chargingText: 'Fully Charged',
+    externalPowerText: 'Внешнее питание',
+    chargingText: 'Полностью заряжен',
   },
   1: {
     color: 'average',
-    externalPowerText: 'Low External Power',
-    chargingText: 'Charging',
+    externalPowerText: 'Низкое внешнее питание',
+    chargingText: 'Зарядка',
   },
   0: {
     color: 'bad',
-    externalPowerText: 'No External Power',
-    chargingText: 'Not Charging',
+    externalPowerText: 'Нет внешнего питания',
+    chargingText: 'Не заряжается',
   },
 };
 

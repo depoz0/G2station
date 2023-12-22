@@ -59,8 +59,8 @@
 		. += water_icon
 
 /obj/structure/mop_bucket/janitorialcart
-	name = "janitorial cart"
-	desc = "This is the alpha and omega of sanitation."
+	name = "тележка уборщика"
+	desc = "Это альфа и омега санитарии."
 	icon_state = "cart"
 	water_icon = "cart_water"
 	var/obj/item/storage/bag/trash/mybag
@@ -121,7 +121,7 @@
 /obj/structure/mop_bucket/janitorialcart/examine(mob/user)
 	. = ..()
 	if(contents.len)
-		. += span_bold(span_info("\nIt is carrying:"))
+		. += span_bold(span_info("\nОна несет в себе:"))
 		for(var/thing in sort_names(contents))
 			if(thing in held_signs)
 				continue //we'll do this after.
@@ -132,13 +132,13 @@
 				. += "\t[icon2html(sign_obj, user)] [convert_integer_to_words(length(held_signs))] [sign_obj.name]\s"
 			else
 				. += "\t[icon2html(sign_obj, user)] \a [sign_obj]"
-		. += span_notice("\n<b>Left-click</b> to [contents.len > 1 ? "search [src]" : "remove [contents[1]]"].")
+		. += span_notice("\n<b>Левый-клик</b> для [contents.len > 1 ? "поиска [src]" : "удаления [contents[1]]"].")
 		if(mybag)
-			. += span_notice("<b>Right-click</b> with a <b>[weight_class_to_text(mybag.atom_storage.max_specific_storage)] item</b> to put it in [mybag].")
+			. += span_notice("<b>Правый-клик</b> с <b>[weight_class_to_text(mybag.atom_storage.max_specific_storage)] предметом</b> чтобы положить его в [mybag].")
 		if(mymop)
-			. += span_notice("<b>Right-click</b> to quickly remove [mymop].")
+			. += span_notice("<b>Правый-клик</b> для быстрого удаления [mymop].")
 	if(CART_HAS_MINIMUM_REAGENT_VOLUME)
-		. += span_notice("<b>Right-click</b> with a <b>mop</b> to wet it.")
+		. += span_notice("<b>Правый-клик</b> с помощью <b>швабры</b> чтобы смочить ее.")
 		. += span_info("<b>Crowbar</b> it to dump its mop bucket onto [get_turf(src)].")
 
 /obj/structure/mop_bucket/janitorialcart/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
@@ -151,7 +151,7 @@
 		if(contents.len == 1)
 			context[SCREENTIP_CONTEXT_LMB] = "Remove [contents[1]]"
 			. = CONTEXTUAL_SCREENTIP_SET
-		context[SCREENTIP_CONTEXT_LMB] = "Search cart"
+		context[SCREENTIP_CONTEXT_LMB] = "Поиск в тележке"
 		. = CONTEXTUAL_SCREENTIP_SET
 
 	if(istype(held_item, /obj/item/mop) && !mymop)
@@ -184,51 +184,51 @@
 /obj/structure/mop_bucket/janitorialcart/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/mop))
 		if(mymop)
-			balloon_alert(user, "already has \a [mymop]!")
+			balloon_alert(user, "уже имеет [mymop]!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "placed [attacking_item]")
+			balloon_alert(user, "поместил [attacking_item]")
 		return
 
 	if(istype(attacking_item, /obj/item/pushbroom))
 		if(mybroom)
-			balloon_alert(user, "already has \a [mybroom]!")
+			balloon_alert(user, "уже имеет [mybroom]!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "placed [attacking_item]")
+			balloon_alert(user, "поместил [attacking_item]")
 		return
 
 	if(istype(attacking_item, /obj/item/storage/bag/trash))
 		if(mybag)
-			balloon_alert(user, "already has \a [mybag]!")
+			balloon_alert(user, "уже имеет [mybag]!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "attached [attacking_item]")
+			balloon_alert(user, "прикрепил [attacking_item]")
 		return
 
 	if(istype(attacking_item, /obj/item/reagent_containers/spray/cleaner))
 		if(myspray)
-			balloon_alert(user, "already has \a [myspray]!")
+			balloon_alert(user, "уже имеет [myspray]!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "placed [attacking_item]")
+			balloon_alert(user, "поместил [attacking_item]")
 		return
 
 	if(istype(attacking_item, /obj/item/lightreplacer))
 		if(myreplacer)
-			balloon_alert(user, "already has \a [myreplacer]!")
+			balloon_alert(user, "уже имеет [myreplacer]!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "placed [attacking_item]")
+			balloon_alert(user, "поместил [attacking_item]")
 		return
 
 	else if(istype(attacking_item, /obj/item/clothing/suit/caution))
 		if(held_signs.len >= max_signs)
 			balloon_alert(user, "sign rack is full!")
 		else if(user.transferItemToLoc(attacking_item, src))
-			balloon_alert(user, "placed [attacking_item]")
+			balloon_alert(user, "поместил [attacking_item]")
 		return
 
 	return ..()
 
 /obj/structure/mop_bucket/janitorialcart/crowbar_act(mob/living/user, obj/item/tool)
 	if(!CART_HAS_MINIMUM_REAGENT_VOLUME)
-		balloon_alert(user, "mop bucket is empty!")
+		balloon_alert(user, "ведро для швабры пустое!")
 		return ITEM_INTERACT_SUCCESS
 	user.balloon_alert_to_viewers("starts dumping [src]...", "started dumping [src]...")
 	user.visible_message(span_notice("[user] begins to dumping the contents of [src]'s mop bucket."), span_notice("You begin to dump the contents of [src]'s mop bucket..."))
