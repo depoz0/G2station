@@ -11,8 +11,8 @@
  * Pens
  */
 /obj/item/pen
-	desc = "It's a normal black ink pen."
-	name = "pen"
+	desc = "Это обычная ручка с черными чернилами."
+	name = "ручка"
 	icon = 'icons/obj/service/bureaucracy.dmi'
 	icon_state = "pen"
 	inhand_icon_state = "pen"
@@ -69,24 +69,24 @@
 	return BRUTELOSS
 
 /obj/item/pen/blue
-	desc = "It's a normal blue ink pen."
+	desc = "Это обычная ручка с синими чернилами."
 	icon_state = "pen_blue"
 	colour = "#0000FF"
 
 /obj/item/pen/red
-	desc = "It's a normal red ink pen."
+	desc = "Это обычная ручка с красными чернилами."
 	icon_state = "pen_red"
 	colour = "#FF0000"
 	throw_speed = 4 // red ones go faster (in this case, fast enough to embed!)
 
 /obj/item/pen/invisible
-	desc = "It's an invisible pen marker."
+	desc = "Это невидимая ручка-маркер."
 	icon_state = "pen"
 	colour = "#FFFFFF"
 
 /obj/item/pen/fourcolor
-	desc = "It's a fancy four-color ink pen, set to black."
-	name = "four-color pen"
+	desc = "Это модная четырехцветная чернильная ручка, настроенная на черный цвет."
+	name = "четырёхцветная ручка"
 	icon_state = "pen_4color"
 	colour = "#000000"
 
@@ -107,12 +107,12 @@
 			chosen_color = "blue"
 		else
 			colour = "#000000"
-	to_chat(user, span_notice("\The [src] will now write in [chosen_color]."))
-	desc = "It's a fancy four-color ink pen, set to [chosen_color]."
+	to_chat(user, span_notice("[src] теперь будет писать [chosen_color]."))
+	desc = "Это модная четырехцветная чернильная ручка, настроенная на [chosen_color]."
 
 /obj/item/pen/fountain
-	name = "fountain pen"
-	desc = "It's a common fountain pen, with a faux wood body. Rumored to work in zero gravity situations."
+	name = "перьевая ручка"
+	desc = "Это обычная перьевая ручка с корпусом из искусственного дерева. По слухам, работает в условиях невесомости."
 	icon_state = "pen-fountain"
 	font = FOUNTAIN_PEN_FONT
 	requires_gravity = FALSE // fancy spess pens
@@ -120,8 +120,8 @@
 	dart_insert_projectile_icon_state = "overlay_fountainpen_proj"
 
 /obj/item/pen/charcoal
-	name = "charcoal stylus"
-	desc = "It's just a wooden stick with some compressed ash on the end. At least it can write."
+	name = "угольный карандаш"
+	desc = "Это просто деревянная палочка с прессованным золой на конце. По крайней мере, она может писать."
 	icon_state = "pen-charcoal"
 	colour = "#696969"
 	font = CHARCOAL_FONT
@@ -130,15 +130,15 @@
 	requires_gravity = FALSE // this is technically a pencil
 
 /datum/crafting_recipe/charcoal_stylus
-	name = "Charcoal Stylus"
+	name = "Угольный карандаш"
 	result = /obj/item/pen/charcoal
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1, /datum/reagent/ash = 30)
 	time = 3 SECONDS
 	category = CAT_TOOLS
 
 /obj/item/pen/fountain/captain
-	name = "captain's fountain pen"
-	desc = "It's an expensive Oak fountain pen. The nib is quite sharp."
+	name = "перьевая ручка капитана"
+	desc = "Это дорогая перьевая ручка из дуба. Перо довольно острое."
 	icon_state = "pen-fountain-o"
 	force = 5
 	throwforce = 5
@@ -177,7 +177,7 @@
 /obj/item/pen/fountain/captain/reskin_obj(mob/M)
 	..()
 	if(current_skin)
-		desc = "It's an expensive [current_skin] fountain pen. The nib is quite sharp."
+		desc = "Это дорогая перьевая ручка из [current_skin]. Перо довольно острое."
 
 /obj/item/pen/fountain/captain/proc/reskin_dart_insert(datum/component/dart_insert/insert_comp)
 	if(!istype(insert_comp)) //You really shouldn't be sending this signal from anything other than a dart_insert component
@@ -190,13 +190,13 @@
 	if(.)
 		return
 	if(loc != user)
-		to_chat(user, span_warning("You must be holding the pen to continue!"))
+		to_chat(user, span_warning("Вы должны держать ручку, чтобы продолжить!"))
 		return
-	var/deg = tgui_input_number(user, "What angle would you like to rotate the pen head to? (0-360)", "Rotate Pen Head", max_value = 360)
+	var/deg = tgui_input_number(user, "На какой градус вы хотите повернуть головку ручки? (0-360)", "Поворот головки ручки", max_value = 360)
 	if(isnull(deg) || QDELETED(user) || QDELETED(src) || !user.can_perform_action(src, FORBID_TELEKINESIS_REACH) || loc != user)
 		return
 	degrees = deg
-	to_chat(user, span_notice("You rotate the top of the pen to [deg] degrees."))
+	to_chat(user, span_notice("Вы поворачиваете верхнюю часть ручки на [deg] градусов."))
 	SEND_SIGNAL(src, COMSIG_PEN_ROTATED, deg, user)
 
 /obj/item/pen/attack(mob/living/M, mob/user, params)
@@ -204,8 +204,8 @@
 		return ..()
 	if(!M.try_inject(user, injection_flags = INJECT_TRY_SHOW_ERROR_MESSAGE))
 		return FALSE
-	to_chat(user, span_warning("You stab [M] with the pen."))
-	to_chat(M, span_danger("You feel a tiny prick!"))
+	to_chat(user, span_warning("Вы протыкаете [M] ручкой."))
+	to_chat(M, span_danger("Вы чувствуете маленький укольчик!"))
 	log_combat(user, M, "stabbed", src)
 	return TRUE
 

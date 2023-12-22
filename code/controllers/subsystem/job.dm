@@ -753,7 +753,7 @@ SUBSYSTEM_DEF(job)
 /datum/controller/subsystem/job/proc/get_living_heads()
 	. = list()
 	for(var/datum/mind/head as anything in get_crewmember_minds())
-		if(!(head.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND))
+		if(!(head.assigned_role.job_flags & JOB_HEAD_OF_STAFF))
 			continue
 		if(isnull(head.current) || head.current.stat == DEAD)
 			continue
@@ -763,7 +763,7 @@ SUBSYSTEM_DEF(job)
 /datum/controller/subsystem/job/proc/get_all_heads()
 	. = list()
 	for(var/datum/mind/head as anything in get_crewmember_minds())
-		if(head.assigned_role.departments_bitflags & DEPARTMENT_BITFLAG_COMMAND)
+		if(head.assigned_role.job_flags & JOB_HEAD_OF_STAFF)
 			. += head
 
 /// Returns a list of minds of all security members who are alive
@@ -828,9 +828,9 @@ SUBSYSTEM_DEF(job)
 	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		to_chat(new_captain, span_notice("Благодаря вашему статусу в командном составе, вы были повышены до исполняющего обязанности капитана. Об этом вы можете прочитать в важной записке [where]."))
 	else
-		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		to_chat(new_captain, span_notice("Код для получения запасного ID из сейфа на мостике, можно найти в [where]."))
 		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
 
 	// Force-give their ID card bridge access.

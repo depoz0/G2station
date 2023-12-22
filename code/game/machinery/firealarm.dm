@@ -60,8 +60,8 @@
 
 	AddElement( \
 		/datum/element/contextual_screentip_bare_hands, \
-		lmb_text = "Turn on", \
-		rmb_text = "Turn off", \
+		lmb_text = "Включить", \
+		rmb_text = "Выключить", \
 	)
 
 	AddComponent( \
@@ -257,8 +257,8 @@
 	for(var/obj/machinery/door/firedoor/firelock in my_area.firedoors)
 		firelock.activate(FIRELOCK_ALARM_TYPE_GENERIC)
 	if(user)
-		balloon_alert(user, "triggered alarm!")
-		user.log_message("triggered a fire alarm.", LOG_GAME)
+		balloon_alert(user, "включил сигнализацию!")
+		user.log_message("включил пожарную сигнализацию.", LOG_GAME)
 	soundloop.start() //Manually pulled fire alarms will make the sound, rather than the doors.
 	SEND_SIGNAL(src, COMSIG_FIREALARM_ON_TRIGGER)
 	update_use_power(ACTIVE_POWER_USE)
@@ -278,8 +278,8 @@
 	for(var/obj/machinery/door/firedoor/firelock in my_area.firedoors)
 		firelock.crack_open()
 	if(user)
-		balloon_alert(user, "reset alarm")
-		user.log_message("reset a fire alarm.", LOG_GAME)
+		balloon_alert(user, "сбрасывает сигнализацию")
+		user.log_message("сбрасывает сигнал пожарной тревоги.", LOG_GAME)
 	soundloop.stop()
 	SEND_SIGNAL(src, COMSIG_FIREALARM_ON_RESET)
 	update_use_power(IDLE_POWER_USE)
@@ -316,7 +316,7 @@
 	if(tool.tool_behaviour == TOOL_SCREWDRIVER && buildstage == FIRE_ALARM_BUILD_SECURED)
 		tool.play_tool_sound(src)
 		toggle_panel_open()
-		to_chat(user, span_notice("The wires have been [panel_open ? "exposed" : "unexposed"]."))
+		to_chat(user, span_notice("Провода были [panel_open ? "обнажены" : "спрятаны"]."))
 		update_appearance()
 		return
 
@@ -327,10 +327,10 @@
 				if(!tool.tool_start_check(user, amount=1))
 					return
 
-				to_chat(user, span_notice("You begin repairing [src]..."))
+				to_chat(user, span_notice("Вы начинаете ремонтировать [src]..."))
 				if(tool.use_tool(src, user, 40, volume=50))
 					atom_integrity = max_integrity
-					to_chat(user, span_notice("You repair [src]."))
+					to_chat(user, span_notice("Вы отремонтировали [src]."))
 			else
 				to_chat(user, span_warning("[src] is already in good condition!"))
 			return
@@ -457,14 +457,14 @@
 	if((my_area?.fire || LAZYLEN(my_area?.active_firelocks)))
 		. += "The local area hazard light is flashing."
 		if(is_station_level(z))
-			. += "The station security alert level is [SSsecurity_level.get_current_level_as_text()]."
-		. += "<b>Left-Click</b> to activate all firelocks in this area."
-		. += "<b>Right-Click</b> to reset firelocks in this area."
+			. += "Уровень безопасности на станции [SSsecurity_level.get_current_level_as_text()]."
+		. += "<b>Левый клик</b> активирует все противопожарные двери в этой локации."
+		. += "<b>Правый клик</b> сбрасывает блокировку противопожарных дверей в этой локации."
 	else
 		if(is_station_level(z))
-			. += "The station security alert level is [SSsecurity_level.get_current_level_as_text()]."
+			. += "Уровень безопасности на станции [SSsecurity_level.get_current_level_as_text()]."
 		. += "The local area thermal detection light is [my_area.fire_detect ? "lit" : "unlit"]."
-		. += "<b>Left-Click</b> to activate all firelocks in this area."
+		. += "<b>Левый клик</b> активирует все противопожарные двери в этой локации."
 
 // Allows Silicons to disable thermal sensor
 /obj/machinery/firealarm/BorgCtrlClick(mob/living/silicon/robot/user)

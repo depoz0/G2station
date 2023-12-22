@@ -2,6 +2,7 @@
 	name = "Map"
 	message = "Vote for next round's map!"
 	count_method = VOTE_COUNT_METHOD_MULTI
+	winner_method = VOTE_WINNER_METHOD_WEIGHTED_RANDOM
 
 /datum/vote/map_vote/New()
 	. = ..()
@@ -24,7 +25,7 @@
 		var/de_facto_winner = choices[1]
 		var/datum/map_config/change_me_out = global.config.maplist[de_facto_winner]
 		SSmapping.changemap(change_me_out)
-		to_chat(world, span_boldannounce("The map vote has been skipped because there is only one map left to vote for. The map has been changed to [change_me_out.map_name]."))
+		to_chat(world, span_boldannounce("Голосование по картам было пропущено, так как осталась только одна карта, за которую можно проголосовать. Карта была изменена на [change_me_out.map_name]."))
 		SSmapping.map_voted = TRUE // voted by not voting, very sad.
 		return FALSE
 

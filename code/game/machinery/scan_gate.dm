@@ -90,7 +90,7 @@
 			if(allowed(user))
 				locked = FALSE
 				req_access = list()
-				to_chat(user, span_notice("You unlock [src]."))
+				to_chat(user, span_notice("Вы разблокировали [src]."))
 		else if(!(obj_flags & EMAGGED))
 			to_chat(user, span_notice("You lock [src] with [W]."))
 			var/list/access = W.GetAccess()

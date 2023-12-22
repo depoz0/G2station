@@ -359,7 +359,7 @@
 		SSshuttle.emergency_last_call_loc = null
 
 	priority_announce(
-		text = "The emergency shuttle has been called. [red_alert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]It will arrive in [(timeLeft(60 SECONDS))] minutes.[reason][SSshuttle.emergency_last_call_loc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ][SSshuttle.admin_emergency_no_recall ? "\n\nWarning: Shuttle recall subroutines disabled; Recall not possible." : ""]",
+		text = "Вызван аварийный шаттл. [red_alert ? "Red Alert state confirmed: Dispatching priority shuttle. " : "" ]Он прибудет через [(timeLeft(60 SECONDS))] [runam(timeLeft(60 SECONDS), "минуту", "минуты", "минут")].[reason][SSshuttle.emergency_last_call_loc ? "\n\nCall signal traced. Results can be viewed on any communications console." : "" ][SSshuttle.admin_emergency_no_recall ? "\n\nWarning: Shuttle recall subroutines disabled; Recall not possible." : ""]",
 		title = "Emergency Shuttle Dispatched",
 		sound = ANNOUNCER_SHUTTLECALLED,
 		sender_override = "Emergency Shuttle Uplink Alert",
@@ -473,10 +473,10 @@
 					return
 				mode = SHUTTLE_DOCKED
 				setTimer(SSshuttle.emergency_dock_time)
-				send2adminchat("Server", "The Emergency Shuttle has docked with the station.")
+				send2adminchat("Server", "Аварийный шаттл пристыковался к станции.")
 				priority_announce(
-					text = "[SSshuttle.emergency] has docked with the station. You have [DisplayTimeText(SSshuttle.emergency_dock_time)] to board the emergency shuttle.",
-					title = "Emergency Shuttle Arrival",
+					text = "[SSshuttle.emergency] пристыковался к станции. У вас есть [DisplayTimeText(SSshuttle.emergency_dock_time)] чтобы подняться на борт аварийного шаттла.",
+					title = "Прибытие аварийного шаттла",
 					sound = ANNOUNCER_SHUTTLEDOCK,
 					sender_override = "Emergency Shuttle Uplink Alert",
 					color_override = "orange",
@@ -736,7 +736,7 @@
 	return INITIALIZE_HINT_QDEL
 
 /obj/docking_port/stationary/random/icemoon
-	target_area = /area/icemoon/surface/outdoors
+	target_area = /area/icemoon/surface/outdoors/unexplored/rivers/no_monsters
 
 //Pod suits/pickaxes
 

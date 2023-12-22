@@ -66,8 +66,8 @@
 
 /datum/ai_planning_subtree/random_speech/lizard // all of these have to be three words long or i'm killing you. you're dead.
 	speech_chance = 3
-	emote_hear = list("stamps around some.", "hisses a bit.")
-	emote_see = list("blehs the tongue.", "tilts the head.", "does a spin.")
+	emote_hear = list("stamps around some.", "слегка шипит.")
+	emote_see = list("blehs the tongue.", "наклоняет голову.", "делает разворот.")
 
 /datum/ai_planning_subtree/random_speech/sheep
 	speech_chance = 5

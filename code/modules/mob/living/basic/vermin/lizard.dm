@@ -82,7 +82,7 @@
 /// Janitor's pet lizard.
 /mob/living/basic/lizard/wags_his_tail
 	name = "Wags-His-Tail"
-	desc = "The janitorial department's trusty pet lizard."
+	desc = "Верная домашняя ящерица из отделения уборки."
 
 /// Another pet lizard for the janitor.
 /mob/living/basic/lizard/eats_the_roaches

@@ -34,6 +34,8 @@
 	var/light_type = /obj/item/light/tube
 	///String of the light type, used in descriptions and in examine
 	var/fitting = "tube"
+	var/lamp2 = "Лампа накаливания"
+	var/lamp1 = "Люминесцентная лампа"
 	///Count of number of times switched on/off, this is used to calculate the probability the light burns out
 	var/switchcount = 0
 	///Cell reference
@@ -126,9 +128,11 @@
 		if("tube")
 			if(prob(2))
 				break_light_tube(TRUE)
+				lamp1 = "Люминесцентная лампа"
 		if("bulb")
 			if(prob(5))
 				break_light_tube(TRUE)
+				lamp1 = "Лампа накаливания"
 	update(trigger = FALSE)
 
 /obj/machinery/light/Destroy()
@@ -324,11 +328,11 @@
 		if(LIGHT_OK)
 			. += "Свет [on? "включен" : "выключен"]."
 		if(LIGHT_EMPTY)
-			. += "[fitting] было удален."
+			. += "[lamp1] былa удаленa."
 		if(LIGHT_BURNED)
-			. += "[fitting] сгорела."
+			. += "[lamp1] перегорела."
 		if(LIGHT_BROKEN)
-			. += "[fitting] была разбита."
+			. += "[lamp1] была разбита."
 	if(cell || has_mock_cell)
 		. += "Прибор для измерения заряда резервного питания, показания которого [has_mock_cell ? 100 : round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
 
@@ -340,12 +344,12 @@
 	// attempt to insert light
 	if(istype(tool, /obj/item/light))
 		if(status == LIGHT_OK)
-			to_chat(user, span_warning("[fitting] уже вставлена!"))
+			to_chat(user, span_warning("[lamp1] уже установлена!"))
 			return
 		add_fingerprint(user)
 		var/obj/item/light/light_object = tool
 		if(!istype(light_object, light_type))
-			to_chat(user, span_warning("This type of light requires a [fitting]!"))
+			to_chat(user, span_warning("Для этого типа освещения требуется [lamp1]!"))
 			return
 		if(!user.temporarilyRemoveItemFromInventory(light_object))
 			return
@@ -396,10 +400,12 @@
 		if("tube")
 			new_light = new /obj/structure/light_construct(loc)
 			new_light.icon_state = "tube-construct-stage[current_stage]"
+			lamp1 = "Люминесцентная лампа"
 
 		if("bulb")
 			new_light = new /obj/structure/light_construct/small(loc)
 			new_light.icon_state = "bulb-construct-stage[current_stage]"
+			lamp1 = "Лампа накаливания"
 	new_light.setDir(dir)
 	new_light.stage = current_stage
 	if(!disassembled)
@@ -526,12 +532,12 @@
 	add_fingerprint(user)
 
 	if(status == LIGHT_EMPTY)
-		to_chat(user, span_warning("There is no [fitting] in this light!"))
+		to_chat(user, span_warning("В этом светильнике нет [lamp1]!"))
 		return
 
 	// make it burn hands unless you're wearing heat insulated gloves or have the RESISTHEAT/RESISTHEATHANDS traits
 	if(!on)
-		to_chat(user, span_notice("You remove the light [fitting]."))
+		to_chat(user, span_notice("Вы удалили из светильника [lamp1]."))
 		// create a light tube/bulb item and put it in the user's hand
 		drop_light_tube(user)
 		return
@@ -544,7 +550,7 @@
 			var/obj/item/organ/internal/stomach/ethereal/stomach = maybe_stomach
 			if(stomach.drain_time > world.time)
 				return
-			to_chat(user, span_notice("You start channeling some power through the [fitting] into your body."))
+			to_chat(user, span_notice("Вы начинаете пропускать энергию через [lamp1] в свое тело."))
 			stomach.drain_time = world.time + LIGHT_DRAIN_TIME
 			while(do_after(user, LIGHT_DRAIN_TIME, target = src))
 				stomach.drain_time = world.time + LIGHT_DRAIN_TIME

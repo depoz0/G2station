@@ -1,7 +1,7 @@
 // Banana
 /obj/item/seeds/banana
-	name = "pack of banana seeds"
-	desc = "They're seeds that grow into banana trees. When grown, keep away from clown."
+	name = "упаковка банановых семян"
+	desc = "Это семена из которых вырастают банановые деревья. Когда вырастут, держите подальше от клоуна."
 	icon_state = "seed-banana"
 	species = "banana"
 	plantname = "Banana Tree"
@@ -18,8 +18,8 @@
 
 /obj/item/food/grown/banana
 	seed = /obj/item/seeds/banana
-	name = "banana"
-	desc = "It's an excellent prop for a clown."
+	name = "банан"
+	desc = "Это отличный реквизит для клоуна."
 	icon_state = "banana"
 	inhand_icon_state = "banana_peel"
 	trash_type = /obj/item/grown/bananapeel
@@ -66,8 +66,8 @@
 //Banana Peel
 /obj/item/grown/bananapeel
 	seed = /obj/item/seeds/banana
-	name = "banana peel"
-	desc = "A peel from a banana."
+	name = "банановая кожура"
+	desc = "Кожура от банана."
 	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
 	icon_state = "banana_peel"
@@ -92,8 +92,8 @@
 
 // Mimana - invisible sprites are totally a feature!
 /obj/item/seeds/banana/mime
-	name = "pack of mimana seeds"
-	desc = "They're seeds that grow into mimana trees. When grown, keep away from mime."
+	name = "упаковка семян миманы"
+	desc = "Это семена из которых вырастают деревья мимана. Когда вырастут, держите подальше от мима."
 	icon_state = "seed-mimana"
 	species = "mimana"
 	plantname = "Mimana Tree"
@@ -105,16 +105,16 @@
 
 /obj/item/food/grown/banana/mime
 	seed = /obj/item/seeds/banana/mime
-	name = "mimana"
-	desc = "It's an excellent prop for a mime."
+	name = "мимана"
+	desc = "Это отличный реквизит для мима."
 	icon_state = "mimana"
 	trash_type = /obj/item/grown/bananapeel/mimanapeel
 	distill_reagent = /datum/reagent/consumable/ethanol/silencer
 
 /obj/item/grown/bananapeel/mimanapeel
 	seed = /obj/item/seeds/banana/mime
-	name = "mimana peel"
-	desc = "A mimana peel."
+	name = "кожура миманы"
+	desc = "Кожура миманы."
 	icon_state = "mimana_peel"
 	inhand_icon_state = "mimana_peel"
 

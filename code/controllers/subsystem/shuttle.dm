@@ -313,15 +313,15 @@ SUBSYSTEM_DEF(shuttle)
 /datum/controller/subsystem/shuttle/proc/canEvac()
 	var/shuttle_refuel_delay = CONFIG_GET(number/shuttle_refuel_delay)
 	if(world.time - SSticker.round_start_time < shuttle_refuel_delay)
-		return "The emergency shuttle is refueling. Please wait [DisplayTimeText(shuttle_refuel_delay - (world.time - SSticker.round_start_time))] before attempting to call."
+		return "Аварийный шаттл заправляется. Пожалуйста, подождите [DisplayTimeText(shuttle_refuel_delay - (world.time - SSticker.round_start_time))] перед началом вызова."
 
 	switch(emergency.mode)
 		if(SHUTTLE_RECALL)
 			return "The emergency shuttle may not be called while returning to CentCom."
 		if(SHUTTLE_CALL)
-			return "The emergency shuttle is already on its way."
+			return "Аварийный шаттл уже в пути."
 		if(SHUTTLE_DOCKED)
-			return "The emergency shuttle is already here."
+			return "Аварийный шаттл уже прибыл."
 		if(SHUTTLE_IGNITING)
 			return "The emergency shuttle is firing its engines to leave."
 		if(SHUTTLE_ESCAPE)
@@ -360,17 +360,17 @@ SUBSYSTEM_DEF(shuttle)
 		return
 
 	if(length(trim(call_reason)) < CALL_SHUTTLE_REASON_LENGTH && SSsecurity_level.get_current_level_as_number() > SEC_LEVEL_GREEN)
-		to_chat(user, span_alert("You must provide a reason."))
+		to_chat(user, span_alert("Вы должны указать причину."))
 		return
 
 	var/area/signal_origin = get_area(user)
 	call_evac_shuttle(call_reason, signal_origin)
 
-	log_shuttle("[key_name(user)] has called the emergency shuttle.")
+	log_shuttle("[key_name(user)] вызвал аварийный шаттл.")
 	deadchat_broadcast(" has called the shuttle at [span_name("[signal_origin.name]")].", span_name("[user.real_name]"), user, message_type=DEADCHAT_ANNOUNCEMENT)
 	if(call_reason)
 		SSblackbox.record_feedback("text", "shuttle_reason", 1, "[call_reason]")
-		log_shuttle("Shuttle call reason: [call_reason]")
+		log_shuttle("Причина вызова шаттла: [call_reason]")
 		SSticker.emergency_reason = call_reason
 	message_admins("[ADMIN_LOOKUPFLW(user)] has called the shuttle. (<A HREF='?_src_=holder;[HrefToken()];trigger_centcom_recall=1'>TRIGGER CENTCOM RECALL</A>)")
 

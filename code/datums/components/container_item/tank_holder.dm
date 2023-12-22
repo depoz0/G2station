@@ -22,7 +22,7 @@
 	if(user)
 		if(!user.transferItemToLoc(I, container))
 			return TRUE
-		to_chat(user, span_notice("You put [I] into [container]."))
+		to_chat(user, span_notice("Вы положили [I] в [container]."))
 	else
 		I.forceMove(container)
 	container.tank = I

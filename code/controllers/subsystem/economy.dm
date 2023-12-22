@@ -167,11 +167,11 @@ SUBSYSTEM_DEF(economy)
 /datum/controller/subsystem/economy/proc/price_update()
 	var/fluff_string = ""
 	if(!HAS_TRAIT(SSeconomy, TRAIT_MARKET_CRASHING))
-		fluff_string = ", but company countermeasures protect <b>YOU</b> from being affected!"
+		fluff_string = ", но контрмеры компании защищают вас от их воздействия!"
 	else
-		fluff_string = ", and company countermeasures are failing to protect <b>YOU</b> from being affected. We're all doomed!"
-	earning_report = "<b>Sector Economic Report</b><br><br> Sector vendor prices is currently at <b>[SSeconomy.inflation_value()*100]%</b>[fluff_string]<br><br> The station spending power is currently <b>[station_total] Credits</b>, and the crew's targeted allowance is at <b>[station_target] Credits</b>.<br><br>[SSstock_market.news_string] That's all from the <i>Nanotrasen Economist Division</i>."
-	GLOB.news_network.submit_article(earning_report, "Station Earnings Report", "Station Announcements", null, update_alert = FALSE)
+		fluff_string = ", а контрмеры компании не способны защитить <b>Вас</b> их воздействия. Мы все обречены!"
+	earning_report = "<b>Sector Economic Report</b><br><br> Цены на услуги поставщиков в секторе в настоящее время достигают <b>[SSeconomy.inflation_value()*100]%</b>[fluff_string]<br><br> Траты станции в настоящее время равны <b>[station_total] кредит</b>, а целевое пособие экипажа <b>[station_target] кредит</b>.<br><br>[SSstock_market.news_string] Это все из отдела <i>Нанотрасен Экономика</i>."
+	GLOB.news_network.submit_article(earning_report, "Отчет о доходах станции", "Объявления станции", null, update_alert = FALSE)
 	return TRUE
 
 /**

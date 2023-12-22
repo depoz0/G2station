@@ -102,8 +102,8 @@
 	name = "Chav"
 	desc = "Unknown"
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='notice'>Ye feel like a reet prat like, innit?</span>"
-	text_lose_indication = "<span class='notice'>You no longer feel like being rude and sassy.</span>"
+	text_gain_indication = "<span class='notice'>Вы чувствуете себя настоящим грубияном, не так ли?</span>"
+	text_lose_indication = "<span class='notice'>Вы больше не чувствуете себя грубым и наглым.</span>"
 
 /datum/mutation/human/chav/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
