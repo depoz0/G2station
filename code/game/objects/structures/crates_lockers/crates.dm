@@ -1,6 +1,6 @@
 /obj/structure/closet/crate
-	name = "crate"
-	desc = "A rectangular steel crate."
+	name = "ящик"
+	desc = "Стальной прямоугольный ящик."
 	icon = 'icons/obj/storage/crates.dmi'
 	icon_state = "crate"
 	base_icon_state = "crate"
@@ -156,8 +156,8 @@
 	icon_state = "crateopen"
 
 /obj/structure/closet/crate/coffin
-	name = "coffin"
-	desc = "It's a burial receptacle for the dearly departed."
+	name = "гроб"
+	desc = "Это погребальный ящик для усопших."
 	icon_state = "coffin"
 	base_icon_state = "coffin"
 	resistance_flags = FLAMMABLE
@@ -173,16 +173,16 @@
 	elevation_open = 0
 
 /obj/structure/closet/crate/trashcart //please make this a generic cart path later after things calm down a little
-	desc = "A heavy, metal trashcart with wheels."
-	name = "trash cart"
+	desc = "Тяжелая металлическая тележка для мусора с колесами."
+	name = "мусорная тележка"
 	icon_state = "trashcart"
 	base_icon_state = "trashcart"
 	can_install_electronics = FALSE
 	paint_jobs = null
 
 /obj/structure/closet/crate/trashcart/laundry
-	name = "laundry cart"
-	desc = "A large cart for hauling around large amounts of laundry."
+	name = "прачечная тележка"
+	desc = "Большая тележка для перевозки большого количества белья."
 	icon_state = "laundry"
 	base_icon_state = "laundry"
 	elevation = 14
@@ -224,8 +224,8 @@
 	base_icon_state = "medical"
 
 /obj/structure/closet/crate/freezer
-	desc = "A freezer."
-	name = "freezer"
+	desc = "Морозильная камера."
+	name = "морозильник"
 	icon_state = "freezer"
 	base_icon_state = "freezer"
 	paint_jobs = null

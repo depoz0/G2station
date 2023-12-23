@@ -229,8 +229,8 @@
 	tank_leak()
 
 /obj/structure/reagent_dispensers/watertank
-	name = "water tank"
-	desc = "A water tank."
+	name = "резервуар с водой"
+	desc = "Резервуар с водой."
 	icon_state = "water"
 	openable = TRUE
 

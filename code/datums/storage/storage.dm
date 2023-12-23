@@ -372,7 +372,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 
 	if(total_weight > max_total_storage)
 		if(messages && user && !silent_for_user)
-			user.balloon_alert(user, "no room!")
+			user.balloon_alert(user, "нет места!")
 		return FALSE
 
 	if(length(can_hold))
@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		var/datum/storage/item_storage = to_insert.atom_storage
 		if((to_insert.w_class >= resolve_parent.w_class) && item_storage && !allow_big_nesting)
 			if(messages && user)
-				user.balloon_alert(user, "too big!")
+				user.balloon_alert(user, "слишком большой!")
 			return FALSE
 
 	return TRUE
@@ -786,7 +786,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 
 	// Storage to storage transfer is instant
 	if(dest_object.atom_storage)
-		to_chat(user, span_notice("You dump the contents of [resolve_parent] into [dest_object]."))
+		to_chat(user, span_notice("Вы выгружаете содержимое [resolve_parent] в [dest_object]."))
 
 		if(rustle_sound)
 			playsound(resolve_parent, SFX_RUSTLE, 50, TRUE, -5)
@@ -804,7 +804,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		return
 
 	// Storage to loc transfer requires a do_after
-	to_chat(user, span_notice("You start dumping out the contents of [resolve_parent] onto [dest_object]..."))
+	to_chat(user, span_notice("Вы начинаете выгружать содержимое [resolve_parent] на [dest_object]..."))
 	if(!do_after(user, 2 SECONDS, target = dest_object))
 		return
 
@@ -1168,11 +1168,11 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 	collection_mode = (collection_mode+1)%3
 	switch(collection_mode)
 		if(COLLECT_SAME)
-			resolve_parent.balloon_alert(user, "will now only pick up a single type")
+			resolve_parent.balloon_alert(user, "теперь будет подбирать только один тип")
 		if(COLLECT_EVERYTHING)
-			resolve_parent.balloon_alert(user, "will now pick up everything")
+			resolve_parent.balloon_alert(user, "теперь будет подбирать все")
 		if(COLLECT_ONE)
-			resolve_parent.balloon_alert(user, "will now pick up one at a time")
+			resolve_parent.balloon_alert(user, "теперь будет подбирать по одному")
 
 /// Gives a spiffy animation to our parent to represent opening and closing.
 /datum/storage/proc/animate_parent()

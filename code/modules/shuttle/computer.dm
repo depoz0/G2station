@@ -7,8 +7,8 @@
 #define SHUTTLE_CONSOLE_ERROR "error"
 
 /obj/machinery/computer/shuttle
-	name = "shuttle console"
-	desc = "A shuttle control computer."
+	name = "консоль шаттла"
+	desc = "Компьютер управления шаттлом."
 	icon_screen = "shuttle"
 	icon_keyboard = "tech_key"
 	light_color = LIGHT_COLOR_CYAN
@@ -38,25 +38,25 @@
 /obj/machinery/computer/shuttle/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()
 	if(is_station_level(user.z) && user.mind && IS_HEAD_REVOLUTIONARY(user) && !(user.mind in dumb_rev_heads)) //Rev heads will get a one-time warning that they shouldn't leave
-		to_chat(user, span_warning("You get a feeling that leaving the station might be a REALLY dumb idea..."))
+		to_chat(user, span_warning("У вас возникает ощущение, что покинуть станцию может быть очень глупой идеей..."))
 		dumb_rev_heads += user.mind
 		return
 	if (HAS_TRAIT(user, TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION) && !is_station_level(user.z)) //Free golems and other mobs with this trait will not be able to use the shuttle from outside the station Z
 		to_chat(user, span_warning("У вас возникнет чувство что лучше не стоит связываться с этим."))
 		return
 	if(!user.can_read(src, reading_check_flags = READING_CHECK_LITERACY)) //Illiterate mobs which aren't otherwise blocked from using computers will send the shuttle to a random valid destination
-		to_chat(user, span_warning("You start mashing buttons at random!"))
+		to_chat(user, span_warning("Вы начинаете нажимать кнопки случайным образом!"))
 		if(do_after(user, 10 SECONDS, target = src))
 			var/list/dest_list = get_valid_destinations()
 			if(!dest_list.len) //No valid destinations
-				to_chat(user, span_warning("The console shows a flashing error message, but you can't comprehend it."))
+				to_chat(user, span_warning("Консоль показывает мигающее сообщение об ошибке, но вы не можете его понять."))
 				return
 			var/list/destination = pick(dest_list)
 			switch (send_shuttle(destination["id"], user))
 				if (SHUTTLE_CONSOLE_SUCCESS)
 					return
 				else
-					to_chat(user, span_warning("The console shows a flashing error message, but you can't comprehend it."))
+					to_chat(user, span_warning("Консоль показывает мигающее сообщение об ошибке, но вы не можете его понять."))
 					return
 		return
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -83,13 +83,13 @@
 	else
 		switch(mobile_docking_port.mode)
 			if(SHUTTLE_IGNITING)
-				data["status"] = "Igniting"
+				data["status"] = "Запуск"
 			if(SHUTTLE_IDLE)
-				data["status"] = "Idle"
+				data["status"] = "Бездействие"
 			if(SHUTTLE_RECHARGING)
-				data["status"] = "Recharging"
+				data["status"] = "Зарядка"
 			else
-				data["status"] = "In Transit"
+				data["status"] = "В пути"
 	data["locations"] = get_valid_destinations()
 	if(length(data["locations"]) == 1)
 		for(var/location in data["locations"])
@@ -169,7 +169,7 @@
 	switch(SSshuttle.moveShuttle(shuttleId, dest_id, TRUE))
 		if(DOCKING_SUCCESS)
 			say("Шаттл отбывает. Пожалуйста, отойдите от дверей.")
-			log_shuttle("[key_name(user)] has sent shuttle \"[shuttleId]\" towards \"[dest_id]\", using [src].")
+			log_shuttle("[key_name(user)] отправил шаттл \"[shuttleId]\" в направлении \"[dest_id]\", используя [src].")
 			return SHUTTLE_CONSOLE_SUCCESS
 		else
 			return SHUTTLE_CONSOLE_ERROR
@@ -179,29 +179,29 @@
 	if(.)
 		return
 	if(!allowed(usr))
-		to_chat(usr, span_danger("Access denied."))
+		to_chat(usr, span_danger("Доступ запрещен."))
 		return
 
 	switch(action)
 		if("move")
 			switch (send_shuttle(params["shuttle_id"], usr)) //Try to send the shuttle, tell the user what happened
 				if (SHUTTLE_CONSOLE_ACCESSDENIED)
-					to_chat(usr, span_warning("Access denied."))
+					to_chat(usr, span_warning("Доступ запрещен."))
 					return
 				if (SHUTTLE_CONSOLE_ENDGAME)
-					to_chat(usr, span_warning("You've already escaped. Never going back to that place again!"))
+					to_chat(usr, span_warning("Вы уже сбежали. Никогда больше не вернетесь в это место!"))
 					return
 				if (SHUTTLE_CONSOLE_RECHARGING)
-					to_chat(usr, span_warning("Shuttle engines are not ready for use."))
+					to_chat(usr, span_warning("Двигатели шаттла не готовы к использованию."))
 					return
 				if (SHUTTLE_CONSOLE_INTRANSIT)
-					to_chat(usr, span_warning("Shuttle already in transit."))
+					to_chat(usr, span_warning("Шаттл уже в пути."))
 					return
 				if (SHUTTLE_CONSOLE_DESTINVALID)
-					to_chat(usr, span_warning("Invalid destination."))
+					to_chat(usr, span_warning("Недопустимый пункт назначения."))
 					return
 				if (SHUTTLE_CONSOLE_ERROR)
-					to_chat(usr, span_warning("Unable to comply."))
+					to_chat(usr, span_warning("Невозможно выполнить."))
 					return
 				if (SHUTTLE_CONSOLE_SUCCESS)
 					return TRUE //No chat message here because the send_shuttle proc makes the console itself speak

@@ -3,7 +3,7 @@
 #define SCULPT_SOUND_INCREMENT 4
 
 /obj/structure/statue
-	name = "statue"
+	name = "статуя"
 	desc = "Placeholder. Yell at Firecage if you SOMEHOW see this."
 	icon = 'icons/obj/art/statue.dmi'
 	icon_state = ""
@@ -78,8 +78,8 @@
 	icon_state = "nuke"
 
 /obj/structure/statue/uranium/eng
-	name = "Statue of an engineer"
-	desc = "This statue has a sickening green colour."
+	name = "Статуя инженера"
+	desc = "Эта статуя имеет тошнотворный зеленый цвет."
 	icon_state = "eng"
 
 ////////////////////////////plasma///////////////////////////////////////////////////////////////////////
@@ -87,16 +87,16 @@
 /obj/structure/statue/plasma
 	max_integrity = 200
 	impressiveness = 20
-	desc = "This statue is suitably made from plasma."
+	desc = "Эта статуя сделана из плазмы."
 	custom_materials = list(/datum/material/plasma=SHEET_MATERIAL_AMOUNT*5)
 	abstract_type = /obj/structure/statue/plasma
 
 /obj/structure/statue/plasma/scientist
-	name = "statue of a scientist"
+	name = "статуя ученого"
 	icon_state = "sci"
 
 /obj/structure/statue/plasma/xeno
-	name = "statue of a xenomorph"
+	name = "статуя ксеноморфа"
 	icon_state = "xeno"
 
 //////////////////////gold///////////////////////////////////////
@@ -104,32 +104,32 @@
 /obj/structure/statue/gold
 	max_integrity = 300
 	impressiveness = 25
-	desc = "This is a highly valuable statue made from gold."
+	desc = "Это очень ценная статуэтка, сделанная из золота."
 	custom_materials = list(/datum/material/gold=SHEET_MATERIAL_AMOUNT*5)
 	abstract_type = /obj/structure/statue/gold
 
 /obj/structure/statue/gold/hos
-	name = "statue of the head of security"
+	name = "статуя главы службы безопасности"
 	icon_state = "hos"
 
 /obj/structure/statue/gold/hop
-	name = "statue of the head of personnel"
+	name = "статуя начальника отдела персонала"
 	icon_state = "hop"
 
 /obj/structure/statue/gold/cmo
-	name = "statue of the chief medical officer"
+	name = "статут главврача"
 	icon_state = "cmo"
 
 /obj/structure/statue/gold/ce
-	name = "statue of the chief engineer"
+	name = "статуя главного инженера"
 	icon_state = "ce"
 
 /obj/structure/statue/gold/rd
-	name = "statue of the research director"
+	name = "статуя директора по исследованиям"
 	icon_state = "rd"
 
 /obj/structure/statue/gold/qm
-	name = "statue of the quartermaster"
+	name = "статуя квартирмейстера"
 	icon_state = "qm"
 
 //////////////////////////silver///////////////////////////////////////
@@ -137,7 +137,7 @@
 /obj/structure/statue/silver
 	max_integrity = 300
 	impressiveness = 25
-	desc = "This is a valuable statue made from silver."
+	desc = "Это ценная статуэтка, сделанная из серебра."
 	custom_materials = list(/datum/material/silver=SHEET_MATERIAL_AMOUNT*5)
 	abstract_type = /obj/structure/statue/silver
 
@@ -146,7 +146,7 @@
 	icon_state = "md"
 
 /obj/structure/statue/silver/janitor
-	name = "statue of a janitor"
+	name = "статуя уборщика"
 	icon_state = "jani"
 
 /obj/structure/statue/silver/sec
@@ -166,20 +166,20 @@
 /obj/structure/statue/diamond
 	max_integrity = 1000
 	impressiveness = 50
-	desc = "This is a very expensive diamond statue."
+	desc = "Это очень дорогая статуэтка с бриллиантом."
 	custom_materials = list(/datum/material/diamond=SHEET_MATERIAL_AMOUNT*5)
 	abstract_type = /obj/structure/statue/diamond
 
 /obj/structure/statue/diamond/captain
-	name = "statue of THE captain."
+	name = "статуя капитана."
 	icon_state = "cap"
 
 /obj/structure/statue/diamond/ai1
-	name = "statue of the AI hologram."
+	name = "Статуя голограммы ИИ."
 	icon_state = "ai1"
 
 /obj/structure/statue/diamond/ai2
-	name = "statue of the AI core."
+	name = "Статуя ядра ИИ."
 	icon_state = "ai2"
 
 ////////////////////////bananium///////////////////////////////////////
@@ -187,12 +187,12 @@
 /obj/structure/statue/bananium
 	max_integrity = 300
 	impressiveness = 50
-	desc = "A bananium statue with a small engraving:'HOOOOOOONK'."
+	desc = "Статуэтка из бананиума с небольшой гравировкой: HOOOOOOONK."
 	custom_materials = list(/datum/material/bananium=SHEET_MATERIAL_AMOUNT*5)
 	abstract_type = /obj/structure/statue/bananium
 
 /obj/structure/statue/bananium/clown
-	name = "statue of a clown"
+	name = "статуя клоуна"
 	icon_state = "clown"
 
 /////////////////////sandstone/////////////////////////////////////////
@@ -204,7 +204,7 @@
 	abstract_type = /obj/structure/statue/sandstone
 
 /obj/structure/statue/sandstone/assistant
-	name = "statue of an assistant"
+	name = "статуя ассистента"
 	desc = "A cheap statue of sandstone for a greyshirt."
 	icon_state = "assist"
 
