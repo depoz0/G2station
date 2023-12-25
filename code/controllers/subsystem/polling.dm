@@ -22,9 +22,9 @@ SUBSYSTEM_DEF(polling)
 	if(role && !role_name_text)
 		role_name_text = role
 	if(role_name_text && !question)
-		question = "Do you want to play as [full_capitalize(role_name_text)]?"
+		question = "Хотите ли вы сыграть в роли [full_capitalize(role_name_text)]?"
 	if(!question)
-		question = "Do you want to play as a special role?"
+		question = "Хотите сыграть особую роль?"
 	log_game("Polling candidates [role_name_text ? "for [role_name_text]" : "\"[question]\""] for [DisplayTimeText(poll_time)] seconds")
 
 	// Start firing
@@ -112,7 +112,7 @@ SUBSYSTEM_DEF(polling)
 		var/act_never = ""
 		if(ignore_category)
 			act_never = "<a href='?src=[REF(poll_alert_button)];never=1'>\[Never For This Round]</a>"
-		to_chat(candidate_mob, span_boldnotice(examine_block("Now looking for candidates [role_name_text ? "to play as \an [role_name_text]." : "\"[question]\""] [act_jump] [act_signup] [act_never]")))
+		to_chat(candidate_mob, span_boldnotice(examine_block("Сейчас мы ищем кандидатов [role_name_text ? "на роль [role_name_text]." : "\"[question]\""] [act_jump] [act_signup] [act_never]")))
 
 		// Start processing it so it updates visually the timer
 		START_PROCESSING(SSprocessing, poll_alert_button)

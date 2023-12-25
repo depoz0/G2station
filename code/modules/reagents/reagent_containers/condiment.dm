@@ -82,7 +82,7 @@
 			return
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [trans] units of the contents of [target]."))
+		to_chat(user, span_notice("Вы наполняете [src] [trans] единицами содержимого из [rusrep(target.name, 2)]."))
 
 	//Something like a glass or a food item. Player probably wants to transfer TO it.
 	else if(target.is_drainable() || IS_EDIBLE(target))

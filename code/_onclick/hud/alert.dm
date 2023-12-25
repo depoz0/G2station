@@ -850,15 +850,15 @@
 	var/left_click_text
 	if(poll)
 		if(owner in poll.signed_up)
-			left_click_text = "Leave"
+			left_click_text = "Уйти"
 		else
-			left_click_text = "Enter"
+			left_click_text = "Войти"
 		context[SCREENTIP_CONTEXT_LMB] = "[left_click_text] Poll"
 		if(poll.ignoring_category)
 			var/selected_never = FALSE
 			if(owner.ckey in GLOB.poll_ignore[poll.ignoring_category])
 				selected_never = TRUE
-			context[SCREENTIP_CONTEXT_ALT_LMB] = "[selected_never ? "Cancel " : ""]Never For This Round"
+			context[SCREENTIP_CONTEXT_ALT_LMB] = "[selected_never ? "Отменить " : ""]Никогда в этом раунде"
 		if(poll.jump_to_me && isobserver(owner))
 			context[SCREENTIP_CONTEXT_CTRL_LMB] = "Jump To"
 	return CONTEXTUAL_SCREENTIP_SET

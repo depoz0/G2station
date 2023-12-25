@@ -43,17 +43,17 @@
 		return FALSE
 	if(candidate in signed_up)
 		if(!silent)
-			to_chat(candidate, span_warning("You have already signed up for this!"))
+			to_chat(candidate, span_warning("Вы уже подписались на это!"))
 		return FALSE
 	if(time_left() <= 0)
 		if(!silent)
-			to_chat(candidate, span_danger("Sorry, you were too late for the consideration!"))
+			to_chat(candidate, span_danger("Извините, но вы опоздали с ответом!"))
 			SEND_SOUND(candidate, 'sound/machines/buzz-sigh.ogg')
 		return FALSE
 
 	signed_up += candidate
 	if(!silent)
-		to_chat(candidate, span_notice("You have signed up for [role]! A candidate will be picked randomly soon."))
+		to_chat(candidate, span_notice("Вы подписались на [role]! Кандидат будет выбран случайным образом в ближайшее время."))
 		// Sign them up for any other polls with the same mob type
 		for(var/datum/candidate_poll/existing_poll as anything in SSpolling.currently_polling)
 			if(src != existing_poll && poll_key == existing_poll.poll_key && !(candidate in existing_poll.signed_up))

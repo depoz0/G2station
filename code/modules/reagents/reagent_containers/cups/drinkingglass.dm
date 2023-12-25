@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/cup/glass/drinkingglass
-	name = "drinking glass"
-	desc = "Your standard drinking glass."
+	name = "питьевой стакан"
+	desc = "Стандартный стакан для питья."
 	icon_state = "glass_empty"
 	base_icon_state = "glass_empty"
 	amount_per_transfer_from_this = 10
@@ -54,8 +54,8 @@
 //  This is on a case-by-case basis, and you can even make a separate sprite for shot glasses if you want. //
 
 /obj/item/reagent_containers/cup/glass/drinkingglass/shotglass
-	name = "shot glass"
-	desc = "A shot glass - the universal symbol for bad decisions."
+	name = "рюмка"
+	desc = "Рюмка - универсальный знак плохих решений."
 	icon = 'icons/obj/drinks/shot_glasses.dmi'
 	icon_state = "shotglass"
 	base_icon_state = "shotglass"

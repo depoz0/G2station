@@ -335,7 +335,7 @@
 		else
 			is_disabled += " and"
 
-	check_list += "\t <span class='[no_damage ? "notice" : "warning"]'>Your [name][is_disabled][self_aware ? " has " : " is "][status].</span>"
+	check_list += "\t <span class='[no_damage ? "notice" : "warning"]'>Ваша [name][is_disabled][self_aware ? " has " : " "][status].</span>"
 
 	for(var/datum/wound/wound as anything in wounds)
 		switch(wound.severity)
