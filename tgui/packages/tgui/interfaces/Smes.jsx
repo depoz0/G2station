@@ -48,20 +48,20 @@ export const Smes = (props) => {
             }}
           />
         </Section>
-        <Section title="Вход">
-          <LabeledList>
-            <LabeledList.Item
-              label="Режим зарядки"
-              buttons={
-                <Button
-                  icon={inputAttempt ? 'sync-alt' : 'times'}
-                  selected={inputAttempt}
-                  onClick={() => act('tryinput')}
-                >
-                  {inputAttempt ? 'Авто' : 'Выкл'}
-                </Button>
-              }
+        <Section
+          title="Вход"
+          buttons={
+            <Button
+              icon={inputAttempt ? 'sync-alt' : 'times'}
+              selected={inputAttempt}
+              onClick={() => act('tryinput')}
             >
+              {inputAttempt ? 'Auto' : 'Off'}
+            </Button>
+          }
+        >
+          <LabeledList>
+            <LabeledList.Item label="Charge Mode">
               <Box color={inputState}>
                 {(capacityPercent >= 100 && 'Полностью заряжен') ||
                   (inputting && 'Зарядка') ||
@@ -133,20 +133,20 @@ export const Smes = (props) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Выход">
-          <LabeledList>
-            <LabeledList.Item
-              label="Режим вывода"
-              buttons={
-                <Button
-                  icon={outputAttempt ? 'power-off' : 'times'}
-                  selected={outputAttempt}
-                  onClick={() => act('tryoutput')}
-                >
-                  {outputAttempt ? 'Вкл' : 'Выкл'}
-                </Button>
-              }
+        <Section
+          title="Выход"
+          buttons={
+            <Button
+              icon={outputAttempt ? 'power-off' : 'times'}
+              selected={outputAttempt}
+              onClick={() => act('tryoutput')}
             >
+              {outputAttempt ? 'On' : 'Off'}
+            </Button>
+          }
+        >
+          <LabeledList>
+            <LabeledList.Item label="Output Mode">
               <Box color={outputState}>
                 {outputting
                   ? 'Отправка'
