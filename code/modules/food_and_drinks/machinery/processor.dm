@@ -139,7 +139,7 @@
 		user.stop_pulling()
 		return
 	if(!LAZYLEN(processor_contents))
-		to_chat(user, span_warning("[src] is empty!"))
+		to_chat(user, span_warning("[src.name] пуст!"))
 		return TRUE
 	processing = TRUE
 	user.visible_message(span_notice("[user] turns on [src]."), \

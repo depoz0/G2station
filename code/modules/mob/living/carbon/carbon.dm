@@ -134,7 +134,7 @@
 		return FALSE
 	var/atom/movable/thrown_thing
 	var/obj/item/held_item = get_active_held_item()
-	var/verb_text = pick("throw", "toss", "hurl", "chuck", "fling")
+	var/verb_text = pick("кинули", "бросили", "hurl", "chuck", "fling")
 	if(prob(0.5))
 		verb_text = "yeet"
 	var/neckgrab_throw = FALSE // we can't check for if it's a neckgrab throw when totaling up power_throw since we've already stopped pulling them by then, so get it early
@@ -171,9 +171,9 @@
 		var/obj/item/thrown_item = thrown_thing
 		if(thrown_item.throw_verb)
 			verb_text = thrown_item.throw_verb
-	visible_message(span_danger("[src] [verb_text][plural_s(verb_text)] [thrown_thing][power_throw ? " really hard!" : "."]"), \
-					span_danger("You [verb_text] [thrown_thing][power_throw ? " really hard!" : "."]"))
-	log_message("has thrown [thrown_thing] [power_throw > 0 ? "really hard" : ""]", LOG_ATTACK)
+	visible_message(span_danger("[src] [verb_text][plural_s(verb_text)] [thrown_thing][power_throw ? " очень сильно!" : "."]"), \
+					span_danger("Вы [verb_text] [thrown_thing][power_throw ? " очень сильно!" : "."]"))
+	log_message("бросил [thrown_thing] [power_throw > 0 ? "очень сильно" : ""]", LOG_ATTACK)
 	var/extra_throw_range = HAS_TRAIT(src, TRAIT_THROWINGARM) ? 2 : 0
 	newtonian_move(get_dir(target, src))
 	thrown_thing.safe_throw_at(target, thrown_thing.throw_range + extra_throw_range, max(1,thrown_thing.throw_speed + power_throw), src, null, null, null, move_force)

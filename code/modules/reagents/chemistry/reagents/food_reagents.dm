@@ -434,7 +434,7 @@
 	if(methods & INGEST)
 		if(!holder.has_reagent(/datum/reagent/consumable/milk))
 			if(prob(15))
-				to_chat(exposed_mob, span_danger("[pick("Your head pounds.", "Your mouth feels like it's on fire.", "You feel dizzy.")]"))
+				to_chat(exposed_mob, span_danger("[pick("Your head pounds.", "Your mouth feels like it's on fire.", "Вы чувствуете головокружение.")]"))
 			if(prob(10))
 				victim.set_eye_blur_if_lower(2 SECONDS)
 			if(prob(10))

@@ -115,8 +115,8 @@
 	. = ..()
 
 	if(!user.combat_mode)
-		user.visible_message(span_notice("[user] knocks on [src]."), \
-			span_notice("You knock on [src]."))
+		user.visible_message(span_notice("[user] стучит в [src.name]."), \
+			span_notice("Вы стучите в [src.name]."))
 		playsound(src, knock_sound, 50, TRUE)
 	else
 		user.visible_message(span_warning("[user] bashes [src]!"), \

@@ -346,10 +346,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/chair/stool/bar, 0)
 		return
 	for(var/obj/A in T)
 		if(istype(A, /obj/structure/chair))
-			to_chat(user, span_warning("There is already a chair here!"))
+			to_chat(user, span_warning("Здесь уже есть стул!"))
 			return
 		if(A.density && !(A.flags_1 & ON_BORDER_1))
-			to_chat(user, span_warning("There is already something here!"))
+			to_chat(user, span_warning("Здесь уже что-то есть!"))
 			return
 
 	user.visible_message(span_notice("[user] rights \the [src.name]."), span_notice("You right \the [name]."))

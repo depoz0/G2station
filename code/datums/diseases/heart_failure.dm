@@ -37,7 +37,7 @@
 			if(SPT_PROB(1, seconds_per_tick))
 				to_chat(affected_mob, span_warning("You feel [pick("discomfort", "pressure", "a burning sensation", "pain")] in your chest."))
 			if(SPT_PROB(1, seconds_per_tick))
-				to_chat(affected_mob, span_warning("You feel dizzy."))
+				to_chat(affected_mob, span_warning("Вы чувствуете головокружение."))
 				affected_mob.adjust_confusion(6 SECONDS)
 			if(SPT_PROB(1.5, seconds_per_tick))
 				to_chat(affected_mob, span_warning("You feel [pick("full", "nauseated", "sweaty", "weak", "tired", "short of breath", "uneasy")]."))

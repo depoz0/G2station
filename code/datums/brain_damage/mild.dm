@@ -82,7 +82,7 @@
 	name = "Concussion"
 	desc = "Patient's brain is concussed."
 	scan_desc = "concussion"
-	gain_text = span_warning("Your head hurts!")
+	gain_text = span_warning("У вас болит голова!")
 	lose_text = span_notice("The pressure inside your head starts fading.")
 
 /datum/brain_trauma/mild/concussion/on_life(seconds_per_tick, times_fired)

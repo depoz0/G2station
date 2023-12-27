@@ -754,7 +754,7 @@
 				fake_msg = pick(
 				span_warning(pick("Your head hurts.", "Your head pounds.")),
 				span_warning(pick("You're having difficulty breathing.", "Your breathing becomes heavy.")),
-				span_warning(pick("You feel dizzy.", "Your head spins.")),
+				span_warning(pick("Вы чувствуете головокружение.", "Your head spins.")),
 				span_warning(pick("You swallow excess mucus.", "You lightly cough.")),
 				span_warning(pick("Your head hurts.", "Your mind blanks for a moment.")),
 				span_warning(pick("Your throat hurts.", "You clear your throat.")))
