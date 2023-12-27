@@ -213,7 +213,7 @@ const ContactsScreen = (props: any) => {
               width="220px"
               placeholder="Поиск по имени или должности..."
               value={searchUser}
-              onChange={(_, value) => setSearchUser(value)}
+              onInput={(_, value) => setSearchUser(value)}
             />
           </Stack>
         </Section>
