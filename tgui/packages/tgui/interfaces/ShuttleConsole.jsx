@@ -97,7 +97,9 @@ export const ShuttleConsoleContent = (props) => {
         </Box>
       </Box>
       <Section
-        title={type === 'shuttle' ? 'Управление шаттлом' : 'Base Launch Controls'}
+        title={
+          type === 'shuttle' ? 'Управление шаттлом' : 'Base Launch Controls'
+        }
         level={2}
       >
         <LabeledList>
