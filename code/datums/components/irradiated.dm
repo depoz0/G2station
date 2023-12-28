@@ -131,12 +131,12 @@
 
 	var/obj/item/bodypart/affected_limb = human_parent.get_bodypart(human_parent.get_random_valid_zone())
 	human_parent.visible_message(
-		span_boldwarning("[human_parent]'s [affected_limb.plaintext_zone] bubbles unnaturally, then bursts into blisters!"),
-		span_boldwarning("Your [affected_limb.plaintext_zone] bubbles unnaturally, then bursts into blisters!"),
+		span_boldwarning("[human_parent] [affected_limb.plaintext_zone] неестественно пузырится, а потом лопается волдырями!"),
+		span_boldwarning("Ваша [affected_limb.plaintext_zone] неестественно пузырится, а потом лопается волдырями!"),
 	)
 
 	if(human_parent.is_blind())
-		to_chat(human_parent, span_boldwarning("Your [affected_limb.plaintext_zone] feels like it's bubbling, then burns like hell!"))
+		to_chat(human_parent, span_boldwarning("Ваша [affected_limb.plaintext_zone] как будто пузырится, а потом горит как в аду!"))
 
 	human_parent.apply_damage(RADIATION_BURN_SPLOTCH_DAMAGE, BURN, affected_limb)
 	playsound(

@@ -56,7 +56,7 @@
 		vision_distance = COMBAT_MESSAGE_RANGE,
 		ignored_mobs = user,
 	)
-	to_chat(user, span_danger("You [response_harm_simple] [src]!"))
+	to_chat(user, span_danger("Вы [response_harm_simple] [src.name]!"))
 	playsound(loc, attacked_sound, 25, TRUE, -1)
 	apply_damage(damage)
 	log_combat(user, src, "attacked")
