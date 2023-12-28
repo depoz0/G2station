@@ -52,7 +52,8 @@ export const InterfaceLockNoticeBox = (props) => {
   // For everyone else
   return (
     <NoticeBox>
-      Проведите {accessText} для {locked ? 'разблокировки' : 'блокировки'} интерфейса.
+      Проведите {accessText} для {locked ? 'разблокировки' : 'блокировки'}
+      интерфейса.
     </NoticeBox>
   );
 };
