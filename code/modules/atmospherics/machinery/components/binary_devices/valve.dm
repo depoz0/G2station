@@ -6,8 +6,8 @@ It's like a regular ol' straight pipe, but you can turn it on and off.
 
 /obj/machinery/atmospherics/components/binary/valve
 	icon_state = "mvalve_map-3"
-	name = "manual valve"
-	desc = "A pipe with a valve that can be used to disable flow of gas through it."
+	name = "ручной клапан"
+	desc = "Труба с клапаном, с помощью которого можно перекрыть поток газа."
 	can_unwrench = TRUE
 	shift_underlay_only = FALSE
 	interaction_flags_machine = INTERACT_MACHINE_OFFLINE | INTERACT_MACHINE_OPEN //Intentionally no allow_silicon flag
@@ -41,13 +41,13 @@ It's like a regular ol' straight pipe, but you can turn it on and off.
 		update_parents()
 		var/datum/pipeline/parent1 = parents[1]
 		parent1.reconcile_air()
-		investigate_log("was opened by [usr ? key_name(usr) : "a remote signal"]", INVESTIGATE_ATMOS)
-		balloon_alert_to_viewers("valve opened")
+		investigate_log("был открыт [usr ? key_name(usr) : "дистанционным сигналом"]", INVESTIGATE_ATMOS)
+		balloon_alert_to_viewers("клапан открыт")
 		vent_movement |= VENTCRAWL_ALLOWED
 	else
 		update_icon_nopipes()
-		investigate_log("was closed by [usr ? key_name(usr) : "a remote signal"]", INVESTIGATE_ATMOS)
-		balloon_alert_to_viewers("valve closed")
+		investigate_log("был закрыт [usr ? key_name(usr) : "дистанционным сигналом"]", INVESTIGATE_ATMOS)
+		balloon_alert_to_viewers("клапан закрыт")
 		vent_movement &= ~VENTCRAWL_ALLOWED
 
 
@@ -78,8 +78,8 @@ It's like a regular ol' straight pipe, but you can turn it on and off.
 /obj/machinery/atmospherics/components/binary/valve/digital // can be controlled by AI
 	icon_state = "dvalve_map-3"
 
-	name = "digital valve"
-	desc = "A digitally controlled valve."
+	name = "цифровой клапан"
+	desc = "Клапан с цифровым управлением."
 	valve_type = DIGITAL_VALVE
 	pipe_state = "dvalve"
 

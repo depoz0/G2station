@@ -88,7 +88,7 @@
 	name = "machinery"
 	icon = 'icons/obj/machines/fax.dmi'
 	desc = "Some kind of machine."
-	verb_say = "beeps"
+	verb_say = "пикает"
 	verb_yell = "blares"
 	pressure_resistance = 15
 	pass_flags_self = PASSMACHINE | LETPASSCLICKS

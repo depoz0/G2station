@@ -21,19 +21,19 @@
 	switch(impress)
 		if(GREAT_ART to INFINITY)
 			user.add_mood_event("artgreat", /datum/mood_event/artgreat)
-			msg = "What \a [pick("masterpiece", "chef-d'oeuvre")]. So [pick("trascended", "awe-inspiring", "bewitching", "impeccable")]!"
+			msg = "Вот это [pick("шедевр", "произведениe")]. Так [pick("потрясающе", "восхитительно", "завораживающе", "безупречно")]!"
 		if (GOOD_ART to GREAT_ART)
 			user.add_mood_event("artgood", /datum/mood_event/artgood)
-			msg = "[source.p_Theyre()] a [pick("respectable", "commendable", "laudable")] art piece, easy on the keen eye."
+			msg = "[source.p_Theyre()] искусство [pick("достойное уважения", "достойное похвалы", "достойное восхищения")], легкое и привлекающее внимание."
 		if (BAD_ART to GOOD_ART)
 			user.add_mood_event("artok", /datum/mood_event/artok)
-			msg = "[source.p_Theyre()] fair to middling, enough to be called an \"art object\"."
+			msg = "[source.p_Theyre()] вполне достойно чтобы называться \"арт-объектом\"."
 		if (0 to BAD_ART)
 			user.add_mood_event("artbad", /datum/mood_event/artbad)
-			msg = "Wow, [source.p_they()] sucks."
+			msg = "Вау, [source.p_they()] - отстой."
 
-	user.visible_message(span_notice("[user] stops and looks intently at [source]."), \
-		span_notice("You appraise [source]... [msg]"))
+	user.visible_message(span_notice("[user] останавливается и пристально смотрит на [source]."), \
+		span_notice("Вы разглядываете [source]... [msg]"))
 
 /datum/element/art/proc/on_examine(atom/source, mob/user, list/examine_texts)
 	SIGNAL_HANDLER
@@ -43,7 +43,7 @@
 		INVOKE_ASYNC(src, PROC_REF(appraise), source, user) //Do not sleep the proc.
 
 /datum/element/art/proc/appraise(atom/source, mob/user)
-	to_chat(user, span_notice("You start appraising [source]..."))
+	to_chat(user, span_notice("Вы начинаете изучать [source]..."))
 	if(!do_after(user, 2 SECONDS, target = source))
 		return
 	var/mult = 1
@@ -57,13 +57,13 @@
 	var/msg
 	if(user.mind?.has_antag_datum(/datum/antagonist/rev))
 		user.add_mood_event("artgreat", /datum/mood_event/artgreat)
-		msg = "What \a [pick("masterpiece", "chef-d'oeuvre")] [source.p_theyre()]. So [pick("subversive", "revolutionary", "unitizing", "egalitarian")]!"
+		msg = "Вот это [pick("шедевр", "произведение")] [source.p_theyre()]. Так [pick("провакационно", "революционно", "унификационно", "эгалитаристично")]!"
 	else
 		user.add_mood_event("artbad", /datum/mood_event/artbad)
-		msg = "Wow, [source.p_they()] sucks."
+		msg = "Вау, [source.p_they()] - отстой."
 
-	user.visible_message(span_notice("[user] stops to inspect [source]."), \
-		span_notice("You appraise [source], inspecting the fine craftsmanship of the proletariat... [msg]"))
+	user.visible_message(span_notice("[user] останавливается чтобы осмотреть [source]."), \
+		span_notice("Вы оцениваете [source], осматривая тонкое мастерство пролетариата... [msg]"))
 
 /datum/element/art/commoner
 
@@ -79,10 +79,10 @@
 
 	if(!(user.mind.assigned_role.title in haters))
 		user.add_mood_event("artgreat", /datum/mood_event/artgreat)
-		msg = "What \a [pick("masterpiece", "chef-d'oeuvre")] [source.p_theyre()]. So [pick("relatable", "down to earth", "true", "real")]!"
+		msg = "Вот это [pick("шедевр", "произведение")] [source.p_theyre()]. Так [pick("правдиво", "приземленно", "истинно", "реально")]!"
 	else
 		user.add_mood_event("artbad", /datum/mood_event/artbad)
-		msg = "Wow, [source.p_they()] sucks."
+		msg = "Вау, [source.p_they()] - отстой."
 
-	user.visible_message(span_notice("[user] stops to inspect [source]."), \
-		span_notice("You appraise [source], inspecting the fine craftsmanship of the proletariat... [msg]"))
+	user.visible_message(span_notice("[user] останавливается чтобы осмотреть [source]."), \
+		span_notice("Вы оцениваете [source], осматривая тонкое мастерство пролетариата... [msg]"))

@@ -81,7 +81,7 @@
 					span_userdanger("[user] feeds you something from [src]."))
 		log_combat(user, target_mob, "fed", reagents.get_reagent_log_string())
 	else
-		to_chat(user, span_notice("You swallow a gulp of [src]."))
+		to_chat(user, span_notice("Вы проглатываете глоток [src.name]."))
 
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, target_mob, user)
 	var/fraction = min(gulp_size/reagents.total_volume, 1)

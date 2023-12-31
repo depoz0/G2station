@@ -9,7 +9,7 @@
 	name = "Toggle Light"
 
 /datum/action/item_action/toggle_computer_light
-	name = "Toggle Flashlight"
+	name = "Фонарик"
 
 /datum/action/item_action/toggle_hood
 	name = "Toggle Hood"
@@ -51,7 +51,7 @@
 	return ..()
 
 /datum/action/item_action/toggle_helmet_flashlight
-	name = "Toggle Helmet Flashlight"
+	name = "Фонарик на шлеме"
 
 /datum/action/item_action/toggle_helmet_mode
 	name = "Toggle Helmet Mode"
@@ -115,4 +115,3 @@
 
 /datum/action/item_action/call_link
 	name = "Call MODlink"
-

@@ -1,6 +1,6 @@
 /mob/living/basic/mouse
-	name = "mouse"
-	desc = "This cute little guy just loves the taste of uninsulated electrical cables. Isn't he adorable?"
+	name = "мышь"
+	desc = "Этот милый малыш просто обожает вкус неизолированных электрических проводов. Разве он не очарователен?"
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"
@@ -21,10 +21,10 @@
 	speak_emote = list("squeaks")
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
-	response_disarm_simple = "gently push aside"
-	response_harm_continuous = "splats"
-	response_harm_simple = "splat"
+	response_disarm_continuous = "осторожно отодвинули в сторону"
+	response_disarm_simple = "осторожно отодвинули в сторону"
+	response_harm_continuous = "шлепаете"
+	response_harm_simple = "шлепаете"
 
 	ai_controller = /datum/ai_controller/basic_controller/mouse
 
@@ -120,7 +120,7 @@
 		var/obj/item/food/deadmouse/mouse = new(loc)
 		mouse.copy_corpse(src)
 		if(HAS_TRAIT(src, TRAIT_BEING_SHOCKED))
-			mouse.desc = "They're toast."
+			mouse.desc = "Они поджарились."
 			mouse.add_atom_colour("#3A3A3A", FIXED_COLOUR_PRIORITY)
 	qdel(src)
 
@@ -145,7 +145,7 @@
 	SIGNAL_HANDLER
 
 	if(ishuman(entered) && stat == CONSCIOUS)
-		to_chat(entered, span_notice("[icon2html(src, entered)] Squeak!"))
+		to_chat(entered, span_notice("[icon2html(src, entered)] Писк!"))
 
 /// Called when a mouse is hand-fed some cheese, it will stop being afraid of humans
 /mob/living/basic/mouse/proc/tamed(mob/living/tamer, obj/item/food/cheese/cheese)
@@ -160,8 +160,8 @@
 	// Royal cheese will evolve us into a regal rat
 	if(istype(cheese, /obj/item/food/cheese/royal))
 		visible_message(
-			span_warning("[src] devours [cheese]! They morph into something... greater!"),
-			span_notice("You devour [cheese], and start morphing into something... greater!"),
+			span_warning("[src] пожирает [cheese]! Они превращаются в нечто... более великое!"),
+			span_notice("Вы съедаете [cheese], и начинаете превращаться в нечто... большее!"),
 		)
 		evolve_into_regal_rat()
 		qdel(cheese)
@@ -171,8 +171,8 @@
 	// Normal cheese will either heal us
 	if(prob(90) || health < maxHealth)
 		visible_message(
-			span_notice("[src] nibbles [cheese]."),
-			span_notice("You nibble [cheese][health < maxHealth ? ", restoring your health" : ""].")
+			span_notice("[src] грызёт [cheese]."),
+			span_notice("Вы съедает [cheese][health < maxHealth ? ", восстанавливая ваше здоровье" : ""].")
 		)
 		adjust_health(-maxHealth)
 
@@ -180,8 +180,8 @@
 	// ...if the rat cap allows us, that is
 	else if(length(SSmobs.cheeserats) >= cap)
 		visible_message(
-			span_warning("[src] carefully eats [cheese], hiding it from the [cap] mice on the station!"),
-			span_notice("You carefully nibble [cheese], hiding it from the [cap] other mice on board the station.")
+			span_warning("[src] аккуратно ест [cheese], пряча его от [cap] мышей на станции!"),
+			span_notice("Вы осторожно обгладываете [cheese], пряча его от [cap] других мышей на борту станции.")
 		)
 	else
 		visible_message(
@@ -247,10 +247,10 @@
 	desc = "Jerry the cat is not amused."
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
-	response_disarm_continuous = "gently pushes aside"
-	response_disarm_simple = "gently push aside"
-	response_harm_continuous = "splats"
-	response_harm_simple = "splat"
+	response_disarm_continuous = "осторожно отодвинули в сторону"
+	response_disarm_simple = "осторожно отодвинули в сторону"
+	response_harm_continuous = "шлепаете"
+	response_harm_simple = "шлепаете"
 	gold_core_spawnable = NO_SPAWN
 	contributes_to_ratcap = FALSE
 
@@ -268,8 +268,8 @@
 	new /mob/living/basic/mouse/brown(loc, /* tame = */ tame) // dominant gene
 
 /mob/living/basic/mouse/rat
-	name = "rat"
-	desc = "They're a nasty, ugly, evil, disease-ridden rodent with anger issues."
+	name = "крыса"
+	desc = "Они - мерзкие, уродливые, злобные, больные грызуны, у которых проблемы с гневом."
 
 	gold_core_spawnable = NO_SPAWN
 	melee_damage_lower = 3
@@ -288,8 +288,8 @@
 
 /// Mice turn into food when they die
 /obj/item/food/deadmouse
-	name = "dead mouse"
-	desc = "They look like somebody dropped the bass on it. A lizard's favorite meal."
+	name = "мёртвая мышь"
+	desc = "Они выглядят так, будто кто-то уронил на них окуня. Любимая еда ящерицы."
 	icon = 'icons/mob/simple/animal.dmi'
 	icon_state = "mouse_gray_dead"
 	bite_consumption = 3
@@ -337,12 +337,12 @@
 	var/mob/living/living_user = user
 	if(istype(living_user) && attacking_item.get_sharpness() && living_user.combat_mode)
 		if(!isturf(loc))
-			balloon_alert(user, "can't butcher here!")
+			balloon_alert(user, "здесь нельзя разделывать!")
 			return
 
-		balloon_alert(user, "butchering...")
+		balloon_alert(user, "разделывание...")
 		if(!do_after(user, 0.75 SECONDS, src))
-			balloon_alert(user, "interrupted!")
+			balloon_alert(user, "прервано!")
 			return
 
 		loc.balloon_alert(user, "butchered")
@@ -360,9 +360,9 @@
 		var/datum/reagents/target_reagents = target.reagents
 		var/trans_amount = reagents.maximum_volume - reagents.total_volume * (4 / 3)
 		if(target_reagents.has_reagent(/datum/reagent/fuel) && target_reagents.trans_to(src, trans_amount))
-			to_chat(user, span_notice("You dip [src] into [target]."))
+			to_chat(user, span_notice("Вы погружаете [src] в [target]."))
 		else
-			to_chat(user, span_warning("That's a terrible idea."))
+			to_chat(user, span_warning("Это ужасная идея."))
 		return .
 
 /obj/item/food/deadmouse/moldy

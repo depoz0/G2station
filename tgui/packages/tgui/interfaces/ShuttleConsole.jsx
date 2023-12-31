@@ -90,22 +90,24 @@ export const ShuttleConsoleContent = (props) => {
       </Box>
       <Box textAlign="center" fontSize="14px" mb={1}>
         <Box inline bold>
-          STATUS:
+          СТАТУС:
         </Box>
         <Box inline color={STATUS_COLOR_KEYS[status] || 'bad'} ml={1}>
-          {status || 'Not Available'}
+          {status || 'Не доступно'}
         </Box>
       </Box>
       <Section
-        title={type === 'shuttle' ? 'Shuttle Controls' : 'Base Launch Controls'}
+        title={
+          type === 'shuttle' ? 'Управление шаттлом' : 'Base Launch Controls'
+        }
         level={2}
       >
         <LabeledList>
-          <LabeledList.Item label="Location">
-            {docked_location || 'Not Available'}
+          <LabeledList.Item label="Местонахождение">
+            {docked_location || 'Не доступно'}
           </LabeledList.Item>
           <LabeledList.Item
-            label="Destination"
+            label="Пункт назначения"
             buttons={
               type !== 'shuttle' &&
               locations.length === 0 &&
@@ -122,7 +124,7 @@ export const ShuttleConsoleContent = (props) => {
           >
             {(locations.length === 0 && (
               <Box mb={1.7} color="bad">
-                Not Available
+                Не доступно
               </Box>
             )) ||
               (locations.length === 1 && (
@@ -138,7 +140,7 @@ export const ShuttleConsoleContent = (props) => {
                   disabled={locked || authorization_required}
                   selected={
                     getLocationNameById(locations, destination) ||
-                    'Select a Destination'
+                    'Выберите пункт назначения'
                   }
                   onSelected={(value) =>
                     act('set_destination', {
@@ -151,7 +153,7 @@ export const ShuttleConsoleContent = (props) => {
         </LabeledList>
         <Button
           fluid
-          content="Depart"
+          content="Вылет"
           disabled={
             !getLocationNameById(locations, destination) ||
             locked ||

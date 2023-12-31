@@ -125,13 +125,13 @@
 					affecting = victim.get_bodypart(pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
 					victim.Paralyze(60)
 				else
-					to_chat(victim, span_notice("Your [victim.shoes] protects you from [src]."))
+					to_chat(victim, span_notice("Ваши [victim.shoes] защищают вас от [rusrep(src.name, 2)]."))
 			if(BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND)
 				if(!victim.gloves)
 					affecting = victim.get_bodypart(type)
 					victim.Stun(60)
 				else
-					to_chat(victim, span_notice("Your [victim.gloves] protects you from [src]."))
+					to_chat(victim, span_notice("Ваши [victim.gloves] защищают вас от [rusrep(src.name, 2)]."))
 		if(affecting)
 			if(affecting.receive_damage(1, 0))
 				victim.update_damage_overlays()

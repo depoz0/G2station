@@ -1,4 +1,3 @@
-#define MAX_DENT_DECALS 15
 #define LEANING_OFFSET 11
 
 /turf/closed/wall
@@ -68,8 +67,8 @@
 	animate(src, 0.2 SECONDS, pixel_x = new_x, pixel_y = new_y)
 	add_traits(list(TRAIT_UNDENSE, TRAIT_EXPANDED_FOV), LEANING_TRAIT)
 	visible_message(
-		span_notice("[src] leans against [wall]."),
-		span_notice("You lean against [wall]."),
+		span_notice("[src] опирается на [wall]."),
+		span_notice("Вы опираетесь на [wall]."),
 	)
 	RegisterSignals(src, list(
 		COMSIG_MOB_CLIENT_PRE_MOVE,
@@ -124,7 +123,7 @@
 	. += deconstruction_hints(user)
 
 /turf/closed/wall/proc/deconstruction_hints(mob/user)
-	return span_notice("The outer plating is <b>welded</b> firmly in place.")
+	return span_notice("Внешнее металлическое покрытие <b>приваривается</b> прочно на место.")
 
 /turf/closed/wall/attack_tk()
 	return
@@ -209,7 +208,7 @@
 		add_dent(WALL_DENT_HIT)
 		user.visible_message(span_danger("[user] smashes \the [src]!"), \
 					span_danger("You smash \the [src]!"), \
-					span_hear("You hear a booming smash!"))
+					span_hear("Вы слышите громкий грохот!"))
 	return TRUE
 
 /**
@@ -235,14 +234,14 @@
 	if(.)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
-	to_chat(user, span_notice("You push the wall but nothing happens!"))
+	to_chat(user, span_notice("Вы толкаете стену, но ничего не происходит!"))
 	playsound(src, 'sound/weapons/genhit.ogg', 25, TRUE)
 	add_fingerprint(user)
 
 /turf/closed/wall/attackby(obj/item/W, mob/user, params)
 	user.changeNext_move(CLICK_CD_MELEE)
 	if (!ISADVANCEDTOOLUSER(user))
-		to_chat(user, span_warning("You don't have the dexterity to do this!"))
+		to_chat(user, span_warning("У вас не хватает ловкости, чтобы сделать это!"))
 		return
 
 	//get the user's location
@@ -265,10 +264,10 @@
 		if(!W.tool_start_check(user, amount=1))
 			return FALSE
 
-		to_chat(user, span_notice("You begin fixing dents on the wall..."))
+		to_chat(user, span_notice("Вы начинаете исправлять вмятины на стене..."))
 		if(W.use_tool(src, user, 0, volume=100))
 			if(iswallturf(src) && LAZYLEN(dent_decals))
-				to_chat(user, span_notice("You fix some dents on the wall."))
+				to_chat(user, span_notice("Вы исправляете несколько вмятин на стене."))
 				cut_overlay(dent_decals)
 				dent_decals.Cut()
 			return TRUE
@@ -294,10 +293,10 @@
 		if(!I.tool_start_check(user, amount=round(slicing_duration / 50)))
 			return FALSE
 
-		to_chat(user, span_notice("You begin slicing through the outer plating..."))
+		to_chat(user, span_notice("Вы начинаете разрезать внешнюю обшивку..."))
 		if(I.use_tool(src, user, slicing_duration, volume=100))
 			if(iswallturf(src))
-				to_chat(user, span_notice("You remove the outer plating."))
+				to_chat(user, span_notice("Вы снимаете внешнее покрытие."))
 				dismantle_wall()
 			return TRUE
 
@@ -387,5 +386,4 @@
 	. = ..()
 	SEND_SIGNAL(gone, COMSIG_LIVING_WALL_EXITED, src)
 
-#undef MAX_DENT_DECALS
 #undef LEANING_OFFSET

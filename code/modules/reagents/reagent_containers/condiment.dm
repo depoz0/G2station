@@ -82,7 +82,7 @@
 			return
 
 		var/trans = target.reagents.trans_to(src, amount_per_transfer_from_this, transferred_by = user)
-		to_chat(user, span_notice("You fill [src] with [trans] units of the contents of [target]."))
+		to_chat(user, span_notice("Вы наполняете [src] [trans] единицами содержимого из [rusrep(target.name, 2)]."))
 
 	//Something like a glass or a food item. Player probably wants to transfer TO it.
 	else if(target.is_drainable() || IS_EDIBLE(target))
@@ -412,18 +412,18 @@
 	  * Since all of them differs only in color should probably be replaced with usual reagentfillings instead
 	  */
 	var/list/possible_states = list(
-		/datum/reagent/consumable/ketchup = list("condi_ketchup", "Ketchup", "You feel more American already."),
+		/datum/reagent/consumable/ketchup = list("condi_ketchup", "Кетчуп", "Соус который делает еду вкуснее."),
 		/datum/reagent/consumable/capsaicin = list("condi_hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"),
-		/datum/reagent/consumable/soysauce = list("condi_soysauce", "Soy Sauce", "A salty soy-based flavoring"),
+		/datum/reagent/consumable/soysauce = list("condi_soysauce", "Соевый соус", "Соленая приправа на основе сои"),
 		/datum/reagent/consumable/frostoil = list("condi_frostoil", "Coldsauce", "Leaves the tongue numb in its passage"),
-		/datum/reagent/consumable/salt = list("condi_salt", "Salt Shaker", "Salt. From space oceans, presumably"),
-		/datum/reagent/consumable/blackpepper = list("condi_pepper", "Pepper Mill", "Often used to flavor food or make people sneeze"),
-		/datum/reagent/consumable/nutriment/fat/oil = list("condi_cornoil", "Vegetable Oil", "A delicious oil used in cooking."),
-		/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Tasty spacey sugar!"),
+		/datum/reagent/consumable/salt = list("condi_salt", "Солонка", "Соль. Из космических океанов, предположительно"),
+		/datum/reagent/consumable/blackpepper = list("condi_pepper", "Перечница", "Часто используется для ароматизации пищи или для того, чтобы заставить человека чихнуть"),
+		/datum/reagent/consumable/nutriment/fat/oil = list("condi_cornoil", "Растительное масло", "Вкусное масло, используемое в кулинарии."),
+		/datum/reagent/consumable/sugar = list("condi_sugar", "Сахар", "Вкусный космический сахар!"),
 		/datum/reagent/consumable/astrotame = list("condi_astrotame", "Astrotame", "The sweetness of a thousand sugars but none of the calories."),
-		/datum/reagent/consumable/bbqsauce = list("condi_bbq", "BBQ sauce", "Hand wipes not included."),
-		/datum/reagent/consumable/peanut_butter = list("condi_peanutbutter", "Peanut Butter", "A creamy paste made from ground peanuts."),
-		/datum/reagent/consumable/cherryjelly = list("condi_cherryjelly", "Cherry Jelly", "A jar of super-sweet cherry jelly."),
+		/datum/reagent/consumable/bbqsauce = list("condi_bbq", "Соус барбекю", "Салфетки для рук в комплект не входят."),
+		/datum/reagent/consumable/peanut_butter = list("condi_peanutbutter", "Арахисовое масло", "Кремообразная паста, приготовленная из измельченного арахиса."),
+		/datum/reagent/consumable/cherryjelly = list("condi_cherryjelly", "Вишневое желе", "Баночка суперсладкого вишневого желе."),
 	)
 	/// Can't use initial(name) for this. This stores the name set by condimasters.
 	var/originalname = "condiment"
@@ -484,7 +484,7 @@
 
 //Ketchup
 /obj/item/reagent_containers/condiment/pack/ketchup
-	name = "ketchup pack"
+	name = "пакет кетчупа"
 	originalname = "ketchup"
 	list_reagents = list(/datum/reagent/consumable/ketchup = 10)
 

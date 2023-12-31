@@ -3,10 +3,10 @@
 
 /datum/reagent/consumable/ethanol
 	name = "Ethanol"
-	description = "A well-known alcohol with a variety of applications."
+	description = "Известный спирт с широким спектром применения."
 	color = "#404030" // rgb: 64, 64, 48
 	nutriment_factor = 0
-	taste_description = "alcohol"
+	taste_description = "алкоголя"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	creation_purity = 1 // impure base reagents are a big no-no
 	ph = 7.33
@@ -113,11 +113,11 @@
 
 /datum/reagent/consumable/ethanol/beer
 	name = "Beer"
-	description = "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
+	description = "Алкогольный напиток, который варили с древних времен на Старой Земле. По-прежнему популярен и сегодня."
 	color = "#664300" // rgb: 102, 67, 0
 	nutriment_factor = 1
 	boozepwr = 25
-	taste_description = "mild carbonated malt"
+	taste_description = "слабо газированного солода"
 	ph = 4
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	glass_price = DRINK_PRICE_STOCK
@@ -129,17 +129,17 @@
 
 /datum/reagent/consumable/ethanol/beer/light
 	name = "Light Beer"
-	description = "An alcoholic beverage brewed since ancient times on Old Earth. This variety has reduced calorie and alcohol content."
+	description = "Алкогольный напиток, который варят с древних времен на Старой Земле. В этом сорте снижено содержание калорий и алкоголя."
 	boozepwr = 5 //Space Europeans hate it
-	taste_description = "dish water"
+	taste_description = "воды после мытья посуды"
 	ph = 5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/consumable/ethanol/beer/maltliquor
 	name = "Malt Liquor"
-	description = "An alcoholic beverage brewed since ancient times on Old Earth. This variety is stronger than usual, super cheap, and super terrible."
+	description = "Алкогольный напиток, который варят с древних времен на Старой Земле. Этот сорт крепче обычного, супердешевый и суперужасный."
 	boozepwr = 35
-	taste_description = "sweet corn beer and the hood life"
+	taste_description = "сладкой кукурузы"
 	ph = 4.8
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
@@ -191,8 +191,8 @@
 		drinker.set_jitter_if_lower(10 SECONDS)
 
 /datum/reagent/consumable/ethanol/whiskey
-	name = "Whiskey"
-	description = "A superb and well-aged single-malt whiskey. Damn."
+	name = "Виски"
+	description = "Превосходный и хорошо выдержанный односолодовый виски."
 	color = "#b4a287" // rgb: 180,162,135
 	boozepwr = 75
 	taste_description = "molasses"

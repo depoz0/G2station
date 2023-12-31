@@ -223,8 +223,8 @@
 	toolspeed = 0.5
 
 /obj/item/circular_saw
-	name = "circular saw"
-	desc = "For heavy duty cutting."
+	name = "циркулярная пила"
+	desc = "Для резки где требуется большая мощность."
 	icon = 'icons/obj/medical/surgery_tools.dmi'
 	icon_state = "saw"
 	inhand_icon_state = "saw"

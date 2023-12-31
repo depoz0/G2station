@@ -1,6 +1,6 @@
 /*****************Pickaxes & Drills & Shovels****************/
 /obj/item/pickaxe
-	name = "pickaxe"
+	name = "кирка"
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "pickaxe"
 	inhand_icon_state = "pickaxe"
@@ -27,16 +27,16 @@
 	return SHAME
 
 /obj/item/pickaxe/rusted
-	name = "rusty pickaxe"
-	desc = "A pickaxe that's been left to rust."
+	name = "ржавая кирка"
+	desc = "Кирка, которую оставили ржаветь."
 	attack_verb_continuous = list("ineffectively hits")
 	attack_verb_simple = list("ineffectively hit")
 	force = 1
 	throwforce = 1
 
 /obj/item/pickaxe/mini
-	name = "compact pickaxe"
-	desc = "A smaller, compact version of the standard pickaxe."
+	name = "компактная кирка"
+	desc = "Уменьшенная, компактная версия стандартной кирки."
 	icon_state = "minipick"
 	worn_icon_state = "pickaxe"
 	force = 10

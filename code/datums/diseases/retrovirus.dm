@@ -35,7 +35,7 @@
 	switch(stage)
 		if(1)
 			if(SPT_PROB(4, seconds_per_tick))
-				to_chat(affected_mob, span_danger("Your head hurts."))
+				to_chat(affected_mob, span_danger("У вас болит голова."))
 			if(SPT_PROB(4.5, seconds_per_tick))
 				to_chat(affected_mob, span_danger("You feel a tingling sensation in your chest."))
 			if(SPT_PROB(4.5, seconds_per_tick))

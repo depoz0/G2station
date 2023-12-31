@@ -26,7 +26,7 @@
 			carrier = FALSE // Go fuck yourself
 		if(2)
 			if(SPT_PROB(0.5, seconds_per_tick))
-				to_chat(affected_mob, span_warning("You feel dizzy."))
+				to_chat(affected_mob, span_warning("Вы чувствуете головокружение."))
 				affected_mob.adjust_confusion(6 SECONDS)
 			if(SPT_PROB(0.5, seconds_per_tick))
 				to_chat(affected_mob, span_notice("You look at your hand. Your vision blurs."))

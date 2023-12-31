@@ -2,18 +2,18 @@
 //Individual ones aren't commented since their functions should be evident at a glance
 
 /datum/mutation/human/nervousness
-	name = "Nervousness"
-	desc = "Causes the holder to stutter."
+	name = "Нервозность"
+	desc = "Вызывает заикание у носителя."
 	quality = MINOR_NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel nervous.</span>"
+	text_gain_indication = "<span class='danger'>Вы чувствуете нервозность.</span>"
 
 /datum/mutation/human/nervousness/on_life(seconds_per_tick, times_fired)
 	if(SPT_PROB(5, seconds_per_tick))
 		owner.set_stutter_if_lower(20 SECONDS)
 
 /datum/mutation/human/wacky
-	name = "Wacky"
-	desc = "You are not a clown. You are the entire circus."
+	name = "Чудачество"
+	desc = "Вы не клоун. Вы - весь цирк."
 	quality = MINOR_NEGATIVE
 	text_gain_indication = "<span class='sans'><span class='infoplain'>You feel an off sensation in your voicebox.</span></span>"
 	text_lose_indication = "<span class='notice'>The off sensation passes.</span>"
@@ -34,11 +34,11 @@
 	speech_args[SPEECH_SPANS] |= SPAN_SANS
 
 /datum/mutation/human/mute
-	name = "Mute"
-	desc = "Completely inhibits the vocal section of the brain."
+	name = "Немость"
+	desc = "Полностью блокирует речевой участок мозга."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You feel unable to express yourself at all.</span>"
-	text_lose_indication = "<span class='danger'>You feel able to speak freely again.</span>"
+	text_gain_indication = "<span class='danger'>Вы чувствуете, что не можете выразить себя.</span>"
+	text_lose_indication = "<span class='danger'>Вы чувствуете, что снова можете говорить свободно.</span>"
 
 /datum/mutation/human/mute/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -51,11 +51,11 @@
 	REMOVE_TRAIT(owner, TRAIT_MUTE, GENETIC_MUTATION)
 
 /datum/mutation/human/unintelligible
-	name = "Unintelligible"
-	desc = "Partially inhibits the vocal center of the brain, severely distorting speech."
+	name = "Неразборчивость"
+	desc = "Частично подавляет речевой участок мозга, сильно искажая речь."
 	quality = NEGATIVE
-	text_gain_indication = "<span class='danger'>You can't seem to form any coherent thoughts!</span>"
-	text_lose_indication = "<span class='danger'>Your mind feels more clear.</span>"
+	text_gain_indication = "<span class='danger'>Вы не можете сформировать ни одной связной мысли!</span>"
+	text_lose_indication = "<span class='danger'>Ваш разум становится более ясным.</span>"
 
 /datum/mutation/human/unintelligible/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -94,8 +94,13 @@
 		message = replacetext(message,"a",pick("å","ä","æ","a"))
 		message = replacetext(message,"bo","bjo")
 		message = replacetext(message,"o",pick("ö","ø","o"))
+		message = replacetext(message,"в","ф")
+		message = replacetext(message,"г","х")
+		message = replacetext(message,"а",pick("å","ä","æ","а"))
+		message = replacetext(message,"на","няа")
+		message = replacetext(message,"о",pick("ö","ø","о"))
 		if(prob(30))
-			message += " Bork[pick("",", bork",", bork, bork")]!"
+			message += " Вак[pick("",", вак",", вак, вак")]!"
 		speech_args[SPEECH_MESSAGE] = trim(message)
 
 /datum/mutation/human/chav

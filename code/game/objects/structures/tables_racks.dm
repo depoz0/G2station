@@ -88,7 +88,7 @@
 	. += deconstruction_hints(user)
 
 /obj/structure/table/proc/deconstruction_hints(mob/user)
-	return span_notice("The top is <b>screwed</b> on, but the main <b>bolts</b> are also visible.")
+	return span_notice("Верхняя часть <b>прикручена</b>, но видны и основные <b>болты</b>.")
 
 /obj/structure/table/update_icon(updates=ALL)
 	. = ..()
@@ -112,20 +112,20 @@
 				if(pushed_mob.buckled == src)
 					//Already buckled to the table, you probably meant to unbuckle them
 					return ..()
-				to_chat(user, span_warning("[pushed_mob] is buckled to [pushed_mob.buckled]!"))
+				to_chat(user, span_warning("[pushed_mob] пристегнут к [pushed_mob.buckled]!"))
 				return
 			if(user.combat_mode)
 				switch(user.grab_state)
 					if(GRAB_PASSIVE)
-						to_chat(user, span_warning("You need a better grip to do that!"))
+						to_chat(user, span_warning("Для этого вам нужен более мощный захват!"))
 						return
 					if(GRAB_AGGRESSIVE)
 						tablepush(user, pushed_mob)
 					if(GRAB_NECK to GRAB_KILL)
 						tablelimbsmash(user, pushed_mob)
 			else
-				pushed_mob.visible_message(span_notice("[user] begins to place [pushed_mob] onto [src]..."), \
-									span_userdanger("[user] begins to place [pushed_mob] onto [src]..."))
+				pushed_mob.visible_message(span_notice("[user] начинает помещать [pushed_mob] на [src]..."), \
+									span_userdanger("[user] начинает помещать [pushed_mob] на [src]..."))
 				if(do_after(user, 3.5 SECONDS, target = pushed_mob))
 					tableplace(user, pushed_mob)
 				else
@@ -134,8 +134,8 @@
 		else if(user.pulling.pass_flags & PASSTABLE)
 			user.Move_Pulled(src)
 			if (user.pulling.loc == loc)
-				user.visible_message(span_notice("[user] places [user.pulling] onto [src]."),
-					span_notice("You place [user.pulling] onto [src]."))
+				user.visible_message(span_notice("[user] помещает [user.pulling] на [src]."),
+					span_notice("Вы помещаете [user.pulling] на [src]."))
 				user.stop_pulling()
 	return ..()
 
@@ -161,13 +161,13 @@
 /obj/structure/table/proc/tableplace(mob/living/user, mob/living/pushed_mob)
 	pushed_mob.forceMove(loc)
 	pushed_mob.set_resting(TRUE, TRUE)
-	pushed_mob.visible_message(span_notice("[user] places [pushed_mob] onto [src]."), \
-								span_notice("[user] places [pushed_mob] onto [src]."))
+	pushed_mob.visible_message(span_notice("[user] помещает [pushed_mob] на [src]."), \
+								span_notice("[user] помещает [pushed_mob] на [src]."))
 	log_combat(user, pushed_mob, "places", null, "onto [src]")
 
 /obj/structure/table/proc/tablepush(mob/living/user, mob/living/pushed_mob)
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
-		to_chat(user, span_danger("Throwing [pushed_mob] onto the table might hurt them!"))
+		to_chat(user, span_danger("Бросая [pushed_mob] на стол, вы можете причинить им вред!"))
 		return
 	var/passtable_key = REF(user)
 	passtable_on(pushed_mob, passtable_key)
@@ -209,7 +209,7 @@
 /obj/structure/table/screwdriver_act_secondary(mob/living/user, obj/item/tool)
 	if(obj_flags & NO_DECONSTRUCTION || !deconstruction_ready)
 		return FALSE
-	to_chat(user, span_notice("You start disassembling [src]..."))
+	to_chat(user, span_notice("Вы начинаете разбирать [src]..."))
 	if(tool.use_tool(src, user, 2 SECONDS, volume=50))
 		deconstruct(TRUE)
 	return ITEM_INTERACT_SUCCESS
@@ -217,7 +217,7 @@
 /obj/structure/table/wrench_act_secondary(mob/living/user, obj/item/tool)
 	if(obj_flags & NO_DECONSTRUCTION || !deconstruction_ready)
 		return FALSE
-	to_chat(user, span_notice("You start deconstructing [src]..."))
+	to_chat(user, span_notice("Вы начинаете разбирать [src]..."))
 	if(tool.use_tool(src, user, 4 SECONDS, volume=50))
 		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
 		deconstruct(TRUE, 1)
@@ -411,8 +411,8 @@
  * Glass tables
  */
 /obj/structure/table/glass
-	name = "glass table"
-	desc = "What did I say about leaning on the glass tables? Now you need surgery."
+	name = "стеклянный стол"
+	desc = "Что я говорил о том, что нельзя опираться на стеклянные столы? Теперь тебе нужна операция."
 	icon = 'icons/obj/smooth_structures/glass_table.dmi'
 	icon_state = "glass_table-0"
 	base_icon_state = "glass_table"
@@ -456,8 +456,8 @@
 		table_shatter(M)
 
 /obj/structure/table/glass/proc/table_shatter(mob/living/victim)
-	visible_message(span_warning("[src] breaks!"),
-		span_danger("You hear breaking glass."))
+	visible_message(span_warning("[src] разбивается!"),
+		span_danger("Вы слышите звук бьющегося стекла."))
 
 	playsound(loc, SFX_SHATTER, 50, TRUE)
 
@@ -651,14 +651,14 @@
 	if(weapon.tool_behaviour == TOOL_WELDER)
 		if(weapon.tool_start_check(user, amount = 0))
 			if(deconstruction_ready)
-				to_chat(user, span_notice("You start strengthening the reinforced table..."))
+				to_chat(user, span_notice("Вы начинаете укреплять усиленный стол..."))
 				if (weapon.use_tool(src, user, 50, volume = 50))
-					to_chat(user, span_notice("You strengthen the table."))
+					to_chat(user, span_notice("Вы укрепили стол."))
 					deconstruction_ready = FALSE
 			else
-				to_chat(user, span_notice("You start weakening the reinforced table..."))
+				to_chat(user, span_notice("Вы начинаете ослаблять усиленный стол..."))
 				if (weapon.use_tool(src, user, 50, volume = 50))
-					to_chat(user, span_notice("You weaken the table."))
+					to_chat(user, span_notice("Вы ослабили стол."))
 					deconstruction_ready = TRUE
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 

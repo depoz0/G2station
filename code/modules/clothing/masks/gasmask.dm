@@ -8,8 +8,8 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 ))
 
 /obj/item/clothing/mask/gas
-	name = "gas mask"
-	desc = "A face-covering mask that can be connected to an air supply. Good for concealing your identity and with a filter slot to help remove those toxins." //More accurate
+	name = "противогаз"
+	desc = "Маска, закрывающая лицо, которую можно подключить к источнику воздуха. Хорошо скрывает вашу личность и оснащена фильтром для удаления токсинов." //More accurate
 	icon_state = "gas_alt"
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | MASKINTERNALS | GAS_FILTERING
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	var/mob/wearer = loc
 	if(istype(tool, /obj/item/clothing/mask/cigarette))
 		if(flags_cover & MASKCOVERSMOUTH)
-			balloon_alert(user, "mask's mouth is covered!")
+			balloon_alert(user, "рот маски прикрыт!")
 			return ..()
 
 		if(max_filters <= 0 || cig)

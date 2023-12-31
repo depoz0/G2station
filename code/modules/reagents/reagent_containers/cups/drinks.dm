@@ -15,7 +15,8 @@
 /obj/item/reagent_containers/cup/glass/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum, do_splash = TRUE)
 	. = ..()
 	if(!.) //if the bottle wasn't caught
-		smash(hit_atom, throwingdatum?.thrower, TRUE)
+		var/mob/thrower = throwingdatum?.get_thrower()
+		smash(hit_atom, thrower, TRUE)
 
 /obj/item/reagent_containers/cup/glass/proc/smash(atom/target, mob/thrower, ranged = FALSE, break_top = FALSE)
 	if(!isGlass)
@@ -206,8 +207,8 @@
 	custom_price = PAYCHECK_CREW * 0.9
 
 /obj/item/reagent_containers/cup/glass/waterbottle
-	name = "bottle of water"
-	desc = "A bottle of water filled at an old Earth bottling facility."
+	name = "бутылка воды"
+	desc = "Бутылка воды, наполненная на старом заводе по розливу воды."
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "smallbottle"
 	inhand_icon_state = null
@@ -241,16 +242,16 @@
 /obj/item/reagent_containers/cup/glass/waterbottle/examine(mob/user)
 	. = ..()
 	if(cap_lost)
-		. += span_notice("The cap seems to be missing.")
+		. += span_notice("Похоже, что крышка отсутствует.")
 	else if(cap_on)
-		. += span_notice("The cap is firmly on to prevent spilling. Alt-click to remove the cap.")
+		. += span_notice("Крышка плотно прилегает, чтобы предотвратить проливание. Нажмите Alt-клик, чтобы снять крышку.")
 	else
-		. += span_notice("The cap has been taken off. Alt-click to put a cap on.")
+		. += span_notice("Крышка была снята. Нажмите Alt-клик, чтобы надеть крышку.")
 
 /obj/item/reagent_containers/cup/glass/waterbottle/AltClick(mob/user)
 	. = ..()
 	if(cap_lost)
-		to_chat(user, span_warning("The cap seems to be missing! Where did it go?"))
+		to_chat(user, span_warning("Кажется, крышка пропала! Куда она делась?"))
 		return
 
 	var/fumbled = HAS_TRAIT(user, TRAIT_CLUMSY) && prob(5)
@@ -262,12 +263,12 @@
 			to_chat(user, span_warning("You fumble with [src]'s cap! The cap falls onto the ground and simply vanishes. Where the hell did it go?"))
 			cap_lost = TRUE
 		else
-			to_chat(user, span_notice("You remove the cap from [src]."))
+			to_chat(user, span_notice("Вы снимаете крышку с [src]."))
 			playsound(loc, 'sound/effects/can_open1.ogg', 50, TRUE)
 	else
 		cap_on = TRUE
 		spillable = FALSE
-		to_chat(user, span_notice("You put the cap on [src]."))
+		to_chat(user, span_notice("Вы надеваете крышку на [src]."))
 	update_appearance()
 
 /obj/item/reagent_containers/cup/glass/waterbottle/is_refillable()
@@ -285,7 +286,7 @@
 		return
 
 	if(cap_on && reagents.total_volume && istype(target))
-		to_chat(user, span_warning("You must remove the cap before you can do that!"))
+		to_chat(user, span_warning("Для этого необходимо снять крышку!"))
 		return
 
 	return ..()
@@ -294,13 +295,13 @@
 	. |= AFTERATTACK_PROCESSED_ITEM
 
 	if(cap_on && (target.is_refillable() || target.is_drainable() || (reagents.total_volume && !user.combat_mode)))
-		to_chat(user, span_warning("You must remove the cap before you can do that!"))
+		to_chat(user, span_warning("Для этого необходимо снять крышку!"))
 		return
 
 	else if(istype(target, /obj/item/reagent_containers/cup/glass/waterbottle))
 		var/obj/item/reagent_containers/cup/glass/waterbottle/other_bottle = target
 		if(other_bottle.cap_on)
-			to_chat(user, span_warning("[other_bottle] has a cap firmly twisted on!"))
+			to_chat(user, span_warning("[other_bottle] имеет плотно закрученную крышку!"))
 			return
 
 	return . | ..()
@@ -314,9 +315,9 @@
 		return
 	if(prob(flip_chance)) // landed upright
 		src.visible_message(span_notice("[src] lands upright!"))
-		if(throwingdatum.thrower)
-			var/mob/living/living_thrower = throwingdatum.thrower
-			living_thrower.add_mood_event("bottle_flip", /datum/mood_event/bottle_flip)
+		var/mob/living/thrower = throwingdatum?.get_thrower()
+		if(thrower)
+			thrower.add_mood_event("bottle_flip", /datum/mood_event/bottle_flip)
 	else // landed on it's side
 		animate(src, transform = matrix(prob(50)? 90 : -90, MATRIX_ROTATE), time = 3, loop = 0)
 
@@ -358,8 +359,8 @@
 
 
 /obj/item/reagent_containers/cup/glass/sillycup
-	name = "paper cup"
-	desc = "A paper water cup."
+	name = "бумажный стаканчик"
+	desc = "Бумажный стаканчик для питья."
 	icon_state = "water_cup_e"
 	possible_transfer_amounts = list(10)
 	volume = 10
@@ -426,8 +427,8 @@
 // icon states.
 
 /obj/item/reagent_containers/cup/glass/shaker
-	name = "shaker"
-	desc = "A metal shaker to mix drinks in."
+	name = "\proper шейкер"
+	desc = "Металлический шейкер для смешивания напитков."
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "shaker"
 	custom_materials = list(/datum/material/iron= HALF_SHEET_MATERIAL_AMOUNT * 1.5)

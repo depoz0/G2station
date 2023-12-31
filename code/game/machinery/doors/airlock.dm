@@ -1868,7 +1868,7 @@
 // Station Airlocks Glass
 
 /obj/machinery/door/airlock/glass
-	name = "glass airlock"
+	name = "шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
@@ -1886,13 +1886,13 @@
 	id_tag = INCINERATOR_SYNDICATELAVA_AIRLOCK_EXTERIOR
 
 /obj/machinery/door/airlock/command/glass
-	name = "command glass airlock"
+	name = "командный шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/engineering/glass
-	name = "engineering glass airlock"
+	name = "инженерный шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
@@ -1900,23 +1900,23 @@
 	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
 
 /obj/machinery/door/airlock/security/glass
-	name = "security glass airlock"
+	name = "охранный шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/medical/glass
-	name = "medical glass airlock"
+	name = "медицинский шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
 /obj/machinery/door/airlock/hydroponics/glass //Uses same icon as medical/glass, maybe update it with its own unique icon one day?
-	name = "hydroponics glass airlock"
+	name = "гидропоники шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
 /obj/machinery/door/airlock/research/glass
-	name = "research glass airlock"
+	name = "исследовательский шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
@@ -1938,7 +1938,7 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/atmos/glass
-	name = "atmospheric glass airlock"
+	name = "атмосферный шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
@@ -1946,17 +1946,17 @@
 	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
 
 /obj/machinery/door/airlock/science/glass
-	name = "science glass airlock"
+	name = "научный шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
 /obj/machinery/door/airlock/virology/glass
-	name = "virology glass airlock"
+	name = "вирусологический шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 
 /obj/machinery/door/airlock/maintenance/glass
-	name = "maintainence glass airlock"
+	name = "обслуживание шлюз с стеклом"
 	opacity = FALSE
 	glass = TRUE
 

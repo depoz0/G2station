@@ -1,5 +1,5 @@
 /obj/item/screwdriver
-	name = "screwdriver"
+	name = "отвертка"
 	desc = "You can be totally screwy with this."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver_map"
@@ -77,8 +77,8 @@
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_alien")
 
 /obj/item/screwdriver/power
-	name = "hand drill"
-	desc = "A simple powered hand drill."
+	name = "ручная дрель"
+	desc = "Простая ручная дрель с электроприводом."
 	icon_state = "drill"
 	belt_icon_state = null
 	inhand_icon_state = "drill"

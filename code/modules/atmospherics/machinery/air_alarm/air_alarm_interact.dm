@@ -37,7 +37,7 @@
 /obj/machinery/airalarm/wrench_act(mob/living/user, obj/item/tool)
 	if(buildstage != AIR_ALARM_BUILD_NO_CIRCUIT)
 		return
-	to_chat(user, span_notice("You detach \the [src] from the wall."))
+	to_chat(user, span_notice("Вы снимаете [src] со стены."))
 	tool.play_tool_sound(src)
 	var/obj/item/wallframe/airalarm/alarm_frame = new(drop_location())
 	user.put_in_hands(alarm_frame)
@@ -73,18 +73,18 @@
 	else
 		if(src.allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
-			to_chat(user, span_notice("You [ locked ? "lock" : "unlock"] the air alarm interface."))
+			to_chat(user, span_notice("Вы [ locked ? "заблокировали" : "разблокировали"] интерфейс воздушной сигнализации."))
 			if(!locked)
 				ui_interact(user)
 		else
-			to_chat(user, span_danger("Access denied."))
+			to_chat(user, span_danger("Доступ запрещен."))
 	return
 
 /obj/machinery/airalarm/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
 		return FALSE
 	obj_flags |= EMAGGED
-	visible_message(span_warning("Sparks fly out of [src]!"))
+	visible_message(span_warning("Из [src] вылетают искры!"))
 	balloon_alert(user, "authentication sensors scrambled")
 	playsound(src, SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	return TRUE
