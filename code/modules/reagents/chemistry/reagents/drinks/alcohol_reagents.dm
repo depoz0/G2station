@@ -2,11 +2,11 @@
 #define ALCOHOL_EXPONENT 1.6 //The exponent applied to boozepwr to make higher volume alcohol at least a little bit damaging to the liver
 
 /datum/reagent/consumable/ethanol
-	name = "Этанол"
+	name = "Ethanol"
 	description = "Известный спирт с широким спектром применения."
 	color = "#404030" // rgb: 64, 64, 48
 	nutriment_factor = 0
-	taste_description = "алкоголь"
+	taste_description = "алкоголя"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	creation_purity = 1 // impure base reagents are a big no-no
 	ph = 7.33
@@ -112,7 +112,7 @@
 		surgery.speed_modifier = max(0.1 * power_multiplier, surgery.speed_modifier)
 
 /datum/reagent/consumable/ethanol/beer
-	name = "Пиво"
+	name = "Beer"
 	description = "Алкогольный напиток, который варили с древних времен на Старой Земле. По-прежнему популярен и сегодня."
 	color = "#664300" // rgb: 102, 67, 0
 	nutriment_factor = 1
@@ -128,7 +128,7 @@
 	mytray.adjust_waterlevel(round(volume * 0.7))
 
 /datum/reagent/consumable/ethanol/beer/light
-	name = "Светлое пиво"
+	name = "Light Beer"
 	description = "Алкогольный напиток, который варят с древних времен на Старой Земле. В этом сорте снижено содержание калорий и алкоголя."
 	boozepwr = 5 //Space Europeans hate it
 	taste_description = "воды после мытья посуды"
@@ -136,7 +136,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/consumable/ethanol/beer/maltliquor
-	name = "Солодовый ликер"
+	name = "Malt Liquor"
 	description = "Алкогольный напиток, который варят с древних времен на Старой Земле. Этот сорт крепче обычного, супердешевый и суперужасный."
 	boozepwr = 35
 	taste_description = "сладкой кукурузы"
