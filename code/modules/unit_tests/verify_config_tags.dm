@@ -11,7 +11,7 @@
 	// Check for any whitespace in a config tag.
 	var/regex/tag_regex_whitespace = new("\\s")
 	// Check to ensure that no config tag has lowercase characters (enforce SCREAMING_SNAKE_CASE).
-	var/regex/tag_regex_lowercase = new("\[a-z\]+")
+	var/regex/tag_regex_lowercase = new("\[a-zа-я\]+")
 
 	for(var/datum/job/occupation as anything in SSjob.joinable_occupations)
 		job_tag = occupation.config_tag

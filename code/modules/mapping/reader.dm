@@ -98,11 +98,11 @@
 
 	// raw strings used to represent regexes more accurately
 	// '' used to avoid confusing syntax highlighting
-	var/static/regex/dmm_regex = new(@'"([a-zA-Z]+)" = (?:\(\n|\()((?:.|\n)*?)\)\n(?!\t)|\((\d+),(\d+),(\d+)\) = \{"([a-zA-Z\n]*)"\}', "g")
+	var/static/regex/dmm_regex = new(@'"([a-zа-яA-ZА-Я]+)" = (?:\(\n|\()((?:.|\n)*?)\)\n(?!\t)|\((\d+),(\d+),(\d+)\) = \{"([a-zа-яA-ZА-Я\n]*)"\}', "g")
 	/// Matches key formats in TMG (IE: newline after the \()
-	var/static/regex/matches_tgm = new(@'^"[A-z]*"[\s]*=[\s]*\([\s]*\n', "m")
+	var/static/regex/matches_tgm = new(@'^"[A-zА-я]*"[\s]*=[\s]*\([\s]*\n', "m")
 	/// Pulls out key value pairs for TGM
-	var/static/regex/var_edits_tgm = new(@'^\t([A-z]*) = (.*?);?$')
+	var/static/regex/var_edits_tgm = new(@'^\t([A-zА-я]*) = (.*?);?$')
 	/// Pulls out model paths for DMM
 	var/static/regex/model_path = new(@'(\/[^\{]*?(?:\{.*?\})?)(?:,|$)', "g")
 

@@ -358,7 +358,7 @@
 
 ///Returns a string with the first letter of each word capitialized
 /proc/full_capitalize(input)
-	var/regex/first_letter = new(@"[^A-z]*?([A-z]*)", "g")
+	var/regex/first_letter = new(@"[^A-zА-я]*?([A-zА-я]*)", "g")
 	return replacetext(input, first_letter, /proc/capitalize)
 
 /proc/stringmerge(text,compare,replace = "*")
