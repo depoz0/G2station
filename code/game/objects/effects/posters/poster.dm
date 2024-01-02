@@ -259,7 +259,7 @@
 	to_chat(user, span_notice("You place the poster!"))
 
 /obj/structure/sign/poster/proc/tear_poster(mob/user)
-	visible_message(span_notice("[user] срывает [src] одним решительным движением!") )
+	visible_message(span_notice("[user] срывает [src.name] одним решительным движением!") )
 	playsound(src.loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	spring_trap(user)
 
