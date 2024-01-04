@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(oilfry_blacklisted_items, typecacheof(list(
 	icon_state = "fryer_off"
 
 /obj/machinery/deepfryer/proc/start_fry(obj/item/frying_item, mob/user)
-	to_chat(user, span_notice("You put [frying_item] into [src]."))
+	to_chat(user, span_notice("Вы положили [frying_item] в [src]."))
 	if(istype(frying_item, /obj/item/freeze_cube))
 		log_bomber(user, "put a freeze cube in a", src)
 		visible_message(span_userdanger("[src] starts glowing... Oh no..."))

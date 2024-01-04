@@ -1,9 +1,9 @@
 /obj/machinery/recharger
-	name = "recharger"
+	name = "зарядное устройство"
 	icon = 'icons/obj/machines/sec.dmi'
 	icon_state = "recharger"
 	base_icon_state = "recharger"
-	desc = "A charging dock for energy based weaponry, PDAs, and other devices."
+	desc = "Зарядный док для энергетического оружия, КПК и других устройств."
 	circuit = /obj/item/circuitboard/machine/recharger
 	pass_flags = PASSTABLE
 	var/obj/item/charging = null
@@ -27,11 +27,11 @@
 /obj/machinery/recharger/examine(mob/user)
 	. = ..()
 	if(!in_range(user, src) && !issilicon(user) && !isobserver(user))
-		. += span_warning("You're too far away to examine [src]'s contents and display!")
+		. += span_warning("Вы слишком далеко, чтобы изучить содержимое [src]!")
 		return
 
 	if(charging)
-		. += {"[span_notice("\The [src] contains:")]
+		. += {"[span_notice("[src] содержит:")]
 		[span_notice("- \A [charging].")]"}
 
 	if(machine_stat & (NOPOWER|BROKEN))
@@ -39,23 +39,23 @@
 	var/status_display_message_shown = FALSE
 	if(using_power)
 		status_display_message_shown = TRUE
-		. += span_notice("The status display reads:")
-		. += span_notice("- Recharging <b>[recharge_coeff*10]%</b> cell charge per cycle.")
+		. += span_notice("На дисплее надпись:")
+		. += span_notice("- Зарядка <b>[recharge_coeff*10]%</b> заряда ячейки за цикл.")
 
 	if(isnull(charging))
 		return
 	if(!status_display_message_shown)
-		. += span_notice("The status display reads:")
+		. += span_notice("На дисплее надпись:")
 
 	var/obj/item/stock_parts/cell/charging_cell = charging.get_cell()
 	if(charging_cell)
-		. += span_notice("- \The [charging]'s cell is at <b>[charging_cell.percent()]%</b>.")
+		. += span_notice("- [charging] находится на уровне <b>[charging_cell.percent()]%</b>.")
 		return
 	if(istype(charging, /obj/item/ammo_box/magazine/recharge))
 		var/obj/item/ammo_box/magazine/recharge/power_pack = charging
-		. += span_notice("- \The [charging]'s cell is at <b>[PERCENT(power_pack.stored_ammo.len/power_pack.max_ammo)]%</b>.")
+		. += span_notice("- [charging] находится на уровне <b>[PERCENT(power_pack.stored_ammo.len/power_pack.max_ammo)]%</b>.")
 		return
-	. += span_notice("- \The [charging] is not reporting a power level.")
+	. += span_notice("- [charging] не сообщает об уровне заряда.")
 
 /obj/machinery/recharger/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	if(is_type_in_typecache(arrived, allowed_devices))
@@ -82,31 +82,31 @@
 		return ..()
 
 	if(!anchored)
-		to_chat(user, span_notice("[src] isn't connected to anything!"))
+		to_chat(user, span_notice("[src] ни к чему не подключен!"))
 		return TRUE
 	if(charging || panel_open)
 		return TRUE
 
 	var/area/our_area = get_area(src) //Check to make sure user's not in space doing it, and that the area got proper power.
 	if(!isarea(our_area) || our_area.power_equip == 0)
-		to_chat(user, span_notice("[src] blinks red as you try to insert [attacking_item]."))
+		to_chat(user, span_notice("[src] мигает красным, когда вы пытаетесь вставить [attacking_item]."))
 		return TRUE
 
 	if (istype(attacking_item, /obj/item/gun/energy))
 		var/obj/item/gun/energy/energy_gun = attacking_item
 		if(!energy_gun.can_charge)
-			to_chat(user, span_notice("Your gun has no external power connector."))
+			to_chat(user, span_notice("У вашего оружия нет разъема для подключения внешнего питания."))
 			return TRUE
 	user.transferItemToLoc(attacking_item, src)
 	return TRUE
 
 /obj/machinery/recharger/wrench_act(mob/living/user, obj/item/tool)
 	if(charging)
-		to_chat(user, span_notice("Remove the charging item first!"))
+		to_chat(user, span_notice("Сначала извлеките заряжаемый предмет!"))
 		return ITEM_INTERACT_BLOCKING
 	set_anchored(!anchored)
 	power_change()
-	to_chat(user, span_notice("You [anchored ? "attached" : "detached"] [src]."))
+	to_chat(user, span_notice("Вы [anchored ? "присоединили" : "отсоединили"] [src]."))
 	tool.play_tool_sound(src)
 	return ITEM_INTERACT_SUCCESS
 
@@ -162,7 +162,7 @@
 	if(!using_power && !finished_recharging) //Inserted thing is at max charge/ammo, notify those around us
 		finished_recharging = TRUE
 		playsound(src, 'sound/machines/ping.ogg', 30, TRUE)
-		say("[charging] has finished recharging!")
+		say("[charging] зарядка завершена!")
 
 /obj/machinery/recharger/emp_act(severity)
 	. = ..()

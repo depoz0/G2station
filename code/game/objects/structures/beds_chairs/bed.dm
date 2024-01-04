@@ -282,8 +282,8 @@
 	anchored = TRUE
 
 /obj/structure/bed/dogbed/renault
-	desc = "Renault's bed! Looks comfy. A foxy person needs a foxy pet."
-	name = "Renault's bed"
+	desc = "Кровать Рено! Выглядит уютно. Любителю лисиц нужен любимец лис."
+	name = "Кровать Рено"
 	anchored = TRUE
 
 /obj/structure/bed/dogbed/mcgriff

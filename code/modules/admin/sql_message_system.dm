@@ -671,7 +671,7 @@
 				output += "<font color='[COLOR_RED]' size='3'><b>Admin message left by [span_prefix("[admin_key]")] on [timestamp]</b></font>"
 				output += "<br><font color='[COLOR_RED]'>[text] <A href='?_src_=holder;[HrefToken()];messageread=[message_id]'>(Click here to verify you have read this message)</A></font><br>"
 			if("note")
-				output += "<font color='[COLOR_RED]' size='3'><b>Note left by [span_prefix("[admin_key]")] on [timestamp]</b></font>"
+				output += "<font color='[COLOR_RED]' size='3'><b>Заметка, оставленная [span_prefix("[admin_key]")] в [timestamp]</b></font>"
 				output += "<br><font color='[COLOR_RED]'>[text]</font><br>"
 			if("watchlist entry")
 				message_admins("<font color='[COLOR_RED]'><B>Notice: </B></font><font color='[COLOR_ADMIN_PINK]'>[key_name_admin(target_ckey)] has been on the watchlist since [timestamp] and has just connected - Reason: [text]</font>")

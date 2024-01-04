@@ -10,7 +10,7 @@ export const KeycardAuth = (props) => {
         <Section>
           <Box>
             {data.waiting === 1 && (
-              <span>Waiting for another device to confirm your request...</span>
+              <span>Ждем еще одно устройство, чтобы подтвердить ваш запрос...</span>
             )}
           </Box>
           <Box>
@@ -35,7 +35,7 @@ export const KeycardAuth = (props) => {
                       onClick={() => {
                         return act('red_alert');
                       }}
-                      content="Red Alert"
+                      content="Красная тревога"
                     />
                     <Button
                       icon="wrench"

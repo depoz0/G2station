@@ -19,7 +19,7 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 	var/obj/item/radio/headset/radio
 	var/arrival = "%PERSON присоединился как %RANK"
 	var/arrivalToggle = 1
-	var/newhead = "%PERSON, %RANK, is the department head."
+	var/newhead = "%PERSON, %RANK, является начальником отдела."
 	var/newheadToggle = 1
 
 	var/greenlight = "Light_Green"

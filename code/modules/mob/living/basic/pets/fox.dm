@@ -4,8 +4,8 @@
 */
 
 /mob/living/basic/pet/fox
-	name = "fox"
-	desc = "They're a fox."
+	name = "лиса"
+	desc = "Это лиса."
 	icon = 'icons/mob/simple/pets.dmi'
 	icon_state = "fox"
 	icon_living = "fox"
@@ -23,8 +23,8 @@
 	held_state = "fox"
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	attack_verb_continuous = "bites"
-	attack_verb_simple = "bite"
+	attack_verb_continuous = "кусает"
+	attack_verb_simple = "кусает"
 	attack_sound = 'sound/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	ai_controller = /datum/ai_controller/basic_controller/fox
@@ -63,8 +63,8 @@
 
 // The captain's fox, Renault
 /mob/living/basic/pet/fox/renault
-	name = "Renault"
-	desc = "Renault, the Captain's trustworthy fox."
+	name = "Рено"
+	desc = "Рено, верный лис капитана."
 	gender = FEMALE
 	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE

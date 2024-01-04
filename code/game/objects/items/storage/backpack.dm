@@ -401,8 +401,8 @@
 	return
 
 /obj/item/storage/backpack/duffelbag
-	name = "duffel bag"
-	desc = "A large duffel bag for holding extra things."
+	name = "вещевая сумка"
+	desc = "Большая вещевая сумка для хранения дополнительных вещей."
 	icon_state = "duffel"
 	inhand_icon_state = "duffel"
 	actions_types = list(/datum/action/item_action/zipper)
@@ -427,7 +427,7 @@
 
 /obj/item/storage/backpack/duffelbag/update_desc(updates)
 	. = ..()
-	desc = "[initial(desc)]<br>[zipped_up ? "It's zipped up, preventing you from accessing its contents." : "It's unzipped, and harder to move in."]"
+	desc = "[initial(desc)]<br>[zipped_up ? "Она застегнута, что не позволяет вам получить доступ к ее содержимому." : "It's unzipped, and harder to move in."]"
 
 /obj/item/storage/backpack/duffelbag/attack_self(mob/user, modifiers)
 	if(loc != user) // God fuck TK

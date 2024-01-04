@@ -11,7 +11,7 @@
 	if(current_dish)
 		to_chat(user, span_warning("There is already a petridish in \the [src]."))
 		return
-	to_chat(user, span_notice("You put [I] into \the [src]."))
+	to_chat(user, span_notice("Вы положили [I] в [src]."))
 	current_dish = I
 	current_dish.forceMove(src)
 

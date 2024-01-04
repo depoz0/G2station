@@ -187,7 +187,7 @@
 /area/station/command/bridge)
 "aei" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
+/obj/effect/turf_decal/tile/dark_green/anticorner{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -3317,7 +3317,7 @@
 /area/station/service/library)
 "dwc" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral/opposingcorners{
+/obj/effect/turf_decal/tile/dark_green/opposingcorners{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -3539,7 +3539,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "dGh" = (
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -5136,7 +5136,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "fko" = (
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
+/obj/effect/turf_decal/tile/dark_green/anticorner/contrasted{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -5721,7 +5721,7 @@
 /area/station/engineering/atmos)
 "fSR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/dark_green,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
 "fTd" = (
@@ -6381,7 +6381,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "gKa" = (
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -10036,6 +10036,7 @@
 "ksm" = (
 /obj/structure/table,
 /obj/item/storage/fancy/donut_box,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "ksI" = (
@@ -11818,7 +11819,7 @@
 /area/station/tcommsat/computer)
 "mos" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -13493,7 +13494,7 @@
 	codes_txt = "patrol;next_patrol=7.1-central";
 	location = "7-escape"
 	},
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
+/obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -14379,7 +14380,7 @@
 /area/station/medical/medbay/central)
 "pql" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
+/obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -17683,7 +17684,7 @@
 /area/station/hallway/primary/central)
 "sNW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral/opposingcorners{
+/obj/effect/turf_decal/tile/dark_green/opposingcorners{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -18154,7 +18155,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "tnn" = (
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/turf_decal/tile/dark_green/half/contrasted,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
 "tnP" = (

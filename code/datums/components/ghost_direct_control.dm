@@ -28,7 +28,7 @@
 		return COMPONENT_INCOMPATIBLE
 
 	src.ban_type = ban_type
-	src.assumed_control_message = assumed_control_message || "You are [parent]!"
+	src.assumed_control_message = assumed_control_message || "Вы [parent]!"
 	src.extra_control_checks = extra_control_checks
 	src.after_assumed_control = after_assumed_control
 
@@ -67,7 +67,7 @@
 	var/mob/living/our_mob = parent
 	if (our_mob.stat == DEAD || our_mob.key || awaiting_ghosts)
 		return
-	examine_text += span_boldnotice("You could take control of this mob by clicking on it.")
+	examine_text += span_boldnotice("Вы можете взять под контроль этого моба, нажав на него.")
 
 /// Send out a request for a brain
 /datum/component/ghost_direct_control/proc/request_ghost_control(role_name, poll_length, poll_ignore_key)
@@ -75,7 +75,7 @@
 		return
 	awaiting_ghosts = TRUE
 	var/list/mob/dead/observer/candidates = SSpolling.poll_ghost_candidates(
-		question = "Do you want to play as [role_name]?",
+		question = "Хотите ли вы играть в качестве [role_name]?",
 		check_jobban = ban_type,
 		role = ban_type,
 		poll_time = poll_length,
@@ -97,10 +97,10 @@
 	if (!hopeful_ghost.client)
 		return
 	if (!(GLOB.ghost_role_flags & GHOSTROLE_SPAWNER))
-		to_chat(hopeful_ghost, span_warning("Ghost roles have been temporarily disabled!"))
+		to_chat(hopeful_ghost, span_warning("Роли призраков были временно отключены!"))
 		return
 	if (awaiting_ghosts)
-		to_chat(hopeful_ghost, span_warning("Ghost candidate selection currently in progress!"))
+		to_chat(hopeful_ghost, span_warning("В настоящее время идет отбор кандидатов в призраки!"))
 		return COMPONENT_CANCEL_ATTACK_CHAIN
 	if (!SSticker.HasRoundStarted())
 		to_chat(hopeful_ghost, span_warning("You cannot assume control of this until after the round has started!"))
@@ -110,7 +110,7 @@
 
 /// We got far enough to establish that this mob is a valid target, let's try to posssess it
 /datum/component/ghost_direct_control/proc/attempt_possession(mob/our_mob, mob/dead/observer/hopeful_ghost)
-	var/ghost_asked = tgui_alert(usr, "Become [our_mob]?", "Are you sure?", list("Yes", "No"))
+	var/ghost_asked = tgui_alert(usr, "Стать [our_mob]?", "Вы уверены?", list("Да", "Нет"))
 	if (ghost_asked != "Yes" || QDELETED(our_mob))
 		return
 	assume_direct_control(hopeful_ghost)
@@ -118,17 +118,17 @@
 /// Grant possession of our mob, component is now no longer required
 /datum/component/ghost_direct_control/proc/assume_direct_control(mob/harbinger)
 	if (QDELETED(src))
-		to_chat(harbinger, span_warning("Offer to possess creature has expired!"))
+		to_chat(harbinger, span_warning("Предложение овладеть существом истекло!"))
 		return
 	if (is_banned_from(harbinger.ckey, list(ban_type)))
-		to_chat(harbinger, span_warning("You are banned from playing as this role!"))
+		to_chat(harbinger, span_warning("Вам запрещено играть за эту роль!"))
 		return
 	if (!(GLOB.ghost_role_flags & GHOSTROLE_SPAWNER))
-		to_chat(harbinger, span_warning("Ghost roles have been temporarily disabled!"))
+		to_chat(harbinger, span_warning("Роли призраков были временно отключены!"))
 		return
 	var/mob/living/new_body = parent
 	if (new_body.stat == DEAD)
-		to_chat(harbinger, span_warning("This body has passed away, it is of no use!"))
+		to_chat(harbinger, span_warning("Это тело умерло, оно бесполезно!"))
 		return
 	if (new_body.key)
 		to_chat(harbinger, span_warning("[parent] has already become sapient!"))
@@ -136,7 +136,7 @@
 		return
 	if (extra_control_checks && !extra_control_checks.Invoke(harbinger))
 		return
-	harbinger.log_message("took control of [new_body].", LOG_GAME)
+	harbinger.log_message("взял контроль над [new_body].", LOG_GAME)
 	new_body.key = harbinger.key
 	to_chat(new_body, span_boldnotice(assumed_control_message))
 	after_assumed_control?.Invoke(harbinger)
