@@ -282,7 +282,7 @@
 
 	computer_id_slot = null
 	playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, FALSE)
-	balloon_alert(user, "ID удалён")
+	balloon_alert(user, "карта ID извлечена")
 	to_chat(user, span_notice("Вы извлекаете карту из отверстия для карты."))
 
 	if(ishuman(loc))
