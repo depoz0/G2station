@@ -1106,14 +1106,6 @@
 /obj/effect/spawner/random/bureaucracy/paper,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
-"bbz" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/drone_dispenser,
-/turf/open/floor/iron,
-/area/station/engineering/lobby)
 "bcT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light{
@@ -20205,11 +20197,11 @@
 /turf/open/floor/wood,
 /area/station/service/library)
 "vCp" = (
-/obj/structure/statue/gold/ce,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/drone_dispenser,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "vCF" = (
@@ -52946,7 +52938,7 @@ rMS
 gah
 hRg
 gah
-bbz
+eyy
 dqj
 dqj
 hir

@@ -241,7 +241,7 @@
 	SIGNAL_HANDLER
 
 	if(!isnull(can_hold_description))
-		examine_list += span_notice("You can examine this further to check what kind of extra items it can hold.")
+		examine_list += span_notice("Вы можете изучить его подробнее, чтобы проверить, какие дополнительные предметы он может вместить.")
 
 /datum/storage/proc/handle_extra_examination(datum/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
@@ -250,7 +250,7 @@
 		examine_list += handle_show_valid_items(source, user)
 
 /datum/storage/proc/handle_show_valid_items(datum/source, user)
-	to_chat(user, span_notice("[source] can hold: [can_hold_description]"))
+	to_chat(user, span_notice("[source] может держать: [can_hold_description]"))
 
 /// Almost 100% of the time the lists passed into set_holdable are reused for each instance
 /// Just fucking cache it 4head
@@ -287,7 +287,7 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 
 	for(var/valid_type in can_hold_list)
 		var/obj/item/valid_item = valid_type
-		desc += "\a [initial(valid_item.name)]"
+		desc += "[initial(valid_item.name)]"
 
 	return "\n\t[span_notice("[desc.Join("\n\t")]")]"
 
