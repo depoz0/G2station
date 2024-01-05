@@ -6,7 +6,7 @@
 	name = "книжный шкаф"
 	icon = 'icons/obj/service/library.dmi'
 	icon_state = "bookempty"
-	desc = "A great place for storing knowledge."
+	desc = "Отличное место для хранения знаний."
 	anchored = FALSE
 	density = TRUE
 	opacity = FALSE
@@ -70,12 +70,12 @@
 /obj/structure/bookcase/examine(mob/user)
 	. = ..()
 	if(!anchored)
-		. += span_notice("The <i>bolts</i> on the bottom are unsecured.")
+		. += span_notice("<i>Болты</i> снизу не закреплены.")
 	else
-		. += span_notice("It's secured in place with <b>bolts</b>.")
+		. += span_notice("Он закреплен на месте с помощью <b>болтов</b>.")
 	switch(state)
 		if(BOOKCASE_UNANCHORED)
-			. += span_notice("There's a <b>small crack</b> visible on the back panel.")
+			. += span_notice("На задней панели имеется <b>маленькая трещина</b>.")
 		if(BOOKCASE_ANCHORED)
 			. += span_notice("There's space inside for a <i>wooden</i> shelf.")
 		if(BOOKCASE_FINISHED)
@@ -160,7 +160,7 @@
 		return
 	if(!length(contents))
 		return
-	var/obj/item/book/choice = tgui_input_list(user, "Book to remove from the shelf", "Remove Book", sort_names(contents.Copy()))
+	var/obj/item/book/choice = tgui_input_list(user, "Книга, которую нужно снять с полки", "Взять книгу", sort_names(contents.Copy()))
 	if(isnull(choice))
 		return
 	if(!(user.mobility_flags & MOBILITY_USE) || user.stat != CONSCIOUS || HAS_TRAIT(user, TRAIT_HANDS_BLOCKED) || !in_range(loc, user))
