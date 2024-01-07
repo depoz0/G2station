@@ -581,7 +581,7 @@
 	if(duration > 1) //pluralize the interval if necessary
 		time_message += "s"
 	var/is_server_ban = (roles_to_ban[1] == "Server")
-	var/note_reason = "Banned from [is_server_ban ? "the server" : " Roles: [roles_to_ban.Join(", ")]"] [isnull(duration) ? "permanently" : "for [time_message]"] - [reason]"
+	var/note_reason = "Бан [is_server_ban ? "на сервер" : "на Роли: [roles_to_ban.Join(", ")]"] [isnull(duration) ? "навсегда" : "на [time_message]"] - [reason]"
 	var/list/clients_online = GLOB.clients.Copy()
 	var/list/admins_online = list()
 	for(var/client/C in clients_online)

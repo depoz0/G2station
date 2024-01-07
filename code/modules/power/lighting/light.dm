@@ -585,7 +585,7 @@
 			to_chat(user, span_notice("You manage to remove the light [fitting], shattering it in process."))
 			break_light_tube()
 		else
-			to_chat(user, span_warning("You try to remove the light [fitting], but you burn your hand on it!"))
+			to_chat(user, span_warning("Вы пытаетесь снять лампу [lamp1], но обжигаете об нее руку!"))
 			return
 	// create a light tube/bulb item and put it in the user's hand
 	drop_light_tube(user)

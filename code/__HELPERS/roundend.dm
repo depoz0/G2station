@@ -517,17 +517,17 @@ GLOBAL_LIST_INIT(achievements_unlocked, list())
 		station_vault += current_acc.account_balance
 		if(!mr_moneybags || mr_moneybags.account_balance < current_acc.account_balance)
 			mr_moneybags = current_acc
-	parts += "<div class='panel stationborder'><span class='header'>Station Economic Summary:</span><br>"
-	parts += "<span class='service'>Service Statistics:</span><br>"
+	parts += "<div class='panel stationborder'><span class='header'>Экономика станции:</span><br>"
+	parts += "<span class='service'>Статистика услуг:</span><br>"
 	for(var/venue_path in SSrestaurant.all_venues)
 		var/datum/venue/venue = SSrestaurant.all_venues[venue_path]
 		tourist_income += venue.total_income
-		parts += "The [venue] served [venue.customers_served] customer\s and made [venue.total_income] credits.<br>"
-	parts += "In total, they earned [tourist_income] credits[tourist_income ? "!" : "..."]<br>"
+		parts += "Заведение [venue] обслужило [venue.customers_served] клиентов и заработало [venue.total_income] кредитов.<br>"
+	parts += "В общей сложности они заработали [tourist_income] кредитов[tourist_income ? "!" : "..."]<br>"
 	log_econ("Roundend service income: [tourist_income] credits.")
 	switch(tourist_income)
 		if(0)
-			parts += "[span_redtext("Service did not earn any credits...")]<br>"
+			parts += "[span_redtext("Услуги не заработали ни одного кредита...")]<br>"
 		if(1 to 2000)
 			parts += "[span_redtext("Centcom is displeased. Come on service, surely you can do better than that.")]<br>"
 			award_service(/datum/award/achievement/jobs/service_bad)

@@ -51,9 +51,9 @@
 	if(!open_status)
 		return
 	if(length(contents) == 1)
-		. += "There is one [contents_tag] left."
+		. += "[contents_tag] последняя."
 	else
-		. += "There are [contents.len <= 0 ? "no" : "[contents.len]"] [contents_tag]s left."
+		. += "[contents.len <= 0 ? "Больше нет" : "Осталось [contents.len] [runam(contents.len, "штука", "штуки", "штук")]"] [contents_tag]."
 
 /obj/item/storage/fancy/attack_self(mob/user)
 	if(open_status == FANCY_CONTAINER_CLOSED)
@@ -156,6 +156,16 @@
 	atom_storage.set_holdable(list(/obj/item/food/egg))
 
 /*
+ * Fertile Egg Box
+ */
+
+/obj/item/storage/fancy/egg_box/fertile
+	name = "fertile egg box"
+	desc = "Only one thing here is fertile, and it's not the eggs."
+	spawn_type = /obj/item/food/egg/fertile
+	spawn_count = 6
+
+/*
  * Candle Box
  */
 
@@ -249,14 +259,14 @@
 	. = ..()
 	if(locate(/obj/item/lighter) in contents)
 		context[SCREENTIP_CONTEXT_ALT_LMB] = "Remove lighter"
-	context[SCREENTIP_CONTEXT_RMB] = "Remove [contents_tag]"
+	context[SCREENTIP_CONTEXT_RMB] = "Удалить [contents_tag]"
 	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/item/storage/fancy/cigarettes/examine(mob/user)
 	. = ..()
 
 	if(spawn_coupon)
-		. += span_notice("There's a coupon on the back of the pack! You can tear it off once it's empty.")
+		. += span_notice("На обратной стороне упаковки есть купон! Вы можете оторвать его, как только упаковка опустеет.")
 
 /obj/item/storage/fancy/cigarettes/update_icon_state()
 	. = ..()
@@ -407,13 +417,13 @@
 /////////////
 
 /obj/item/storage/fancy/cigarettes/cigars
-	name = "\improper premium cigar case"
-	desc = "A case of premium cigars. Very expensive."
+	name = "премиум портсигар"
+	desc = "Ящик сигар премиум-класса. Очень дорогие."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cigarcase"
 	base_icon_state = "cigarcase"
 	w_class = WEIGHT_CLASS_NORMAL
-	contents_tag = "premium cigar"
+	contents_tag = "премиум сигара"
 	spawn_type = /obj/item/clothing/mask/cigarette/cigar
 	spawn_count = 5
 	spawn_coupon = FALSE
@@ -506,7 +516,7 @@
 	spawn_type = /obj/item/food/pickle
 	spawn_count = 10
 	contents_tag = "pickle"
-	foldable_result = null
+	foldable_result = /obj/item/reagent_containers/cup/beaker/large
 	custom_materials = list(/datum/material/glass = SHEET_MATERIAL_AMOUNT)
 	open_status = FANCY_CONTAINER_ALWAYS_OPEN
 	has_open_closed_states = FALSE

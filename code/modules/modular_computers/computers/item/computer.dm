@@ -250,7 +250,7 @@
 	if(user)
 		if(!user.transferItemToLoc(inserting_id, src))
 			return FALSE
-		to_chat(user, span_notice("You insert \the [inserting_id] into the card slot."))
+		to_chat(user, span_notice("Вы вставляете [inserting_id] в отверстие для карты."))
 	else
 		inserting_id.forceMove(src)
 
@@ -282,8 +282,8 @@
 
 	computer_id_slot = null
 	playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, FALSE)
-	balloon_alert(user, "removed ID")
-	to_chat(user, span_notice("You remove the card from the card slot."))
+	balloon_alert(user, "карта ID извлечена")
+	to_chat(user, span_notice("Вы извлекаете карту из отверстия для карты."))
 
 	if(ishuman(loc))
 		var/mob/living/carbon/human/human_wearer = loc
@@ -309,29 +309,29 @@
 	if(enabled)
 		ui_interact(user)
 	else if(isAdminGhostAI(user))
-		var/response = tgui_alert(user, "This computer is turned off. Would you like to turn it on?", "Admin Override", list("Yes", "No"))
-		if(response == "Yes")
+		var/response = tgui_alert(user, "Этот компьютер выключен. Хотите включить его?", "Admin Override", list("Да", "Нет"))
+		if(response == "Да")
 			turn_on(user)
 
 /obj/item/modular_computer/emag_act(mob/user, obj/item/card/emag/emag_card, forced)
 	if(!enabled && !forced)
-		balloon_alert(user, "turn it on first!")
+		balloon_alert(user, "сначала включите его!")
 		return FALSE
 	if(obj_flags & EMAGGED)
 		balloon_alert(user, "already emagged!")
 		if (emag_card)
-			to_chat(user, span_notice("You swipe \the [src] with [emag_card]. A console window fills the screen, but it quickly closes itself after only a few lines are written to it."))
+			to_chat(user, span_notice("Вы проводите [src] с помощью [emag_card]. На экране появляется окно консоли, но оно быстро закрывается после записи в него нескольких строк."))
 		return FALSE
 
 	. = ..()
 	if(!forced)
-		add_log("manual overriding of permissions and modification of device firmware detected. Reboot and reinstall required.")
+		add_log("обнаружено ручное изменение разрешений и модификация прошивки устройства. Требуется перезагрузка и переустановка.")
 	obj_flags |= EMAGGED
 	device_theme = PDA_THEME_SYNDICATE
 	if(user)
-		balloon_alert(user, "syndieOS loaded")
+		balloon_alert(user, "syndieOS загружен")
 		if (emag_card)
-			to_chat(user, span_notice("You swipe \the [src] with [emag_card]. A console window momentarily fills the screen, with white text rapidly scrolling past."))
+			to_chat(user, span_notice("Вы проводите [src] с помощью [emag_card]. а экране на мгновение появляется окно консоли, в котором быстро бежит белый текст."))
 	return TRUE
 
 /obj/item/modular_computer/examine(mob/user)
@@ -339,26 +339,26 @@
 	var/healthpercent = round((atom_integrity/max_integrity) * 100, 1)
 	switch(healthpercent)
 		if(50 to 99)
-			. += span_info("It looks slightly damaged.")
+			. += span_info("Он выглядит слегка поврежденным.")
 		if(25 to 50)
-			. += span_info("It appears heavily damaged.")
+			. += span_info("Он выглядит сильно поврежденным.")
 		if(0 to 25)
-			. += span_warning("It's falling apart!")
+			. += span_warning("Он разваливается на части!")
 
 	if(long_ranged)
-		. += "It is upgraded with an experimental long-ranged network capabilities, picking up NTNet frequencies while further away."
-	. += span_notice("It has [max_capacity] GQ of storage capacity.")
+		. += "Он оснащен экспериментальными сетевыми возможностями дальнего радиуса действия, позволяющими улавливать частоты NTNet на большом расстоянии."
+	. += span_notice("Он имеет [max_capacity] GQ емкости.")
 
 	if(computer_id_slot)
 		if(Adjacent(user))
-			. += "It has \the [computer_id_slot] card installed in its card slot."
+			. += "В его слоте установлена карта [computer_id_slot]."
 		else
-			. += "Its identification card slot is currently occupied."
-		. += span_info("Alt-click [src] to eject the identification card.")
+			. += "В настоящее время слот для идентификационной карты занят."
+		. += span_info("Нажмите Alt-клик [src], чтобы извлечь идентификационную карту.")
 
 /obj/item/modular_computer/examine_more(mob/user)
 	. = ..()
-	. += "Storage capacity: [used_capacity]/[max_capacity]GQ"
+	. += "Объем хранения: [used_capacity]/[max_capacity]GQ"
 
 	for(var/datum/computer_file/app_examine as anything in stored_files)
 		if(app_examine.on_examine(src, user))
@@ -371,21 +371,21 @@
 	. = ..()
 
 	if(held_item?.tool_behaviour == TOOL_SCREWDRIVER && internal_cell)
-		context[SCREENTIP_CONTEXT_RMB] = "Remove Cell"
+		context[SCREENTIP_CONTEXT_RMB] = "Удалить ячейку"
 		. = CONTEXTUAL_SCREENTIP_SET
 	if(held_item?.tool_behaviour == TOOL_WRENCH)
-		context[SCREENTIP_CONTEXT_RMB] = "Deconstruct"
+		context[SCREENTIP_CONTEXT_RMB] = "Разобрать"
 		. = CONTEXTUAL_SCREENTIP_SET
 
 	if(computer_id_slot) // ID get removed first before pAIs
-		context[SCREENTIP_CONTEXT_ALT_LMB] = "Remove ID"
+		context[SCREENTIP_CONTEXT_ALT_LMB] = "Удалить ID"
 		. = CONTEXTUAL_SCREENTIP_SET
 	else if(inserted_pai)
-		context[SCREENTIP_CONTEXT_ALT_LMB] = "Remove pAI"
+		context[SCREENTIP_CONTEXT_ALT_LMB] = "Удалить pAI"
 		. = CONTEXTUAL_SCREENTIP_SET
 
 	if(inserted_disk)
-		context[SCREENTIP_CONTEXT_CTRL_SHIFT_LMB] = "Remove Disk"
+		context[SCREENTIP_CONTEXT_CTRL_SHIFT_LMB] = "Удалить диск"
 		. = CONTEXTUAL_SCREENTIP_SET
 	return . || NONE
 
@@ -439,14 +439,14 @@
 	var/issynth = issilicon(user) // Robots and AIs get different activation messages.
 	if(atom_integrity <= integrity_failure * max_integrity)
 		if(issynth)
-			to_chat(user, span_warning("You send an activation signal to \the [src], but it responds with an error code. It must be damaged."))
+			to_chat(user, span_warning("Вы посылаете сигнал активации на [src], но он отвечает кодом ошибки. Должно быть, он поврежден."))
 		else
 			to_chat(user, span_warning("Вы нажимаете кнопку питания, но компьютер не загружается выдавая различные ошибки а затем снова выключается."))
 		return FALSE
 
 	if(use_power()) // checks if the PC is powered
 		if(issynth)
-			to_chat(user, span_notice("You send an activation signal to \the [src], turning it on."))
+			to_chat(user, span_notice("Вы посылаете сигнал активации на [src], включая его."))
 		else
 			to_chat(user, span_notice("Вы нажимаете кнопку питания и запускаете [rusrep(src.name, 4)]."))
 		if(looping_sound)
@@ -458,7 +458,7 @@
 		return TRUE
 	else // Unpowered
 		if(issynth)
-			to_chat(user, span_warning("You send an activation signal to \the [src] but it does not respond."))
+			to_chat(user, span_warning("Вы посылаете сигнал активации на [src] но он не отвечает."))
 		else
 			to_chat(user, span_warning("Вы нажимаете кнопку питания, но [src.name] не реагирует."))
 		return FALSE
@@ -574,7 +574,7 @@
 
 	if(!program || !istype(program)) // Program not found or it's not executable program.
 		if(user)
-			to_chat(user, span_danger("\The [src]'s screen shows \"I/O ERROR - Unable to run program\" warning."))
+			to_chat(user, span_danger("На экране [src] появляется предупреждение \"I/O ERROR - Невозможно запустить программу\"."))
 		return FALSE
 
 	// The program is already running. Resume it.
@@ -592,7 +592,7 @@
 
 	if(idle_threads.len > max_idle_programs)
 		if(user)
-			to_chat(user, span_danger("\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error."))
+			to_chat(user, span_danger("На [src] появляется ошибка \"Достигнута максимальная нагрузка на процессор. Невозможно запустить другую программу\"."))
 		return FALSE
 
 	if(program.program_flags & PROGRAM_REQUIRES_NTNET && !get_ntnet_status()) // The program requires NTNet connection, but we are not connected to NTNet.
@@ -753,15 +753,15 @@
 		if(user && !user.transferItemToLoc(attacking_item, src))
 			return
 		internal_cell = attacking_item
-		to_chat(user, span_notice("You plug \the [attacking_item] to \the [src]."))
+		to_chat(user, span_notice("Вы подключаете [attacking_item] к [src]."))
 		return
 
 	if(istype(attacking_item, /obj/item/photo))
 		var/obj/item/photo/attacking_photo = attacking_item
 		if(store_file(new /datum/computer_file/picture(attacking_photo.picture)))
-			balloon_alert(user, "photo scanned")
+			balloon_alert(user, "фото отсканировано")
 		else
-			balloon_alert(user, "no space!")
+			balloon_alert(user, "нет места!")
 		return
 
 	// Check if any Applications need it
@@ -792,7 +792,7 @@
 		if(!papers_added)
 			return
 		balloon_alert(user, "inserted paper")
-		to_chat(user, span_notice("Added in [papers_added] new sheets. You now have [stored_paper] / [max_paper] printing paper stored."))
+		to_chat(user, span_notice("В [papers_added] добавлены новые листы. Теперь у вас есть запас бумаги для печати [stored_paper] / [max_paper]."))
 		bin.update_appearance()
 		return
 
@@ -823,13 +823,13 @@
 	. = ..()
 	tool.play_tool_sound(src, user, 20, volume=20)
 	deconstruct(TRUE)
-	user.balloon_alert(user, "disassembled")
+	user.balloon_alert(user, "разобрано")
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/modular_computer/welder_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(atom_integrity == max_integrity)
-		to_chat(user, span_warning("\The [src] does not require repairs."))
+		to_chat(user, span_warning("[src] не требуется ремонт."))
 		return ITEM_INTERACT_SUCCESS
 
 	if(!tool.tool_start_check(user, amount=1))
@@ -839,7 +839,7 @@
 	if(!tool.use_tool(src, user, 20, volume=50))
 		return ITEM_INTERACT_SUCCESS
 	atom_integrity = max_integrity
-	to_chat(user, span_notice("You repair \the [src]."))
+	to_chat(user, span_notice("Вы починили [src]."))
 	update_appearance()
 	return ITEM_INTERACT_SUCCESS
 
@@ -853,7 +853,7 @@
 			inserted_disk?.forceMove(drop_location())
 			new /obj/item/stack/sheet/iron(drop_location(), steel_sheet_cost)
 		else
-			physical.visible_message(span_notice("\The [src] breaks apart!"))
+			physical.visible_message(span_notice("[src] разваливается на части!"))
 			new /obj/item/stack/sheet/iron(drop_location(), round(steel_sheet_cost * 0.5))
 	relay_qdel()
 	return ..()

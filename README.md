@@ -6,8 +6,16 @@
 
 ## Установка сервера на linux
 
+		=======
 
-=======
+## Oбновления сборки
+
+Стабильная версия сборки находиться в ветке [master](https://github.com/depoz0/G2station)
+
+Эксперементальные обновления сборки можно найти в ветке [exp](https://github.com/depoz0/G2station/tree/exp)
+
+
+
 
 
 ## /tg/station codebase
@@ -70,3 +78,6 @@ The TGS DMAPI is licensed as a subproject under the MIT license.
 See the footer of [code/__DEFINES/tgs.dm](./code/__DEFINES/tgs.dm) and [code/modules/tgs/LICENSE](./code/modules/tgs/LICENSE) for the MIT license.
 
 All assets including icons and sound are under a [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise indicated.
+
+
+<div style="text-align:center"><img src="https://github.com/depoz0/G2station/blob/exp/G2logo2.png?raw=true" /></div>

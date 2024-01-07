@@ -416,8 +416,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	start_extended = TRUE
 
 /obj/item/phone
-	name = "red phone"
-	desc = "Should anything ever go wrong..."
+	name = "красный телефон"
+	desc = "Если что-то пойдет не так..."
 	icon = 'icons/obj/devices/voice.dmi'
 	icon_state = "red_phone"
 	force = 3

@@ -187,7 +187,7 @@
 /area/station/command/bridge)
 "aei" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
+/obj/effect/turf_decal/tile/dark_green/anticorner{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -1106,14 +1106,6 @@
 /obj/effect/spawner/random/bureaucracy/paper,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
-"bbz" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/drone_dispenser,
-/turf/open/floor/iron,
-/area/station/engineering/lobby)
 "bcT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light{
@@ -2698,7 +2690,9 @@
 "cKq" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
-	name = "Cold Loop to SM"
+	name = "Cold Loop to SM";
+	on = 1;
+	target_pressure = 4500
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -3325,7 +3319,7 @@
 /area/station/service/library)
 "dwc" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral/opposingcorners{
+/obj/effect/turf_decal/tile/dark_green/opposingcorners{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -3461,7 +3455,9 @@
 /area/station/security/brig)
 "dBS" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen);
+	on = 1
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -3547,7 +3543,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "dGh" = (
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -4615,7 +4611,9 @@
 /area/station/engineering/atmos)
 "eJM" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen);
+	on = 1
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -5144,7 +5142,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology)
 "fko" = (
-/obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
+/obj/effect/turf_decal/tile/dark_green/anticorner/contrasted{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -5729,7 +5727,7 @@
 /area/station/engineering/atmos)
 "fSR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/dark_green,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
 "fTd" = (
@@ -6389,7 +6387,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "gKa" = (
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -8807,7 +8805,9 @@
 "jaI" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
-	name = "SM to Cold Loop"
+	name = "SM to Cold Loop";
+	on = 1;
+	target_pressure = 4500
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -10044,6 +10044,7 @@
 "ksm" = (
 /obj/structure/table,
 /obj/item/storage/fancy/donut_box,
+/obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "ksI" = (
@@ -11826,7 +11827,7 @@
 /area/station/tcommsat/computer)
 "mos" = (
 /obj/structure/cable,
-/obj/effect/turf_decal/tile/neutral{
+/obj/effect/turf_decal/tile/dark_green{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -13501,7 +13502,7 @@
 	codes_txt = "patrol;next_patrol=7.1-central";
 	location = "7-escape"
 	},
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
+/obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 1
 	},
 /turf/open/floor/iron,
@@ -14353,7 +14354,8 @@
 /area/station/service/janitor)
 "pob" = (
 /obj/machinery/atmospherics/components/binary/pump{
-	dir = 1
+	dir = 1;
+	target_pressure = 4500
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
@@ -14387,7 +14389,7 @@
 /area/station/medical/medbay/central)
 "pql" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
+/obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -14591,7 +14593,8 @@
 /area/station/hallway/primary/starboard)
 "pyA" = (
 /obj/machinery/atmospherics/components/binary/pump{
-	name = "Gas to Chamber"
+	name = "Gas to Chamber";
+	target_pressure = 4500
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
@@ -15737,7 +15740,8 @@
 /area/station/cargo)
 "qJY" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -17691,7 +17695,7 @@
 /area/station/hallway/primary/central)
 "sNW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/tile/neutral/opposingcorners{
+/obj/effect/turf_decal/tile/dark_green/opposingcorners{
 	dir = 8
 	},
 /turf/open/floor/iron,
@@ -18162,7 +18166,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "tnn" = (
-/obj/effect/turf_decal/tile/neutral/half/contrasted,
+/obj/effect/turf_decal/tile/dark_green/half/contrasted,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/exit)
 "tnP" = (
@@ -20205,11 +20209,11 @@
 /turf/open/floor/wood,
 /area/station/service/library)
 "vCp" = (
-/obj/structure/statue/gold/ce,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/drone_dispenser,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "vCF" = (
@@ -52946,7 +52950,7 @@ rMS
 gah
 hRg
 gah
-bbz
+eyy
 dqj
 dqj
 hir

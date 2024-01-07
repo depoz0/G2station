@@ -35,8 +35,8 @@
 
 // ===== COMMAND CONSOLE =====
 /obj/machinery/modular_computer/preset/command
-	name = "command console"
-	desc = "A stationary computer. This one comes preloaded with command programs."
+	name = "командная консоль"
+	desc = "Стационарный компьютер. Этот компьютер поставляется с предустановленными командными программами."
 	starting_programs = list(
 		/datum/computer_file/program/chatclient,
 		/datum/computer_file/program/card_mod,
@@ -44,8 +44,8 @@
 
 // ===== IDENTIFICATION CONSOLE =====
 /obj/machinery/modular_computer/preset/id
-	name = "identification console"
-	desc = "A stationary computer. This one comes preloaded with identification modification programs."
+	name = "идентификационная консоль"
+	desc = "Стационарный компьютер. В комплект поставки входят программы для модификации идентификации."
 	starting_programs = list(
 		/datum/computer_file/program/chatclient,
 		/datum/computer_file/program/card_mod,

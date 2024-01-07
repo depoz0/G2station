@@ -307,8 +307,8 @@
 	icon_state = "syndie_pinata_shreds"
 
 /obj/effect/decal/cleanable/garbage
-	name = "decomposing garbage"
-	desc = "A split open garbage bag, its stinking content seems to be partially liquified. Yuck!"
+	name = "разлагающийся мусор"
+	desc = "Разорванный мешок для мусора, его вонючее содержимое, похоже, частично разжижено. Фу!"
 	icon = 'icons/obj/debris.dmi'
 	icon_state = "garbage"
 	plane = GAME_PLANE
@@ -413,8 +413,8 @@
 	return
 
 /obj/effect/decal/cleanable/fuel_pool
-	name = "pool of fuel"
-	desc = "A pool of flammable fuel. Its probably wise to clean this off before something ignites it..."
+	name = "лужа топлива"
+	desc = "Лужа легковоспламеняющегося топлива. Возможно, стоит убрать ее, пока что-нибудь не воспламенилось..."
 	icon_state = "fuel_pool"
 	layer = LOW_OBJ_LAYER
 	beauty = -50

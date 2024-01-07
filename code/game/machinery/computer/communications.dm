@@ -8,8 +8,8 @@
 
 // The communications computer
 /obj/machinery/computer/communications
-	name = "communications console"
-	desc = "A console used for high-priority announcements and emergencies."
+	name = "коммуникационная консоль"
+	desc = "Консоль, используемая для высокоприоритетных объявлений и чрезвычайных ситуаций."
 	icon_screen = "comm"
 	icon_keyboard = "tech_key"
 	req_access = list(ACCESS_COMMAND)
@@ -122,7 +122,7 @@
 		var/obj/item/card/emag/battlecruiser/caller_card = emag_card
 		if (user)
 			if(!IS_TRAITOR(user))
-				to_chat(user, span_danger("You get the feeling this is a bad idea."))
+				to_chat(user, span_danger("У вас возникает ощущение, что это плохая идея."))
 				return FALSE
 		if(battlecruiser_called)
 			if (user)
@@ -192,11 +192,11 @@
 				var/obj/item/held_item = usr.get_active_held_item()
 				var/obj/item/card/id/id_card = held_item?.GetID()
 				if (!istype(id_card))
-					to_chat(usr, span_warning("You need to swipe your ID!"))
+					to_chat(usr, span_warning("Вам нужно провести ID картой!"))
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 					return
 				if (!(ACCESS_CAPTAIN in id_card.access))
-					to_chat(usr, span_warning("You are not authorized to do this!"))
+					to_chat(usr, span_warning("У вас нет на это полномочий!"))
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 					return
 
@@ -208,13 +208,13 @@
 
 			SSsecurity_level.set_level(new_sec_level)
 
-			to_chat(usr, span_notice("Authorization confirmed. Modifying security level."))
+			to_chat(usr, span_notice("Авторизация подтверждена. Изменение уровня безопасности."))
 			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 
 			// Only notify people if an actual change happened
-			usr.log_message("changed the security level to [params["newSecurityLevel"]] with [src].", LOG_GAME)
-			message_admins("[ADMIN_LOOKUPFLW(usr)] has changed the security level to [params["newSecurityLevel"]] with [src] at [AREACOORD(usr)].")
-			deadchat_broadcast(" has changed the security level to [params["newSecurityLevel"]] with [src] at [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type=DEADCHAT_ANNOUNCEMENT)
+			usr.log_message("изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src.name].", LOG_GAME)
+			message_admins("[ADMIN_LOOKUPFLW(usr)] изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src] на [AREACOORD(usr)].")
+			deadchat_broadcast(" изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src] на [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type=DEADCHAT_ANNOUNCEMENT)
 
 			alert_level_tick += 1
 		if ("deleteMessage")
@@ -243,10 +243,10 @@
 				to_chat(usr, span_danger("SYSERR @l(19833)of(transmit.dm): !@$ MESSAGE TRANSMITTED TO SYNDICATE COMMAND."))
 			else if(syndicate)
 				message_syndicate(message, usr)
-				to_chat(usr, span_danger("Message transmitted to Syndicate Command."))
+				to_chat(usr, span_danger("Сообщение передано командованию Синдиката."))
 			else
 				message_centcom(message, usr)
-				to_chat(usr, span_notice("Message transmitted to Central Command."))
+				to_chat(usr, span_notice("Сообщение передано центральному командованию."))
 
 			var/associates = (emagged || syndicate) ? "the Syndicate": "CentCom"
 			usr.log_talk(message, LOG_SAY, tag = "message to [associates]")
@@ -265,7 +265,7 @@
 			if (!can_purchase_this_shuttle(shuttle))
 				return
 			if (!shuttle.prerequisites_met())
-				to_chat(usr, span_alert("You have not met the requirements for purchasing this shuttle."))
+				to_chat(usr, span_alert("Вы не выполнили требования для покупки этого шаттла."))
 				return
 			var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
 			if (bank_account.account_balance < shuttle.credit_cost)
@@ -282,7 +282,7 @@
 			minor_announce("[purchaser_name] has purchased [shuttle.name] for [shuttle.credit_cost] credits.[shuttle.extra_desc ? " [shuttle.extra_desc]" : ""]" , "Shuttle Purchase")
 
 			message_admins("[ADMIN_LOOKUPFLW(usr)] purchased [shuttle.name].")
-			log_shuttle("[key_name(usr)] has purchased [shuttle.name].")
+			log_shuttle("[key_name(usr)] купил [shuttle.name].")
 			SSblackbox.record_feedback("text", "shuttle_purchase", 1, shuttle.name)
 			state = STATE_MAIN
 		if ("recallShuttle")
@@ -297,9 +297,9 @@
 				return
 			var/reason = trim(html_encode(params["reason"]), MAX_MESSAGE_LEN)
 			nuke_request(reason, usr)
-			to_chat(usr, span_notice("Request sent."))
+			to_chat(usr, span_notice("Запрос отправлен."))
 			usr.log_message("has requested the nuclear codes from CentCom with reason \"[reason]\"", LOG_SAY)
-			priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self-Destruct Codes Requested", SSstation.announcer.get_rand_report_sound())
+			priority_announce("Коды для ядерного самоуничтожения для станции были запрошены [usr]. Подтверждение или отказ на этот запрос будет отправлен в ближайшее время.", "Запрошены коды ядерного самоуничтожения", SSstation.announcer.get_rand_report_sound())
 			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
 			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
 		if ("restoreBackupRoutingData")
@@ -426,30 +426,30 @@
 				return
 			if (GLOB.emergency_access)
 				revoke_maint_all_access()
-				usr.log_message("disabled emergency maintenance access.", LOG_GAME)
+				usr.log_message("доступ к отсекам обслуживания заблокирован.", LOG_GAME)
 				message_admins("[ADMIN_LOOKUPFLW(usr)] disabled emergency maintenance access.")
-				deadchat_broadcast(" disabled emergency maintenance access at [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
+				deadchat_broadcast(" отключил доступ к отсекам обслуживания через [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
 			else
 				make_maint_all_access()
-				usr.log_message("enabled emergency maintenance access.", LOG_GAME)
+				usr.log_message("доступ к отсекам обслуживания разблокирован.", LOG_GAME)
 				message_admins("[ADMIN_LOOKUPFLW(usr)] enabled emergency maintenance access.")
-				deadchat_broadcast(" enabled emergency maintenance access at [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
+				deadchat_broadcast(" дал доступ к отсекам обслуживания через [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type = DEADCHAT_ANNOUNCEMENT)
 		// Request codes for the Captain's Spare ID safe.
 		if("requestSafeCodes")
 			if(SSjob.assigned_captain)
-				to_chat(usr, span_warning("There is already an assigned Captain or Acting Captain on deck!"))
+				to_chat(usr, span_warning("На палубе уже есть назначенный капитан или исполняющий обязанности капитана!"))
 				return
 
 			if(SSjob.safe_code_timer_id)
-				to_chat(usr, span_warning("The safe code has already been requested and is being delivered to your station!"))
+				to_chat(usr, span_warning("Код сейфа уже запрошен и доставляется на вашу станцию!"))
 				return
 
 			if(SSjob.safe_code_requested)
-				to_chat(usr, span_warning("The safe code has already been requested and delivered to your station!"))
+				to_chat(usr, span_warning("Код сейфа уже запрошен и доставлен на вашу станцию!"))
 				return
 
 			if(!SSid_access.spare_id_safe_code)
-				to_chat(usr, span_warning("There is no safe code to deliver to your station!"))
+				to_chat(usr, span_warning("Не существует безопасного кода для доставки на вашу станцию!"))
 				return
 
 			var/turf/pod_location = get_turf(src)
@@ -457,11 +457,11 @@
 			SSjob.safe_code_request_loc = pod_location
 			SSjob.safe_code_requested = TRUE
 			SSjob.safe_code_timer_id = addtimer(CALLBACK(SSjob, TYPE_PROC_REF(/datum/controller/subsystem/job, send_spare_id_safe_code), pod_location), 120 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
-			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the Captain's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
+			minor_announce("В связи с нехваткой персонала ваша станция была одобрена для доставки кодов доступа к Запасному удостоверению капитана. Доставка через дроп-капсулу по месту [get_area(pod_location)]. Время прибытия 120 секунд.")
 
 /obj/machinery/computer/communications/proc/emergency_access_cooldown(mob/user)
 	if(toggle_uses == toggle_max_uses) //you have used up free uses already, do it one more time and start a cooldown
-		to_chat(user, span_warning("This was your last free use without cooldown, you will not be able to use this again for [DisplayTimeText(EMERGENCY_ACCESS_COOLDOWN)]."))
+		to_chat(user, span_warning("Это было ваше последнее бесплатное использование без кулдауна, вы не сможете использовать его снова в течение [DisplayTimeText(EMERGENCY_ACCESS_COOLDOWN)]."))
 		COOLDOWN_START(src, emergency_access_cooldown, EMERGENCY_ACCESS_COOLDOWN)
 		++toggle_uses //add a use so that this if() is false the next time you try this button
 		return FALSE
@@ -490,10 +490,10 @@
 		payload["is_filtered"] = TRUE
 
 	send2otherserver(html_decode(station_name()), message, "Comms_Console", destination == "all" ? null : list(destination), additional_data = payload)
-	minor_announce(message, title = "Outgoing message to allied station")
-	usr.log_talk(message, LOG_SAY, tag = "message to the other server")
-	message_admins("[ADMIN_LOOKUPFLW(usr)] has sent a message to the other server\[s].")
-	deadchat_broadcast(" has sent an outgoing message to the other station(s).</span>", "<span class='bold'>[usr.real_name]", usr, message_type = DEADCHAT_ANNOUNCEMENT)
+	minor_announce(message, title = "Исходящее сообщение на союзную станцию")
+	usr.log_talk(message, LOG_SAY, tag = "сообщение на другой сервер")
+	message_admins("[ADMIN_LOOKUPFLW(usr)] отправил сообщение на другой сервер\[s].")
+	deadchat_broadcast(" отправил исходящее сообщение на другую станцию (станции).</span>", "<span class='bold'>[usr.real_name]", usr, message_type = DEADCHAT_ANNOUNCEMENT)
 	SScommunications.soft_filtering = FALSE // set it to false at the end of the proc to ensure that everything prior reads as intended
 
 /obj/machinery/computer/communications/ui_data(mob/user)
@@ -697,11 +697,11 @@
 		return FALSE
 
 	if (SSshuttle.emergency.mode != SHUTTLE_RECALL && SSshuttle.emergency.mode != SHUTTLE_IDLE)
-		return "The shuttle is already in transit."
+		return "Шаттл уже находится в пути."
 	if (SSshuttle.shuttle_purchased == SHUTTLEPURCHASE_PURCHASED)
-		return "A replacement shuttle has already been purchased."
+		return "Запасной шаттл уже приобретен."
 	if (SSshuttle.shuttle_purchased == SHUTTLEPURCHASE_FORCED)
-		return "Due to unforseen circumstances, shuttle purchasing is no longer available."
+		return "В связи с непредвиденными обстоятельствами покупка шаттла больше не возможна."
 	return TRUE
 
 /// Returns whether we are authorized to buy this specific shuttle.
@@ -728,9 +728,9 @@
 /obj/machinery/computer/communications/proc/make_announcement(mob/living/user)
 	var/is_ai = issilicon(user)
 	if(!SScommunications.can_announce(user, is_ai))
-		to_chat(user, span_alert("Intercomms recharging. Please stand by."))
+		to_chat(user, span_alert("Интеркомы перезаряжаются. Пожалуйста, оставайтесь на связи."))
 		return
-	var/input = tgui_input_text(user, "Message to announce to the station crew", "Announcement")
+	var/input = tgui_input_text(user, "Сообщение для объявления экипажу станции", "Объявление")
 	if(!input || !user.can_perform_action(src, ALLOW_SILICON_REACH))
 		return
 	if(user.try_speak(input))
@@ -741,15 +741,15 @@
 		//No cheating, mime/random mute guy!
 		input = "..."
 		user.visible_message(
-			span_notice("[user] holds down [src]'s announcement button, leaving the mic on in awkward silence."),
-			span_notice("You leave the mic on in awkward silence..."),
-			span_hear("You hear an awkward silence, somehow."),
+			span_notice("[user] удерживает кнопку объявления [src] оставляя микрофон включенным в неловкой тишине."),
+			span_notice("Вы оставляете микрофон включенным в неловкой тишине..."),
+			span_hear("Наступает неловкая тишина."),
 			vision_distance = 4,
 		)
 
 	var/list/players = get_communication_players()
 	SScommunications.make_announcement(user, is_ai, input, syndicate || (obj_flags & EMAGGED), players)
-	deadchat_broadcast(" made a priority announcement from [span_name("[get_area_name(usr, TRUE)]")].", span_name("[user.real_name]"), user, message_type=DEADCHAT_ANNOUNCEMENT)
+	deadchat_broadcast(" сделал приоритетное заявление из [span_name("[get_area_name(usr, TRUE)]")].", span_name("[user.real_name]"), user, message_type=DEADCHAT_ANNOUNCEMENT)
 
 /obj/machinery/computer/communications/proc/get_communication_players()
 	return GLOB.player_list
@@ -766,11 +766,11 @@
 		if("message")
 			status_signal.data["top_text"] = data1
 			status_signal.data["bottom_text"] = data2
-			log_game("[key_name(usr)] has changed the station status display message to \"[data1] [data2]\" [loc_name(usr)]")
+			log_game("[key_name(usr)] изменил сообщение на дисплее состояния станции на \"[data1] [data2]\" [loc_name(usr)]")
 
 		if("alert")
 			status_signal.data["picture_state"] = data1
-			log_game("[key_name(usr)] has changed the station status display message to \"[data1]\" [loc_name(usr)]")
+			log_game("[key_name(usr)] изменил сообщение на дисплее состояния станции на \"[data1]\" [loc_name(usr)]")
 
 
 	frequency.post_signal(src, status_signal)
@@ -817,12 +817,12 @@
 /obj/machinery/computer/communications/proc/can_hack(mob/living/hacker, feedback = FALSE)
 	if(machine_stat & (NOPOWER|BROKEN))
 		if(feedback && hacker)
-			balloon_alert(hacker, "can't hack!")
+			balloon_alert(hacker, "не возможно взломать!")
 		return FALSE
 	var/area/console_area = get_area(src)
 	if(!console_area || !(console_area.area_flags & VALID_TERRITORY))
 		if(feedback && hacker)
-			balloon_alert(hacker, "signal too weak!")
+			balloon_alert(hacker, "сигнал слишком слабый!")
 		return FALSE
 	return TRUE
 
@@ -858,7 +858,7 @@
 
 	var/picked_option = pick(hack_options)
 	message_admins("[ADMIN_LOOKUPFLW(hacker)] hacked a [name] located at [ADMIN_VERBOSEJMP(src)], resulting in: [picked_option]!")
-	hacker.log_message("hacked a communications console, resulting in: [picked_option].", LOG_GAME, log_globally = TRUE)
+	hacker.log_message("взломал коммуникационную консоль, в результате чего: [picked_option].", LOG_GAME, log_globally = TRUE)
 	switch(picked_option)
 		if(HACK_PIRATE) // Triggers pirates, which the crew may be able to pay off to prevent
 			var/list/pirate_rulesets = list(
@@ -908,7 +908,7 @@
 			else
 				// We spawned some sleeper agents, nice - give them a report to kickstart the paranoia
 				priority_announce(
-					"Attention crew, it appears that someone on your station has hijacked your telecommunications and broadcasted an unknown signal.",
+					"Внимание экипажу, похоже, что кто-то на вашей станции захватил ваши телекоммуникации и передает неизвестный сигнал.",
 					"[command_name()] High-Priority Update",
 				)
 
