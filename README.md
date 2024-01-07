@@ -6,8 +6,16 @@
 
 ## Установка сервера на linux
 
+		=======
 
-=======
+## Oбновления сборки
+
+Стабильная версия сборки находиться в ветке [master](https://github.com/depoz0/G2station)
+
+Эксперементальные обновления сборки можно найти в ветке [exp](https://github.com/depoz0/G2station/tree/exp)
+
+
+
 
 
 ## /tg/station codebase
