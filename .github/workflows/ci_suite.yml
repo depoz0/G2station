@@ -10,7 +10,6 @@ on:
   pull_request:
     branches:
     - master
-    - exp
     - 'project/**'
   merge_group:
     branches:
