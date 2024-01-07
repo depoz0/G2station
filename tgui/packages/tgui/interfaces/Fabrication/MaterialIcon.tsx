@@ -3,53 +3,53 @@ import { classes } from 'common/react';
 import { Icon } from '../../components';
 
 const MATERIAL_ICONS: Record<string, [number, string][]> = {
-  iron: [
+  железо: [
     [0, 'sheet-metal'],
     [17, 'sheet-metal_2'],
     [34, 'sheet-metal_3'],
   ],
-  glass: [
+  стекло: [
     [0, 'sheet-glass'],
     [17, 'sheet-glass_2'],
     [34, 'sheet-glass_3'],
   ],
-  silver: [
+  серебро: [
     [0, 'sheet-silver'],
     [17, 'sheet-silver_2'],
     [34, 'sheet-silver_3'],
   ],
-  gold: [
+  золото: [
     [0, 'sheet-gold'],
     [17, 'sheet-gold_2'],
     [34, 'sheet-gold_3'],
   ],
-  diamond: [
+  алмаз: [
     [0, 'sheet-diamond'],
     [17, 'sheet-diamond_2'],
     [34, 'sheet-diamond_3'],
   ],
-  plasma: [
+  плазма: [
     [0, 'sheet-plasma'],
     [17, 'sheet-plasma_2'],
     [34, 'sheet-plasma_3'],
   ],
-  uranium: [
+  уран: [
     [0, 'sheet-uranium'],
     [17, 'sheet-uranium_2'],
     [34, 'sheet-uranium_3'],
   ],
-  bananium: [
+  бананиум: [
     [0, 'sheet-bananium'],
     [17, 'sheet-bananium_2'],
     [34, 'sheet-bananium_3'],
   ],
-  titanium: [
+  титан: [
     [0, 'sheet-titanium'],
     [17, 'sheet-titanium_2'],
     [34, 'sheet-titanium_3'],
   ],
   'bluespace crystal': [[0, 'bluespace_crystal']],
-  plastic: [
+  пластик: [
     [0, 'sheet-plastic'],
     [17, 'sheet-plastic_2'],
     [34, 'sheet-plastic_3'],
