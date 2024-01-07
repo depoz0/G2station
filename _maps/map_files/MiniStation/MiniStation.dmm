@@ -2690,7 +2690,9 @@
 "cKq" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
-	name = "Cold Loop to SM"
+	name = "Cold Loop to SM";
+	on = 1;
+	target_pressure = 4500
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -3453,7 +3455,9 @@
 /area/station/security/brig)
 "dBS" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen);
+	on = 1
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4607,7 +4611,9 @@
 /area/station/engineering/atmos)
 "eJM" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen);
+	on = 1
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -8799,7 +8805,9 @@
 "jaI" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
-	name = "SM to Cold Loop"
+	name = "SM to Cold Loop";
+	on = 1;
+	target_pressure = 4500
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -14346,7 +14354,8 @@
 /area/station/service/janitor)
 "pob" = (
 /obj/machinery/atmospherics/components/binary/pump{
-	dir = 1
+	dir = 1;
+	target_pressure = 4500
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
@@ -14584,7 +14593,8 @@
 /area/station/hallway/primary/starboard)
 "pyA" = (
 /obj/machinery/atmospherics/components/binary/pump{
-	name = "Gas to Chamber"
+	name = "Gas to Chamber";
+	target_pressure = 4500
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter)
@@ -15730,7 +15740,8 @@
 /area/station/cargo)
 "qJY" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
-	dir = 1
+	dir = 1;
+	filter_type = list(/datum/gas/nitrogen)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
