@@ -3003,7 +3003,10 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_level = 200000;
+	output_level = 150000
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "dcq" = (
@@ -16547,7 +16550,10 @@
 "ryy" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_level = 200000;
+	output_level = 150000
+	},
 /obj/machinery/light/small/directional/north,
 /obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
@@ -19558,7 +19564,10 @@
 "uSq" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor/heavy,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_level = 200000;
+	output_level = 150000
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "uTE" = (
@@ -19568,7 +19577,10 @@
 	dir = 9
 	},
 /obj/machinery/airalarm/directional/west,
-/obj/machinery/power/smes/engineering,
+/obj/machinery/power/smes/engineering{
+	input_level = 200000;
+	output_level = 150000
+	},
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "uTF" = (
