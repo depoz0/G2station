@@ -110,14 +110,14 @@
 	var/px_y = 0
 
 	///the type of damage overlay (if any) to use when this bodypart is bruised/burned.
-	var/dmg_overlay_type = "human"
+	var/dmg_overlay_type = "человеческая"
 	/// If we're bleeding, which icon are we displaying on this part
 	var/bleed_overlay_icon
 
 	//Damage messages used by help_shake_act()
-	var/light_brute_msg = "bruised"
-	var/medium_brute_msg = "battered"
-	var/heavy_brute_msg = "mangled"
+	var/light_brute_msg = "ушиблен"
+	var/medium_brute_msg = "побито"
+	var/heavy_brute_msg = "искалеченно"
 
 	var/light_burn_msg = "numb"
 	var/medium_burn_msg = "blistered"
