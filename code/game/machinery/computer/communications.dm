@@ -213,8 +213,8 @@
 
 			// Only notify people if an actual change happened
 			usr.log_message("изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src.name].", LOG_GAME)
-			message_admins("[ADMIN_LOOKUPFLW(usr)] изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src] на [AREACOORD(usr)].")
-			deadchat_broadcast(" изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src] на [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type=DEADCHAT_ANNOUNCEMENT)
+			message_admins("[ADMIN_LOOKUPFLW(usr)] изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src.name] на [AREACOORD(usr)].")
+			deadchat_broadcast(" изменил уровень безопасности на [params["newSecurityLevel"]] с помощью [src.name] на [span_name("[get_area_name(usr, TRUE)]")].", span_name("[usr.real_name]"), usr, message_type=DEADCHAT_ANNOUNCEMENT)
 
 			alert_level_tick += 1
 		if ("deleteMessage")

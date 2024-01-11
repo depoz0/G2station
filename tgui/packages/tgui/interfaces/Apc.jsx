@@ -75,18 +75,18 @@ const ApcContent = (props) => {
     return (
       <NoticeBox info textAlign="center" mb={0}>
         <b>
-          <h3>SYSTEM FAILURE</h3>
+          <h3>СИСТЕМНЫЙ СБОЙ</h3>
         </b>
-        I/O regulators have malfunctioned! <br />
-        Awaiting system reboot.
+        I/O регуляторы вышли из строя! <br />
+        Ожидание перезагрузки системы.
         <br />
         Executing software reboot in {data.failTime} seconds...
         <br />
         <br />
         <Button
           icon="sync"
-          content="Reboot Now"
-          tooltip="Force an interface reset."
+          content="Перезагрузить"
+          tooltip="Принудительная перезагрузка интерфейса."
           tooltipPosition="bottom"
           onClick={() => act('reboot')}
         />
