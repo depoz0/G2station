@@ -117,8 +117,8 @@
 	. += mug_glow
 
 /obj/item/reagent_containers/cup/rag
-	name = "damp rag"
-	desc = "For cleaning up messes, you suppose."
+	name = "влажная тряпка"
+	desc = "Полагаю, для уборки грязи."
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/obj/toys/toy.dmi'
 	icon_state = "rag"

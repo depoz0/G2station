@@ -97,7 +97,7 @@
 
 /obj/item/reagent_containers/condiment/enzyme
 	name = "universal enzyme"
-	desc = "Used in cooking various dishes."
+	desc = "Используется для приготовления различных блюд."
 	icon_state = "enzyme"
 	list_reagents = list(/datum/reagent/consumable/enzyme = 50)
 	fill_icon_thresholds = null

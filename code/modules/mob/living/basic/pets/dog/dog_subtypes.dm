@@ -20,7 +20,7 @@
 /mob/living/basic/pet/dog/pug/mcgriff
 	name = "McGriff"
 	real_name = "McGriff"
-	desc = "This dog can tell something smells around here, and that something is CRIME!"
+	desc = "Эта собака чует, что здесь чем-то попахивает, и это что-то - ПРЕСТУПЛЕНИЕ!"
 	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 

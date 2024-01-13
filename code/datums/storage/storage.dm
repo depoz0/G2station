@@ -501,14 +501,14 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		playsound(resolve_parent, SFX_RUSTLE, 50, TRUE, -5)
 
 	if(!silent_for_user)
-		to_chat(user, span_notice("Вы помещаете [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [resolve_parent.name]."))
+		to_chat(user, span_notice("Вы помещаете [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."))
 
 	for(var/mob/viewing in oviewers(user, null))
 		if(in_range(user, viewing))
-			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [resolve_parent.name]."), MSG_VISUAL)
+			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."), MSG_VISUAL)
 			return
 		if(thing && thing.w_class >= 3)
-			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [resolve_parent.name]."), MSG_VISUAL)
+			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."), MSG_VISUAL)
 			return
 
 /**

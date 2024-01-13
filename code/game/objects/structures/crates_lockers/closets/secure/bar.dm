@@ -1,5 +1,5 @@
 /obj/structure/closet/secure_closet/bar
-	name = "booze storage"
+	name = "шкаф с выпивкой"
 	req_access = list(ACCESS_BAR)
 	icon_state = "cabinet"
 	resistance_flags = FLAMMABLE
@@ -32,11 +32,10 @@
 		new /obj/item/reagent_containers/cup/glass/colocup(src)
 
 /obj/structure/closet/secure/closet/bar/lavaland_bartender_clothes
-	name = "bartender's closet"
+	name = "шкаф бармена"
 
 /obj/structure/closet/secure_closet/bar/lavaland_bartender_clothes/PopulateContents()
 	new /obj/item/clothing/neck/beads(src)
 	new /obj/item/clothing/glasses/sunglasses/reagent(src)
 	new /obj/item/clothing/suit/costume/hawaiian(src)
 	new /obj/item/clothing/shoes/sandal/beach(src)
-

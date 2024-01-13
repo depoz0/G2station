@@ -366,8 +366,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 	paper_cups--
 
 /obj/structure/reagent_dispensers/beerkeg
-	name = "beer keg"
-	desc = "Beer is liquid bread, it's good for you..."
+	name = "пивной бочонок"
+	desc = "Пиво - это жидкий хлеб, оно полезно для вас..."
 	icon_state = "beer"
 	reagent_id = /datum/reagent/consumable/ethanol/beer
 	openable = TRUE
@@ -391,7 +391,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/virusfood, 30
 
 /obj/structure/reagent_dispensers/cooking_oil
 	name = "vat of cooking oil"
-	desc = "A huge metal vat with a tap on the front. Filled with cooking oil for use in frying food."
+	desc = "Огромный металлический чан с наружным краном. Наполняется растительным маслом для жарки еды."
 	icon_state = "vat"
 	anchored = TRUE
 	reagent_id = /datum/reagent/consumable/nutriment/fat/oil
