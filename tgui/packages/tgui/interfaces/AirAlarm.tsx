@@ -136,23 +136,23 @@ const AirAlarmStatus = (props) => {
 
 const AIR_ALARM_ROUTES = {
   home: {
-    title: 'Air Controls',
+    title: 'Управление воздухом',
     component: () => AirAlarmControlHome,
   },
   vents: {
-    title: 'Vent Controls',
+    title: 'Приточная вентиляция',
     component: () => AirAlarmControlVents,
   },
   scrubbers: {
-    title: 'Scrubber Controls',
+    title: 'Вытяжная вентиляция',
     component: () => AirAlarmControlScrubbers,
   },
   modes: {
-    title: 'Operating Mode',
+    title: 'Режим работы',
     component: () => AirAlarmControlModes,
   },
   thresholds: {
-    title: 'Alarm Thresholds',
+    title: 'Пороги тревоги',
     component: () => AirAlarmControlThresholds,
   },
 } as const;
@@ -170,7 +170,7 @@ const AirAlarmControl = (props) => {
         screen && (
           <Button
             icon="arrow-left"
-            content="Back"
+            content="Назад"
             onClick={() => setScreen('home')}
           />
         )
@@ -201,14 +201,14 @@ const AirAlarmControlHome = (props) => {
       <Button
         icon={atmosAlarm ? 'exclamation-triangle' : 'exclamation'}
         color={atmosAlarm && 'caution'}
-        content="Area Atmosphere Alarm"
+        content="Вкл тревогу по атмосфере"
         onClick={() => act(atmosAlarm ? 'reset' : 'alarm')}
       />
       <Box mt={1} />
       <Button
         icon={isPanicSiphoning ? 'exclamation-triangle' : 'exclamation'}
         color={isPanicSiphoning && 'danger'}
-        content="Panic Siphon"
+        content="Вкл вытяжку 'режим паники'"
         onClick={() =>
           act('mode', {
             mode: isPanicSiphoning ? filteringPath : panicSiphonPath,

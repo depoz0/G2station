@@ -84,8 +84,8 @@
 	var/static/radial_charge = image(icon = 'icons/hud/radial.dmi', icon_state = "radial_charge")
 
 	// we show the button even if the proc will not work
-	var/static/list/radial_options = list("eject" = radial_eject, "cook" = radial_cook, "charge" = radial_charge)
-	var/static/list/ai_radial_options = list("eject" = radial_eject, "cook" = radial_cook, "charge" = radial_charge, "examine" = radial_examine)
+	var/static/list/radial_options = list("извлечь" = radial_eject, "готовить" = radial_cook, "зарядка" = radial_charge)
+	var/static/list/ai_radial_options = list("извлечь" = radial_eject, "готовить" = radial_cook, "зарядка" = radial_charge, "examine" = radial_examine)
 
 /obj/machinery/microwave/Initialize(mapload)
 	. = ..()
@@ -174,12 +174,12 @@
 
 	if(!operating)
 		if(!operating && vampire_charging_capable)
-			. += span_notice("[EXAMINE_HINT("Alt-click")] to change default mode.")
+			. += span_notice("[EXAMINE_HINT("Alt-клик")] чтобы изменить режим.")
 
-		. += span_notice("[EXAMINE_HINT("Right-click")] to start [vampire_charging_enabled ? "charging" : "cooking"] cycle.")
+		. += span_notice("[EXAMINE_HINT("Правая кнопка мыши")] чтобы запустить цикл [vampire_charging_enabled ? "зарядки" : "готовки"].")
 
 	if(!in_range(user, src) && !issilicon(user) && !isobserver(user))
-		. += span_warning("You're too far away to examine [src]'s contents and display!")
+		. += span_warning("Вы слишком далеко, чтобы рассмотреть содержимое и дисплей [src]!")
 		return
 	if(operating)
 		. += span_notice("[src] работает.")
@@ -449,7 +449,7 @@
 
 	if(item.w_class <= WEIGHT_CLASS_NORMAL && !istype(item, /obj/item/storage) && !user.combat_mode)
 		if(ingredients.len >= max_n_of_items)
-			balloon_alert(user, "it's full!")
+			balloon_alert(user, "она полна!")
 			return TRUE
 		if(!user.transferItemToLoc(item, src))
 			balloon_alert(user, "it's stuck to your hand!")
@@ -457,7 +457,7 @@
 
 		ingredients += item
 		open(autoclose = 0.6 SECONDS)
-		user.visible_message(span_notice("[user] adds \a [item] to \the [src]."), span_notice("You add [item] to \the [src]."))
+		user.visible_message(span_notice("[user] добавляет [item.name] в [src.name]."), span_notice("Вы добавляете [item.name] в [src.name]."))
 		update_appearance()
 		return
 
@@ -466,7 +466,7 @@
 /obj/machinery/microwave/attack_hand_secondary(mob/user, list/modifiers)
 	if(user.can_perform_action(src, ALLOW_SILICON_REACH))
 		if(!length(ingredients))
-			balloon_alert(user, "it's empty!")
+			balloon_alert(user, "онa пустa!")
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 		start_cycle(user)
@@ -486,7 +486,7 @@
 
 /obj/machinery/microwave/CtrlClick(mob/user)
 	. = ..()
-	if(cell_powered && !isnull(cell) && anchored)
+	if(user.can_perform_action(src) && cell_powered && !isnull(cell) && anchored)
 		user.put_in_hands(cell)
 		balloon_alert(user, "removed cell")
 		cell = null
@@ -507,7 +507,7 @@
 		if(isAI(user))
 			examine(user)
 		else
-			balloon_alert(user, "it's empty!")
+			balloon_alert(user, "онa пустa!")
 		return
 
 	var/choice = show_radial_menu(user, src, isAI(user) ? ai_radial_options : radial_options, require_near = !issilicon(user))
@@ -519,12 +519,12 @@
 		return
 
 	switch(choice)
-		if("eject")
+		if("извлечь")
 			eject()
-		if("cook")
+		if("готовить")
 			vampire_charging_enabled = FALSE
 			start_cycle(user)
-		if("charge")
+		if("зарядка")
 			vampire_charging_enabled = TRUE
 			start_cycle(user)
 		if("examine")
@@ -615,7 +615,7 @@
 			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
 			return
 
-	visible_message(span_notice("\The [src] turns on."), null, span_hear("You hear a microwave humming."))
+	visible_message(span_notice("[src.name] включается."), null, span_hear("Вы слышите, как гудит микроволновка."))
 	operating = TRUE
 	set_light(l_range = 1.5, l_power = 1.2, l_on = TRUE)
 	soundloop.start()

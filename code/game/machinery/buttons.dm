@@ -97,7 +97,7 @@
 		default_deconstruction_screwdriver(user, "[base_icon_state][skin]-open", "[base_icon_state][skin]", tool)
 		update_appearance()
 	else
-		balloon_alert(user, "access denied")
+		balloon_alert(user, "доступ запрещён")
 		flick_overlay_view("[base_icon_state]-overlay-error", 1 SECONDS)
 
 	return TRUE
@@ -223,7 +223,7 @@
 		return
 
 	if(!allowed(user))
-		balloon_alert(user, "access denied")
+		balloon_alert(user, "доступ запрещён")
 		flick_overlay_view("[base_icon_state]-overlay-error", 1 SECONDS)
 		return
 

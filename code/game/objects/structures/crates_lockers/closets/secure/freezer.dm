@@ -42,7 +42,7 @@
 	. = ..()
 
 /obj/structure/closet/secure_closet/freezer/empty
-	name = "freezer"
+	name = "морозильник"
 
 /obj/structure/closet/secure_closet/freezer/empty/open
 	req_access = null
@@ -95,7 +95,7 @@
 	req_access = null
 
 /obj/structure/closet/secure_closet/freezer/gulag_fridge
-	name = "refrigerator"
+	name = "холодильник"
 
 /obj/structure/closet/secure_closet/freezer/gulag_fridge/PopulateContents()
 	..()
@@ -103,7 +103,7 @@
 		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 
 /obj/structure/closet/secure_closet/freezer/fridge
-	name = "refrigerator"
+	name = "холодильник"
 	req_access = list(ACCESS_KITCHEN)
 
 /obj/structure/closet/secure_closet/freezer/fridge/PopulateContents()
@@ -127,7 +127,7 @@
 	opened = TRUE
 
 /obj/structure/closet/secure_closet/freezer/money
-	name = "freezer"
+	name = "морозильник"
 	desc = "This contains cold hard cash."
 	req_access = list(ACCESS_VAULT)
 

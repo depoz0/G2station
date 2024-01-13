@@ -34,19 +34,19 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 	minimum_required = 1
 	role_name = "random animal"
 	var/animals = 1
-	var/one = "one"
+	var/one = "один"
 	fakeable = TRUE
 
 /datum/round_event/ghost_role/sentience/announce(fake)
 	var/sentience_report = ""
 
-	var/data = pick("scans from our long-range sensors", "our sophisticated probabilistic models", "our omnipotence", "the communications traffic on your station", "energy emissions we detected", "\[REDACTED\]")
-	var/pets = pick("animals/bots", "bots/animals", "pets", "simple animals", "lesser lifeforms", "\[REDACTED\]")
-	var/strength = pick("human", "moderate", "lizard", "security", "command", "clown", "low", "very low", "\[REDACTED\]")
+	var/data = pick("сканирование наших сенсоров дальнего действия", "наши сложные вероятностные модели", "наше всемогущество", "коммуникационный трафик на вашей станции", "обнаруженные нами выбросы энергии", "\[ОТРЕДАКТИРОВАНО\]")
+	var/pets = pick("животных/ботов", "ботов/животных", "питомцов", "простых животных", "низших форм жизни", "\[REDACTED\]")
+	var/strength = pick("уровне человека", "среднем уровне", "уровне ящерицы", "уровне охраны", "уровне начальства", "уровне клоуна", "низком уровне", "очень низком уровне", "\[ОТРЕДАКТИРОВАНО\]")
 
-	sentience_report += "Based on [data], we believe that [one] of the station's [pets] has developed [strength] level intelligence, and the ability to communicate."
+	sentience_report += "Основываясь на [data], мы считаем, что [one] из [pets] на станции развили интеллект на [strength] и способность к общению."
 
-	priority_announce(sentience_report,"[command_name()] Medium-Priority Update")
+	priority_announce(sentience_report,"[command_name()] объявление со средним приоритетом")
 
 /datum/round_event/ghost_role/sentience/spawn_role()
 	var/list/mob/dead/observer/candidates
@@ -100,10 +100,10 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 		selected.health = selected.maxHealth
 		spawned_mobs += selected
 
-		to_chat(selected, span_userdanger("Hello world!"))
-		to_chat(selected, "<span class='warning'>Due to freak radiation and/or chemicals \
-			and/or lucky chance, you have gained human level intelligence \
-			and the ability to speak and understand human language!</span>")
+		to_chat(selected, span_userdanger("Привет, мир!"))
+		to_chat(selected, "<span class='warning'>Благодаря радиации и/или химикатам \
+			и/или счастливой случайности, вы обрели интеллект человеческого уровня \
+			и способность говорить и понимать человеческий язык!</span>")
 
 	return SUCCESSFUL_SPAWN
 
@@ -127,6 +127,6 @@ GLOBAL_LIST_INIT(high_priority_sentience, typecacheof(list(
 	description = "ALL animals and robots become sentient, provided there is enough ghosts."
 
 /datum/round_event/ghost_role/sentience/all
-	one = "all"
+	one = "все"
 	animals = INFINITY // as many as there are ghosts and animals
 	// cockroach pride, station wide

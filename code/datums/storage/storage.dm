@@ -55,7 +55,7 @@
 	var/emp_shielded
 
 	/// you put things *in* a bag, but *on* a plate
-	var/insert_preposition = "in"
+	var/insert_preposition = "в"
 
 	/// don't show any chat messages regarding inserting items
 	var/silent = FALSE
@@ -501,14 +501,14 @@ GLOBAL_LIST_EMPTY(cached_storage_typecaches)
 		playsound(resolve_parent, SFX_RUSTLE, 50, TRUE, -5)
 
 	if(!silent_for_user)
-		to_chat(user, span_notice("You put [thing] [insert_preposition]to [resolve_parent]."))
+		to_chat(user, span_notice("Вы помещаете [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."))
 
 	for(var/mob/viewing in oviewers(user, null))
 		if(in_range(user, viewing))
-			viewing.show_message(span_notice("[user] puts [thing] [insert_preposition]to [resolve_parent]."), MSG_VISUAL)
+			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."), MSG_VISUAL)
 			return
 		if(thing && thing.w_class >= 3)
-			viewing.show_message(span_notice("[user] puts [thing] [insert_preposition]to [resolve_parent]."), MSG_VISUAL)
+			viewing.show_message(span_notice("[user] помещает [thing.name] [(insert_preposition == null)? "на" : "[insert_preposition]"] [rusrep(resolve_parent.name, 4)]."), MSG_VISUAL)
 			return
 
 /**

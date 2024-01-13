@@ -112,7 +112,7 @@
 
 /obj/item/seeds/examine(mob/user)
 	. = ..()
-	. += span_notice("Use a pen on it to rename it or change its description.")
+	. += span_notice("Используйте ручку, чтобы переименовать его или изменить его описание.")
 	if(reagents_add && user.can_see_reagents())
 		. += span_notice("- Plant Reagents -")
 		for(var/datum/plant_gene/reagent/reagent_gene in genes)

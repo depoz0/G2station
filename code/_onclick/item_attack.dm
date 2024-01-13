@@ -275,8 +275,8 @@
 
 	var/damage = take_damage(attacking_item.force, attacking_item.damtype, MELEE, 1)
 	//only witnesses close by and the victim see a hit message.
-	user.visible_message(span_danger("[user] hits [src] with [attacking_item][damage ? "." : ", without leaving a mark!"]"), \
-		span_danger("You hit [src] with [attacking_item][damage ? "." : ", without leaving a mark!"]"), null, COMBAT_MESSAGE_RANGE)
+	user.visible_message(span_danger("[user] ударил [src.name] с помощью [attacking_item.name][damage ? "." : ", не оставляя следа!"]"), \
+		span_danger("Вы ударили [src.name] с помощью [attacking_item.name][damage ? "." : ", не оставляя следа!"]"), null, COMBAT_MESSAGE_RANGE)
 	log_combat(user, src, "attacked", attacking_item)
 
 /area/attacked_by(obj/item/attacking_item, mob/living/user)
@@ -297,8 +297,8 @@
 	var/armor_block = min(run_armor_check(
 			def_zone = targeting,
 			attack_flag = MELEE,
-			absorb_text = span_notice("Your armor has protected your [targeting_human_readable]!"),
-			soften_text = span_warning("Your armor has softened a hit to your [targeting_human_readable]!"),
+			absorb_text = span_notice("Ваша броня защитила вас [targeting_human_readable]!"),
+			soften_text = span_warning("Ваша броня смягчила удар, нанесенный вашему [targeting_human_readable]!"),
 			armour_penetration = attacking_item.armour_penetration,
 			weak_against_armour = attacking_item.weak_against_armour,
 		), ARMOR_MAX_BLOCK)
@@ -395,8 +395,8 @@
 					adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
 					if(stat == CONSCIOUS)
 						visible_message(
-							span_danger("[src] is knocked senseless!"),
-							span_userdanger("You're knocked senseless!"),
+							span_danger("[src] потерял сознание!"),
+							span_userdanger("Вы потеряли сознание!"),
 						)
 						set_confusion_if_lower(20 SECONDS)
 						adjust_eye_blur(20 SECONDS)
@@ -423,8 +423,8 @@
 			if(stat == CONSCIOUS && !attacking_item.get_sharpness() && armor_block < 50)
 				if(prob(damage_done))
 					visible_message(
-						span_danger("[src] is knocked down!"),
-						span_userdanger("You're knocked down!"),
+						span_danger("[src] сбит с ног!"),
+						span_userdanger("Вы сбиты с ног!"),
 					)
 					apply_effect(6 SECONDS, EFFECT_KNOCKDOWN, armor_block)
 

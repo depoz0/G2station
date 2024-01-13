@@ -134,7 +134,7 @@
 		return FALSE
 	var/atom/movable/thrown_thing
 	var/obj/item/held_item = get_active_held_item()
-	var/verb_text = pick("кинули", "бросили", "hurl", "chuck", "fling")
+	var/verb_text = pick("кинули", "бросили", "метнули", "швырнули")
 	if(prob(0.5))
 		verb_text = "yeet"
 	var/neckgrab_throw = FALSE // we can't check for if it's a neckgrab throw when totaling up power_throw since we've already stopped pulling them by then, so get it early
@@ -185,9 +185,9 @@
 	frequency_number = frequency_number + (rand(-5,5)/100); //Adds a bit of randomness in the frequency to not sound exactly the same.
 	//The volume of the sound takes the minimum between the distance thrown or the max range an item, but no more than 50. Short throws are quieter. A fast throwing speed also makes the noise sharper.
 	playsound(src, throwsound, min(8*min(get_dist(loc,target),thrown_thing.throw_range), 50), vary = TRUE, extrarange = -1, frequency = frequency_number)
-	visible_message(span_danger("[src] [verb_text][plural_s(verb_text)] [thrown_thing][power_throw_text]"), \
-					span_danger("Вы [verb_text] [thrown_thing][power_throw_text]"))
-	log_message("бросил [thrown_thing] [power_throw_text]", LOG_ATTACK)
+	visible_message(span_danger("[src] [verb_text][plural_s(verb_text)] [thrown_thing.name][power_throw_text]"), \
+					span_danger("Вы [verb_text] [thrown_thing.name][power_throw_text]"))
+	log_message("бросил [thrown_thing.name] [power_throw_text]", LOG_ATTACK)
 	var/extra_throw_range = HAS_TRAIT(src, TRAIT_THROWINGARM) ? 2 : 0
 	newtonian_move(get_dir(target, src))
 	thrown_thing.safe_throw_at(target, thrown_thing.throw_range + extra_throw_range, max(1,thrown_thing.throw_speed + power_throw), src, null, null, null, move_force)

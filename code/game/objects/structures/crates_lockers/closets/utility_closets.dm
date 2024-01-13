@@ -91,8 +91,8 @@
  * Tool Closet
  */
 /obj/structure/closet/toolcloset
-	name = "tool closet"
-	desc = "It's a storage unit for tools."
+	name = "шкаф инструментов"
+	desc = "Это шкаф для хранения инструментов."
 	icon_state = "eng"
 	icon_door = "eng_tool"
 
@@ -140,8 +140,8 @@
  * Radiation Closet
  */
 /obj/structure/closet/radiation
-	name = "radiation suit closet"
-	desc = "It's a storage unit for rad-protective suits."
+	name = "шкаф радиационных костюмов"
+	desc = "Это шкаф для хранения радиационно-защитных костюмов."
 	icon_state = "eng"
 	icon_door = "eng_rad"
 
@@ -155,8 +155,8 @@
  * Bombsuit closet
  */
 /obj/structure/closet/bombcloset
-	name = "\improper EOD closet"
-	desc = "It's a storage unit for explosion-protective suits."
+	name = "шкаф сапера"
+	desc = "Это шкаф для хранения взрывозащитных костюмов."
 	icon_state = "bomb"
 
 /obj/structure/closet/bombcloset/PopulateContents()

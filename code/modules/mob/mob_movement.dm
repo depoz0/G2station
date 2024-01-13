@@ -278,7 +278,7 @@
 	if(backup.newtonian_move(REVERSE_DIR(movement_dir), instant = TRUE)) //You're pushing off something movable, so it moves
 		// We set it down here so future calls to Process_Spacemove by the same pair in the same tick don't lead to fucky
 		backup.last_pushoff = world.time
-		to_chat(src, span_info("Вы отталкиваетесь от [backup] чтобы привести себя в движение."))
+		to_chat(src, span_info("Вы отталкиваетесь от [backup.name] чтобы привести себя в движение."))
 	return TRUE
 
 /**

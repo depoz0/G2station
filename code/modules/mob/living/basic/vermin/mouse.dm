@@ -289,7 +289,7 @@
 /// Mice turn into food when they die
 /obj/item/food/deadmouse
 	name = "мёртвая мышь"
-	desc = "Они выглядят так, будто кто-то уронил на них окуня. Любимая еда ящерицы."
+	desc = "Он выглядит так, будто кто-то уронил на него окуня. Любимая еда ящерицы."
 	icon = 'icons/mob/simple/animal.dmi'
 	icon_state = "mouse_gray_dead"
 	bite_consumption = 3

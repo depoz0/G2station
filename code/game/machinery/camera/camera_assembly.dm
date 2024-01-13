@@ -35,20 +35,20 @@
 	//upgrade messages
 	var/has_upgrades
 	if(emp_module)
-		. += span_info("It has electromagnetic interference shielding installed.")
+		. += span_info("В нем установлена защита от электромагнитных помех.")
 		has_upgrades = TRUE
 	else if(state == STATE_WIRED)
-		. += span_info("It can be shielded against electromagnetic interference with some <b>plasma</b>.")
+		. += span_info("Его можно экранировать от электромагнитных помех с помощью немного <b>плазмы</b>.")
 	if(xray_module)
-		. += span_info("It has an X-ray photodiode installed.")
+		. += span_info("В ней установлен рентгеновский фотодиод.")
 		has_upgrades = TRUE
 	else if(state == STATE_WIRED)
-		. += span_info("It can be upgraded with an X-ray photodiode with an <b>analyzer</b>.")
+		. += span_info("Его можно дооснастить рентгеновским фотодиодом с <b>анализатором</b>.")
 	if(proxy_module)
-		. += span_info("It has a proximity sensor installed.")
+		. += span_info("В нем установлен датчик приближения.")
 		has_upgrades = TRUE
 	else if(state == STATE_WIRED)
-		. += span_info("It can be upgraded with a <b>proximity sensor</b>.")
+		. += span_info("Его можно дооснастить <b>датчиком приближения</b>.")
 
 	//construction states
 	switch(state)
@@ -128,7 +128,7 @@
 	if(!tool.tool_start_check(user, amount=1))
 		return
 	user.balloon_alert_to_viewers("[state == STATE_WELDED ? "un" : null]welding...")
-	audible_message(span_hear("You hear welding."))
+	audible_message(span_hear("Вы слышите сварку."))
 	if(!tool.use_tool(src, user, 2 SECONDS, volume = 50))
 		user.balloon_alert_to_viewers("stopped [state == STATE_WELDED ? "un" : null]welding!")
 		return

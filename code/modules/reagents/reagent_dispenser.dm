@@ -310,8 +310,8 @@
 	return ..()
 
 /obj/structure/reagent_dispensers/fueltank/large
-	name = "high capacity fuel tank"
-	desc = "A tank full of a high quantity of welding fuel. Keep away from open flames."
+	name = "топливный бак большой емкости"
+	desc = "Бак, наполненный большим количеством сварочного топлива. Держите вдали от открытого огня."
 	icon_state = "fuel_high"
 	tank_volume = 5000
 
@@ -322,8 +322,8 @@
 	can_be_tanked = FALSE
 
 /obj/structure/reagent_dispensers/wall/peppertank
-	name = "pepper spray refiller"
-	desc = "Contains condensed capsaicin for use in law \"enforcement.\""
+	name = "заправка перцовых баллончиков"
+	desc = "Содержит конденсированный капсаицин для использования в \"правоохранительных органах.\""
 	icon_state = "pepper"
 	reagent_id = /datum/reagent/consumable/condensedcapsaicin
 
@@ -332,7 +332,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 /obj/structure/reagent_dispensers/wall/peppertank/Initialize(mapload)
 	. = ..()
 	if(prob(1))
-		desc = "IT'S PEPPER TIME, BITCH!"
+		desc = "ВРЕМЯ ПЕРЦА, СУКА!"
 	find_and_hang_on_wall()
 
 /obj/structure/reagent_dispensers/water_cooler
@@ -366,8 +366,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 	paper_cups--
 
 /obj/structure/reagent_dispensers/beerkeg
-	name = "beer keg"
-	desc = "Beer is liquid bread, it's good for you..."
+	name = "пивной бочонок"
+	desc = "Пиво - это жидкий хлеб, оно полезно для вас..."
 	icon_state = "beer"
 	reagent_id = /datum/reagent/consumable/ethanol/beer
 	openable = TRUE
@@ -391,7 +391,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/virusfood, 30
 
 /obj/structure/reagent_dispensers/cooking_oil
 	name = "vat of cooking oil"
-	desc = "A huge metal vat with a tap on the front. Filled with cooking oil for use in frying food."
+	desc = "Огромный металлический чан с наружным краном. Наполняется растительным маслом для жарки еды."
 	icon_state = "vat"
 	anchored = TRUE
 	reagent_id = /datum/reagent/consumable/nutriment/fat/oil
