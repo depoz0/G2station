@@ -3840,7 +3840,7 @@
 "dYN" = (
 /obj/structure/cable,
 /obj/effect/landmark/start/hangover,
-/turf/open/floor/plating,
+/turf/open/floor/catwalk_floor,
 /area/station/tcommsat/computer)
 "dZJ" = (
 /obj/effect/turf_decal/tile/green/half/contrasted,
