@@ -310,8 +310,8 @@
 	return ..()
 
 /obj/structure/reagent_dispensers/fueltank/large
-	name = "high capacity fuel tank"
-	desc = "A tank full of a high quantity of welding fuel. Keep away from open flames."
+	name = "топливный бак большой емкости"
+	desc = "Бак, наполненный большим количеством сварочного топлива. Держите вдали от открытого огня."
 	icon_state = "fuel_high"
 	tank_volume = 5000
 
@@ -322,8 +322,8 @@
 	can_be_tanked = FALSE
 
 /obj/structure/reagent_dispensers/wall/peppertank
-	name = "pepper spray refiller"
-	desc = "Contains condensed capsaicin for use in law \"enforcement.\""
+	name = "заправка перцовых баллончиков"
+	desc = "Содержит конденсированный капсаицин для использования в \"правоохранительных органах.\""
 	icon_state = "pepper"
 	reagent_id = /datum/reagent/consumable/condensedcapsaicin
 
@@ -332,7 +332,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/reagent_dispensers/wall/peppertank, 3
 /obj/structure/reagent_dispensers/wall/peppertank/Initialize(mapload)
 	. = ..()
 	if(prob(1))
-		desc = "IT'S PEPPER TIME, BITCH!"
+		desc = "ВРЕМЯ ПЕРЦА, СУКА!"
 	find_and_hang_on_wall()
 
 /obj/structure/reagent_dispensers/water_cooler
