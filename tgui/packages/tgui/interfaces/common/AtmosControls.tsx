@@ -226,7 +226,9 @@ export const Scrubber = (props: ScrubberProps) => {
           <Button
             icon={widenet ? 'expand' : 'compress'}
             selected={widenet}
-            content={widenet ? 'Расширенный радиус действия' : 'Нормальный радиус действия'}
+            content={
+              widenet ? 'Расширенный радиус действия' : 'Нормальный радиус действия'
+            }
             onClick={() =>
               act('widenet', {
                 ref: refID,
