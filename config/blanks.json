@@ -942,5 +942,26 @@
 			"<font color=\"grey\"><div align=\"justify\">This payment document is the property of Nanotrasen. You must deliver this document to the head of the Nanotrasen facility staff within 24 hours of service for independent tax accounting.</div></font></p>",
 			"<div style=\"all: initial;\" class=\"notranslate\"></div>"
 		]
+	},
+	{
+		"code": "ПРАВИЛА",
+		"category": "Правила сервера",
+		"name": "Правила сервера",
+		"info": [
+			"<h1><table bgcolor=\"darkorange\" width=\"100%\"><th><div align=\"center\"><font color=\"white\">Правила сервера</font></div></th></table></h1>",
+			"<hr />",
+			"<p><strong>Самые важные:</strong></p>",
+			"<dl>",
+			"<dt>1. Убивать других игроков без причины ЗАПРЕЩЕНО!<dt>",
+			"<dd><i>- Наказание: Бан</i></dd>",
+			"</dl><hr />",
+			"<p><strong>Остальные не менее важные:</strong></p>",
+			"<p>1. </p>",
+			"<p>2. </p>",
+			"<p>3. </p>",
+			"<hr />",
+			"<font color=\"grey\"><div align=\"justify\">Желаем вам приятного прибывания на станции. Данный документ является собственностью компании \"Нанотрасен\". Распечатан на станции G2Station, после прочтения рекомендуем этот документ отдать новоприбывшим на станцию или оставить в доке прибытия.</div></font></p>",
+			"<div style=\"all: initial;\" class=\"notranslate\"></div>"
+		]
 	}
 ]

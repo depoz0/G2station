@@ -643,7 +643,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/plasma/spawner, 0)
 	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/tinted
-	name = "tinted window"
+	name = "тонированное окно"
 	icon_state = "twindow"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/spawner, 0)

@@ -1,6 +1,6 @@
 /mob/living/basic/cockroach
-	name = "cockroach"
-	desc = "This station is just crawling with bugs."
+	name = "таракан"
+	desc = "Эта станция просто кишит жуками."
 	icon_state = "cockroach"
 	icon_dead = "cockroach_no_animation"
 	density = FALSE
@@ -77,14 +77,14 @@
 	damage_type = BRUTE
 
 /obj/item/ammo_casing/glockroach
-	name = "0.9mm bullet casing"
-	desc = "A... 0.9mm bullet casing? What?"
+	name = "гильза пули 0,9мм"
+	desc = "э... гильза от пули калибра 0,9мм? Что?"
 	projectile_type = /obj/projectile/glockroachbullet
 
 
 /mob/living/basic/cockroach/glockroach
 	name = "glockroach"
-	desc = "HOLY SHIT, THAT COCKROACH HAS A GUN!"
+	desc = "СРАНЬ ГОСПОДНЯ, У ЭТОГО ТАРАКАНА ЕСТЬ ПИСТОЛЕТ!"
 	icon_state = "glockroach"
 	melee_damage_lower = 2.5
 	melee_damage_upper = 10

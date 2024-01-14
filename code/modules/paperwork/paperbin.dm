@@ -102,7 +102,7 @@
 		pen.add_fingerprint(user)
 		pen.forceMove(user.loc)
 		user.put_in_hands(pen)
-		to_chat(user, span_notice("Вы достаете [pen] из [src]."))
+		to_chat(user, span_notice("Вы достаете [pen.name] из [src.name]."))
 		bin_pen = null
 		update_appearance()
 	else if(total_paper > 0)
@@ -111,7 +111,7 @@
 		top_paper.add_fingerprint(user)
 		top_paper.forceMove(user.loc)
 		user.put_in_hands(top_paper)
-		to_chat(user, span_notice("Вы достаете [top_paper] из [src]."))
+		to_chat(user, span_notice("Вы достаете [top_paper.name] из [src.name]."))
 		update_appearance()
 	else
 		to_chat(user, span_warning("[src] пустой!"))
@@ -126,7 +126,7 @@
 		var/obj/item/paper/paper = I
 		if(!user.transferItemToLoc(paper, src))
 			return
-		to_chat(user, span_notice("Вы положили [paper] в [src]."))
+		to_chat(user, span_notice("Вы положили [paper.name] в [src.name]."))
 		paper_stack += paper
 		total_paper += 1
 		update_appearance()
@@ -134,7 +134,7 @@
 		var/obj/item/pen/pen = I
 		if(!user.transferItemToLoc(pen, src))
 			return
-		to_chat(user, span_notice("Вы положили [pen] в [src]."))
+		to_chat(user, span_notice("Вы положили [pen.name] в [src.name]."))
 		bin_pen = pen
 		update_appearance()
 	else
