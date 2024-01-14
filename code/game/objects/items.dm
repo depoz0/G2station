@@ -729,7 +729,7 @@
 /obj/item/verb/verb_pickup()
 	set src in oview(1)
 	set category = "Object"
-	set name = "Pick up"
+	set name = "Поднять"
 
 	if(usr.incapacitated() || !Adjacent(usr))
 		return

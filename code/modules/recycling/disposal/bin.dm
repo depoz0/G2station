@@ -185,7 +185,7 @@
 		return
 	add_fingerprint(user)
 	if(user == target)
-		user.visible_message(span_warning("[user] starts climbing into [src]."), span_notice("You start climbing into [src]..."))
+		user.visible_message(span_warning("[user] начинает забираться в [src.name]."), span_notice("Вы начинаете забираться в [src.name]..."))
 	else
 		target.visible_message(span_danger("[user] starts putting [target] into [src]."), span_userdanger("[user] starts putting you into [src]!"))
 	if(do_after(user, 2 SECONDS, target))
@@ -193,7 +193,7 @@
 			return
 		target.forceMove(src)
 		if(user == target)
-			user.visible_message(span_warning("[user] climbs into [src]."), span_notice("You climb into [src]."))
+			user.visible_message(span_warning("[user] забрался в [src.name]."), span_notice("Вы забрались в [src.name]."))
 			. = TRUE
 		else
 			target.visible_message(span_danger("[user] places [target] in [src]."), span_userdanger("[user] places you in [src]."))
