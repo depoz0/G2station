@@ -698,7 +698,7 @@
 /proc/display_unread_notes(client/display_to, show_after)
 	var/list/text = list()
 	for(var/datum/admin_message/message in get_message_output("note", display_to.ckey, FALSE, show_after))
-		text += "<font color='[COLOR_RED]' size='3'><b>Note left by [span_prefix("[message.admin_key]")] on [message.timestamp]</b></font>"
+		text += "<font color='[COLOR_RED]' size='3'><b>Заметка, оставленная [span_prefix("[message.admin_key]")] в [message.timestamp]</b></font>"
 		text += "<br><font color='[COLOR_RED]'>[message.text]</font><br>"
 	if(length(text))
 		to_chat(display_to, text.Join())
