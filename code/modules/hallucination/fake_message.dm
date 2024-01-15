@@ -50,19 +50,19 @@
 
 		message_pool["[span_bold("[suspicious_personnel]")] [pick("sneezes", "coughs")]."] = 1
 
-	message_pool[span_notice("You hear something squeezing through the ducts...")] = 1
+	message_pool[span_notice("Вы слышите, как что-то протискивается через воздуховоды...")] = 1
 
 	message_pool[span_warning("Your [pick("arm", "leg", "back", "head")] itches.")] = 1
-	message_pool[span_warning("You feel [pick("hot", "cold", "dry", "wet", "woozy", "faint")].")] = 1
-	message_pool[span_warning("Your stomach rumbles.")] = 1
-	message_pool[span_warning("Your head hurts.")] = 1
-	message_pool[span_warning("You hear a faint buzz in your head.")] = 1
+	message_pool[span_warning("Вы чувствуете [pick("жар", "холод", "сухость", "влажность", "вялость", "слабость")].")] = 1
+	message_pool[span_warning("У вас заурчало в животе.")] = 1
+	message_pool[span_warning("У вас болит голова.")] = 1
+	message_pool[span_warning("В голове раздается слабый гул.")] = 1
 
 	if(prob(10))
-		message_pool[span_warning("Behind you.")] = 1
-		message_pool[span_warning("You hear a faint laughter.")] = 1
-		message_pool[span_warning("You hear skittering on the ceiling.")] = 1
-		message_pool[span_warning("You see an inhumanly tall silhouette moving in the distance.")] = 2
+		message_pool[span_warning("Позади вас.")] = 1
+		message_pool[span_warning("Вы слышите тихий смех.")] = 1
+		message_pool[span_warning("Вы слышите, как по потолку стучат.")] = 1
+		message_pool[span_warning("Вы видите нечеловечески высокий силуэт, движущийся вдалеке.")] = 2
 
 	if(prob(30))
 		var/some_help = pick_list_replacements(HALLUCINATION_FILE, "advice")
