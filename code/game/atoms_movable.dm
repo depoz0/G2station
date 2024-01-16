@@ -322,8 +322,8 @@
 	SHOULD_CALL_PARENT(TRUE)
 	if(!(impact_flags & ZIMPACT_NO_MESSAGE))
 		visible_message(
-			span_danger("[src] врезается в [impacted_turf]!"),
-			span_userdanger("Вы врезаетесь в [impacted_turf]!"),
+			span_danger("[src] врезается в [impacted_turf.name]!"),
+			span_userdanger("Вы врезаетесь в [impacted_turf.name]!"),
 		)
 	if(!(impact_flags & ZIMPACT_NO_SPIN))
 		INVOKE_ASYNC(src, PROC_REF(SpinAnimation), 5, 2)

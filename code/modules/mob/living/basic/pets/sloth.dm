@@ -59,13 +59,13 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/basic/sloth)
 
 /mob/living/basic/sloth/paperwork
 	name = "Paperwork"
-	desc = "Cargo's pet sloth. About as useful as the rest of the techs."
+	desc = "Домашний ленивец грузчиков. Примерно так же полезен, как и остальные техники."
 	gender = MALE
 	gold_core_spawnable = NO_SPAWN
 
 /mob/living/basic/sloth/citrus
 	name = "Citrus"
-	desc = "Cargo's pet sloth. She's dressed in a horrible sweater."
+	desc = "Домашний ленивец грузчиков. Она одета в ужасный свитер."
 	icon_state = "cool_sloth"
 	icon_living = "cool_sloth"
 	icon_dead = "cool_sloth_dead"

@@ -56,12 +56,12 @@ export const Smes = (props) => {
               selected={inputAttempt}
               onClick={() => act('tryinput')}
             >
-              {inputAttempt ? 'Auto' : 'Off'}
+              {inputAttempt ? 'Авто' : 'Выкл'}
             </Button>
           }
         >
           <LabeledList>
-            <LabeledList.Item label="Charge Mode">
+            <LabeledList.Item label="Режим зарядки">
               <Box color={inputState}>
                 {(capacityPercent >= 100 && 'Полностью заряжен') ||
                   (inputting && 'Зарядка') ||
@@ -141,12 +141,12 @@ export const Smes = (props) => {
               selected={outputAttempt}
               onClick={() => act('tryoutput')}
             >
-              {outputAttempt ? 'On' : 'Off'}
+              {outputAttempt ? 'Вкл' : 'Выкл'}
             </Button>
           }
         >
           <LabeledList>
-            <LabeledList.Item label="Output Mode">
+            <LabeledList.Item label="Режим вывода">
               <Box color={outputState}>
                 {outputting
                   ? 'Отправка'
