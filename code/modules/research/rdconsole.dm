@@ -110,7 +110,7 @@ Nothing else in the console has ID requirements.
 		if(istype(stored_research, /datum/techweb/science))
 			SSblackbox.record_feedback("associative", "science_techweb_unlock", 1, list("id" = "[id]", "name" = TN.display_name, "price" = "[json_encode(price)]", "time" = SQLtime()))
 		if(stored_research.research_node_id(id))
-			say("Successfully researched [TN.display_name].")
+			say("Успешно исследовано [TN.display_name].")
 			var/logname = "Unknown"
 			if(isAI(user))
 				logname = "AI [user.name]"

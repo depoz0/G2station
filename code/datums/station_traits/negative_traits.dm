@@ -630,9 +630,9 @@
 			var/obj/machinery/nebula_shielding/emergency/rad_shield = /obj/machinery/nebula_shielding/emergency/radiation
 
 			priority_announce(
-				{"Is everything okay there? We're getting high radiation readings from inside the station. \
-				We're sending an emergency shielding unit for now, it will last [initial(rad_shield.detonate_in) / (1 MINUTES)] minutes. \n\n\
-				Set up the nebula shielding. You can order construction kits at cargo if yours have been lost.
+				{"Там все в порядке? Мы получаем высокие показатели радиации внутри станции. \
+				Mы отправляем аварийный блок защиты, его хватит на [initial(rad_shield.detonate_in) / (1 MINUTES)] минут. \n\n\
+				Установите защиту от туманности. Вы можете заказать строительные наборы в грузовом отсеке, если ваши были утеряны.
 				"}
 			)
 

@@ -197,7 +197,7 @@
 		if(istype(stored_research, /datum/techweb/science))
 			SSblackbox.record_feedback("associative", "science_techweb_unlock", 1, list("id" = "[id]", "name" = tech_node.display_name, "price" = "[json_encode(price)]", "time" = SQLtime()))
 		if(stored_research.research_node_id(id))
-			computer.say("Successfully researched [tech_node.display_name].")
+			computer.say("Успешно исследовано [tech_node.display_name].")
 			var/logname = "Unknown"
 			if(isAI(user))
 				logname = "AI [user.name]"

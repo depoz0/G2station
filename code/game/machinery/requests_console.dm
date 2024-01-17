@@ -185,7 +185,7 @@ GLOBAL_LIST_EMPTY(req_console_ckey_departments)
 			return TRUE
 		if("send_announcement")
 			if(!COOLDOWN_FINISHED(src, announcement_cooldown))
-				to_chat(usr, span_alert("Intercomms recharging. Please stand by."))
+				to_chat(usr, span_alert("Интеркомы перезаряжаются. Пожалуйста, оставайтесь на связи."))
 				return
 			if(!can_send_announcements)
 				return
