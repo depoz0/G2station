@@ -160,21 +160,25 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/keycard_auth, 26)
 
 GLOBAL_VAR_INIT(emergency_access, FALSE)
 /proc/make_maint_all_access()
-	for(var/area/station/maintenance/A in GLOB.areas)
-		for(var/turf/in_area as anything in A.get_contained_turfs())
-			for(var/obj/machinery/door/airlock/D in in_area)
-				D.emergency = TRUE
-				D.update_icon(ALL, 0)
+	for(var/area/station/maintenance/area in GLOB.areas)
+		for (var/list/zlevel_turfs as anything in area.get_zlevel_turf_lists())
+			for(var/turf/area_turf as anything in zlevel_turfs)
+				for(var/obj/machinery/door/airlock/airlock in area_turf)
+					airlock.emergency = TRUE
+					airlock.update_icon(ALL, 0)
+
 	minor_announce("Сняты ограничения на доступ к обслуживанию и внешним шлюзам.", "Внимание! Объявлена чрезвычайная ситуация на всей станции!",1)
 	GLOB.emergency_access = TRUE
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("emergency maintenance access", "enabled"))
 
 /proc/revoke_maint_all_access()
-	for(var/area/station/maintenance/A in GLOB.areas)
-		for(var/turf/in_area as anything in A.get_contained_turfs())
-			for(var/obj/machinery/door/airlock/D in in_area)
-				D.emergency = FALSE
-				D.update_icon(ALL, 0)
+	for(var/area/station/maintenance/area in GLOB.areas)
+		for (var/list/zlevel_turfs as anything in area.get_zlevel_turf_lists())
+			for(var/turf/area_turf as anything in zlevel_turfs)
+				for(var/obj/machinery/door/airlock/airlock in area_turf)
+					airlock.emergency = FALSE
+					airlock.update_icon(ALL, 0)
+
 	minor_announce("Ограничения доступа в зоны обслуживания восстановлены.", "Внимание! Общестанционная чрезвычайная ситуация отменена:")
 	GLOB.emergency_access = FALSE
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("emergency maintenance access", "disabled"))
