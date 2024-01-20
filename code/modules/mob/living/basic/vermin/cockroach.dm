@@ -14,10 +14,10 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 
-	verb_say = "chitters"
-	verb_ask = "chitters inquisitively"
-	verb_exclaim = "chitters loudly"
-	verb_yell = "chitters loudly"
+	verb_say = "щебечет"
+	verb_ask = "любопытно щебечет"
+	verb_exclaim = "громко щебечет"
+	verb_yell = "громко щебечет"
 	response_disarm_continuous = "shoos"
 	response_disarm_simple = "shoo"
 	response_harm_continuous = "splats"

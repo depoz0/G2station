@@ -164,7 +164,7 @@ export const TechwebContent = (props) => {
         <Flex className="Techweb__HeaderContent">
           <Flex.Item>
             <Box>
-              Available points:
+              Доступные очки:
               <ul className="Techweb__PointSummary">
                 {Object.keys(points).map((k) => (
                   <li key={k}>
@@ -188,7 +188,7 @@ export const TechwebContent = (props) => {
           <Flex.Item grow={1} />
           <Flex.Item>
             <Button fluid onClick={() => act('toggleLock')} icon="lock">
-              Lock Console
+              Блокировка консоли
             </Button>
             {d_disk && (
               <Flex.Item>
@@ -283,28 +283,28 @@ const TechwebOverview = (props) => {
                 selected={!searching && tabIndex === 0}
                 onClick={() => switchTab(0)}
               >
-                Researched
+                Исследовано
               </Tabs.Tab>
               <Tabs.Tab
                 selected={!searching && tabIndex === 1}
                 onClick={() => switchTab(1)}
               >
-                Available
+                Доступно
               </Tabs.Tab>
               <Tabs.Tab
                 selected={!searching && tabIndex === 2}
                 onClick={() => switchTab(2)}
               >
-                Future
+                Будущее
               </Tabs.Tab>
-              {!!searching && <Tabs.Tab selected>Search Results</Tabs.Tab>}
+              {!!searching && <Tabs.Tab selected>Результаты поиска</Tabs.Tab>}
             </Tabs>
           </Flex.Item>
           <Flex.Item align={'center'}>
             <Input
               value={searchText}
               onInput={(e, value) => setSearchText(value)}
-              placeholder={'Search...'}
+              placeholder={'Поиск...'}
             />
           </Flex.Item>
         </Flex>
@@ -377,7 +377,7 @@ const TechwebDiskMenu = (props) => {
               Eject
             </Button>
             <Button icon="home" onClick={() => setTechwebRoute(null)}>
-              Home
+              Главная
             </Button>
           </Flex.Item>
         </Flex>
@@ -450,20 +450,20 @@ const TechNodeDetail = (props) => {
                 selected={tabIndex === 0}
                 onClick={() => setTabIndex(0)}
               >
-                Required ({complPrereq}/{prereqNodes.length})
+                Требуется ({complPrereq}/{prereqNodes.length})
               </Tabs.Tab>
               <Tabs.Tab
                 selected={tabIndex === 1}
                 disabled={unlockedNodes.length === 0}
                 onClick={() => setTabIndex(1)}
               >
-                Unlocks ({unlockedNodes.length})
+                Разблокировка ({unlockedNodes.length})
               </Tabs.Tab>
             </Tabs>
           </Flex.Item>
           <Flex.Item align="center">
             <Button icon="home" onClick={() => setTechwebRoute(null)}>
-              Home
+              Главная
             </Button>
           </Flex.Item>
         </Flex>
@@ -519,7 +519,7 @@ const TechNode = (props) => {
       }}
       value={expcompl / required_experiments.length}
     >
-      Experiments ({expcompl}/{required_experiments.length})
+      Эксперименты ({expcompl}/{required_experiments.length})
     </ProgressBar>
   );
 
@@ -562,7 +562,7 @@ const TechNode = (props) => {
                   setTabIndex(0);
                 }}
               >
-                Details
+                Подробнее
               </Button>
             )}
             {tier > 0 && (
@@ -571,7 +571,7 @@ const TechNode = (props) => {
                 disabled={!can_unlock || tier > 1}
                 onClick={() => act('researchNode', { node_id: id })}
               >
-                Research
+                Исследовать
               </Button>
             )}
           </>
@@ -630,7 +630,7 @@ const TechNode = (props) => {
       {required_experiments.length > 0 && (
         <Collapsible
           className="Techweb__NodeExperimentsRequired"
-          title="Required Experiments"
+          title="Необходимые эксперименты"
         >
           {required_experiments.map((k, index) => {
             const thisExp = experiments[k];
@@ -644,7 +644,7 @@ const TechNode = (props) => {
       {Object.keys(discount_experiments).length > 0 && (
         <Collapsible
           className="TechwebNodeExperimentsRequired"
-          title="Discount-Eligible Experiments"
+          title="Эксперименты с правом на скидку"
         >
           {Object.keys(discount_experiments).map((k, index) => {
             const thisExp = experiments[k];
@@ -654,8 +654,8 @@ const TechNode = (props) => {
             return (
               <Experiment key={thisExp} exp={thisExp}>
                 <Box className="Techweb__ExperimentDiscount">
-                  Provides a discount of {discount_experiments[k]} points to all
-                  required point pools.
+                  Предоставляет скидку в {discount_experiments[k]} очков на все
+                  требуемые очки исследования.
                 </Box>
               </Experiment>
             );
@@ -678,14 +678,14 @@ const LockedExperiment = (props) => {
         <Flex align="center" justify="space-between">
           <Flex.Item color="rgba(0, 0, 0, 0.6)">
             <Icon name="lock" />
-            Undiscovered Experiment
+            Неоткрытый эксперимент
           </Flex.Item>
           <Flex.Item color="rgba(0, 0, 0, 0.5)">???</Flex.Item>
         </Flex>
       </Button>
       <Box className={'ExperimentConfigure__ExperimentContent'}>
-        This experiment has not been discovered yet, continue researching nodes
-        in the tree to discover the contents of this experiment.
+        Этот эксперимент еще не открыт, продолжайте исследовать исследования,
+        чтобы узнать содержание этого эксперимента.
       </Box>
     </Box>
   );

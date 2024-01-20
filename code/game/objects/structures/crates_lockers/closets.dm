@@ -5,8 +5,8 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 
 
 /obj/structure/closet
-	name = "closet"
-	desc = "It's a basic storage unit."
+	name = "шкаф"
+	desc = "Это обычный шкаф для хранения."
 	icon = 'icons/obj/storage/closet.dmi'
 	icon_state = "generic"
 	density = TRUE
@@ -420,13 +420,13 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 		return FALSE
 	if(strong_grab)
 		if(user)
-			to_chat(user, span_danger("[pulledby] has an incredibly strong grip on [src], preventing it from opening."))
+			to_chat(user, span_danger("[pulledby] невероятно крепко вцепился в [src.name], не давая ему открыться."))
 		return FALSE
 	var/turf/T = get_turf(src)
 	for(var/mob/living/L in T)
 		if(L.anchored || horizontal && L.mob_size > MOB_SIZE_TINY && L.density)
 			if(user)
-				to_chat(user, span_danger("There's something large on top of [src], preventing it from opening."))
+				to_chat(user, span_danger("Сверху на [src.name] лежит что-то большое, мешающее его открыть."))
 			return FALSE
 	return TRUE
 
@@ -435,12 +435,12 @@ GLOBAL_LIST_EMPTY(roundstart_station_closets)
 	for(var/obj/structure/closet/closet in T)
 		if(closet != src && !closet.wall_mounted)
 			if(user)
-				balloon_alert(user, "[closet.name] is in the way!")
+				balloon_alert(user, "[closet.name] стоит на пути!")
 			return FALSE
 	for(var/mob/living/L in T)
 		if(L.anchored || horizontal && L.mob_size > MOB_SIZE_TINY && L.density)
 			if(user)
-				to_chat(user, span_danger("There's something too large in [src], preventing it from closing."))
+				to_chat(user, span_danger("В [src.name] что-то слишком большое, что мешает его закрыть."))
 			return FALSE
 	return TRUE
 

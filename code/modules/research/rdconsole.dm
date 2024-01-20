@@ -18,7 +18,7 @@ Nothing else in the console has ID requirements.
 */
 /obj/machinery/computer/rdconsole
 	name = "R&D Console"
-	desc = "A console used to interface with R&D tools."
+	desc = "Консоль используемая для взаимодействия с инструментами научно-исследовательских работ."
 	icon_screen = "rdcomp"
 	icon_keyboard = "rd_key"
 	circuit = /obj/item/circuitboard/computer/rdconsole
@@ -84,7 +84,7 @@ Nothing else in the console has ID requirements.
 				return
 			d_disk = D
 		else
-			to_chat(user, span_warning("Machine cannot accept disks in that format."))
+			to_chat(user, span_warning("Машина не может принимать диски такого формата."))
 			return
 		to_chat(user, span_notice("You insert [D] into \the [src]!"))
 		return
@@ -135,16 +135,16 @@ Nothing else in the console has ID requirements.
 			))
 			return TRUE
 		else
-			say("Failed to research node: Internal database error!")
+			say("Не удалось исследовать: Внутренняя ошибка базы данных!")
 			return FALSE
-	say("Not enough research points...")
+	say("Не хватает очков для исследования...")
 	return FALSE
 
 /obj/machinery/computer/rdconsole/emag_act(mob/user, obj/item/card/emag/emag_card)
 	. = ..()
 	if (obj_flags & EMAGGED)
 		return
-	balloon_alert(user, "security protocols disabled")
+	balloon_alert(user, "протоколы безопасности отключены")
 	playsound(src, SFX_SPARKS, 75, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	obj_flags |= EMAGGED
 	locked = FALSE
@@ -305,18 +305,18 @@ Nothing else in the console has ID requirements.
 
 	// Check if the console is locked to block any actions occuring
 	if (locked && action != "toggleLock")
-		say("Console is locked, cannot perform further actions.")
+		say("Консоль заблокирована, дальнейшие действия невозможны.")
 		return TRUE
 
 	switch (action)
 		if ("toggleLock")
 			if(obj_flags & EMAGGED)
-				to_chat(usr, span_boldwarning("Security protocol error: Unable to access locking protocols."))
+				to_chat(usr, span_boldwarning("Ошибка протокола безопасности: Невозможно получить доступ к протоколам блокировки."))
 				return TRUE
 			if(allowed(usr))
 				locked = !locked
 			else
-				to_chat(usr, span_boldwarning("Unauthorized Access."))
+				to_chat(usr, span_boldwarning("Несанкционированный доступ."))
 			return TRUE
 		if ("researchNode")
 			research_node(params["node_id"], usr)
