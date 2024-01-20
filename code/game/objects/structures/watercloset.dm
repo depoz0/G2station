@@ -735,8 +735,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 //Defines used are pre-existing in layers.dm//
 
 /obj/structure/curtain
-	name = "curtain"
-	desc = "Contains less than 1% mercury."
+	name = "штора"
+	desc = "Содержит менее 1% ртути."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "bathroom-open"
 	var/icon_type = "bathroom"//used in making the icon state
@@ -790,10 +790,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 	if(anchored)
 		return TRUE
 
-	user.visible_message(span_warning("[user] cuts apart [src]."),
-		span_notice("You start to cut apart [src]."), span_hear("You hear cutting."))
+	user.visible_message(span_warning("[user] разрезает на части [src.name]."),
+		span_notice("Вы начинаете разрезать на части [src.name]."), span_hear("Вы слышите звук резания."))
 	if(I.use_tool(src, user, 50, volume=100) && !anchored)
-		to_chat(user, span_notice("You cut apart [src]."))
+		to_chat(user, span_notice("Вы разрезали [src]."))
 		deconstruct()
 
 	return TRUE

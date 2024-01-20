@@ -10,9 +10,9 @@
  * - I don't recommend using both methods on the same elevator, as it might result in some jank, but it's functional.
  */
 /obj/machinery/elevator_control_panel
-	name = "elevator panel"
+	name = "панель лифта"
 	// Fire alarm reference.
-	desc = "<i>\"In case of emergency, please use the stairs.\"</i> Thus, always use the stairs."
+	desc = "<i>\"В случае чрезвычайной ситуации, пожалуйста, воспользуйтесь лестницей.\"</i> Лучше всегда пользуйтесь лестницей."
 	density = FALSE
 
 	icon = 'icons/obj/wallmounts.dmi'

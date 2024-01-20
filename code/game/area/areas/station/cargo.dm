@@ -39,7 +39,7 @@
 	icon_state = "cargo_lobby"
 
 /area/station/cargo/miningdock
-	name = "\improper Mining Dock"
+	name = "Горнодобывающий док"
 	icon_state = "mining_dock"
 
 /area/station/cargo/miningdock/cafeteria

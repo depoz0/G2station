@@ -1,7 +1,7 @@
 // Basic ladder. By default links to the z-level above/below.
 /obj/structure/ladder
-	name = "ladder"
-	desc = "A sturdy metal ladder."
+	name = "лестница"
+	desc = "Прочная металлическая лестница."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "ladder11"
 	anchored = TRUE
@@ -30,14 +30,14 @@
 
 /obj/structure/ladder/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	if(up)
-		context[SCREENTIP_CONTEXT_LMB] = "Climb up"
+		context[SCREENTIP_CONTEXT_LMB] = "Подняться на вверх"
 	if(down)
-		context[SCREENTIP_CONTEXT_RMB] = "Climb down"
+		context[SCREENTIP_CONTEXT_RMB] = "Спуститься вниз"
 	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/structure/ladder/examine(mob/user)
 	. = ..()
-	. += span_info("<b>Left-click</b> it to start moving up; <b>Right-click</b> to start moving down.")
+	. += span_info("<b>Левый-клик</b> чтобы начать движение вверх; <b>Правый-клик</b> чтобы начать движение вниз.")
 
 /obj/structure/ladder/Destroy(force)
 	GLOB.ladders -= src
@@ -89,10 +89,10 @@
 		return
 
 	if(!up && !down)
-		balloon_alert(user, "doesn't lead anywhere!")
+		balloon_alert(user, "никуда не ведет!")
 		return
 	if(going_up ? !up : !down)
-		balloon_alert(user, "can't go any further [going_up ? "up" : "down"]")
+		balloon_alert(user, "[going_up ? "выше подняться" : "ниже спуститься"] некуда")
 		return
 	if(user.buckled && user.buckled.anchored)
 		balloon_alert(user, "buckled to something anchored!")
@@ -110,13 +110,13 @@
 
 /// The message shown when the player starts climbing the ladder
 /obj/structure/ladder/proc/show_initial_fluff_message(mob/user, going_up)
-	var/up_down = going_up ? "up" : "down"
-	user.balloon_alert_to_viewers("climbing [up_down]...")
+	var/up_down = going_up ? "взбираемся вверх" : "спускаемся вниз"
+	user.balloon_alert_to_viewers("[up_down]...")
 
 /obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE)
 	var/obj/structure/ladder/ladder = going_up ? up : down
 	if(!ladder)
-		balloon_alert(user, "there's nothing that way!")
+		balloon_alert(user, "там ничего нет!")
 		return
 	var/response = SEND_SIGNAL(user, COMSIG_LADDER_TRAVEL, src, ladder, going_up)
 	if(response & LADDER_TRAVEL_BLOCK)
@@ -136,12 +136,13 @@
 
 /// The messages shown after the player has finished climbing. Players can see this happen from either src or the destination so we've 2 POVs here
 /obj/structure/ladder/proc/show_final_fluff_message(mob/user, obj/structure/ladder/destination, going_up)
-	var/up_down = going_up ? "up" : "down"
+	var/up_down = going_up ? "поднялся на вверх" : "спустился вниз"
+	var/up_down2 = going_up ? "поднимается на вверх" : "спускается вниз"
 
 	//POV of players around the source
-	visible_message(span_notice("[user] climbs [up_down] [src]."))
+	visible_message(span_notice("[user] [up_down2] [src]."))
 	//POV of players around the destination
-	user.balloon_alert_to_viewers("climbed [up_down]")
+	user.balloon_alert_to_viewers("[up_down]")
 
 /// Shows a radial menu that players can use to climb up and down a stair.
 /obj/structure/ladder/proc/show_options(mob/user, is_ghost = FALSE)

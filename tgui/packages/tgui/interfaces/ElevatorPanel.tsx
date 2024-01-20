@@ -68,7 +68,7 @@ export const ElevatorPanel = (props) => {
         {!lift_exists && <NoLiftDimmer />}
         <Stack height="100%" vertical>
           <Stack.Item>
-            <Section title="Floor" align="center">
+            <Section title="Этаж" align="center">
               <FloorPanel />
             </Section>
           </Stack.Item>

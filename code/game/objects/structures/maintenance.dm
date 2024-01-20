@@ -2,8 +2,8 @@
 as well as a location where a hidden item can somtimes be retrieved
 at the cost of risking a vicious bite.**/
 /obj/structure/moisture_trap
-	name = "moisture trap"
-	desc = "A device installed in order to control moisture in poorly ventilated areas.\nThe stagnant water inside basin seems to produce serious biofouling issues when improperly maintained.\nThis unit in particular seems to be teeming with life!\nWho thought mother Gaia could assert herself so vigoriously in this sterile and desolate place?"
+	name = "влагоуловитель"
+	desc = "Устройство, установленное для контроля влажности в плохо проветриваемых помещениях.\nЗастойная вода в бассейне при неправильном уходе создает серьезные проблемы с биообрастанием.\nЭто устройство, в частности, кажется кишащим жизнью.\nКто бы мог подумать, что мать-Гайя может так энергично заявить о себе в этом стерильном и пустынном месте?"
 	icon_state = "moisture_trap"
 	anchored = TRUE
 	density = FALSE
@@ -247,8 +247,8 @@ at the cost of risking a vicious bite.**/
  * Spawns in maint shafts, and blocks lines of sight perodically when active.
  */
 /obj/structure/steam_vent
-	name = "steam vent"
-	desc = "A device periodically filtering out moisture particles from the nearby walls and windows. It's only possible due to the moisture traps nearby."
+	name = "пароотвод"
+	desc = "Устройство, периодически отфильтровывающее частицы влаги из близлежащих стен и окон. Это возможно только благодаря расположенным поблизости влагоуловителям."
 	icon_state = "steam_vent"
 	anchored = TRUE
 	density = FALSE
@@ -273,31 +273,31 @@ at the cost of risking a vicious bite.**/
 /obj/structure/steam_vent/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
 	if(!COOLDOWN_FINISHED(src, steam_vent_interact))
-		balloon_alert(user, "not ready to adjust!")
+		balloon_alert(user, "не готова к регулировке!!")
 		return
 	vent_active = !vent_active
 	update_icon_state()
 	if(vent_active)
-		balloon_alert(user, "vent on")
+		balloon_alert(user, "открыто")
 	else
-		balloon_alert(user, "vent off")
+		balloon_alert(user, "закрыто")
 		return
 	blow_steam()
 
 /obj/structure/steam_vent/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
 	if(isnull(held_item))
-		context[SCREENTIP_CONTEXT_LMB] = vent_active ? "Close valve" : "Open valve"
+		context[SCREENTIP_CONTEXT_LMB] = vent_active ? "Закрыть вентиль" : "Открыть вентиль"
 		return CONTEXTUAL_SCREENTIP_SET
 	if(held_item.tool_behaviour == TOOL_WRENCH)
-		context[SCREENTIP_CONTEXT_RMB] = "Deconstruct"
+		context[SCREENTIP_CONTEXT_RMB] = "Демонтировать"
 		return CONTEXTUAL_SCREENTIP_SET
 	return .
 
 /obj/structure/steam_vent/wrench_act_secondary(mob/living/user, obj/item/tool)
 	. = ..()
 	if(vent_active)
-		balloon_alert(user, "must be off!")
+		balloon_alert(user, "нужно закрыть вентиль!")
 		return
 	if(tool.use_tool(src, user, 3 SECONDS))
 		playsound(loc, 'sound/items/deconstruct.ogg', 50, TRUE)
@@ -332,5 +332,5 @@ at the cost of risking a vicious bite.**/
 	icon_state = "steam_vent[vent_active ? "": "_off"]"
 
 /obj/structure/steam_vent/fast
-	desc = "A device periodically filtering out moisture particles from the nearby walls and windows. It's only possible due to the moisture traps nearby. It's faster than most."
+	desc = "Устройство, периодически отфильтровывающее частицы влаги из близлежащих стен и окон. Это возможно только благодаря находящимся поблизости влагоуловителям. Работает быстрее, чем большинство других."
 	steam_speed = 10 SECONDS

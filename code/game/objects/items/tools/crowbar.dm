@@ -1,6 +1,6 @@
 /obj/item/crowbar
-	name = "pocket crowbar"
-	desc = "A small crowbar. This handy tool is useful for lots of things, such as prying floor tiles or opening unpowered doors."
+	name = "карманный ломик"
+	desc = "Небольшой ломик. Этот удобный инструмент пригодится для многих вещей, например, для откола напольной плитки или открытия неработающих дверей."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "crowbar"
 	inhand_icon_state = "crowbar"
@@ -54,8 +54,8 @@
 
 
 /obj/item/crowbar/large
-	name = "large crowbar"
-	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
+	name = "большой ломик"
+	desc = "Это большой ломик. Он не помещается в карманы, потому что он большой."
 	force = 12
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 3
@@ -67,7 +67,7 @@
 
 /obj/item/crowbar/large/emergency
 	name = "emergency crowbar"
-	desc = "It's a bulky crowbar. It almost seems deliberately designed to not be able to fit inside of a backpack."
+	desc = "Это громоздкий лом. Кажется, что он специально создан для того, чтобы не помещаться в рюкзак."
 	w_class = WEIGHT_CLASS_BULKY
 
 /obj/item/crowbar/hammer

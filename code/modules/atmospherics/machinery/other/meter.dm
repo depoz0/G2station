@@ -1,6 +1,6 @@
 /obj/machinery/meter
-	name = "gas flow meter"
-	desc = "It measures something."
+	name = "расходомер газа"
+	desc = "Он что-то измеряет."
 	icon = 'icons/obj/pipes_n_cables/meter.dmi'
 	icon_state = "meter"
 	layer = HIGH_PIPE_LAYER
@@ -113,11 +113,11 @@
 	if (target)
 		var/datum/gas_mixture/pipe_air = target.return_air()
 		if(pipe_air)
-			. = "The pressure gauge reads [round(pipe_air.return_pressure(), 0.01)] kPa; [round(pipe_air.temperature,0.01)] K ([round(pipe_air.temperature-T0C,0.01)]&deg;C)."
+			. = "Показания манометра [round(pipe_air.return_pressure(), 0.01)] kPa; [round(pipe_air.temperature,0.01)] K ([round(pipe_air.temperature-T0C,0.01)]&deg;C)."
 		else
-			. = "The sensor error light is blinking."
+			. = "Мигает индикатор ошибки датчика."
 	else
-		. = "The connect error light is blinking."
+		. = "Мигает индикатор ошибки соединения."
 
 /obj/machinery/meter/examine(mob/user)
 	. = ..()

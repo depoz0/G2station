@@ -146,9 +146,9 @@ export const PowerMonitorContent = (props) => {
         </Box>
         <Table>
           <Table.Row header>
-            <Table.Cell>Area</Table.Cell>
-            <Table.Cell collapsing>Charge</Table.Cell>
-            <Table.Cell textAlign="right">Draw</Table.Cell>
+            <Table.Cell>Область</Table.Cell>
+            <Table.Cell collapsing>Заряд</Table.Cell>
+            <Table.Cell textAlign="right">Потребление</Table.Cell>
             <Table.Cell collapsing title="Оборудование">
               Об
             </Table.Cell>

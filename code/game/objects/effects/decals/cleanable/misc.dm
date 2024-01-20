@@ -100,8 +100,8 @@
 	icon_state = base_icon_state
 
 /obj/effect/decal/cleanable/greenglow
-	name = "glowing goo"
-	desc = "Jeez. I hope that's not for lunch."
+	name = "светящаяся слизь"
+	desc = "Боже. Надеюсь, это не на обед."
 	icon_state = "greenglow"
 	light_power = 3
 	light_range = 2

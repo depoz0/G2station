@@ -56,19 +56,19 @@
 		var/mob/living/crossing_mob = crossing_movable
 		if(crossing_mob.mob_size > MOB_SIZE_SMALL && !(crossing_mob.movement_type & MOVETYPES_NOT_TOUCHING_GROUND))
 			if(HAS_TRAIT(crossing_mob, TRAIT_PACIFISM))
-				crossing_mob.visible_message(span_notice("[crossing_mob] carefully steps over [parent_as_living]."), span_notice("You carefully step over [parent_as_living] to avoid hurting it."))
+				crossing_mob.visible_message(span_notice("[crossing_mob] осторожно перешагиваете через [parent_as_living.name]."), span_notice("Вы осторожно перешагиваете через [parent_as_living.name], чтобы не задеть его."))
 				return
 			if(should_squash)
-				crossing_mob.visible_message(span_notice("[crossing_mob] squashed [parent_as_living]."), span_notice("You squashed [parent_as_living]."))
+				crossing_mob.visible_message(span_notice("[crossing_mob] раздавил [parent_as_living]."), span_notice("Вы раздавили [parent_as_living.name]."))
 				Squish(parent_as_living)
 			else
-				parent_as_living.visible_message(span_notice("[parent_as_living] avoids getting crushed."))
+				parent_as_living.visible_message(span_notice("[parent_as_living.name] избегает быть раздавленным."))
 	else if(isstructure(crossing_movable))
 		if(should_squash)
 			crossing_movable.visible_message(span_notice("[parent_as_living] is crushed under [crossing_movable]."))
 			Squish(parent_as_living)
 		else
-			parent_as_living.visible_message(span_notice("[parent_as_living] avoids getting crushed."))
+			parent_as_living.visible_message(span_notice("[parent_as_living.name] избегает быть раздавленным."))
 
 /datum/component/squashable/proc/Squish(mob/living/target)
 	if(squash_flags & SQUASHED_SHOULD_BE_GIBBED)
