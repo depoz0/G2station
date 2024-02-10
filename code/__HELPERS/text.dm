@@ -1211,3 +1211,9 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			return b
 		else
 			return c
+/// Generate a grawlix string of length of the text argument.
+/proc/grawlix(text)
+	var/grawlix = ""
+	for(var/iteration in 1 to length_char(text))
+		grawlix += pick("@", "$", "?", "!", "#", "§", "*", "£", "%", "☠", "★", "☆", "¿", "⚡")
+	return grawlix
